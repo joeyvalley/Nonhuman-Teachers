@@ -35,25 +35,12 @@ function App() {
 
   async function handleSubmit(e) {
     e.preventDefault();
+    console.log("hello");
+
     const email = e.target.EMAIL.value; // Get email value from the form
-    console.log(email);
-    const apiKey = '44ff24c95a644cc1984389326df6c2ef-us21'; // Replace with your MailChimp API key
-    const listId = 'e3b39a30fb'; // Replace with your mailing list ID
-    const server = apiKey.slice(-4); // Extract the server number from your API key (e.g., "us1" or "us20")
 
     try {
-      const response = await axios({
-        method: 'post',
-        url: `https://${server}.api.mailchimp.com/3.0/lists/${listId}/members`,
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `apikey ${apiKey}`,
-        },
-        data: {
-          email_address: email,
-          status: 'subscribed',
-        },
-      });
+      const response = await axios.post('/api/subscribe', { email });
 
       if (response.status === 200) {
         console.log('Successfully added to the mailing list');
@@ -67,6 +54,7 @@ function App() {
       // Handle the error, e.g., show an error message to the user
     }
   }
+
 
   return (
     <>

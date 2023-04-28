@@ -61,6 +61,7 @@
 
 .subscribe:hover {
   background: white;
+  border-radius: 0;
   cursor: pointer;
 }
 
