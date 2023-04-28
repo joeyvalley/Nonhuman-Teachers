@@ -1,6 +1,6 @@
 import "./style.css"
 import axios from 'axios';
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 function App() {
 
@@ -21,6 +21,13 @@ function App() {
   const [description, setDescription] = useState(startingVideo.title)
   const [email, setEmail] = useState()
 
+  useEffect(() => {
+    setTimeout(() => {
+      currSelection.current.style.opacity = 1;
+    }, 100);
+  }, [])
+
+
   function switchVideo() {
     const newVideo = randomVideo()
     const videoElement = currSelection.current
@@ -29,6 +36,7 @@ function App() {
       videoElement.src = newVideo.link;
       setDescription(newVideo.title)
       videoElement.load();
+      videoElement.style.transition = "opacity 500ms ease-in-out";
       videoElement.style.opacity = 1;
     }, 500);
   }
