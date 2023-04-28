@@ -101,13 +101,10 @@
   height: auto;
   z-index: 50;
   mix-blend-mode: color-burn;
-  transition: transform 100ms ease-in-out;
-
 }
 
 .logo:hover {
   cursor: pointer;
-  transform: scale(1.025);
 }
 
 .logo-img {

@@ -16,6 +16,7 @@ function App() {
   const currSelection = useRef(null)
   const [video, setVideo] = useState(startingVideo.link)
   const [description, setDescription] = useState(startingVideo.title)
+  const [email, setEmail] = useState()
 
   function switchVideo() {
     const newVideo = randomVideo()
@@ -35,21 +36,20 @@ function App() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    console.log("hello");
-
     const email = e.target.EMAIL.value; // Get email value from the form
-
     try {
       const response = await axios.post('/api/subscribe', { email });
 
       if (response.status === 200) {
-        console.log('Successfully added to the mailing list');
+        setEmail("Thank you for subscribing!")
         // Handle successful subscription, e.g., show a message to the user
       } else {
+        setEmail("An error occurred, please try again.")
         console.log('An error occurred:', response);
         // Handle the error, e.g., show an error message to the user
       }
     } catch (error) {
+      setEmail("An error occurred, please try again.")
       console.log('An error occurred:', error);
       // Handle the error, e.g., show an error message to the user
     }
@@ -58,9 +58,9 @@ function App() {
 
   return (
     <>
-      <div className="logo">
+      <div className="logo" onClick={() => window.location.reload()}>
         <img src="assets/nht-logo.png" alt="NHT logo" className="logo-img" />
-      </div>
+      </div >
       <div className="container">
         <video autoPlay muted className="video" ref={currSelection} onEnded={switchVideo}>
           <source src={video} type="video/mp4" />
@@ -68,7 +68,7 @@ function App() {
       </div>
       <div className="newsletter">
         <form onSubmit={handleSubmit}>
-          <input type="email" name="EMAIL" className="email" id="mce-EMAIL" placeholder="Join newsletter." required />
+          <input type="email" name="EMAIL" className="email" id="mce-EMAIL" placeholder="Enter email to join newsletter." value={email} onChange={(e) => setEmail(e.target.value)} required />
           <input type="submit" value="Subscribe" className="subscribe" />
         </form>
       </div>
