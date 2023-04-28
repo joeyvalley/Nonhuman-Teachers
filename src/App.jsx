@@ -65,7 +65,7 @@ function App() {
         <img src="assets/nht-logo.png" alt="NHT logo" className="logo-img" />
       </div >
       <div className="container">
-        <video autoPlay muted className="video" ref={currSelection} onEnded={switchVideo}>
+        <video autoPlay playsInline muted className="video" ref={currSelection} onEnded={switchVideo}>
           <source src={video} type="video/mp4" />
         </video>
       </div>
