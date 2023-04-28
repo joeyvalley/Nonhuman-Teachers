@@ -3,9 +3,9 @@ const axios = require('axios');
 module.exports = async (req, res) => {
   if (req.method === 'POST') {
     const { email } = req.body;
-    const apiKey = '44ff24c95a644cc1984389326df6c2ef-us21'; // Replace with your MailChimp API key
-    const listId = 'e3b39a30fb'; // Replace with your mailing list ID
-    const server = 'us21'; // Extract the server number from your API key (e.g., "us1" or "us20")
+    const apiKey = process.env.API_KEY
+    const listId = process.env.LIST_ID; // Replace with your mailing list ID
+    const server = process.env.SERVER_ID; // Extract the server number from your API key (e.g., "us1" or "us20")
 
     try {
       const response = await axios({
