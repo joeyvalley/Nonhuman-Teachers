@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: fixed;
+  background-color: black;
+  left: 0;
+  top: 0;
+}
+
+.video {
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+}
+
+.email {
+  font-family: "Helveesti Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 41px;
+  color: black;
+  background: none;
+  border: none;
+  border-bottom: 1px solid black;
+  width: 100%;
+  padding: 0px;
+  display: inline-block;
+}
+
+.email:focus {
+  outline: none;
+}
+
+.email::placeholder {
+  color: black;
+}
+
+.subscribe {
+  font-family: "Helveesti Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 41px;
+  color: black;
+  background: none;
+  border: 1px solid black;
+  display: inline-block;
+  transition: background 200ms ease-in-out;
+}
+
+.subscribe:hover {
+  background: white;
+  cursor: pointer;
+}
+
+.newsletter {
+  position: fixed;
+  width: 726px;
+  height: 40px;
+  top: 50%;
+  left: calc(50% - 363px);
+}
+
+.newsletter form {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-column-gap: 20px;
+}
+
+.description {
+  position: absolute;
+  width: auto;
+  bottom: 5px;
+  right: 1px;
+  font-family: 'Helveesti Regular Italic';
+  font-style: normal;
+  font-size: 12px;
+  line-height: 20px;
+  color: black;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+@font-face {
+  font-family: "Helveesti Regular";
+  src: url(../public/assets/helveesti-regular.woff);
+}
+
+@font-face {
+  font-family: "Helveesti Regular Italic";
+  src: url(../public/assets/helveesti-regular-italic.woff);
+}
