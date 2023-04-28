@@ -23,9 +23,13 @@ module.exports = async (req, res) => {
 
       res.status(response.status).send(response.data);
     } catch (error) {
-      res.status(error.response.status).send(error.response.data);
+      if (error.response) {
+        res.status(error.response.status).send(error.response.data);
+      } else {
+        console.error('Axios error:', error);
+        res.status(500).send({ message: 'Internal Server Error' });
+      }
     }
-  } else {
-    res.status(405).send({ message: 'Method not allowed' });
   }
+
 };
