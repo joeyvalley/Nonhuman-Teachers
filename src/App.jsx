@@ -59,7 +59,6 @@ function App() {
   return (
     <>
       <div className="logo">
-
         <img src="assets/nht-logo.png" alt="NHT logo" className="logo-img" />
       </div>
       <div className="container">
