@@ -178,4 +178,8 @@
   .email::placeholder {
     text-align: center;
   }
+
+  .container {
+    height: 100dvh;
+  }
 }
