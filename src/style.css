@@ -202,7 +202,7 @@ body {
   .newsletter {
     width: 90%;
     left: 5%;
-    top: 45%;
+    top: calc(50% - 22px);
   }
 
   .newsletter form {
