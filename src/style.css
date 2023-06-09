@@ -74,8 +74,8 @@ body {
 .logo {
   position: absolute;
   top: 16px;
-  left: calc(50% - 90px);
-  width: 180px;
+  left: calc(50% - 59.5px);
+  width: 119px;
   z-index: 50;
   /* mix-blend-mode: var(--blend); */
 }
