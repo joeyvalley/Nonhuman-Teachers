@@ -1,4 +1,4 @@
-import "../style.css"
+import "../styles/landing.css"
 import axios from 'axios';
 import { useEffect, useRef, useState } from "react"
 
@@ -17,7 +17,7 @@ function App() {
   ]
   const startingVideo = randomVideo();
   const currSelection = useRef(null)
-  const [video, setVideo] = useState(startingVideo.link)
+  // const [video, setVideo] = useState(startingVideo.link)
   const [description, setDescription] = useState(startingVideo.title)
   const [email, setEmail] = useState()
 
@@ -74,7 +74,7 @@ function App() {
       </div >
       <div className="container">
         <video autoPlay muted playsInline className="video" ref={currSelection} onEnded={switchVideo}>
-          <source src={video} type="video/mp4" />
+          <source src={startingVideo.link} type="video/mp4" />
         </video>
       </div>
       <div className="newsletter">
