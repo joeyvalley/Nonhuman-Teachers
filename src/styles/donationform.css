@@ -1,0 +1,16 @@
+.donation-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.donation-form {
+  position: absolute;
+  min-height: 900px;
+  width: 300px;
+  top: calc(50% - 245px);
+  left: calc(50% - 150px);
+  z-index: 50;
+
+}

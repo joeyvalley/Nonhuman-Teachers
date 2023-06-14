@@ -1,0 +1,131 @@
+:root {
+  --fontColor: black;
+  --blend: difference;
+  --avocado: #D2D5BF;
+  --green: #5F733A;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-size: 16px;
+  background-color: var(--avocado);
+}
+
+
+.logo {
+  width: 120px;
+}
+
+.logo-sticky {
+  position: absolute;
+  width: 100%;
+  top: 50vh;
+  transform: translateY(-50%);
+  text-align: center;
+  z-index: 50;
+}
+
+.logo-fixed {
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  top: 24px;
+  left: 0;
+  margin-top: 0;
+  transform: none;
+  z-index: 50;
+}
+
+.main {
+  position: absolute;
+  width: 100vw;
+  height: fit-content;
+  margin-top: 100vh;
+  z-index: 20;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  background-color: var(--avocado);
+  padding: 18px 24px 60px 24px;
+}
+
+.section p {
+  font-family: "Helveesti";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  color: black;
+  margin-bottom: 24px;
+}
+
+.transparent-section {
+  height: 100vh;
+  mix-blend-mode: overlay;
+}
+
+.navbar {
+  position: fixed;
+  z-index: 100;
+  padding: 1.5rem;
+  top: 0;
+}
+
+.navbar ul {
+  list-style-type: none;
+}
+
+.navbar li {
+  font-family: "Helveesti";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  color: var(--green);
+
+}
+
+.navbar li:hover {
+  cursor: pointer;
+  font-style: italic;
+}
+
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--avocado);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+}
+
+.background-video {
+  min-height: 100%;
+}
+
+
+
+@font-face {
+  font-family: "Helveesti";
+  src: url(../../public/assets/helveesti-regular.woff);
+}
+
+@font-face {
+  font-family: "Helveesti";
+  src: url(../../public/assets/helveesti-regular-italic.woff);
+  font-style: italic;
+}
