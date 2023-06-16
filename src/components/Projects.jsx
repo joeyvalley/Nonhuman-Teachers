@@ -3,8 +3,35 @@ export default function Projects() {
     <div className="section" id="projects">
       <div className="section-left">
         <p>Nonhuman Teachers hosts a diversity of projects<span className="footnote-number">5</span>, from multidisciplinary events in collaboration with like-minded institutions to research trips to the tending of our xeric botanical garden in LA.<span className="footnote-number">6</span></p>
-        <div className="events">
-          <h1>Events</h1>
+        <div className="projects">
+          <div className="projects-left">
+            <div className="project">
+              <h2 className="project-title">Events<span className="footnote-number">7</span></h2>
+              <img src="assets/images/events.jpg" alt="Events" />
+            </div>
+            <div className="project">
+              <h2 className="project-title">Plant Orphans<span className="footnote-number"><span className="footnote-number">9</span></span></h2>
+              <img src="assets/images/greenhouse.jpg" alt="Plant Orphans" />
+            </div>
+            <div className="project">
+              <h2 className="project-title">LESCSS<span className="footnote-number">11</span></h2>
+              <img src="assets/images/lescss.jpg" alt="LESCSS" />
+            </div>
+          </div>
+          <div className="projects-right">
+            <div className="project">
+              <h2 className="project-title">Publishing & Bookclub<span className="footnote-number">8</span></h2>
+              <img src="assets/images/earthworms.jpg" alt="Earthworms" />
+            </div>
+            <div className="project">
+              <h2 className="project-title">Travel<span className="footnote-number">10</span></h2>
+              <img src="assets/images/travel.jpg" alt="Travel" />
+            </div>
+            <div className="project">
+              <h2 className="project-title">The Future<span className="footnote-number">12</span></h2>
+              <img src="assets/images/future.jpg" alt="Future" />
+            </div>
+          </div>
         </div>
       </div>
       <div className="section-center"></div>

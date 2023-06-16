@@ -11,7 +11,7 @@ export default function About() {
       <div className="section-center"></div>
       <div className="section-right">
         <div className="footnote">
-          <span className="footnote-text">1.&emsp;A quote by Timothy Morton.<br />*Bring a small paintbrush with you on a hike. Pollinate the wildflowers on your route.*</span>
+          <span className="footnote-text">1.&emsp;A quote by Timothy Morton. Bring a small paintbrush with you on a hike. Pollinate the wildflowers on your route.*</span>
         </div>
         <div className="footnote">
           <span className="footnote-text">2.&emsp;Who of your friends or family are the result of a flower given?<br />* Identify what nonhuman relationships you are embedded in, what energy flows, what cycles, and what ecological communities you are more than just an observer in.</span>
