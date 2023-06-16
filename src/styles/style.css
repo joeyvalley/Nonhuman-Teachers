@@ -1,7 +1,7 @@
 :root {
   --fontColor: black;
   --blend: difference;
-  --avocado: #D2D5BF;
+  --avocado: #D6BA94;
   --green: #5F733A;
 }
 
@@ -17,6 +17,7 @@ body {
   text-rendering: optimizeLegibility;
   font-size: 16px;
   background-color: var(--avocado);
+  overflow-x: hidden;
 }
 
 
@@ -45,18 +46,67 @@ body {
 }
 
 .main {
-  position: absolute;
+  position: relative;
   width: 100vw;
   height: fit-content;
-  margin-top: 100vh;
-  z-index: 20;
 }
 
 .section {
   display: grid;
-  grid-template-columns: 3fr 2fr;
+  width: 100vw;
+  grid-template-columns: 6fr 1fr 1fr;
   background-color: var(--avocado);
-  padding: 18px 24px 60px 24px;
+  padding: 144px 24px 60px 24px;
+  min-height: 100vh;
+}
+
+
+.footnote {
+  width: 100%;
+  min-height: 144px;
+  margin-bottom: 24px;
+}
+
+.footnote-text {
+  font-family: "Helveesti";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: black;
+  transition: color ease-in-out 100ms;
+  padding-bottom: 4px;
+  display: block;
+}
+
+.footnote-text-link {
+  font-family: "Helveesti";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: black;
+  transition: color ease-in-out 100ms;
+  padding-bottom: 4px;
+  display: block;
+}
+
+.footnote-text-link:hover {
+  cursor: pointer;
+  color: white
+}
+
+.footnote-text a {
+  color: black;
+  text-decoration: underline;
+  transition: color ease-in-out 100ms;
+}
+
+.footnote-text a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.footnote img {
+  width: 100%;
 }
 
 .section p {
@@ -69,20 +119,47 @@ body {
   margin-bottom: 24px;
 }
 
+.section ul {
+  list-style-type: none;
+}
+
+.section li {
+  font-family: "Helveesti";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  color: black;
+}
+
+.section li a {
+  color: black;
+  text-decoration: underline;
+  transition: color ease-in-out 100ms;
+}
+
+.section li a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
 .transparent-section {
   height: 100vh;
   mix-blend-mode: overlay;
 }
 
 .navbar {
-  position: fixed;
+  position: sticky;
   z-index: 100;
   padding: 1.5rem;
+  height: 144px;
   top: 0;
+  z-index: 50;
 }
 
 .navbar ul {
   list-style-type: none;
+
 }
 
 .navbar li {
@@ -90,18 +167,25 @@ body {
   font-style: normal;
   font-weight: 400;
   font-size: 1.5rem;
-  line-height: 1.5rem;
-  color: var(--green);
+  color: var(--black);
+  display: inline;
+  padding-right: 1.5rem;
 
 }
 
-.navbar li:hover {
-  cursor: pointer;
-  font-style: italic;
+.navbar li a {
+  color: black;
+  text-decoration: none;
+}
+
+.navbar li a:hover {
+  color: white;
+  text-decoration: none;
+
 }
 
 .video-container {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   height: 100vh;
