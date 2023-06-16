@@ -6,10 +6,10 @@ const Logo = React.forwardRef((props, ref) => {
   return (
     <>
       <div className="logo-sticky" ref={props.ref1}>
-        <img src="assets/nht-logo-text-black.png" alt="Logo" className="logo" />
+        <img src="assets/nht-logo.png" alt="Logo" className="logo" />
       </div>
       <div className="logo-fixed" ref={props.ref2}>
-        <img src="assets/nht-logo-text-black.png" alt="Logo" className="logo" />
+        <img src="assets/nht-logo.png" alt="Logo" className="logo" />
       </div>
     </>
   );

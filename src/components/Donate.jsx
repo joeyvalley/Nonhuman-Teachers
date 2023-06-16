@@ -15,6 +15,21 @@ export default function Donate() {
       </div>
       <div className="section-center"></div>
       <div className="section-right">
+        <div className="footnote">
+          <span className="footnote-text">13.&emsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa fuga saepe minima ducimus nulla minus sequi, consectetur illo odio distinctio quis culpa nemo ab? Suscipit voluptatibus quia ipsa est officiis.</span>
+        </div>
+        <div className="footnote">
+          <span className="footnote-text">14.&emsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa fuga saepe minima ducimus nulla minus sequi, consectetur illo odio distinctio quis culpa nemo ab? Suscipit voluptatibus quia ipsa est officiis.</span>
+        </div>
+        <div className="footnote">
+          <span className="footnote-text">15.&emsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa fuga saepe minima ducimus nulla minus sequi, consectetur illo odio distinctio quis culpa nemo ab? Suscipit voluptatibus quia ipsa est officiis.</span>
+        </div>
+        <div className="footnote">
+          <span className="footnote-text">16.&emsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa fuga saepe minima ducimus nulla minus sequi, consectetur illo odio distinctio quis culpa nemo ab? Suscipit voluptatibus quia ipsa est officiis.</span>
+        </div>
+        <div className="footnote">
+          <span className="footnote-text">17.&emsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa fuga saepe minima ducimus nulla minus sequi, consectetur illo odio distinctio quis culpa nemo ab? Suscipit voluptatibus quia ipsa est officiis.</span>
+        </div>
       </div>
     </div>
   )

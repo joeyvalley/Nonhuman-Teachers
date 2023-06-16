@@ -20,6 +20,89 @@ body {
   overflow-x: hidden;
 }
 
+@font-face {
+  font-family: "Helveesti";
+  src: url(../../public/assets/helveesti-regular.woff);
+}
+
+@font-face {
+  font-family: "Helveesti";
+  src: url(../../public/assets/helveesti-regular-italic.woff);
+  font-style: italic;
+}
+
+.background-video {
+  min-height: 100%;
+}
+
+.contact-left {
+  position: relative;
+  display: inline;
+  float: left;
+  width: 50%;
+  padding-right: 24px;
+}
+
+.contact-right {
+  position: relative;
+  display: inline;
+  float: right;
+}
+
+.footnote {
+  width: 100%;
+  min-height: 144px;
+  margin-bottom: 24px;
+}
+
+.footnote img {
+  width: 100%;
+}
+
+.footnote-number {
+  vertical-align: super;
+  font-size: 0.75rem;
+  line-height: 0;
+}
+
+.footnote-text {
+  font-family: "Helveesti";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: black;
+  transition: color ease-in-out 100ms;
+  padding-bottom: 4px;
+  display: block;
+}
+
+.footnote-text a {
+  color: black;
+  text-decoration: underline;
+  transition: color ease-in-out 100ms;
+}
+
+.footnote-text a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.footnote-text-link {
+  font-family: "Helveesti";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: black;
+  transition: color ease-in-out 100ms;
+  padding-bottom: 4px;
+  display: block;
+}
+
+.footnote-text-link:hover {
+  cursor: pointer;
+  color: white
+}
+
 
 .logo {
   width: 120px;
@@ -49,103 +132,6 @@ body {
   position: relative;
   width: 100vw;
   height: fit-content;
-}
-
-.section {
-  display: grid;
-  width: 100vw;
-  grid-template-columns: 6fr 1fr 1fr;
-  background-color: var(--avocado);
-  padding: 144px 24px 60px 24px;
-  min-height: 100vh;
-}
-
-
-.footnote {
-  width: 100%;
-  min-height: 144px;
-  margin-bottom: 24px;
-}
-
-.footnote-text {
-  font-family: "Helveesti";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 0.8rem;
-  color: black;
-  transition: color ease-in-out 100ms;
-  padding-bottom: 4px;
-  display: block;
-}
-
-.footnote-text-link {
-  font-family: "Helveesti";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 0.8rem;
-  color: black;
-  transition: color ease-in-out 100ms;
-  padding-bottom: 4px;
-  display: block;
-}
-
-.footnote-text-link:hover {
-  cursor: pointer;
-  color: white
-}
-
-.footnote-text a {
-  color: black;
-  text-decoration: underline;
-  transition: color ease-in-out 100ms;
-}
-
-.footnote-text a:hover {
-  color: white;
-  text-decoration: underline;
-}
-
-.footnote img {
-  width: 100%;
-}
-
-.section p {
-  font-family: "Helveesti";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1.5rem;
-  line-height: 1.8rem;
-  color: black;
-  margin-bottom: 24px;
-}
-
-.section ul {
-  list-style-type: none;
-}
-
-.section li {
-  font-family: "Helveesti";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1.5rem;
-  line-height: 1.8rem;
-  color: black;
-}
-
-.section li a {
-  color: black;
-  text-decoration: underline;
-  transition: color ease-in-out 100ms;
-}
-
-.section li a:hover {
-  color: white;
-  text-decoration: underline;
-}
-
-.transparent-section {
-  height: 100vh;
-  mix-blend-mode: overlay;
 }
 
 .navbar {
@@ -184,6 +170,66 @@ body {
 
 }
 
+.section {
+  display: grid;
+  width: 100vw;
+  grid-template-columns: 6fr 1fr 1fr;
+  background-color: var(--avocado);
+  padding: 184px 24px 60px 24px;
+  min-height: 100vh;
+}
+
+.section p {
+  font-family: "Helveesti";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: black;
+  margin-bottom: 24px;
+}
+
+
+.section p.italic {
+  font-style: italic;
+}
+
+.section p a {
+  color: black;
+  text-decoration: underline;
+  transition: color ease-in-out 100ms;
+}
+
+.section p a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+
+.section ul {
+  list-style-type: none;
+}
+
+.section li {
+  font-family: "Helveesti";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  color: black;
+}
+
+.section li a {
+  color: black;
+  text-decoration: underline;
+  transition: color ease-in-out 100ms;
+}
+
+.section li a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
 .video-container {
   position: relative;
   top: 0;
@@ -195,21 +241,4 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 0;
-}
-
-.background-video {
-  min-height: 100%;
-}
-
-
-
-@font-face {
-  font-family: "Helveesti";
-  src: url(../../public/assets/helveesti-regular.woff);
-}
-
-@font-face {
-  font-family: "Helveesti";
-  src: url(../../public/assets/helveesti-regular-italic.woff);
-  font-style: italic;
 }
