@@ -1,16 +1,21 @@
 import { useState } from 'react';
+import { gsap } from 'gsap';
 import Modal from './Modal';
 
 export default function About() {
   const [modalImageUrl, setModalImageUrl] = useState(null);
 
-  const handleOpenModal = (imageUrl) => {
+  function handleOpenModal(imageUrl) {
     setModalImageUrl(imageUrl);
   };
+  function handleCloseModal() {
+    gsap.to('.modal', {
+      opacity: 0, duration: 0.5, onComplete: () => {
+        setModalImageUrl(null);
+      }
+    });
+  }
 
-  const handleCloseModal = () => {
-    setModalImageUrl(null);
-  };
 
   return (
     <>

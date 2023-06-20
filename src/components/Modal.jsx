@@ -2,7 +2,8 @@ import { gsap } from 'gsap';
 import { useEffect } from 'react';
 import "../styles/style.css"
 
-const Modal = ({ imageUrl, onClose }) => {
+export default function Modal({ imageUrl, onClose }) {
+
   useEffect(() => {
     // Animate the modal or perform any other setup logic
     gsap.to('.modal', { opacity: 1, duration: 0.5 });
@@ -20,6 +21,5 @@ const Modal = ({ imageUrl, onClose }) => {
       </div>
     </div>
   );
-};
 
-export default Modal;
+};
