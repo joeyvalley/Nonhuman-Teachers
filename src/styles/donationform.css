@@ -1,16 +1,24 @@
 .donation-container {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  z-index: 100;
 }
 
 .donation-form {
+  font-family: "Helveesti" !important;
+  font-size: 1.75rem !important;
   position: absolute;
   min-height: 900px;
-  width: 300px;
-  top: calc(50% - 245px);
-  left: calc(50% - 150px);
-  z-index: 50;
+  width: 500px;
+  top: calc(50% - 270px);
+  left: calc(50% - 250px);
+}
 
+@font-face {
+  font-family: "Helveesti";
+  src: url(../../public/assets/helveesti-regular.woff);
 }

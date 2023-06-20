@@ -3,7 +3,6 @@ export default function Donate() {
     <div className="section" id="donate">
       <div className="section-left">
         <p>Nonhuman Teachers is a non-profit organization dedicated to lorem ipsum tendic to blatium exerumq uuntia dis re ex entet que idenis et, at mollaborro quame nus, quidus eum, sequi opta voluptibus estia- tur.<span className="footnote-number">13</span> Qui tendic to blatium exerumq uuntia dis re ex.<span className="footnote-number">14</span></p>
-        <div></div>
         <ul>
           <li>Our work is generously supported by:</li>
           <li><a href="https://dimesnyc.com/">Dimes</a><span className="footnote-number">16</span></li>

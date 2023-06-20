@@ -25,7 +25,7 @@ export default function Contact() {
 
       <div className="section-right">
         <div className="footnote">
-          <span className="footnote-text">18.&emsp;Nonhuman Teachers is registered as a non-profit organization. </span>
+          <span className="footnote-text">18.&emsp;Nonhuman Teachers is a registered 501(c)(3) non-profit organization. </span>
         </div>
         <div className="footnote">
           <span className="footnote-text">19.&emsp;Contributions to Nonhuman Teachers are tax-deductible to the extent permitted by law. Nonhuman Teachers' tax identification number is 88-4314173.<br />&nbsp;&nbsp;&nbsp;&emsp;You may also mail a tax-deductible check to: 3209 Fletcher Dr, Los Angeles, CA 90065<br />&nbsp;&nbsp;&nbsp;&emsp;Checks with donations of $250 or greater will be sent a tax receipt from our fiscal sponsor National Young Farmers Coalition. Donations of less than $250 will not be sent a tax receipt, as a copy of the check is acceptable as proof by the IRS.</span>
