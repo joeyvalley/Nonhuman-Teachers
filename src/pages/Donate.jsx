@@ -4,7 +4,6 @@ export default function Donate() {
   return (
     <>
       <DonationForm></DonationForm>
-      <Video></Video>
     </>
   );
 }
