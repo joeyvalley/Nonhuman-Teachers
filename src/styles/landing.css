@@ -146,12 +146,12 @@ body {
 
 @font-face {
   font-family: "Helveesti Regular";
-  src: url(../public/assets/helveesti-regular.woff);
+  src: url(../../public/assets/helveesti-regular.woff);
 }
 
 @font-face {
   font-family: "Helveesti Regular Italic";
-  src: url(../public/assets/helveesti-regular-italic.woff);
+  src: url(../../public/assets/helveesti-regular-italic.woff);
 }
 
 @media screen and (max-width: 849px) {
