@@ -1,0 +1,236 @@
+donation-widget.tabs .tabs-content {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background: #D6BA94 !important;
+}
+
+.google-pay {
+  background: #D6BA94 !important;
+  border: 0px solid !important;
+  border-radius: 0px !important;
+  box-shadow: none !important;
+  color: black !important;
+}
+
+.payment-method {
+  background: #D6BA94 !important;
+  border: 1px solid black;
+  border-radius: 0px !important;
+  box-shadow: none !important;
+  color: black !important;
+}
+
+.tabs-header .arrow.l.active i {
+  color: black !important;
+}
+
+.box-input .suggested-amount .suggested-amount-box .amount .mc_input .box-item .box-label:focus {
+  box-shadow: none !important;
+  background: red !important;
+}
+
+.tabs-content {
+  font-family: Helvetica !important;
+}
+
+.display-amount {
+  font-family: Helvetica !important;
+  font-weight: normal !important;
+  font-size: 16px !important;
+  color: black !important;
+}
+
+input {
+  background: #D6BA94 !important;
+
+}
+
+input:focus {
+  background: #D6BA94 !important;
+  font-family: Helvetica !important;
+  font-weight: normal !important;
+  font-size: 16px !important;
+
+
+}
+
+.widget-container {
+  box-shadow: none !important;
+}
+
+.material-icons {
+  color: black !important;
+  position: relative;
+}
+
+.lock-outline {
+  display: none !important;
+}
+
+.donation-form {
+  background: #D6BA94 !important;
+  box-shadow: none !important;
+  border: 1px solid black !important;
+  border-radius: 0px;
+
+}
+
+.tabs-header {
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-radius: 0px;
+  background: #D6BA94 !important;
+}
+
+.tabs-footer {
+  border-radius: 0px;
+  background: #D6BA94 !important;
+}
+
+.plan_duration {
+  border: 1px solid black;
+  border-radius: 0px !important;
+}
+
+.lock-outline {
+  position: relative !important;
+  left: 220px !important;
+}
+
+.next {
+  font-family: Helvetica !important;
+  font-weight: normal !important;
+  font-size: 16px !important;
+}
+
+.dw-btn {
+  border: 1px solid black !important;
+  border-radius: 0px !important;
+  background-color: #D6BA94 !important;
+  color: black !important;
+  width: 79.6% !important;
+  text-align: center;
+  padding: 0 !important;
+  position: relative !important;
+  left: -9px;
+  transition: color background-color ease-in-out 200ms;
+}
+
+.dw-btn:hover {
+  background-color: black !important;
+  color: white !important;
+}
+
+input[type="text"] {
+  font-family: Arial, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: normal !important;
+  color: black !important;
+}
+
+.custom-amount-input {
+  font-family: Helvetica !important;
+  font-weight: normal !important;
+  font-size: 16px !important;
+  width: 97% !important;
+  border: 0px solid black !important;
+  border-radius: 0px !important;
+  box-shadow: none !important;
+  text-align: center;
+  padding-left: 31px !important;
+}
+
+.suggested-amount {
+  font-family: Helvetica !important;
+  font-weight: normal !important;
+  font-size: 16px !important;
+  width: 97% !important;
+  border: 0px solid black !important;
+  border-radius: 0px !important;
+  box-shadow: none !important;
+  text-align: center;
+}
+
+.copyright {
+  opacity: 0;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.box-label {
+  background: #D6BA94;
+  border-radius: 0px !important;
+  border: 0px solid black !important;
+  font-family: Helvetica !important;
+  font-weight: normal !important;
+  font-size: 16px !important;
+}
+
+.box-currency {
+  font-family: Helvetica !important;
+  font-family: Helvetica !important;
+  font-weight: normal !important;
+  font-size: 16px !important;
+  top: 2px !important;
+}
+
+.desc-sharing {
+  display: none !important;
+}
+
+.desc {
+  font-family: Helvetica !important;
+  font-weight: normal !important;
+  font-size: 16px !important;
+  color: black !important;
+  text-align: center;
+}
+
+.donorbox-custom-amount {
+  font-family: Helvetica !important;
+  font-weight: normal !important;
+  font-size: 16px !important;
+}
+
+.custom-amount-text {
+  font-family: Helvetica !important;
+  font-weight: normal !important;
+  font-size: 16px !important;
+}
+
+.cta-message {
+  font-family: Helvetica !important;
+  font-weight: normal !important;
+  font-size: 16px !important;
+}
+
+.plan_duration {
+  font-family: Helvetica !important;
+  font-weight: normal !important;
+  font-size: 16px !important;
+  border: 0px !important;
+  box-shadow: none !important;
+}
+
+.pd_radio {
+  border: 0px solid !important;
+  box-shadow: none !important;
+}
+
+.pd_radio:focus {
+  box-shadow: none !important;
+}
+
+.tooltip-wrapper-span {
+  font-family: Helvetica !important;
+  font-weight: normal !important;
+  font-size: 16px !important;
+}
+
+.recurring {
+  display: none !important;
+}
