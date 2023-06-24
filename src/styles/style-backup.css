@@ -142,10 +142,10 @@ body {
 .logo-sticky {
   position: absolute;
   width: 100%;
-  top: calc(50dvh - 60px);
+  top: 50vh;
+  transform: translateY(-50%);
   text-align: center;
   z-index: 50;
-  background-color: red;
 }
 
 .logo-fixed {

@@ -54,7 +54,6 @@ export default function Home() {
       <Logo ref1={logoRef} ref2={fixedLogoRef} />
       <Video />
       <Sections />
-      <Video />
     </>
   );
 }
