@@ -12,9 +12,9 @@
 }
 
 body {
-  -webkit-font-smoothing: antialiased;
+  /* -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility; */
   font-size: 16px;
   background-color: var(--avocado);
   overflow-x: hidden;
@@ -32,29 +32,26 @@ body {
 }
 
 .background-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  min-height: 100%;
 }
 
 .contact-left {
+  position: relative;
+  display: inline;
+  float: left;
+  width: 50%;
   padding-right: 24px;
 }
 
-.contact-left p {
-  text-align: left !important;
-}
-
 .contact-right {
-  text-align: left !important;
+  position: relative;
+  display: inline;
+  float: right;
 }
 
 .project img {
   width: 100%;
-  margin-bottom: 1rem;
+  padding-bottom: 16px;
 }
 
 .project img:hover {
@@ -70,70 +67,25 @@ body {
 }
 
 .projects-left {
-  padding-right: 0.5rem;
+  padding-right: 16px;
 }
 
 .projects-right {
-  padding-left: 0.5rem;
+  padding-left: 16px;
 }
 
 .project-title {
-  text-align: center !important;
+  text-align: center;
   font-family: "Helveesti";
-  font-size: 1rem;
-  line-height: 0.5rem !important;
-  /* margin-bottom: 1rem; */
+  font-size: 1.75rem;
   color: black;
   transition: color ease-in-out 100ms;
-}
-
-.event {
-  margin-bottom: 1rem;
-}
-
-.event-link {
-  padding: 0.25rem;
-  border: 1px solid black;
-  text-align: center;
-  transition: all ease-in-out 200ms;
-  margin-top: 0.25rem;
-}
-
-.event-link:hover {
-  background: black;
-  color: white;
-  cursor: pointer;
-}
-
-.event a {
-  text-decoration: none;
-  color: black;
-}
-
-.event img {
-  width: 100%;
-}
-
-.event span {
-  font-family: "Helveesti";
-  font-size: 0.7rem;
-  display: block;
-  margin-bottom: 0rem;
-}
-
-
-.footnotes {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 0.5rem;
+  padding-bottom: 16px;
 }
 
 .footnote {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  height: auto;
+  width: 100%;
+  margin-bottom: 1.75rem;
 }
 
 .footnote img {
@@ -142,17 +94,18 @@ body {
 
 .footnote-number {
   vertical-align: super;
-  font-size: 0.7rem;
+  font-size: 0.85rem;
   line-height: 0;
 }
 
 .footnote-text {
   font-family: "Helveesti";
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   color: black;
   transition: color ease-in-out 100ms;
+  padding-bottom: 4px;
   display: block;
-  text-align: left;
+  text-align: justify;
 }
 
 .footnote-text a {
@@ -168,12 +121,12 @@ body {
 
 .footnote-text-link {
   font-family: "Helveesti";
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   color: black;
   transition: color ease-in-out 100ms;
   padding-bottom: 4px;
   display: block;
-  text-align: left;
+  text-align: justify;
 }
 
 .footnote-text-link:hover {
@@ -189,21 +142,21 @@ body {
 .logo-sticky {
   position: absolute;
   width: 100%;
-  top: calc(50dvh - 60px);
+  top: 50vh;
+  transform: translateY(-50%);
   text-align: center;
-  z-index: 100;
-  mix-blend-mode: normal;
+  z-index: 50;
 }
 
 .logo-fixed {
   position: fixed;
   width: 100%;
   text-align: center;
+  top: 1.75rem;
   left: 0;
   margin-top: 0;
   transform: none;
   z-index: 50;
-  mix-blend-mode: overlay;
 }
 
 .main {
@@ -212,129 +165,57 @@ body {
   height: fit-content;
 }
 
-.masthead {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.5rem;
-}
-
-.masthead p {
-  font-size: 0.7rem !important;
-  text-align: left !important;
-
-.modal {
-  height: 100vh;
-  width: 100vw;
-  background: red;
-  z-index: 100;
-  position: fixed;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  opacity: 0;
-}
-
-.modal-close {
-  position: absolute;
-  z-index: 110;
-  top: 1.75rem;
-  right: 1.75rem;
-  font-family: "Helveesti";
-  font-size: 1.79rem;
-  color: var(--black);
-  transition: color ease-in-out 100ms;
-}
-
-.modal-close:hover {
-  cursor: pointer;
-  color: white;
-}
-
-.modal-content {
-  width: 100%;
-  height: 100%;
-  background: green;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.modal-content img {
-  min-height: 100%;
-  min-width: 100%;
-}
-
 .navbar {
   position: sticky;
   z-index: 100;
-  padding: 0.75rem;
+  padding: 1.75rem;
+  height: 9rem;
   top: 0;
   z-index: 50;
-  background-color: var(--avocado);
-  display: flex;
-  justify-content: space-between;
-  width: 100vw;
-  gap: 0.5rem;
-  border-bottom: 1px solid black;
-
-
-.navbar-item {
-  font-family: "Helveesti";
-  font-size: 1rem;
-  color: var(--black);
-  display: inline;
-  width: fit-content;
 }
 
-.navbar-item a {
+.navbar ul {
+  list-style-type: none;
+
+}
+
+.navbar li {
+  font-family: "Helveesti";
+  font-size: 1.79rem;
+  color: var(--black);
+  display: inline;
+  padding-right: 1.75rem;
+
+}
+
+.navbar li a {
   color: black;
   text-decoration: none;
 }
 
-.navbar-item a:hover {
+.navbar li a:hover {
   color: white;
   text-decoration: none;
-
 
 }
 
 .section {
   display: grid;
   width: 100vw;
-  grid-template-columns: 1fr;
+  grid-template-columns: 4fr 1fr 1fr;
   background-color: var(--avocado);
-  padding: 3.95rem 0.7rem 0rem 0.7rem;
-  min-height: 100dvh;
-}
-
-.footer {
-  position: relative;
-  padding: 1.5rem 0rem 0.5rem 0rem;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  background-color: var(--avocado);
-}
-
-.footer p {
-  font-family: "Helveesti";
-  font-size: 0.7rem !important;
-
-}
-
-.selected {
-  color: white !important;
+  padding: 11.5rem 1.75rem 3.75rem 1.75rem;
+  min-height: 100vh;
 }
 
 .section p {
   font-family: "Helveesti";
   font-style: normal;
   font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.3rem;
+  font-size: 1.75rem;
+  line-height: 2rem;
   color: black;
-  margin-bottom: 1rem;
-  text-align: justify;
+  margin-bottom: 1.75rem;
 }
 
 
@@ -356,15 +237,14 @@ body {
 
 .section ul {
   list-style-type: none;
-  margin-bottom: 1rem;
 }
 
 .section li {
   font-family: "Helveesti";
   font-style: normal;
   font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.3rem;
+  font-size: 1.75rem;
+  line-height: 1.8rem;
   color: black;
 }
 
@@ -378,12 +258,6 @@ body {
   color: white;
   text-decoration: underline;
 }
-
-.section-left-contact {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
 
 .section-right {
   padding-left: 1.5rem;
@@ -400,5 +274,4 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 0;
-  overflow: hidden;
 }

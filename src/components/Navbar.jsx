@@ -1,18 +1,49 @@
-import React from "react";
+import { useState, forwardRef, useEffect } from "react";
 import "../styles/style.css";
 
-export default function Navbar() {
+const Navbar = forwardRef((props, ref) => {
+  const [selectedLink, setSelectedLink] = useState();
+
+  useEffect(() => {
+    setSelectedLink(props.currentPage)
+  }, [props.currentPage])
+
+  useEffect(() => {
+    setSelectedLink("about")
+  }, [])
+
+
+  function handleClick(link) {
+    setSelectedLink(link);
+  }
 
   return (
     <>
       <div className="navbar">
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#donate">Donate</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+        <div className="navbar-item">
+          <a href="#about" className={`navbar-item ${selectedLink === "about" ? "selected" : ""}`}
+            onClick={() => handleClick("about")}>About</a>
+        </div>
+        <div className="navbar-item">
+          <a href="#events" className={`${selectedLink === "events" ? "selected" : ""}`}
+            onClick={() => handleClick("events")}>Events</a>
+        </div>
+        <div className="navbar-item">
+          <a href="#projects" className={`navbar-item ${selectedLink === "projects" ? "selected" : ""}`}
+            onClick={() => handleClick("projects")}>Projects</a>
+        </div>
+        <div className="navbar-item">
+          <a href="#donate" className={`navbar-item ${selectedLink === "donate" ? "selected" : ""}`}
+            onClick={() => handleClick("donate")}>Donate</a>
+        </div>
+
+        <div className="navbar-item">
+          <a href="#contact" className={`navbar-item ${selectedLink === "contact" ? "selected" : ""}`}
+            onClick={() => handleClick("contact")}>Contact</a>
+        </div>
       </div>
     </>
   );
-}
+});
+
+export default Navbar;

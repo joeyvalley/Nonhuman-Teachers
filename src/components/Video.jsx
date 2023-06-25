@@ -1,6 +1,4 @@
 import "../styles/style.css"
-import axios from 'axios';
-import { useEffect, useRef, useState } from "react"
 
 export default function Video() {
 
@@ -16,7 +14,6 @@ export default function Video() {
     { title: "Polychaete worm of the Syllidae family at 20x and 40x magnification. Video by Rafael Martín-Ledo.", link: "https://i.imgur.com/R4UIzum.mp4" }
   ]
   const startingVideo = randomVideo();
-  const description = startingVideo.title;
 
   function randomVideo() {
     return videos[Math.floor(Math.random() * videos.length)]
@@ -24,17 +21,7 @@ export default function Video() {
 
   return (
     <div className="video-container">
-      <div className="video-footnote-container">
-        <div className="section-left">
-        </div>
-        <div className="section-center"></div>
-        <div className="section-right">
-          <div className="video-footnote">
-            <p>{description}</p>
-          </div>
-        </div>
-      </div>
-      <video className="background-video" autoPlay muted playsInline >
+      <video className="background-video" autoPlay muted playsInline loop>
         <source src={startingVideo.link} type="video/mp4" />
       </video>
     </div>

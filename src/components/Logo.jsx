@@ -1,18 +1,11 @@
-import React from "react";
 import "../styles/style.css"
 
-const Logo = React.forwardRef((props, ref) => {
-  // Component logic and JSX here
+export default function Logo() {
   return (
     <>
-      <div className="logo-sticky" ref={props.ref1}>
-        <img src="assets/nht-logo.png" alt="Logo" className="logo" />
-      </div>
-      <div className="logo-fixed" ref={props.ref2}>
-        <img src="assets/nht-logo.png" alt="Logo" className="logo" />
+      <div className="logo-sticky">
+        <a href="#about"><img src="assets/nht-logo.png" alt="Logo" className="logo" /></a>
       </div>
     </>
   );
-});
-
-export default Logo;
+}
