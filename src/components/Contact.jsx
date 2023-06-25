@@ -9,7 +9,7 @@ const Contact = React.forwardRef((props, ref) => {
         <div className="copy">
           <p>Nonhuman Teachers<span className="footnote-number">1-8</span><br />3209 Fletcher Drive<br />Los Angeles, CA 90065</p>
           <p>Our facilities are open during events, and at all other times by appointment only.</p>
-          <p>For any inquiries regarding collaborations, partnerships, and donations, email us at: <a href="mailto:info@nonhumanteachers.org">info@nonhumanteachers.org</a></p>
+          <p>For any inquiries regarding collaborations, partnerships, and donations,<span className="footnote-number">19</span> email us at: <a href="mailto:info@nonhumanteachers.org">info@nonhumanteachers.org</a></p>
           <p>Follow us: <a href="https://instagram.com/nonhumanteachers">@nonhumanteachers</a></p>
           <Newsletter />
           <p>--</p>
@@ -42,7 +42,6 @@ const Contact = React.forwardRef((props, ref) => {
         </div>
       </div>
       <Footer />
-
     </>
   )
 });

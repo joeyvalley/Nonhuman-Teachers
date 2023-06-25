@@ -4,7 +4,9 @@ body {
 }
 
 .donation-container {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -13,6 +15,8 @@ body {
 }
 
 .donation-form {
+  font-family: "Helveesti" !important;
+  font-size: 1.75rem !important;
   position: absolute;
   min-height: 900px;
   width: 300px;

@@ -5,7 +5,7 @@ export default function DonationForm() {
     <>
       <script src="https://donorbox.org/widget.js" paypalExpress="false"></script>
       <div className="donation-container">
-        <iframe className="donation-form" title="Donate" src="https://donorbox.org/embed/nonhuman-teachers-website" name="donorbox" allowpaymentrequest="allowpaymentrequest" seamless="seamless" frameborder="0" ></iframe>
+        <iframe title="Donation Form" className="donation-form" src="https://donorbox.org/embed/nonhuman-teachers-website?default_interval=o&enable_auto_scroll=false" name="donorbox" allowpaymentrequest="allowpaymentrequest" seamless="seamless" frameborder="0" ></iframe>
       </div>
     </>
   );
