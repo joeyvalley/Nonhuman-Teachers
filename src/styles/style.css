@@ -12,9 +12,9 @@
 }
 
 body {
-  /* -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility; */
+  text-rendering: optimizeLegibility;
   font-size: 16px;
   background-color: var(--avocado);
   overflow-x: hidden;
@@ -32,7 +32,12 @@ body {
 }
 
 .background-video {
-  min-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .contact-left {
@@ -51,7 +56,7 @@ body {
 
 .project img {
   width: 100%;
-  padding-bottom: 16px;
+  margin-bottom: 1rem;
 }
 
 .project img:hover {
@@ -67,25 +72,70 @@ body {
 }
 
 .projects-left {
-  padding-right: 16px;
+  padding-right: 0.5rem;
 }
 
 .projects-right {
-  padding-left: 16px;
+  padding-left: 0.5rem;
 }
 
 .project-title {
-  text-align: center;
+  text-align: center !important;
   font-family: "Helveesti";
-  font-size: 1.75rem;
+  font-size: 1rem;
+  line-height: 0.5rem !important;
+  /* margin-bottom: 1rem; */
   color: black;
   transition: color ease-in-out 100ms;
-  padding-bottom: 16px;
+}
+
+.event {
+  margin-bottom: 1rem;
+}
+
+.event-link {
+  padding: 0.25rem;
+  border: 1px solid black;
+  text-align: center;
+  transition: all ease-in-out 200ms;
+  margin-top: 0.25rem;
+}
+
+.event-link:hover {
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+.event a {
+  text-decoration: none;
+  color: black;
+}
+
+.event img {
+  width: 100%;
+}
+
+.event span {
+  font-family: "Helveesti";
+  font-size: 0.7rem;
+  display: block;
+  margin-bottom: 0rem;
+}
+
+
+.footnotes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0.5rem;
 }
 
 .footnote {
-  width: 100%;
-  margin-bottom: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  height: auto;
 }
 
 .footnote img {
@@ -94,18 +144,17 @@ body {
 
 .footnote-number {
   vertical-align: super;
-  font-size: 0.85rem;
+  font-size: 0.7rem;
   line-height: 0;
 }
 
 .footnote-text {
   font-family: "Helveesti";
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   color: black;
   transition: color ease-in-out 100ms;
-  padding-bottom: 4px;
   display: block;
-  text-align: justify;
+  text-align: left;
 }
 
 .footnote-text a {
@@ -121,7 +170,7 @@ body {
 
 .footnote-text-link {
   font-family: "Helveesti";
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   color: black;
   transition: color ease-in-out 100ms;
   padding-bottom: 4px;
@@ -144,19 +193,19 @@ body {
   width: 100%;
   top: calc(50dvh - 60px);
   text-align: center;
-  z-index: 50;
-  background-color: red;
+  z-index: 100;
+  mix-blend-mode: normal;
 }
 
 .logo-fixed {
   position: fixed;
   width: 100%;
   text-align: center;
-  top: 1.75rem;
   left: 0;
   margin-top: 0;
   transform: none;
   z-index: 50;
+  mix-blend-mode: overlay;
 }
 
 .main {
@@ -165,35 +214,46 @@ body {
   height: fit-content;
 }
 
+.masthead {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.masthead p {
+  font-size: 0.7rem !important;
+  text-align: left !important;
+}
+
 .navbar {
   position: sticky;
   z-index: 100;
-  padding: 1.75rem;
-  height: 9rem;
+  padding: 0.75rem;
   top: 0;
   z-index: 50;
+  background-color: var(--avocado);
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  gap: 0.5rem;
+  border-bottom: 1px solid black;
+
 }
 
-.navbar ul {
-  list-style-type: none;
-
-}
-
-.navbar li {
+.navbar-item {
   font-family: "Helveesti";
-  font-size: 1.79rem;
+  font-size: 1rem;
   color: var(--black);
   display: inline;
-  padding-right: 1.75rem;
-
+  width: fit-content;
 }
 
-.navbar li a {
+.navbar-item a {
   color: black;
   text-decoration: none;
 }
 
-.navbar li a:hover {
+.navbar-item a:hover {
   color: white;
   text-decoration: none;
 
@@ -202,20 +262,40 @@ body {
 .section {
   display: grid;
   width: 100vw;
-  grid-template-columns: 4fr 1fr 1fr;
+  grid-template-columns: 1fr;
   background-color: var(--avocado);
-  padding: 11.5rem 1.75rem 3.75rem 1.75rem;
-  min-height: 100vh;
+  padding: 3.95rem 0.7rem 0rem 0.7rem;
+  min-height: 100dvh;
+}
+
+.footer {
+  position: relative;
+  padding: 1.5rem 0rem 0.5rem 0rem;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background-color: var(--avocado);
+}
+
+.footer p {
+  font-family: "Helveesti";
+  font-size: 0.7rem !important;
+
+}
+
+.selected {
+  color: white !important;
 }
 
 .section p {
   font-family: "Helveesti";
   font-style: normal;
   font-weight: 400;
-  font-size: 1.75rem;
-  line-height: 2rem;
+  font-size: 1rem;
+  line-height: 1.3rem;
   color: black;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1rem;
+  text-align: justify;
 }
 
 
@@ -237,14 +317,15 @@ body {
 
 .section ul {
   list-style-type: none;
+  margin-bottom: 1rem;
 }
 
 .section li {
   font-family: "Helveesti";
   font-style: normal;
   font-weight: 400;
-  font-size: 1.75rem;
-  line-height: 1.8rem;
+  font-size: 1rem;
+  line-height: 1.3rem;
   color: black;
 }
 
@@ -274,4 +355,5 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 0;
+  overflow: hidden;
 }
