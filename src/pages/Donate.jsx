@@ -1,8 +1,13 @@
-import DonationForm from "../components/DonationForm";
-export default function Donate() {
+import "../styles/style.css";
+import Navbar from "../components/Navbar";
+import Donate from "../components/Donate";
+
+export default function DonatePage() {
+
   return (
-    <>
-      <DonationForm></DonationForm>
-    </>
+    <div className="main">
+      <Navbar currentPage="donate" />
+      <Donate name="donate" />
+    </div >
   );
 }

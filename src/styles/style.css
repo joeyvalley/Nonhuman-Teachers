@@ -3,6 +3,8 @@
   --blend: difference;
   --avocado: #D6BA94;
   --green: #5F733A;
+  --main-font: 0.9rem;
+  --footnote: 0.65rem;
 }
 
 * {
@@ -125,7 +127,8 @@ body {
 .footnotes {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 0.5rem;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
 }
 
 .footnote {
@@ -142,17 +145,17 @@ body {
 
 .footnote-number {
   vertical-align: super;
-  font-size: 0.7rem;
+  font-size: var(--footnote);
   line-height: 0;
 }
 
 .footnote-text {
   font-family: "Helveesti";
-  font-size: 0.7rem;
+  font-size: var(--footnote);
   color: black;
   transition: color ease-in-out 100ms;
   display: block;
-  text-align: left;
+  text-align: justify;
 }
 
 .footnote-text a {
@@ -168,7 +171,7 @@ body {
 
 .footnote-text-link {
   font-family: "Helveesti";
-  font-size: 0.7rem;
+  font-size: var(--footnote);
   color: black;
   transition: color ease-in-out 100ms;
   padding-bottom: 4px;
@@ -282,7 +285,7 @@ body {
 
 .navbar-item {
   font-family: "Helveesti";
-  font-size: 1rem;
+  font-size: var(--main-font);
   color: var(--black);
   display: inline;
   width: fit-content;
@@ -305,8 +308,8 @@ body {
   width: 100vw;
   grid-template-columns: 1fr;
   background-color: var(--avocado);
-  padding: 3.95rem 0.7rem 0rem 0.7rem;
-  min-height: 100dvh;
+  padding: 0.75rem 0.7rem 0rem 0.7rem;
+  min-height: calc(100dvh - 93px);
 }
 
 .footer {
@@ -320,8 +323,18 @@ body {
 
 .footer p {
   font-family: "Helveesti";
-  font-size: 0.7rem !important;
+  font-size: var(--footnote) !important;
+}
 
+.footer p a {
+  text-decoration: none;
+  color: black;
+}
+
+.footer p a:hover {
+  text-decoration: none;
+  color: white;
+  transition: color ease-in-out 200ms;
 }
 
 .selected {
@@ -332,7 +345,7 @@ body {
   font-family: "Helveesti";
   font-style: normal;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: var(--main-font);
   line-height: 1.3rem;
   color: black;
   margin-bottom: 1rem;

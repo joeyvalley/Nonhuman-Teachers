@@ -1,16 +1,16 @@
-import { useState, forwardRef, useEffect } from "react";
+import { forwardRef, useState, useEffect } from "react";
 import "../styles/style.css";
 
 const Navbar = forwardRef((props, ref) => {
   const [selectedLink, setSelectedLink] = useState();
 
-  useEffect(() => {
-    setSelectedLink(props.currentPage)
-  }, [props.currentPage])
+
 
   useEffect(() => {
-    setSelectedLink("about")
-  }, [])
+    console.log(props.currentPage);
+    setSelectedLink(props.currentPage)
+  }, [props])
+
 
 
   function handleClick(link) {
@@ -21,24 +21,20 @@ const Navbar = forwardRef((props, ref) => {
     <>
       <div className="navbar">
         <div className="navbar-item">
-          <a href="#about" className={`navbar-item ${selectedLink === "about" ? "selected" : ""}`}
+          <a href="/about" className={`navbar-item ${selectedLink === "about" ? "selected" : ""}`}
             onClick={() => handleClick("about")}>About</a>
         </div>
         <div className="navbar-item">
-          <a href="#events" className={`${selectedLink === "events" ? "selected" : ""}`}
-            onClick={() => handleClick("events")}>Events</a>
+          <a href="/calendar" className={`navbar-item ${selectedLink === "calendar" ? "selected" : ""}`}
+            onClick={() => handleClick("calendar")}>Calendar</a>
         </div>
         <div className="navbar-item">
-          <a href="#projects" className={`navbar-item ${selectedLink === "projects" ? "selected" : ""}`}
-            onClick={() => handleClick("projects")}>Projects</a>
-        </div>
-        <div className="navbar-item">
-          <a href="#donate" className={`navbar-item ${selectedLink === "donate" ? "selected" : ""}`}
+          <a href="/donate" className={`navbar-item ${selectedLink === "donate" ? "selected" : ""}`}
             onClick={() => handleClick("donate")}>Donate</a>
         </div>
 
         <div className="navbar-item">
-          <a href="#contact" className={`navbar-item ${selectedLink === "contact" ? "selected" : ""}`}
+          <a href="/contact" className={`navbar-item ${selectedLink === "contact" ? "selected" : ""}`}
             onClick={() => handleClick("contact")}>Contact</a>
         </div>
       </div>

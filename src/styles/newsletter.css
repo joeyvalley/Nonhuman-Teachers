@@ -13,8 +13,8 @@
   font-family: "Helveesti";
   font-style: normal;
   font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.3rem;
+  font-size: var(--main-font);
+  line-height: 1rem;
   color: black;
   background: none;
   border: none;
@@ -52,7 +52,7 @@
   font-family: "Helveesti";
   font-style: normal;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: var(--main-font);
   /* line-height: 1.3rem; */
   padding: 0.25rem;
   color: black;

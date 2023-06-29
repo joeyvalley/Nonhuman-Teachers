@@ -2,10 +2,10 @@ import Footer from "./Footer"
 import Newsletter from "./Newsletter"
 import React from "react";
 
-const Contact = React.forwardRef((props, ref) => {
+const Contact = () => {
   return (
     <>
-      <div className="section" id="contact" ref={ref}>
+      <div className="section" id="contact">
         <div className="copy">
           <p>Nonhuman Teachers<span className="footnote-number">1-8</span><br />3209 Fletcher Drive<br />Los Angeles, CA 90065</p>
           <p>Our facilities are open during events, and at all other times by appointment only.</p>
@@ -44,6 +44,6 @@ const Contact = React.forwardRef((props, ref) => {
       <Footer />
     </>
   )
-});
+};
 
 export default Contact;

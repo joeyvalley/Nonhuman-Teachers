@@ -1,10 +1,11 @@
-import { forwardRef, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import authenticate from "../api/getEvents"
+import Footer from "./Footer";
 
-const Events = forwardRef((props, ref) => {
-
+const Events = () => {
   const [upcomingEvents, setUpcomingEvents] = useState();
   const [pastEvents, setPastEvents] = useState();
+
   useEffect(() => {
     const workAround = async () => {
       const eventsData = await authenticate();
@@ -18,8 +19,7 @@ const Events = forwardRef((props, ref) => {
 
   return (
     <>
-      <div ref={ref} id="events"></div>
-      <div className="section" >
+      <div className="section" id="calendar">
         <div className="copy">
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe corporis corrupti doloremque! Suscipit optio architecto libero repellat. Corrupti impedit, cum rem hic maxime commodi est necessitatibus, reprehenderit iste aperiam cumque.</p>
           <p>Upcoming<span className="footnote-number">1</span></p>
@@ -51,8 +51,9 @@ const Events = forwardRef((props, ref) => {
           </div>
         </div>
       </div >
+      <Footer />
     </>
   )
-});
+};
 
 export default Events;
