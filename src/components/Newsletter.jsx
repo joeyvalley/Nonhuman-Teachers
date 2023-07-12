@@ -13,16 +13,13 @@ export default function Newsletter() {
 
       if (response.status === 200) {
         setEmail("Thank you for subscribing!")
-        // Handle successful subscription, e.g., show a message to the user
       } else {
         setEmail("An error occurred, please try again.")
         console.log('An error occurred:', response);
-        // Handle the error, e.g., show an error message to the user
       }
     } catch (error) {
       setEmail("An error occurred, please try again.")
       console.log('An error occurred:', error);
-      // Handle the error, e.g., show an error message to the user
     }
   }
 

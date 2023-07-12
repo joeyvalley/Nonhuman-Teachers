@@ -7,7 +7,6 @@ const Navbar = forwardRef((props, ref) => {
 
 
   useEffect(() => {
-    console.log(props.currentPage);
     setSelectedLink(props.currentPage)
   }, [props])
 
@@ -37,6 +36,9 @@ const Navbar = forwardRef((props, ref) => {
           <a href="/contact" className={`navbar-item ${selectedLink === "contact" ? "selected" : ""}`}
             onClick={() => handleClick("contact")}>Contact</a>
         </div>
+      </div>
+      <div className="bug">
+        <img src="assets/nht-logo.png" alt="NHT Logo" />
       </div>
     </>
   );

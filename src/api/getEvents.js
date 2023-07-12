@@ -29,17 +29,16 @@ export default async function authenticate() {
 
     events.forEach((event) => {
       if (event.status === "live") {
-        // console.log(event);
         const date = new Date(event.start.local);
         const formattedDate = date.toLocaleString('en-US', dateOptions);
         const time = date.toLocaleString('en-US', timeOptions);
-        upcoming.push({ title: event.name.text, url: event.url, image: event.logo.url, date: formattedDate, time: time })
+        upcoming.push({ title: event.name.text, url: event.url, image: event.logo.original.url, date: formattedDate, time: time })
       }
-      if (event.status === "completed" && past.length < 5) {
+      if (event.status === "completed") {
         const date = new Date(event.start.local);
         const formattedDate = date.toLocaleString('en-US', dateOptions);
         const time = date.toLocaleString('en-US', timeOptions);
-        past.push({ title: event.name.text, url: event.url, image: event.logo.url, date: formattedDate, time: time })
+        past.push({ title: event.name.text, url: event.url, image: event.logo.original.url, date: formattedDate, time: time })
       }
     })
     return [upcoming, past];

@@ -12,29 +12,29 @@ const About = () => {
           <div className="projects">
             <div className="projects-left">
               <div className="project">
-                <p className="project-title">Events<span className="footnote-number">7</span></p>
+                <p className="project-title"><a href="/projects/events">Events</a></p>
                 <img src="assets/images/events.jpg" alt="Events" />
               </div>
               <div className="project">
-                <p className="project-title">Plant Orphans<span className="footnote-number">9</span></p>
+                <p className="project-title"><a href="/projects/plant-orphans">Plant Orphans</a></p>
                 <img src="assets/images/greenhouse.jpg" alt="Plant Orphans" />
               </div>
               <div className="project">
-                <p className="project-title">LESCSS<span className="footnote-number">11</span></p>
+                <p className="project-title"><a href="/projects/LESCSS">LESCSS</a></p>
                 <img src="assets/images/lescss.jpg" alt="LESCSS" />
               </div>
             </div>
             <div className="projects-right">
               <div className="project">
-                <p className="project-title">Earthworms<span className="footnote-number">8</span></p>
+                <p className="project-title"><a href="/projects/earthworms">Earthworms</a></p>
                 <img src="assets/images/earthworms.jpg" alt="Earthworms" />
               </div>
               <div className="project">
-                <p className="project-title">Travel<span className="footnote-number">10</span></p>
+                <p className="project-title"><a href="/projects/travel">Travel</a></p>
                 <img src="assets/images/travel.jpg" alt="Travel" />
               </div>
               <div className="project">
-                <p className="project-title">The Future<span className="footnote-number">12</span></p>
+                <p className="project-title"><a href="/projects/the-future">The Future</a></p>
                 <img src="assets/images/future.jpg" alt="Future" />
               </div>
             </div>
@@ -53,7 +53,7 @@ const About = () => {
           </div>
           <div className="footnote">
             <span className="footnote-text-link">4.&emsp;Peter's journal.</span>
-            {/* <img src="assets/images/warshall.png" alt="Warshall Journal" /> */}
+            <img src="assets/images/warshall.png" alt="Warshall Journal" />
           </div>
         </div>
       </div >

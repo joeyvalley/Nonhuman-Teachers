@@ -10,7 +10,7 @@ const Events = () => {
     const workAround = async () => {
       const eventsData = await authenticate();
       setUpcomingEvents(eventsData[0]);
-      setPastEvents(eventsData[1].reverse());
+      setPastEvents(eventsData[1].reverse().slice(0, 5));
     };
     workAround();
   }, [])
@@ -36,7 +36,7 @@ const Events = () => {
             <div className="event" key={index}>
               <a href={event.url}><img src={event.image} alt="Event" /></a>
               <span>{event.title}</span>
-              <span>{event.date}, {event.time}</span>
+              <span>{event.date}</span>
               <a href={event.url}><span className="event-link">More info</span></a>
             </div>
           )) : null}
