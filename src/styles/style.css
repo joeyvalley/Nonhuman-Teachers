@@ -34,6 +34,10 @@ body {
   font-style: italic;
 }
 
+.lb {
+  display: none;
+}
+
 .background-video {
   position: absolute;
   top: 0;
@@ -67,50 +71,11 @@ body {
   text-align: left !important;
 }
 
-.project img {
+.copy img {
   width: 100%;
-  margin-bottom: 1rem;
 }
 
-.project img:hover {
-  cursor: pointer;
-  mix-blend-mode: overlay;
-}
-
-.projects {
-  position: relative;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.projects-left {
-  padding-right: 0.5rem;
-}
-
-.projects-right {
-  padding-left: 0.5rem;
-}
-
-.project-title {
-  text-align: center !important;
-  font-family: "Helveesti";
-  font-size: 1rem;
-  line-height: 0.5rem !important;
-  /* margin-bottom: 1rem; */
-  color: black;
-  transition: color ease-in-out 100ms;
-}
-
-.project-title a {
-  text-decoration: none !important;
-  color: black !important;
-}
-
-.project-title a:hover {
-  text-decoration: none !important;
-  color: black !important;
-}
+.donation-form {}
 
 .event {
   margin-bottom: 1rem;
@@ -153,7 +118,6 @@ body {
   width: 100vw;
   display: flex;
   justify-content: center;
-  background-color: var(--avocado);
 }
 
 .footer p {
@@ -350,6 +314,51 @@ body {
   text-decoration: none;
 }
 
+.project img {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.project img:hover {
+  cursor: pointer;
+  mix-blend-mode: overlay;
+}
+
+.projects {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.projects-left {
+  padding-right: 0.5rem;
+}
+
+.projects-right {
+  padding-left: 0.5rem;
+}
+
+.project-title {
+  text-align: center !important;
+  font-family: "Helveesti";
+  font-size: 1rem;
+  line-height: 0.5rem !important;
+  /* margin-bottom: 1rem; */
+  color: black;
+  transition: color ease-in-out 100ms;
+}
+
+.project-title a {
+  text-decoration: none !important;
+  color: black !important;
+}
+
+.project-title a:hover {
+  text-decoration: none !important;
+  color: black !important;
+}
+
 .section {
   display: grid;
   width: 100vw;
@@ -384,7 +393,6 @@ body {
 
 }
 
-
 .section p.italic {
   font-style: italic;
 }
@@ -410,7 +418,7 @@ body {
   font-family: "Helveesti";
   font-style: normal;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: var(--main-font);
   line-height: 1.3rem;
   color: black;
 }
@@ -431,13 +439,16 @@ body {
   grid-template-columns: 1fr 1fr;
 }
 
-
 .section-right {
   padding-left: 1.5rem;
 }
 
 .selected {
   color: white !important;
+}
+
+.title {
+  font-style: italic;
 }
 
 .video-container {
@@ -464,6 +475,10 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  .lb {
+    display: block;
   }
 
   .bug {
@@ -573,7 +588,6 @@ body {
     width: 100vw;
     display: flex;
     justify-content: center;
-    background-color: var(--avocado);
   }
 
   .footer p {

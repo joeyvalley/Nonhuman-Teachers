@@ -12,6 +12,8 @@ import TravelPage from './pages/projects/Travel'
 import LESCSSPage from './pages/projects/LESCSS'
 import FuturePage from './pages/projects/Future'
 
+// import DonationForm from "./components/DonationForm"
+
 export default function App() {
   return (
     <>
@@ -29,6 +31,8 @@ export default function App() {
         <Route path="/projects/lescss" element={<LESCSSPage />}></Route>
         <Route path="/projects/plant-orphans" element={<PlantOrphansPage />}></Route>
         <Route path="/projects/travel" element={<TravelPage />}></Route>
+        {/* Alternate Pages */}
+        {/* <Route path="/donations" element={<DonationForm />}></Route> */}
       </Routes>
     </>
   )
