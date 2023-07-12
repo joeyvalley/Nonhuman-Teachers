@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import authenticate from "../api/getEvents"
+import authenticate from "./getEvents.js"
 import Footer from "./Footer";
 
 const Events = () => {
