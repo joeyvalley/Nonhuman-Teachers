@@ -4,6 +4,7 @@ import AboutPage from './pages/About'
 import CalendarPage from './pages/Calendar'
 import ContactPage from './pages/Contact'
 import DonatePage from './pages/Donate'
+import ProjectsPage from './pages/Projects'
 
 import EventsPage from './pages/projects/Events'
 import EarthwormsPage from './pages/projects/Earthworms'
@@ -20,9 +21,10 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         {/* Main Pages */}
-        <Route path="/about" element={<AboutPage />}></Route>
+        <Route path="/projects" element={<ProjectsPage />}></Route>
         <Route path="/calendar" element={<CalendarPage />}></Route>
         <Route path="/donate/" element={<DonatePage />}></Route>
+        <Route path="/about" element={<AboutPage />}></Route>
         <Route path="/contact/" element={<ContactPage />}></Route>
         {/* Sub-Pages */}
         <Route path="/projects/earthworms" element={<EarthwormsPage />}></Route>

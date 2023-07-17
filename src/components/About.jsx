@@ -9,37 +9,7 @@ const About = () => {
         <div className="copy">
           <p>Nonhuman Teachers<span className="footnote-number">1</span> aspires to be a platform for folks in our community to forge more conscious relationships with the natural world that we are all enmeshed in. Sort of like 4H for adults, but instead of raising goats and chickens, we aspire to help raise more ecologically-minded selves, operating on the premise that solidarity with nonhuman beings<span className="footnote-number">2</span> can make us better citizens of this wondrous galactic zoo that we call the ecosphere.<span className="footnote-number">3</span></p>
           <p>Nonhuman Teachers hosts a diversity of projects<span className="footnote-number">5</span>, from multidisciplinary events in collaboration with like-minded institutions to research trips to the tending of our xeric botanical garden in LA.<span className="footnote-number">6</span></p>
-          <div className="projects">
-            <div className="projects-left">
-              <div className="project">
-                <p className="project-title"><a href="/projects/events">Events</a></p>
-                <img src="assets/images/events.jpg" alt="Events" />
-              </div>
-              <div className="project">
-                <p className="project-title"><a href="/projects/plant-orphans">Plant Orphans</a></p>
-                <img src="assets/images/greenhouse.jpg" alt="Plant Orphans" />
-              </div>
-              <div className="project">
-                <p className="project-title"><a href="/projects/LESCSS">LESCSS</a></p>
-                <img src="assets/images/lescss.jpg" alt="LESCSS" />
-              </div>
-            </div>
-            <div className="projects-right">
-              <div className="project">
-                <p className="project-title"><a href="/projects/earthworms">Earthworms</a></p>
-                <img src="assets/images/earthworms.jpg" alt="Earthworms" />
-              </div>
-              <div className="project">
-                <p className="project-title"><a href="/projects/travel">Travel</a></p>
-                <img src="assets/images/travel.jpg" alt="Travel" />
-              </div>
-              <div className="project">
-                <p className="project-title"><a href="/projects/the-future">The Future</a></p>
-                <img src="assets/images/future.jpg" alt="Future" />
-              </div>
-            </div>
-          </div>
-          <p>--</p>
+          <p className="lb">--</p>
         </div>
         <div className="footnotes">
           <div className="footnote">

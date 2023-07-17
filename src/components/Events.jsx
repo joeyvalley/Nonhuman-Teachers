@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import authenticate from "./getEvents.js"
 import Footer from "./Footer";
+import FootnotesLogo from "./FootnotesLogo";
 
 const Events = () => {
   const [upcomingEvents, setUpcomingEvents] = useState();
@@ -40,7 +41,7 @@ const Events = () => {
               <a href={event.url}><span className="event-link">More info</span></a>
             </div>
           )) : null}
-          <p>--</p>
+          <p className="lb">--</p>
         </div>
         <div className="footnotes">
           <div className="footnote">
@@ -49,6 +50,7 @@ const Events = () => {
           <div className="footnote">
             <span className="footnote-text">2.&emsp;We host a lot of events, so this is just a recent selection. See the full list <a href="https://www.eventbrite.com/o/nonhuman-teachers-62088205263">here</a>.</span>
           </div>
+          <FootnotesLogo></FootnotesLogo>
         </div>
       </div >
       <Footer />

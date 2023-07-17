@@ -13,7 +13,7 @@ const Contact = () => {
           <p>Follow us: <a href="https://instagram.com/nonhuman.teachers">@nonhumanteachers</a></p>
           <Newsletter />
           <img src="assets/images/handprint.jpg" alt="Handprint" />
-          <p>--</p>
+          <p className="lb">--</p>
         </div>
         <div className="footnotes">
           <div className="footnote">

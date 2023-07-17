@@ -20,16 +20,22 @@ const Navbar = forwardRef((props, ref) => {
     <>
       <div className="navbar">
         <div className="navbar-item">
-          <a href="/about" className={`navbar-item ${selectedLink === "about" ? "selected" : ""}`}
-            onClick={() => handleClick("about")}>About</a>
+          <a href="/projects" className={`navbar-item ${selectedLink === "projects" ? "selected" : ""}`}
+            onClick={() => handleClick("about")}>Projects</a>
         </div>
         <div className="navbar-item">
           <a href="/calendar" className={`navbar-item ${selectedLink === "calendar" ? "selected" : ""}`}
             onClick={() => handleClick("calendar")}>Calendar</a>
         </div>
+
         <div className="navbar-item">
           <a href="/donate" className={`navbar-item ${selectedLink === "donate" ? "selected" : ""}`}
             onClick={() => handleClick("donate")}>Donate</a>
+        </div>
+
+        <div className="navbar-item">
+          <a href="/about" className={`navbar-item ${selectedLink === "about" ? "selected" : ""}`}
+            onClick={() => handleClick("about")}>About</a>
         </div>
 
         <div className="navbar-item">
@@ -37,9 +43,7 @@ const Navbar = forwardRef((props, ref) => {
             onClick={() => handleClick("contact")}>Contact</a>
         </div>
       </div>
-      <div className="bug">
-        <img src="assets/nht-logo.png" alt="NHT Logo" />
-      </div>
+
     </>
   );
 });
