@@ -8,7 +8,7 @@ export default function FuturePage() {
     <>
 
       <div className="main">
-        <Navbar currentPage="about" />
+        <Navbar currentPage="projects" />
         <div className="section" id="calendar">
           <div className="copy">
             <h1>The Future</h1>

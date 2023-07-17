@@ -4,8 +4,8 @@
   --avocado: #D6BA94;
   --green: #5F733A;
   --main-font: 0.9rem;
-  --header-font: 1.4rem;
-  --footnote: 0.75rem;
+  --header-font: 1.1rem;
+  --footnote: 0.65rem;
 }
 
 * {
@@ -61,6 +61,19 @@ body {
   width: 33%;
 }
 
+.carousel-image:hover {
+  cursor: pointer;
+}
+
+.carousel-image:focus {
+  outline: none;
+  border: none;
+}
+
+.carousel-image:focus-visible {
+  outline: none;
+}
+
 .contact-left {
   padding-right: 24px;
 }
@@ -103,10 +116,25 @@ body {
   border: 1px solid black;
   text-align: center;
   transition: all ease-in-out 200ms;
-  margin-top: 0.25rem;
+  margin-top: 0.5rem;
 }
 
 .event-link:hover {
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+.project-button {
+  padding: 0.25rem;
+  border: 1px solid black;
+  text-align: center;
+  transition: all ease-in-out 200ms;
+  width: auto;
+  display: inline-block;
+}
+
+.project-button:hover {
   background: black;
   color: white;
   cursor: pointer;
@@ -119,15 +147,27 @@ body {
 
 .event img {
   width: 100%;
+  background: white;
+  margin-bottom: 0.25rem;
+  border: 1px solid black;
+  opacity: 0.8;
+  transition: opacity ease 250ms;
+}
+
+.event img:hover {
+  opacity: 1;
 }
 
 .event span {
   font-family: "Helveesti";
-  font-size: 0.7rem;
+  font-size: var(--main-font);
   display: block;
   margin-bottom: 0rem;
 }
 
+.event h1 {
+  font-size: var(--header-font);
+}
 
 .footer {
   position: fixed;
@@ -162,7 +202,7 @@ body {
   top: -1px;
   height: calc(100dvh - 70px);
   overflow: scroll;
-  padding-top: 1rem;
+  padding: 1rem 1rem 0rem 0rem;
   scrollbar-color: transparent transparent;
   /* border: 1px solid red; */
   margin: 0;
@@ -332,7 +372,7 @@ body {
 
 .navbar-item {
   font-family: "Helveesti";
-  font-size: var(--main-font);
+  font-size: var(--header-font);
   color: var(--black);
   display: inline;
   width: fit-content;
@@ -423,7 +463,7 @@ body {
   font-size: var(--main-font);
   line-height: 1.3rem;
   color: black;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   text-align: justify;
 
 }

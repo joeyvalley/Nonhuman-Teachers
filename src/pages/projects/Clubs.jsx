@@ -2,15 +2,15 @@ import "../../styles/style.css";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer"
 
-export default function EarthwormsPage() {
+export default function ClubsPage() {
 
   return (
     <>
       <div className="main">
-        <Navbar currentPage="about" />
+        <Navbar currentPage="projects" />
         <div className="section" id="calendar">
           <div className="copy">
-            <h1>Earthworms Press & Bookclub</h1>
+            <h1>Clubs & Societies</h1>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe corporis corrupti doloremque! Suscipit optio architecto libero repellat. Corrupti impedit, cum rem hic maxime commodi est necessitatibus, reprehenderit iste aperiam cumque.</p>
           </div>
         </div>

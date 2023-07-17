@@ -1,62 +1,103 @@
-import { forwardRef, useState, useEffect, useRef } from "react";
+import { forwardRef, useRef } from "react";
+import Slider from 'react-slick';
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 import Footer from "../components/Footer"
 import FootnotesLogo from "../components/FootnotesLogo"
 
 const Projects = forwardRef((props, ref) => {
-  const [isScrolling, setIsScrolling] = useState(false);
-  const copyRef = useRef(null);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      console.log("fck");
-      setIsScrolling(true);
-      clearTimeout(window.scrollTimer);
-      window.scrollTimer = setTimeout(() => {
-        setIsScrolling(false);
-      }, 150);
-    };
+  const projectSlider = useRef(null);
+  const botanicalSlider = useRef(null);
 
-    copyRef.current.addEventListener("scroll", handleScroll);
-    return () => copyRef.current.removeEventListener("scroll", handleScroll);
-  }, []);
+  const settings = {
+    arrows: false,
+    dots: false,
+    infinite: true,
+    fade: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
+
+  const eventsImages = [
+    'assets/images/events.jpg',
+    'assets/images/botanical.jpg',
+    'assets/images/clubs.jpg',
+    'assets/images/travel.jpg',
+    'assets/images/future.jpg'
+  ];
+
+  const botanicalImages = [
+    'assets/images/botanical.jpg',
+    'assets/images/clubs.jpg',
+    'assets/images/travel.jpg',
+    'assets/images/future.jpg',
+    'assets/images/events.jpg'
+  ];
+
+  function handleImageClick(ref) {
+    ref.current.slickNext(); // go to the next slide
+  }
 
   return (
     <>
       <div className="section" id="projects" ref={ref}>
-        <div className="copy" ref={copyRef}>
+        <div className="copy">
           <p>Nonhuman Teachers hosts a diversity of projects<span className="footnote-number">5</span>, from multidisciplinary events in collaboration with like-minded institutions to research trips to the tending of our xeric botanical garden in LA.<span className="footnote-number">6</span></p>
-          <div className="projects">
-            <div className="projects-left">
-              <div className="project">
-                <p className="project-title"><a href="/projects/events">Events</a></p>
-                <img src="assets/images/events.jpg" alt="Events" />
-              </div>
-              <div className="project">
-                <p className="project-title"><a href="/projects/plant-orphans">Plant Orphans</a></p>
-                <img src="assets/images/greenhouse.jpg" alt="Plant Orphans" />
-              </div>
-              <div className="project">
-                <p className="project-title"><a href="/projects/LESCSS">LESCSS</a></p>
-                <img src="assets/images/lescss.jpg" alt="LESCSS" />
-              </div>
-            </div>
-            <div className="projects-right">
-              <div className="project">
-                <p className="project-title"><a href="/projects/earthworms">Earthworms</a></p>
-                <img src="assets/images/earthworms.jpg" alt="Earthworms" />
-              </div>
-              <div className="project">
-                <p className="project-title"><a href="/projects/travel">Travel</a></p>
-                <img src="assets/images/travel.jpg" alt="Travel" />
-              </div>
-              <div className="project">
-                <p className="project-title"><a href="/projects/the-future">The Future</a></p>
-                <img src="assets/images/future.jpg" alt="Future" />
-              </div>
-            </div>
+          <div className="event">
+            <h1>Programming & Events</h1>
+            <Slider {...settings} ref={projectSlider}>
+              {eventsImages.map((img, index) => (
+                <div key={index}>
+                  <img src={img} alt={`Events ${index}`} onClick={() => handleImageClick(projectSlider)} className="carousel-image" />
+                </div>
+              ))}
+            </Slider>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam id labore exercitationem explicabo a quae eveniet, nostrum mollitia repellendus ad ut quasi beatae! Delectus reprehenderit nisi cupiditate cum perferendis ipsum?</p>
+            <a href="/projects/programming-and-events"><span className="project-button">More Information</span></a>
           </div>
+
+          <div className="event">
+            <h1>Botanical Spaces</h1>
+            <Slider {...settings} ref={botanicalSlider}>
+              {botanicalImages.map((img, index) => (
+                <div key={index}>
+                  <img src={img} alt={`Botanical Spaces ${index}`} onClick={() => handleImageClick(botanicalSlider)} className="carousel-image" />
+                </div>
+              ))}
+            </Slider>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis nesciunt vero itaque possimus ipsum eius asperiores, quisquam quasi rem accusamus debitis, consequuntur soluta dolorum odio sequi maiores ratione exercitationem facere.</p>
+            <a href="/projects/botanical-spaces"><span className="project-button">More Information</span></a>
+          </div>
+
+          <div className="event">
+            <h1>Clubs & Societies</h1>
+            <img src="assets/images/clubs.jpg" alt="Clubs" />
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam tempora, libero excepturi eaque cumque corrupti laudantium architecto explicabo dolorum blanditiis quaerat voluptatibus incidunt commodi quisquam nesciunt praesentium! Alias, voluptates eum.</p>
+            <a href="/projects/clubs-and-societies"><span className="project-button">More Information</span></a>
+
+          </div>
+          <div className="event">
+            <h1>Research & Travel</h1>
+            <img src="assets/images/travel.jpg" alt="Travel" />
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis inventore laborum dolor dolore explicabo velit, recusandae quibusdam quis iste. Repellendus consectetur nulla consequuntur ad ipsum in quia labore at quis?</p>
+            <a href="/projects/research-and-travel"><span className="project-button">More Information</span></a>
+          </div>
+
+          <div className="event">
+            <h1>The Future</h1>
+            <img src="assets/images/future.jpg" alt="Future" />
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos dolore neque cupiditate labore, perspiciatis, odit exercitationem optio ipsa dolores, enim laborum illum sit maxime minus. Iure aspernatur quos perferendis id?</p>
+            <a href="/projects/the-future"><span className="project-button">More Information</span></a>
+          </div>
+
           <p className="lb">--</p>
+
         </div>
+
         <div className="footnotes">
           <div className="footnote">
             <span className="footnote-text-link">5.&emsp;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui a blanditiis reiciendis beatae illo provident mollitia sapiente, voluptatem iure expedita officiis minima repellat dolores laborum maiores molestiae veniam eaque cum.</span>
@@ -84,7 +125,7 @@ const Projects = forwardRef((props, ref) => {
           </div>
           <FootnotesLogo></FootnotesLogo>
         </div>
-      </div>
+      </div >
       <Footer />
     </>
   );

@@ -23,7 +23,7 @@ const Events = () => {
       <div className="section" id="calendar">
         <div className="copy">
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe corporis corrupti doloremque! Suscipit optio architecto libero repellat. Corrupti impedit, cum rem hic maxime commodi est necessitatibus, reprehenderit iste aperiam cumque.</p>
-          <p>Upcoming<span className="footnote-number">1</span></p>
+          <h1>Upcoming<span className="footnote-number">1</span></h1>
           {upcomingEvents ? upcomingEvents.map((event, index) => (
             <div className="event" key={index}>
               <a href={event.url}><img src={event.image} alt="Event" /></a>
@@ -32,7 +32,7 @@ const Events = () => {
               <a href={event.url}><span className="event-link">Tickets and more info</span></a>
             </div>
           )) : null}
-          <p>Past Events<span className="footnote-number">2</span></p>
+          <h1>Past Events<span className="footnote-number">2</span></h1>
           {pastEvents ? pastEvents.map((event, index) => (
             <div className="event" key={index}>
               <a href={event.url}><img src={event.image} alt="Event" /></a>
