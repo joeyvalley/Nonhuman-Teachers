@@ -7,7 +7,7 @@ export default function ProjectsPage() {
   return (
     <div className="main">
       <Navbar currentPage="projects" />
-      <Projects name="about" />
+      <Projects name="projects" />
     </div >
   );
 }

@@ -1,8 +1,24 @@
-import React from "react";
+import { useState } from 'react';
+import { gsap } from 'gsap';
+import Modal from './Modal';
+
 import Footer from "./Footer"
 
 
 const About = () => {
+  const [modalImageUrl, setModalImageUrl] = useState(null);
+
+  function handleOpenModal(imageUrl) {
+    setModalImageUrl(imageUrl);
+  };
+  function handleCloseModal() {
+    gsap.to('.modal', {
+      opacity: 0, duration: 0.5, onComplete: () => {
+        setModalImageUrl(null);
+      }
+    });
+  }
+
   return (
     <>
       <div className="section" id="about">
@@ -22,12 +38,15 @@ const About = () => {
             <span className="footnote-text">3.&emsp;"People forget that science developed from poetry, and they fail to take into consideration that a swing of the pendulum might beneficently unite the two at a higher level, and to mutual advantage.”</span>
           </div>
           <div className="footnote">
-            <span className="footnote-text-link">4.&emsp;Peter's journal.</span>
-            <img src="assets/images/warshall.png" alt="Warshall Journal" />
+            <span className="footnote-text-link" onClick={() => handleOpenModal('assets/images/warshall.png')}>4.&emsp;Peter's journal.</span>
+            <img src="assets/images/warshall.png" alt="Warshall Journal" onClick={() => handleOpenModal('assets/images/warshall.png')} />
           </div>
         </div>
       </div >
       <Footer />
+      {modalImageUrl && (
+        <Modal imageUrl={modalImageUrl} onClose={handleCloseModal} />
+      )}
     </>
   )
 };

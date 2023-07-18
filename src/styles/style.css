@@ -169,6 +169,18 @@ body {
   font-size: var(--header-font);
 }
 
+.event h1 a {
+  color: black;
+  text-decoration: underline;
+  transition: color ease 250ms;
+}
+
+.event h1 a:hover {
+  text-decoration: underline;
+  color: white;
+
+}
+
 .footer {
   position: fixed;
   width: 100%;
@@ -229,6 +241,7 @@ body {
 
 .footnote img {
   width: 100%;
+  cursor: pointer;
 }
 
 .footnote-number {
@@ -331,9 +344,9 @@ body {
   top: 1.75rem;
   right: 1.75rem;
   font-family: "Helveesti";
-  font-size: 1.79rem;
+  font-size: var(--main-font);
   color: var(--black);
-  transition: color ease-in-out 100ms;
+  transition: color ease 250ms;
 }
 
 .modal-close:hover {

@@ -7,10 +7,8 @@ import DonatePage from './pages/Donate'
 import ProjectsPage from './pages/Projects'
 
 import EventsPage from './pages/projects/Events'
-import EarthwormsPage from './pages/projects/Clubs'
 import PlantOrphansPage from './pages/projects/PlantOrphans'
 import TravelPage from './pages/projects/Travel'
-import LESCSSPage from './pages/projects/LESCSS'
 import FuturePage from './pages/projects/Future'
 import ClubsPage from './pages/projects/Clubs'
 

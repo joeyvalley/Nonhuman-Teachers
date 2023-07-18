@@ -28,7 +28,7 @@ const Events = () => {
             <div className="event" key={index}>
               <a href={event.url}><img src={event.image} alt="Event" /></a>
               <span>{event.title}</span>
-              <span>{event.date}, {event.time}</span>
+              <span className="event-date">{event.date}, {event.time}</span>
               <a href={event.url}><span className="event-link">Tickets and more info</span></a>
             </div>
           )) : null}
@@ -37,7 +37,7 @@ const Events = () => {
             <div className="event" key={index}>
               <a href={event.url}><img src={event.image} alt="Event" /></a>
               <span>{event.title}</span>
-              <span>{event.date}</span>
+              <span className="event-date">{event.date}, {event.time}</span>
               <a href={event.url}><span className="event-link">More info</span></a>
             </div>
           )) : null}

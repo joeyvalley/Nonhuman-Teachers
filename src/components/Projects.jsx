@@ -48,7 +48,8 @@ const Projects = forwardRef((props, ref) => {
         <div className="copy">
           <p>Nonhuman Teachers hosts a diversity of projects<span className="footnote-number">5</span>, from multidisciplinary events in collaboration with like-minded institutions to research trips to the tending of our xeric botanical garden in LA.<span className="footnote-number">6</span></p>
           <div className="event">
-            <h1>Programming & Events</h1>
+            <h1><a href="projects/programming-and-events">Programming & Events</a></h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam id labore exercitationem explicabo a quae eveniet, nostrum mollitia repellendus ad ut quasi beatae! Delectus reprehenderit nisi cupiditate cum perferendis ipsum?</p>
             <Slider {...settings} ref={projectSlider}>
               {eventsImages.map((img, index) => (
                 <div key={index}>
@@ -56,12 +57,12 @@ const Projects = forwardRef((props, ref) => {
                 </div>
               ))}
             </Slider>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam id labore exercitationem explicabo a quae eveniet, nostrum mollitia repellendus ad ut quasi beatae! Delectus reprehenderit nisi cupiditate cum perferendis ipsum?</p>
             <a href="/projects/programming-and-events"><span className="project-button">More Information</span></a>
           </div>
 
           <div className="event">
-            <h1>Botanical Spaces</h1>
+            <h1><a href="projects/botanical-spaces">Botanical Spaces</a></h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis nesciunt vero itaque possimus ipsum eius asperiores, quisquam quasi rem accusamus debitis, consequuntur soluta dolorum odio sequi maiores ratione exercitationem facere.</p>
             <Slider {...settings} ref={botanicalSlider}>
               {botanicalImages.map((img, index) => (
                 <div key={index}>
@@ -69,28 +70,27 @@ const Projects = forwardRef((props, ref) => {
                 </div>
               ))}
             </Slider>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis nesciunt vero itaque possimus ipsum eius asperiores, quisquam quasi rem accusamus debitis, consequuntur soluta dolorum odio sequi maiores ratione exercitationem facere.</p>
             <a href="/projects/botanical-spaces"><span className="project-button">More Information</span></a>
           </div>
 
           <div className="event">
-            <h1>Clubs & Societies</h1>
-            <img src="assets/images/clubs.jpg" alt="Clubs" />
+            <h1><a href="projects/clubs-and-societies">Clubs & Societies</a></h1>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam tempora, libero excepturi eaque cumque corrupti laudantium architecto explicabo dolorum blanditiis quaerat voluptatibus incidunt commodi quisquam nesciunt praesentium! Alias, voluptates eum.</p>
+            <img src="assets/images/clubs.jpg" alt="Clubs" className="carousel-image" />
             <a href="/projects/clubs-and-societies"><span className="project-button">More Information</span></a>
 
           </div>
           <div className="event">
-            <h1>Research & Travel</h1>
-            <img src="assets/images/travel.jpg" alt="Travel" />
+            <h1><a href="projects/research-and-travel">Research & Travel</a></h1>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis inventore laborum dolor dolore explicabo velit, recusandae quibusdam quis iste. Repellendus consectetur nulla consequuntur ad ipsum in quia labore at quis?</p>
+            <img src="assets/images/travel.jpg" alt="Travel" className="carousel-image" />
             <a href="/projects/research-and-travel"><span className="project-button">More Information</span></a>
           </div>
 
           <div className="event">
-            <h1>The Future</h1>
-            <img src="assets/images/future.jpg" alt="Future" />
+            <h1><a href="projects/the-future">The Future</a></h1>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos dolore neque cupiditate labore, perspiciatis, odit exercitationem optio ipsa dolores, enim laborum illum sit maxime minus. Iure aspernatur quos perferendis id?</p>
+            <img src="assets/images/future.jpg" alt="Future" className="carousel-image" />
             <a href="/projects/the-future"><span className="project-button">More Information</span></a>
           </div>
 

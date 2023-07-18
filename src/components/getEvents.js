@@ -2,6 +2,9 @@ import axios from "axios";
 
 export default async function authenticate() {
 
+  const API_KEY = process.env.REACT_APP_EVENTBRITE_KEY;
+
+
   const dateOptions = {
     month: 'long',
     day: 'numeric',
@@ -19,11 +22,12 @@ export default async function authenticate() {
       'https://www.eventbriteapi.com/v3/organizations/1433796023533/events/',
       {
         headers: {
-          Authorization: `Bearer TNU4SNTTAAYZB3DYL26H`,
+          Authorization: `Bearer ${API_KEY}`,
         }
       }
     );
     const events = response.data.events;
+
     const upcoming = [];
     const past = [];
 
