@@ -29,8 +29,8 @@ const Navbar = forwardRef((props, ref) => {
         </div>
 
         <div className="navbar-item">
-          <a href="/donate" className={`navbar-item ${selectedLink === "donate" ? "selected" : ""}`}
-            onClick={() => handleClick("donate")}>Donate</a>
+          <a href="/support" className={`navbar-item ${selectedLink === "support" ? "selected" : ""}`}
+            onClick={() => handleClick("support")}>Support</a>
         </div>
 
         <div className="navbar-item">

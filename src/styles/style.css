@@ -34,6 +34,43 @@ body {
   font-style: italic;
 }
 
+.home {
+  width: 100dvw;
+  height: 100dvh;
+  padding: 0rem 10rem;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.home p {
+  font-family: "Helveesti";
+  font-size: 1.5rem;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.home a {
+  text-decoration: underline;
+  color: black;
+  transition: color ease 250ms;
+}
+
+.home a:hover {
+  color: white;
+}
+
+.homeish {
+  background: #4bc525;
+  padding: 1rem 1rem 0 1rem;
+  border: 1px solid black;
+}
+
+
+
 .lb {
   display: none;
 }
@@ -105,7 +142,18 @@ body {
   width: 100%;
 }
 
-.donation-form {}
+.donation-form-container {
+  position: fixed;
+  display: grid;
+  width: 100vw;
+  grid-template-columns: 1fr;
+  top: 49px;
+  height: calc(100vh - 93px);
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  overflow: scroll;
+}
 
 .event {
   margin-bottom: 1rem;
@@ -191,6 +239,7 @@ body {
   bottom: 0;
   background: var(--avocado);
   border-top: 1px solid black;
+  z-index: 100;
 }
 
 .footer p {
@@ -540,7 +589,7 @@ body {
 }
 
 .video-container {
-  position: relative;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
@@ -549,7 +598,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 0;
+  z-index: -1;
   overflow: hidden;
 }
 
@@ -563,6 +612,35 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  .home {
+    width: 100dvw;
+    height: 100dvh;
+    padding: 0rem 5rem;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+  }
+
+  .home p {
+    font-size: var(--header-font);
+    text-align: left;
+    color: black;
+  }
+
+  .home a {
+    text-decoration: underline;
+    color: black;
+    transition: color ease 250ms;
+  }
+
+  .home a:hover {
+    color: white;
   }
 
   .lb {

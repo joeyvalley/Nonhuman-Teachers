@@ -4,6 +4,7 @@ import AboutPage from './pages/About'
 import CalendarPage from './pages/Calendar'
 import ContactPage from './pages/Contact'
 import DonatePage from './pages/Donate'
+import DonationPage from './components/DonationForm'
 import ProjectsPage from './pages/Projects'
 
 import EventsPage from './pages/projects/Events'
@@ -16,24 +17,24 @@ import ClubsPage from './pages/projects/Clubs'
 
 export default function App() {
   return (
-    <>
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        {/* Main Pages */}
-        <Route path="/projects" element={<ProjectsPage />}></Route>
-        <Route path="/calendar" element={<CalendarPage />}></Route>
-        <Route path="/donate/" element={<DonatePage />}></Route>
-        <Route path="/about" element={<AboutPage />}></Route>
-        <Route path="/contact/" element={<ContactPage />}></Route>
-        {/* Sub-Pages */}
-        <Route path="/projects/clubs-and-societies" element={<ClubsPage />}></Route>
-        <Route path="/projects/programming-and-events" element={<EventsPage />}></Route>
-        <Route path="/projects/the-future" element={<FuturePage />}></Route>
-        <Route path="/projects/botanical-spaces" element={<PlantOrphansPage />}></Route>
-        <Route path="/projects/research-and-travel" element={<TravelPage />}></Route>
-        {/* Alternate Pages */}
-        {/* <Route path="/donations" element={<DonationForm />}></Route> */}
-      </Routes >
-    </>
+
+    <Routes>
+      <Route path="/" element={<Home />}></Route>
+      {/* Main Pages */}
+      <Route path="/projects" element={<ProjectsPage />}></Route>
+      <Route path="/calendar" element={<CalendarPage />}></Route>
+      <Route path="/support/" element={<DonatePage />}></Route>
+      <Route path="/donate/" element={<DonationPage />}></Route>
+      <Route path="/about" element={<AboutPage />}></Route>
+      <Route path="/contact/" element={<ContactPage />}></Route>
+      {/* Sub-Pages */}
+      <Route path="/projects/clubs-and-societies" element={<ClubsPage />}></Route>
+      <Route path="/projects/programming-and-events" element={<EventsPage />}></Route>
+      <Route path="/projects/the-future" element={<FuturePage />}></Route>
+      <Route path="/projects/botanical-spaces" element={<PlantOrphansPage />}></Route>
+      <Route path="/projects/research-and-travel" element={<TravelPage />}></Route>
+      {/* Alternate Pages */}
+      {/* <Route path="/donations" element={<DonationForm />}></Route> */}
+    </Routes>
   )
 }

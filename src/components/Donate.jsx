@@ -3,13 +3,17 @@ import Footer from "./Footer";
 
 const Donate = React.forwardRef((props, ref) => {
 
+  function handleClick() {
+    window.location.href = "/donate"
+  }
+
   return (
     <>
       <div className="section" id="donate" ref={ref}>
         <div className="copy">
           <p>Nonhuman Teachers is a registered 501(c)(3) non-profit organization dedicated to new forms of ecological storytelling.<span className="footnote-number">1</span></p>
           <p>At a time when the relationship between humans and the natural world is under enormous pressure, we believe that a realignment of this relationship is an essential step in righting the direction of Spaceship Earth<span className="footnote-number">2</span> for humans and nonhumans alike.</p>
-          <input type="submit" value="Donate Now" className="subscribe" />
+          <input type="submit" value="Donate Now" className="subscribe" onClick={handleClick} />
           <p></p>
           <ul>
             <li>Our work is generously supported by:</li>

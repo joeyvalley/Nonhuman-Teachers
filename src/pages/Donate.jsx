@@ -6,8 +6,8 @@ export default function DonatePage() {
 
   return (
     <div className="main">
-      <Navbar currentPage="donate" />
-      <Donate name="donate" />
+      <Navbar currentPage="support" />
+      <Donate name="support" />
     </div >
   );
 }
