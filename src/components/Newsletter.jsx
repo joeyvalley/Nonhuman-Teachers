@@ -18,7 +18,7 @@ export default function Newsletter() {
         console.log('An error occurred:', response);
       }
     } catch (error) {
-      setEmail("An error occurred, please try again.")
+      setEmail("Whoops.")
       console.log('An error occurred:', error);
     }
   }
@@ -26,7 +26,7 @@ export default function Newsletter() {
   return (
     <div className="newsletter">
       <form onSubmit={handleSubmit}>
-        <input type="email" name="EMAIL" className="email" id="mce-EMAIL" placeholder="Enter email to join newsletter." value={email} onChange={(e) => setEmail(e.target.value)} required />
+        <input type="email" name="EMAIL" className="email" id="mce-EMAIL" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
         <input type="submit" value="Subscribe" className="subscribe" />
       </form>
     </div>

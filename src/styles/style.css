@@ -450,6 +450,70 @@ body {
   text-decoration: none;
 }
 
+.email {
+  font-family: "Helveesti";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1rem;
+  color: white;
+  background: none;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid black;
+  width: 100%;
+  padding: 0px;
+  display: inline-block;
+  transition: color 200ms ease-in-out;
+}
+
+.email:focus {
+  outline: none;
+  /* mix-blend-mode: normal; */
+  color: black;
+}
+
+.email::placeholder {
+  color: black;
+}
+
+.newsletter {}
+
+.newsletter form {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-column-gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.subscribe {
+  font-family: "Helveesti";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  /* line-height: 1.3rem; */
+  padding: 0.25rem;
+  color: black;
+  background: none;
+  border: 1px solid black;
+  display: inline-block;
+  transition: background 200ms ease-in-out;
+}
+
+.subscribe:focus {
+  background: black;
+  color: white;
+  cursor: pointer;
+  /* mix-blend-mode: normal; */
+}
+
+.subscribe:hover {
+  background: black;
+  color: white;
+  cursor: pointer;
+  /* mix-blend-mode: normal; */
+}
+
 .project img {
   width: 100%;
   margin-bottom: 1rem;
@@ -711,6 +775,67 @@ body {
   .project-title a:hover {
     text-decoration: none !important;
     color: black !important;
+  }
+
+  .email {
+    font-family: "Helveesti";
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--header-font);
+    line-height: 1rem;
+    color: white;
+    background: none;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid black;
+    width: 100%;
+    padding: 0px;
+    display: inline-block;
+    transition: color 200ms ease-in-out;
+  }
+
+  .email:focus {
+    outline: none;
+    /* mix-blend-mode: normal; */
+    color: black;
+  }
+
+  .email::placeholder {
+    color: black;
+  }
+
+  .newsletter {}
+
+  .newsletter form {
+    display: flex;
+    margin-bottom: 1rem;
+  }
+
+  .subscribe {
+    font-family: "Helveesti";
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--header-font);
+    /* line-height: 1.3rem; */
+    padding: 0.25rem;
+    color: black;
+    border: 1px solid black;
+    display: inline-block;
+    transition: background 200ms ease-in-out;
+  }
+
+  .subscribe:focus {
+    background: black;
+    color: white;
+    cursor: pointer;
+    /* mix-blend-mode: normal; */
+  }
+
+  .subscribe:hover {
+    background: black;
+    color: white;
+    cursor: pointer;
+    /* mix-blend-mode: normal; */
   }
 
   .event {
