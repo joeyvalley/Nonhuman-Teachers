@@ -1,59 +1,45 @@
-import React, { useEffect, useRef } from "react";
 import "../styles/style.css";
-import Logo from "../components/Logo";
-import Navbar from "../components/Navbar";
-import Sections from "../components/Sections";
 import Video from "../components/Video";
+import { useState } from "react";
+import axios from "axios";
+import Newsletter from "../components/Newsletter";
 
 
 export default function Home() {
-  const logoRef = useRef();
-  const fixedLogoRef = useRef();
 
-  useEffect(() => {
-    const options = {
-      root: null,
-      rootMargin: "-124px 0px 0px 0px",
-      threshold: 0, // Adjust the threshold as needed
-    };
+  const [email, setEmail] = useState()
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          // Logo is in the viewport
-          console.log("Logo is in the viewport");
-          logoRef.current.style.opacity = "1";
-          fixedLogoRef.current.style.opacity = "0";
-          // Perform any actions you need here
-        } else {
-          // Logo is out of the viewport
-          console.log("Logo is out of the viewport");
-          logoRef.current.style.opacity = "0";
-          fixedLogoRef.current.style.opacity = "1";
-          // logoRef.current.style.marginTop = "0px";
-        }
-      });
-    }, options);
+  async function handleSubmit(e) {
+    e.preventDefault();
+    const email = e.target.EMAIL.value; // Get email value from the form
+    try {
+      const response = await axios.post('api/subscribe', { email });
 
-    const currentLogoRef = logoRef.current; // Store current ref value in a variable
-
-    if (currentLogoRef) {
-      observer.observe(currentLogoRef);
-    }
-
-    // Cleanup the observer
-    return () => {
-      if (currentLogoRef) {
-        observer.unobserve(currentLogoRef);
+      if (response.status === 200) {
+        setEmail("Thank you for subscribing!")
+        // Handle successful subscription, e.g., show a message to the user
+      } else {
+        setEmail("An error occurred, please try again!")
+        console.log('An error occurred:', response);
       }
-    };
-  }, []);
+    } catch (error) {
+      setEmail("An error occurred, please try again.")
+      console.log('An error occurred:', error);
+    }
+  }
 
   return (
     <>
-      <Logo ref1={logoRef} ref2={fixedLogoRef} />
-      <Video />
-      <Sections />
+      <div className="home">
+        <div className="homeish">
+
+          <p>Nonhuman Teachers is a registered 501(c)(3) non-profit organization based between Los Angeles and New York.</p>
+          <p>We aim to promote new forms of ecological storytelling at a time when the relationship between humans and nature is under enormous pressure.</p>
+          <p>To support our efforts, please consider <a href="/donate">making a donation</a>.</p>
+          <p>For more information, please email us at <a href="mailto:info@nonhumanteachers.org">info@nonhumanteachers.org</a> or join our newsletter.</p>
+          <Newsletter></Newsletter>
+        </div>
+      </div >
       <Video />
     </>
   );
