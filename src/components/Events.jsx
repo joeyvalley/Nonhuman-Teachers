@@ -22,7 +22,7 @@ const Events = () => {
     <>
       <div className="section" id="calendar">
         <div className="copy">
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe corporis corrupti doloremque! Suscipit optio architecto libero repellat. Corrupti impedit, cum rem hic maxime commodi est necessitatibus, reprehenderit iste aperiam cumque.</p>
+          <p>Fuck, ipsum dolor sit amet consectetur adipisicing elit. Saepe corporis corrupti doloremque! Suscipit optio architecto libero repellat. Corrupti impedit, cum rem hic maxime commodi est necessitatibus, reprehenderit iste aperiam cumque.</p>
           <h1>Upcoming<span className="footnote-number">1</span></h1>
           {upcomingEvents ? upcomingEvents.map((event, index) => (
             <div className="event" key={index}>
