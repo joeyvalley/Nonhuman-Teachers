@@ -26,9 +26,11 @@ const Events = () => {
           <h1>Upcoming<span className="footnote-number">1</span></h1>
           {upcomingEvents ? upcomingEvents.map((event, index) => (
             <div className="event" key={index}>
+              <div className="event-info">
+                <span>{event.title}</span>
+                <span className="event-date">{event.date}, {event.time}</span>
+              </div>
               <a href={event.url}><img src={event.image} alt="Event" /></a>
-              <span>{event.title}</span>
-              <span className="event-date">{event.date}, {event.time}</span>
               <a href={event.url}><span className="event-link">Tickets and more info</span></a>
             </div>
           )) : null}
@@ -53,7 +55,7 @@ const Events = () => {
           <FootnotesLogo></FootnotesLogo>
         </div>
       </div >
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 };

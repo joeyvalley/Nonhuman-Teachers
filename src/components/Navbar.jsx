@@ -20,6 +20,11 @@ const Navbar = forwardRef((props, ref) => {
     <>
       <div className="navbar">
         <div className="navbar-item">
+          <a href="/about" className={`navbar-item ${selectedLink === "about" ? "selected" : ""}`}
+            onClick={() => handleClick("about")}>About</a>
+        </div>
+
+        <div className="navbar-item">
           <a href="/projects" className={`navbar-item ${selectedLink === "projects" ? "selected" : ""}`}
             onClick={() => handleClick("about")}>Projects</a>
         </div>
@@ -33,10 +38,7 @@ const Navbar = forwardRef((props, ref) => {
             onClick={() => handleClick("support")}>Support</a>
         </div>
 
-        <div className="navbar-item">
-          <a href="/about" className={`navbar-item ${selectedLink === "about" ? "selected" : ""}`}
-            onClick={() => handleClick("about")}>About</a>
-        </div>
+
 
         <div className="navbar-item">
           <a href="/contact" className={`navbar-item ${selectedLink === "contact" ? "selected" : ""}`}

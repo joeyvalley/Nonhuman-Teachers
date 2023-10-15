@@ -1,8 +1,7 @@
 :root {
-  --fontColor: black;
+  --fontColor: white;
   --blend: difference;
-  --avocado: #D6BA94;
-  --green: #5F733A;
+  --blue: #25418F;
   --main-font: 0.9rem;
   --header-font: 1.1rem;
   --footnote: 0.65rem;
@@ -19,7 +18,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   font-size: 16px;
-  background-color: var(--avocado);
+  background-color: var(--blue);
   overflow-x: hidden;
 }
 
@@ -37,13 +36,9 @@ body {
 .home {
   width: 100dvw;
   height: 100dvh;
-  padding: 0rem 10rem;
-  display: grid;
-  align-content: center;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 0;
 }
 
 .home p {
@@ -54,19 +49,18 @@ body {
 }
 
 .home a {
-  text-decoration: underline;
-  color: black;
-  transition: color ease 250ms;
+  display: block;
+  height: 33%;
 }
 
-.home a:hover {
-  color: white;
+.home img {
+  height: 100%;
 }
 
 .homeish {
-  background: #4bc525;
+  background: var(--blue);
   padding: 1rem 1rem 0 1rem;
-  border: 1px solid black;
+  border: 1px solid white;
 }
 
 
@@ -159,23 +153,29 @@ body {
   margin-bottom: 1rem;
 }
 
+
+.event-info {
+  margin: 0.5rem 0rem;
+}
+
 .event-link {
   padding: 0.25rem;
-  border: 1px solid black;
+  border: 1px solid white;
+  color: white !important;
   text-align: center;
   transition: all ease-in-out 200ms;
   margin-top: 0.5rem;
 }
 
 .event-link:hover {
-  background: black;
-  color: white;
+  background: white;
+  color: black !important;
   cursor: pointer;
 }
 
 .project-button {
   padding: 0.25rem;
-  border: 1px solid black;
+  border: 1px solid white;
   text-align: center;
   transition: all ease-in-out 200ms;
   width: auto;
@@ -195,7 +195,7 @@ body {
 
 .event img {
   width: 100%;
-  background: white;
+  background: var(--blue);
   margin-bottom: 0.25rem;
   border: 1px solid black;
   opacity: 0.8;
@@ -211,6 +211,7 @@ body {
   font-size: var(--main-font);
   display: block;
   margin-bottom: 0rem;
+  color: white;
 }
 
 .event h1 {
@@ -218,14 +219,14 @@ body {
 }
 
 .event h1 a {
-  color: black;
+  color: white;
   text-decoration: underline;
   transition: color ease 250ms;
 }
 
 .event h1 a:hover {
   text-decoration: underline;
-  color: white;
+  color: black;
 
 }
 
@@ -237,7 +238,7 @@ body {
   justify-content: center;
   align-items: center;
   bottom: 0;
-  background: var(--avocado);
+  background: var(--blue);
   border-top: 1px solid black;
   z-index: 100;
 }
@@ -245,6 +246,8 @@ body {
 .footer p {
   font-family: "Helveesti";
   font-size: var(--footnote) !important;
+  color: white;
+  margin-top: 2px;
 }
 
 .footer p a {
@@ -265,7 +268,6 @@ body {
   overflow: scroll;
   padding: 1rem 1rem 0rem 0rem;
   scrollbar-color: transparent transparent;
-  /* border: 1px solid red; */
   margin: 0;
   background: none;
 }
@@ -302,27 +304,27 @@ body {
 .footnote-text {
   font-family: "Helveesti";
   font-size: var(--footnote);
-  color: black;
+  color: white;
   transition: color ease-in-out 100ms;
   display: block;
   text-align: justify;
 }
 
 .footnote-text a {
-  color: black;
+  color: white;
   text-decoration: underline;
   transition: color ease-in-out 100ms;
 }
 
 .footnote-text a:hover {
-  color: white;
+  color: black;
   text-decoration: underline;
 }
 
 .footnote-text-link {
   font-family: "Helveesti";
   font-size: var(--footnote);
-  color: black;
+  color: white;
   transition: color ease-in-out 100ms;
   padding-bottom: 4px;
   display: block;
@@ -331,7 +333,7 @@ body {
 
 .footnote-text-link:hover {
   cursor: pointer;
-  color: white
+  color: black;
 }
 
 
@@ -378,7 +380,7 @@ body {
 .modal {
   height: 100vh;
   width: 100vw;
-  background: red;
+  background: white;
   z-index: 100;
   position: fixed;
   top: 0;
@@ -400,13 +402,13 @@ body {
 
 .modal-close:hover {
   cursor: pointer;
-  color: white;
+  color: black;
 }
 
 .modal-content {
   width: 100%;
   height: 100%;
-  background: green;
+  background: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -423,7 +425,7 @@ body {
   padding: 0.75rem 2rem 0.75rem 1.2rem;
   top: 0;
   z-index: 50;
-  background-color: var(--avocado);
+  background-color: var(--blue);
   display: flex;
   justify-content: flex;
   width: 100vw;
@@ -435,19 +437,23 @@ body {
 .navbar-item {
   font-family: "Helveesti";
   font-size: var(--header-font);
-  color: var(--black);
+  color: white;
   display: inline;
   width: fit-content;
 }
 
 .navbar-item a {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
 .navbar-item a:hover {
-  color: white;
+  color: black;
   text-decoration: none;
+}
+
+.navbar-item.selected {
+  color: black !important;
 }
 
 .email {
@@ -476,8 +482,6 @@ body {
 .email::placeholder {
   color: black;
 }
-
-.newsletter {}
 
 .newsletter form {
   display: grid;
@@ -576,9 +580,13 @@ body {
   font-weight: 400;
   font-size: var(--header-font);
   line-height: 1.3rem;
-  color: black;
+  color: white;
   margin-bottom: 0.5rem;
   text-align: justify;
+}
+
+.section h1 a {
+  text-decoration: none !important;
 }
 
 
@@ -588,7 +596,7 @@ body {
   font-weight: 400;
   font-size: var(--main-font);
   line-height: 1.3rem;
-  color: black;
+  color: white;
   margin-bottom: 0.5rem;
   text-align: justify;
 
@@ -599,13 +607,13 @@ body {
 }
 
 .section p a {
-  color: black;
+  color: white;
   text-decoration: underline;
   transition: color ease-in-out 100ms;
 }
 
 .section p a:hover {
-  color: white;
+  color: black;
   text-decoration: underline;
 }
 
@@ -621,7 +629,7 @@ body {
   font-weight: 400;
   font-size: var(--main-font);
   line-height: 1.3rem;
-  color: black;
+  color: white;
 }
 
 .section li a {
@@ -644,10 +652,6 @@ body {
   padding-left: 1.5rem;
 }
 
-.selected {
-  color: white !important;
-}
-
 .title {
   font-style: italic;
 }
@@ -658,7 +662,7 @@ body {
   left: 0;
   height: 100vh;
   width: 100vw;
-  background-color: var(--avocado);
+  background-color: var(--blue);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -844,15 +848,16 @@ body {
 
   .event-link {
     padding: 0.25rem;
-    border: 1px solid black;
+    border: 1px solid white;
+    color: white !important;
     text-align: center;
     transition: all ease-in-out 200ms;
     margin-top: 0.25rem;
   }
 
   .event-link:hover {
-    background: black;
-    color: white;
+    background: white;
+    color: black;
     cursor: pointer;
   }
 
@@ -1055,7 +1060,7 @@ body {
     padding: 0.75rem;
     top: 0;
     z-index: 50;
-    background-color: var(--avocado);
+    background-color: var(--blue);
     display: flex;
     justify-content: space-between;
     width: 100vw;
@@ -1086,7 +1091,7 @@ body {
     display: grid;
     width: 100vw;
     grid-template-columns: 1fr;
-    background-color: var(--avocado);
+    background-color: var(--blue);
     padding: 0.75rem 0.7rem 0rem 0.7rem;
     min-height: calc(100dvh - 93px);
   }
@@ -1178,7 +1183,7 @@ body {
     left: 0;
     height: 100vh;
     width: 100vw;
-    background-color: var(--avocado);
+    background-color: var(--blue);
     display: flex;
     align-items: center;
     justify-content: center;
