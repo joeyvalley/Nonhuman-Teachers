@@ -1,4 +1,5 @@
 import Footer from "./Footer"
+import FootnotesLogo from './FootnotesLogo'
 import Newsletter from "./Newsletter"
 import React from "react";
 
@@ -12,35 +13,97 @@ const Contact = () => {
           <p>Our facilities are open during events, and at all other times by appointment only.</p>
           <p>Follow us: <a href="https://instagram.com/nonhuman.teachers">@nonhumanteachers</a></p>
           <Newsletter />
-          <img src="assets/images/handprint.jpg" alt="Handprint" />
+          <img src="assets/images/protest.png" alt="Protest" />
           <p className="lb">--</p>
         </div>
         <div className="footnotes">
-          <div className="footnote">
-            <span className="footnote-text">1. Christian Herman Cummings<br /><span class="title">Co-Founder, Executive Director</span></span>
+          <div className="footnote heading">
+            <span className="footnote-text">BOARD OF DIRECTORS</span>
           </div>
           <div className="footnote">
-            <span className="footnote-text">2. Max Martin<br /><span class="title">Co-Founder, Assistant Director</span></span>
+            <span className="footnote-text">Christian Cummings<br /><span class="title">Executive Director</span></span>
           </div>
           <div className="footnote">
-            <span className="footnote-text">3. Carlos Morera<br /><span class="title">Co-Founder, Creative Director</span></span>
+            <span className="footnote-text">Max Martin<br /><span class="title">Treasurer</span></span>
           </div>
           <div className="footnote">
-            <span className="footnote-text">4. Sandeep Rangi<br /><span class="title">Fiscal Director</span></span>
+            <span className="footnote-text">Carlos Morera<br /><span class="title">Secretary</span></span>
           </div>
           <div className="footnote">
-            <span className="footnote-text">5. Joseph Valle<br /><span class="title">Events Manager, Webmaster</span></span>
+            <span className="footnote-text">Sandeep Rangi<br /><span class="title">Director</span></span>
           </div>
           <div className="footnote">
-            <span className="footnote-text">6. Melody English<br /><span class="title">Communications Manager</span></span>
+            <span className="footnote-text">Sarah Agudo<br /><span class="title">Director</span></span>
+          </div>
+          <div className="footnote heading">
+            <span className="footnote-text">ADVISORY BOARD</span>
           </div>
           <div className="footnote">
-            <span className="footnote-text">7. Miguel Gaydosh<br /><span class="title">Design Consultant</span></span>
+            <span className="footnote-text">Evan Meyer<br /><span class="title">Botanist</span></span>
           </div>
           <div className="footnote">
-            <span className="footnote-text">8. Bill Ramirez<br /><span class="title">Field Manager</span></span>
+            <span className="footnote-text">John Mayer<br /><span class="title">Musician</span></span>
           </div>
+          <div className="footnote">
+            <span className="footnote-text">Emma Reeves<br /><span class="title">Creative Strategist</span></span>
+          </div>
+          <div className="footnote">
+            <span className="footnote-text">Susan Morris<br /><span class="title">Arts & Culture Writer</span></span>
+          </div>
+          <div className="footnote">
+            <span className="footnote-text">Angus Wall<br /><span class="title">Film Producer & Editor</span></span>
+          </div>
+          <div className="footnote">
+            <span className="footnote-text">Sasha Markova<br /><span class="title">Writer & Creative Director</span></span>
+          </div>
+          <div className="footnote">
+            <span className="footnote-text">Andy Rifkin<br /><span class="title">Real Estate Capital Partner</span></span>
+          </div>
+          <div className="footnote heading">
+            <span className="footnote-text">STAFF</span>
+          </div>
+          <div className="footnote">
+            <span className="footnote-text">Christian Cummings<br /><span class="title">Executive Director</span></span>
+          </div>
+          <div className="footnote">
+            <span className="footnote-text">Sandeep Rangi<br /><span class="title">Accounting</span></span>
+          </div>
+          <div className="footnote">
+            <span className="footnote-text">Sarah Agudo<br /><span class="title">Legal</span></span>
+          </div>
+          <div className="footnote">
+            <span className="footnote-text">William Ramirez<br /><span class="title">Gardens</span></span>
+          </div>
+          <div className="footnote">
+            <span className="footnote-text">Joseph Valle<br /><span class="title">Events</span></span>
+          </div>
+          <div className="footnote heading">
+            <span className="footnote-text">VOLUNTEERS</span>
+          </div>
+          <div className="footnote">
+            <span className="footnote-text">Kayra Viezcas<br /><span class="title">Grant Writer</span></span>
+          </div>
+          <div className="footnote">
+            <span className="footnote-text">Seth Allen<br /><span class="title">Publishing</span></span>
+          </div>
+          <div className="footnote">
+            <span className="footnote-text">Emily Bernstein<br /><span class="title">Writer</span></span>
+          </div>
+          <div className="footnote">
+            <span className="footnote-text">Cass Marketos<br /><span class="title">Writer & Composter</span></span>
+          </div>
+          <div className="footnote">
+            <span className="footnote-text">Zachary Repko<br /><span class="title">Workshops Coordinator</span></span>
+          </div>
+          <div className="footnote">
+            <span className="footnote-text">Gracia Echeverria<br /><span class="title">Bookworms</span></span>
+          </div>
+          <div className="footnote">
+            <span className="footnote-text">Miguel Gaydosh<br /><span class="title">Designer</span></span>
+          </div>
+          <FootnotesLogo></FootnotesLogo>
         </div>
+
       </div>
       <Footer />
     </>

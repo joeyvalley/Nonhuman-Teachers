@@ -1,5 +1,5 @@
 :root {
-  --fontColor: white;
+  --fontColor: black;
   --blend: difference;
   --blue: #25418F;
   --main-font: 0.9rem;
@@ -18,7 +18,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   font-size: 16px;
-  background-color: var(--blue);
+  background-color: white;
   overflow-x: hidden;
 }
 
@@ -58,9 +58,9 @@ body {
 }
 
 .homeish {
-  background: var(--blue);
+  background: white;
   padding: 1rem 1rem 0 1rem;
-  border: 1px solid white;
+  border: 1px solid black;
 }
 
 
@@ -118,9 +118,11 @@ body {
 }
 
 .copy {
-  padding: 1rem 0.5rem 0.2rem 0.5rem;
+  padding: 1rem 1rem 0.2rem 0.5rem;
   overflow: scroll;
-  height: calc(100dvh - 71px);
+  height: calc(100dvh - 57px);
+  max-width: 800px;
+  /* background: red; */
 }
 
 .copy::-webkit-scrollbar {
@@ -134,6 +136,12 @@ body {
 
 .copy img {
   width: 100%;
+  margin-bottom: 0.5rem;
+  /* border: 1px solid black; */
+}
+
+.copy .section-heading {
+  margin-bottom: 2rem;
 }
 
 .donation-form-container {
@@ -150,7 +158,7 @@ body {
 }
 
 .event {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 
@@ -160,22 +168,22 @@ body {
 
 .event-link {
   padding: 0.25rem;
-  border: 1px solid white;
-  color: white !important;
+  border: 1px solid black;
+  color: black !important;
   text-align: center;
   transition: all ease-in-out 200ms;
   margin-top: 0.5rem;
 }
 
 .event-link:hover {
-  background: white;
-  color: black !important;
+  background: black;
+  color: white !important;
   cursor: pointer;
 }
 
 .project-button {
   padding: 0.25rem;
-  border: 1px solid white;
+  border: 1px solid black;
   text-align: center;
   transition: all ease-in-out 200ms;
   width: auto;
@@ -195,7 +203,7 @@ body {
 
 .event img {
   width: 100%;
-  background: var(--blue);
+  background: white;
   margin-bottom: 0.25rem;
   border: 1px solid black;
   opacity: 0.8;
@@ -211,7 +219,7 @@ body {
   font-size: var(--main-font);
   display: block;
   margin-bottom: 0rem;
-  color: white;
+  color: black;
 }
 
 .event h1 {
@@ -219,57 +227,62 @@ body {
 }
 
 .event h1 a {
-  color: white;
+  color: black;
   text-decoration: underline;
   transition: color ease 250ms;
 }
 
 .event h1 a:hover {
   text-decoration: underline;
-  color: black;
+  color: var(--blue);
 
 }
 
 .footer {
   position: fixed;
   width: 100%;
-  height: 44px;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   bottom: 0;
-  background: var(--blue);
+  background: white;
   border-top: 1px solid black;
   z-index: 100;
+  padding: 0.25rem 0rem;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .footer p {
   font-family: "Helveesti";
-  font-size: var(--footnote) !important;
-  color: white;
-  margin-top: 2px;
-}
-
-.footer p a {
-  text-decoration: none;
+  font-size: 0.9rem;
+  font-style: italic;
   color: black;
+  margin-top: 2px;
+  display: inline-block;
+  white-space: nowrap;
+  animation: scrollText 15s linear infinite;
 }
 
-.footer p a:hover {
-  text-decoration: none;
-  color: white;
-  transition: color ease-in-out 200ms;
+@keyframes scrollText {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .footnotes {
   position: relative;
   top: -1px;
-  height: calc(100dvh - 70px);
+  height: calc(100dvh - 50px);
   overflow: scroll;
   padding: 1rem 1rem 0rem 0rem;
   scrollbar-color: transparent transparent;
   margin: 0;
-  background: none;
+  /* background: green; */
 }
 
 .footnotes::-webkit-scrollbar {
@@ -290,6 +303,12 @@ body {
   margin-bottom: 1rem;
 }
 
+.heading {
+  border-bottom: 1px solid black;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+}
+
 .footnote img {
   width: 100%;
   cursor: pointer;
@@ -304,27 +323,27 @@ body {
 .footnote-text {
   font-family: "Helveesti";
   font-size: var(--footnote);
-  color: white;
+  color: black;
   transition: color ease-in-out 100ms;
   display: block;
-  text-align: justify;
+  text-align: left;
 }
 
 .footnote-text a {
-  color: white;
+  color: black;
   text-decoration: underline;
   transition: color ease-in-out 100ms;
 }
 
 .footnote-text a:hover {
-  color: black;
+  color: var(--blue);
   text-decoration: underline;
 }
 
 .footnote-text-link {
   font-family: "Helveesti";
   font-size: var(--footnote);
-  color: white;
+  color: black;
   transition: color ease-in-out 100ms;
   padding-bottom: 4px;
   display: block;
@@ -333,7 +352,7 @@ body {
 
 .footnote-text-link:hover {
   cursor: pointer;
-  color: black;
+  color: var(--blue);
 }
 
 
@@ -396,7 +415,7 @@ body {
   right: 1.75rem;
   font-family: "Helveesti";
   font-size: var(--main-font);
-  color: var(--black);
+  color: black;
   transition: color ease 250ms;
 }
 
@@ -422,39 +441,52 @@ body {
 .navbar {
   position: fixed;
   z-index: 100;
-  padding: 0.75rem 2rem 0.75rem 1.2rem;
+  padding: 0.75rem 2rem 0.7rem 1.2rem;
   top: 0;
   z-index: 50;
-  background-color: var(--blue);
+  background-color: white;
   display: flex;
-  justify-content: flex;
+  justify-content: space-between;
   width: 100vw;
   gap: 2rem;
   border-bottom: 1px solid black;
+}
+
+.left {
+  display: inline-block;
+  width: 100%;
+}
+
+.right {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 
 .navbar-item {
   font-family: "Helveesti";
   font-size: var(--header-font);
-  color: white;
+  color: black;
   display: inline;
   width: fit-content;
 }
 
 .navbar-item a {
-  color: white;
-  text-decoration: none;
-}
-
-.navbar-item a:hover {
   color: black;
   text-decoration: none;
 }
 
-.navbar-item.selected {
-  color: black !important;
+.navbar-item a:hover {
+  color: var(--blue);
+  text-decoration: none;
 }
+
+.navbar-item.selected {
+  color: var(--blue) !important;
+}
+
+
 
 .email {
   font-family: "Helveesti";
@@ -462,7 +494,7 @@ body {
   font-weight: 400;
   font-size: 1.5rem;
   line-height: 1rem;
-  color: white;
+  color: black;
   background: none;
   border: none;
   border-radius: 0;
@@ -475,7 +507,6 @@ body {
 
 .email:focus {
   outline: none;
-  /* mix-blend-mode: normal; */
   color: black;
 }
 
@@ -548,7 +579,6 @@ body {
   font-family: "Helveesti";
   font-size: 1rem;
   line-height: 0.5rem !important;
-  /* margin-bottom: 1rem; */
   color: black;
   transition: color ease-in-out 100ms;
 }
@@ -560,7 +590,7 @@ body {
 
 .project-title a:hover {
   text-decoration: none !important;
-  color: black !important;
+  color: var(--blue) !important;
 }
 
 .section {
@@ -580,7 +610,7 @@ body {
   font-weight: 400;
   font-size: var(--header-font);
   line-height: 1.3rem;
-  color: white;
+  color: black;
   margin-bottom: 0.5rem;
   text-align: justify;
 }
@@ -596,7 +626,7 @@ body {
   font-weight: 400;
   font-size: var(--main-font);
   line-height: 1.3rem;
-  color: white;
+  color: black;
   margin-bottom: 0.5rem;
   text-align: justify;
 
@@ -607,13 +637,13 @@ body {
 }
 
 .section p a {
-  color: white;
+  color: black;
   text-decoration: underline;
   transition: color ease-in-out 100ms;
 }
 
 .section p a:hover {
-  color: black;
+  color: var(--blue);
   text-decoration: underline;
 }
 
@@ -629,7 +659,7 @@ body {
   font-weight: 400;
   font-size: var(--main-font);
   line-height: 1.3rem;
-  color: white;
+  color: black;
 }
 
 .section li a {
@@ -639,7 +669,7 @@ body {
 }
 
 .section li a:hover {
-  color: white;
+  color: var(--blue);
   text-decoration: underline;
 }
 
@@ -662,7 +692,7 @@ body {
   left: 0;
   height: 100vh;
   width: 100vw;
-  background-color: var(--blue);
+  background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -778,7 +808,7 @@ body {
 
   .project-title a:hover {
     text-decoration: none !important;
-    color: black !important;
+    color: var(--blue) !important;
   }
 
   .email {
@@ -843,21 +873,21 @@ body {
   }
 
   .event {
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
   }
 
   .event-link {
     padding: 0.25rem;
-    border: 1px solid white;
-    color: white !important;
+    border: 1px solid black;
+    color: black !important;
     text-align: center;
     transition: all ease-in-out 200ms;
     margin-top: 0.25rem;
   }
 
   .event-link:hover {
-    background: white;
-    color: black;
+    background: black;
+    color: white !important;
     cursor: pointer;
   }
 
@@ -899,7 +929,7 @@ body {
 
   .footer p a:hover {
     text-decoration: none;
-    color: white;
+    color: var(--blue);
     transition: color ease-in-out 200ms;
   }
 
@@ -951,7 +981,7 @@ body {
   }
 
   .footnote-text a:hover {
-    color: white;
+    color: var(--blue);
     text-decoration: underline;
   }
 
@@ -967,7 +997,7 @@ body {
 
   .footnote-text-link:hover {
     cursor: pointer;
-    color: white
+    color: var(--blue)
   }
 
 
@@ -1015,7 +1045,7 @@ body {
   .modal {
     height: 100vh;
     width: 100vw;
-    background: red;
+    /* background: red; */
     z-index: 100;
     position: fixed;
     top: 0;
@@ -1037,13 +1067,13 @@ body {
 
   .modal-close:hover {
     cursor: pointer;
-    color: white;
+    color: var(--blue);
   }
 
   .modal-content {
     width: 100%;
     height: 100%;
-    background: green;
+    /* background: green; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1060,7 +1090,7 @@ body {
     padding: 0.75rem;
     top: 0;
     z-index: 50;
-    background-color: var(--blue);
+    background-color: white;
     display: flex;
     justify-content: space-between;
     width: 100vw;
@@ -1083,7 +1113,7 @@ body {
   }
 
   .navbar-item a:hover {
-    color: white;
+    color: var(--blue);
     text-decoration: none;
   }
 
@@ -1091,7 +1121,7 @@ body {
     display: grid;
     width: 100vw;
     grid-template-columns: 1fr;
-    background-color: var(--blue);
+    background-color: white;
     padding: 0.75rem 0.7rem 0rem 0.7rem;
     min-height: calc(100dvh - 93px);
   }

@@ -8,10 +8,10 @@ import DonationPage from './components/DonationForm'
 import ProjectsPage from './pages/Projects'
 
 import EventsPage from './pages/projects/Events'
-import PlantOrphansPage from './pages/projects/PlantOrphans'
-import TravelPage from './pages/projects/Travel'
+import BotanicalSpacesPage from './pages/projects/BotanicalSpaces'
+import MediaPage from './pages/projects/Media'
 import FuturePage from './pages/projects/Future'
-import ClubsPage from './pages/projects/Clubs'
+import GroupsPage from './pages/projects/Groups'
 
 // import DonationForm from "./components/DonationForm"
 
@@ -28,11 +28,11 @@ export default function App() {
       <Route path="/about" element={<AboutPage />}></Route>
       <Route path="/contact/" element={<ContactPage />}></Route>
       {/* Sub-Pages */}
-      <Route path="/projects/clubs-and-societies" element={<ClubsPage />}></Route>
+      <Route path="/projects/groups-and-workshops" element={<GroupsPage />}></Route>
       <Route path="/projects/programming-and-events" element={<EventsPage />}></Route>
       <Route path="/projects/the-future" element={<FuturePage />}></Route>
-      <Route path="/projects/botanical-spaces" element={<PlantOrphansPage />}></Route>
-      <Route path="/projects/research-and-travel" element={<TravelPage />}></Route>
+      <Route path="/projects/botanical-spaces" element={<BotanicalSpacesPage />}></Route>
+      <Route path="/projects/media" element={<MediaPage />}></Route>
       {/* Alternate Pages */}
       {/* <Route path="/donations" element={<DonationForm />}></Route> */}
     </Routes>

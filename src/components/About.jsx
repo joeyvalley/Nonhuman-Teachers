@@ -3,6 +3,7 @@ import { gsap } from 'gsap';
 import Modal from './Modal';
 
 import Footer from "./Footer"
+import FootnotesLogo from './FootnotesLogo';
 
 
 const About = () => {
@@ -23,24 +24,29 @@ const About = () => {
     <>
       <div className="section" id="about">
         <div className="copy">
-          <p>Nonhuman Teachers<span className="footnote-number">1</span> aspires to be a platform for folks in our community to forge more conscious relationships with the natural world that we are all enmeshed in. Sort of like 4H for adults, but instead of raising goats and chickens, we aspire to help raise more ecologically-minded selves, operating on the premise that solidarity with nonhuman beings<span className="footnote-number">2</span> can make us better citizens of this wondrous galactic zoo that we call the ecosphere.<span className="footnote-number">3</span></p>
-          <p>Nonhuman Teachers hosts a diversity of projects<span className="footnote-number">5</span>, from multidisciplinary events in collaboration with like-minded institutions to research trips to the tending of our xeric botanical garden in LA.<span className="footnote-number">6</span></p>
+          {/* <p>"The engineers of the future will be poets" <br />-Terrence McKenna</p> */}
+          <img src="/assets/images/protest.png" alt="NHT Protest" />
+          <p>Nonhuman Teachers<span className="footnote-number">[1]</span> is a 501(c)(3) nonprofit organization that takes a new approach<span className="footnote-number">[2]</span> to ecological storytelling, blending science, art, and the imagination to help deepen the relationship between humans and the natural world.</p>
+          <p>Through multidisciplinary experiential programming<span className="footnote-number">[3]</span>, new nature media<span className="footnote-number">[4]</span>, and immersive botanical spaces<span className="footnote-number">[5]</span>, we aim to ignite a sense of wonder about our rapidly changing Earth, not only to make us better citizens of this place but to help folks imagine it differently.</p>
           <p className="lb">--</p>
         </div>
         <div className="footnotes">
           <div className="footnote">
-            <span className="footnote-text">1.&emsp;The name for our non-profit comes from a note that a friend of ours, a researcher from Harvard, found scrawled in the late ecologist Peter Warshall's journal. We hope that Peter doesn't mind us borrowing it.</span>
+            <span className='footnote-text' id='1'>1. Our name comes from a passage found scrawled in the lecture notes of the late ecologist, Peter Warshall. We hope he doesn't mind us borrowing it.</span>
           </div>
           <div className="footnote">
-            <span className="footnote-text">2.&emsp;Who of your friends or family are the result of a flower given?</span>
+            <span className='footnote-text' id="2">2. The first step toward healing this relationship is with new kinds of stories and new ways of telling them. We need compelling new ways of envisioning the natural world that don't simply cause dread and avoidance or beauty and delusion but that address the complexities of our time in ways that inspire us to keep going, to keep fighting.</span>
           </div>
           <div className="footnote">
-            <span className="footnote-text">3.&emsp;"People forget that science developed from poetry, and they fail to take into consideration that a swing of the pendulum might beneficently unite the two at a higher level, and to mutual advantage.”</span>
+            <span className='footnote-text' id='3'>3. Connecting with the natural world should be a social endeavor. Our multidisciplinary events offer artful ways of engaging with and learning about the natural world while also fostering a deep sense of community.</span>
           </div>
           <div className="footnote">
-            <span className="footnote-text-link" onClick={() => handleOpenModal('assets/images/warshall.png')}>4.&emsp;Peter's journal.</span>
-            <img src="assets/images/warshall.png" alt="Warshall Journal" onClick={() => handleOpenModal('assets/images/warshall.png')} />
+            <span className='footnote-text' id='4'>4. We believe that an innovative and updated approach to how science and the natural world are represented in media is long overdue. One that resonates with a broader audience while bringing a new generation of viewers into the conversation. Taking advantage of the full scope of today's media tools, we want to broadcast our signal far and wide.</span>
           </div>
+          <div className="footnote">
+            <span className='footnote-text' id='5'>5. Our immersive botanical spaces are experiments in what the evolution of a botanical garden can look like; unlikely urban oases of rare and unusual plants, community hubs for science, education, and experimentation.</span>
+          </div>
+          <FootnotesLogo />
         </div>
       </div >
       <Footer />
