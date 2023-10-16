@@ -1,8 +1,7 @@
 :root {
   --fontColor: black;
   --blend: difference;
-  --avocado: #D6BA94;
-  --green: #5F733A;
+  --blue: #25418F;
   --main-font: 0.9rem;
   --header-font: 1.1rem;
   --footnote: 0.65rem;
@@ -19,7 +18,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   font-size: 16px;
-  background-color: var(--avocado);
+  background-color: white;
   overflow-x: hidden;
 }
 
@@ -37,34 +36,13 @@ body {
 .home {
   width: 100dvw;
   height: 100dvh;
-  padding: 0rem 10rem;
-  display: grid;
-  align-content: center;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
-.home p {
-  font-family: "Helveesti";
-  font-size: 1.5rem;
-  text-align: left;
-  margin-bottom: 1rem;
-}
-
-.home a {
-  text-decoration: underline;
-  color: black;
-  transition: color ease 250ms;
-}
-
-.home a:hover {
-  color: white;
 }
 
 .homeish {
-  background: #4bc525;
+  background: white;
   padding: 1rem 1rem 0 1rem;
   border: 1px solid black;
 }
@@ -124,9 +102,11 @@ body {
 }
 
 .copy {
-  padding: 1rem 0.5rem 0.2rem 0.5rem;
+  padding: 1rem 1rem 0.2rem 0.5rem;
   overflow: scroll;
-  height: calc(100dvh - 71px);
+  height: calc(100dvh - 55px);
+  max-width: 800px;
+  /* background: red; */
 }
 
 .copy::-webkit-scrollbar {
@@ -140,6 +120,14 @@ body {
 
 .copy img {
   width: 100%;
+  margin-bottom: 0.5rem;
+  /* border: 1px solid black; */
+}
+
+.copy .section-heading {
+  padding: 1rem 1rem 0rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid black;
 }
 
 .donation-form-container {
@@ -156,12 +144,18 @@ body {
 }
 
 .event {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+
+.event-info {
+  margin: 0.5rem 0rem;
 }
 
 .event-link {
   padding: 0.25rem;
   border: 1px solid black;
+  color: black !important;
   text-align: center;
   transition: all ease-in-out 200ms;
   margin-top: 0.5rem;
@@ -169,7 +163,7 @@ body {
 
 .event-link:hover {
   background: black;
-  color: white;
+  color: white !important;
   cursor: pointer;
 }
 
@@ -211,6 +205,7 @@ body {
   font-size: var(--main-font);
   display: block;
   margin-bottom: 0rem;
+  color: black;
 }
 
 .event h1 {
@@ -225,49 +220,55 @@ body {
 
 .event h1 a:hover {
   text-decoration: underline;
-  color: white;
+  color: var(--blue);
 
 }
 
 .footer {
   position: fixed;
   width: 100%;
-  height: 44px;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   bottom: 0;
-  background: var(--avocado);
+  background: white;
   border-top: 1px solid black;
   z-index: 100;
+  padding: 0.3rem 0rem;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .footer p {
   font-family: "Helveesti";
-  font-size: var(--footnote) !important;
-}
-
-.footer p a {
-  text-decoration: none;
+  font-size: 0.75rem;
+  font-style: italic;
   color: black;
+  margin-top: 2px;
+  display: inline-block;
+  white-space: nowrap;
+  animation: scrollText 30s linear infinite;
 }
 
-.footer p a:hover {
-  text-decoration: none;
-  color: white;
-  transition: color ease-in-out 200ms;
+@keyframes scrollText {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .footnotes {
   position: relative;
   top: -1px;
-  height: calc(100dvh - 70px);
+  height: calc(100dvh - 51px);
   overflow: scroll;
   padding: 1rem 1rem 0rem 0rem;
   scrollbar-color: transparent transparent;
-  /* border: 1px solid red; */
   margin: 0;
-  background: none;
+  /* background: green; */
 }
 
 .footnotes::-webkit-scrollbar {
@@ -288,6 +289,12 @@ body {
   margin-bottom: 1rem;
 }
 
+.heading {
+  border-bottom: 1px solid black;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+}
+
 .footnote img {
   width: 100%;
   cursor: pointer;
@@ -305,7 +312,7 @@ body {
   color: black;
   transition: color ease-in-out 100ms;
   display: block;
-  text-align: justify;
+  text-align: left;
 }
 
 .footnote-text a {
@@ -315,7 +322,7 @@ body {
 }
 
 .footnote-text a:hover {
-  color: white;
+  color: var(--blue);
   text-decoration: underline;
 }
 
@@ -331,7 +338,7 @@ body {
 
 .footnote-text-link:hover {
   cursor: pointer;
-  color: white
+  color: var(--blue);
 }
 
 
@@ -378,7 +385,7 @@ body {
 .modal {
   height: 100vh;
   width: 100vw;
-  background: red;
+  background: white;
   z-index: 100;
   position: fixed;
   top: 0;
@@ -394,19 +401,19 @@ body {
   right: 1.75rem;
   font-family: "Helveesti";
   font-size: var(--main-font);
-  color: var(--black);
+  color: black;
   transition: color ease 250ms;
 }
 
 .modal-close:hover {
   cursor: pointer;
-  color: white;
+  color: black;
 }
 
 .modal-content {
   width: 100%;
   height: 100%;
-  background: green;
+  background: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -420,22 +427,33 @@ body {
 .navbar {
   position: fixed;
   z-index: 100;
-  padding: 0.75rem 2rem 0.75rem 1.2rem;
+  padding: 0.75rem 2rem 0.7rem 1.2rem;
   top: 0;
   z-index: 50;
-  background-color: var(--avocado);
+  background-color: white;
   display: flex;
-  justify-content: flex;
+  justify-content: space-between;
   width: 100vw;
   gap: 2rem;
   border-bottom: 1px solid black;
+}
+
+.left {
+  display: inline-block;
+  width: 100%;
+}
+
+.right {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 
 .navbar-item {
   font-family: "Helveesti";
   font-size: var(--header-font);
-  color: var(--black);
+  color: black;
   display: inline;
   width: fit-content;
 }
@@ -446,17 +464,23 @@ body {
 }
 
 .navbar-item a:hover {
-  color: white;
+  color: var(--blue);
   text-decoration: none;
 }
+
+.navbar-item.selected {
+  color: var(--blue) !important;
+}
+
+
 
 .email {
   font-family: "Helveesti";
   font-style: normal;
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: var(--main-font);
   line-height: 1rem;
-  color: white;
+  color: black;
   background: none;
   border: none;
   border-radius: 0;
@@ -469,15 +493,12 @@ body {
 
 .email:focus {
   outline: none;
-  /* mix-blend-mode: normal; */
   color: black;
 }
 
 .email::placeholder {
   color: black;
 }
-
-.newsletter {}
 
 .newsletter form {
   display: grid;
@@ -490,7 +511,7 @@ body {
   font-family: "Helveesti";
   font-style: normal;
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: var(--main-font);
   /* line-height: 1.3rem; */
   padding: 0.25rem;
   color: black;
@@ -508,6 +529,36 @@ body {
 }
 
 .subscribe:hover {
+  background: black;
+  color: white;
+  cursor: pointer;
+  /* mix-blend-mode: normal; */
+}
+
+.donate {
+  font-family: "Helveesti";
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--main-font);
+  /* line-height: 1.3rem; */
+  padding: 0.25rem;
+  color: black;
+  background: none;
+  border: 1px solid black;
+  display: inline-block;
+  transition: background 200ms ease-in-out;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.donate:focus {
+  background: black;
+  color: white;
+  cursor: pointer;
+  /* mix-blend-mode: normal; */
+}
+
+.donate:hover {
   background: black;
   color: white;
   cursor: pointer;
@@ -544,7 +595,6 @@ body {
   font-family: "Helveesti";
   font-size: 1rem;
   line-height: 0.5rem !important;
-  /* margin-bottom: 1rem; */
   color: black;
   transition: color ease-in-out 100ms;
 }
@@ -556,7 +606,7 @@ body {
 
 .project-title a:hover {
   text-decoration: none !important;
-  color: black !important;
+  color: var(--blue) !important;
 }
 
 .section {
@@ -577,8 +627,12 @@ body {
   font-size: var(--header-font);
   line-height: 1.3rem;
   color: black;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
   text-align: justify;
+}
+
+.section h1 a {
+  text-decoration: none !important;
 }
 
 
@@ -590,7 +644,7 @@ body {
   line-height: 1.3rem;
   color: black;
   margin-bottom: 0.5rem;
-  text-align: justify;
+  text-align: left;
 
 }
 
@@ -600,13 +654,13 @@ body {
 
 .section p a {
   color: black;
-  text-decoration: underline;
+  text-decoration: none;
   transition: color ease-in-out 100ms;
 }
 
 .section p a:hover {
-  color: white;
-  text-decoration: underline;
+  color: var(--blue);
+  text-decoration: none;
 }
 
 
@@ -626,13 +680,13 @@ body {
 
 .section li a {
   color: black;
-  text-decoration: underline;
+  text-decoration: none;
   transition: color ease-in-out 100ms;
 }
 
 .section li a:hover {
-  color: white;
-  text-decoration: underline;
+  color: var(--blue);
+  text-decoration: none;
 }
 
 .section-left-contact {
@@ -642,10 +696,6 @@ body {
 
 .section-right {
   padding-left: 1.5rem;
-}
-
-.selected {
-  color: white !important;
 }
 
 .title {
@@ -658,7 +708,7 @@ body {
   left: 0;
   height: 100vh;
   width: 100vw;
-  background-color: var(--avocado);
+  background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -676,35 +726,6 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-
-  .home {
-    width: 100dvw;
-    height: 100dvh;
-    padding: 0rem 5rem;
-    display: grid;
-    align-content: center;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2000;
-  }
-
-  .home p {
-    font-size: var(--header-font);
-    text-align: left;
-    color: black;
-  }
-
-  .home a {
-    text-decoration: underline;
-    color: black;
-    transition: color ease 250ms;
-  }
-
-  .home a:hover {
-    color: white;
   }
 
   .lb {
@@ -774,7 +795,7 @@ body {
 
   .project-title a:hover {
     text-decoration: none !important;
-    color: black !important;
+    color: var(--blue) !important;
   }
 
   .email {
@@ -839,12 +860,13 @@ body {
   }
 
   .event {
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
   }
 
   .event-link {
     padding: 0.25rem;
     border: 1px solid black;
+    color: black !important;
     text-align: center;
     transition: all ease-in-out 200ms;
     margin-top: 0.25rem;
@@ -852,7 +874,7 @@ body {
 
   .event-link:hover {
     background: black;
-    color: white;
+    color: white !important;
     cursor: pointer;
   }
 
@@ -894,7 +916,7 @@ body {
 
   .footer p a:hover {
     text-decoration: none;
-    color: white;
+    color: var(--blue);
     transition: color ease-in-out 200ms;
   }
 
@@ -946,7 +968,7 @@ body {
   }
 
   .footnote-text a:hover {
-    color: white;
+    color: var(--blue);
     text-decoration: underline;
   }
 
@@ -962,7 +984,7 @@ body {
 
   .footnote-text-link:hover {
     cursor: pointer;
-    color: white
+    color: var(--blue)
   }
 
 
@@ -1010,7 +1032,7 @@ body {
   .modal {
     height: 100vh;
     width: 100vw;
-    background: red;
+    /* background: red; */
     z-index: 100;
     position: fixed;
     top: 0;
@@ -1032,13 +1054,13 @@ body {
 
   .modal-close:hover {
     cursor: pointer;
-    color: white;
+    color: var(--blue);
   }
 
   .modal-content {
     width: 100%;
     height: 100%;
-    background: green;
+    /* background: green; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1055,7 +1077,7 @@ body {
     padding: 0.75rem;
     top: 0;
     z-index: 50;
-    background-color: var(--avocado);
+    background-color: white;
     display: flex;
     justify-content: space-between;
     width: 100vw;
@@ -1078,7 +1100,7 @@ body {
   }
 
   .navbar-item a:hover {
-    color: white;
+    color: var(--blue);
     text-decoration: none;
   }
 
@@ -1086,7 +1108,7 @@ body {
     display: grid;
     width: 100vw;
     grid-template-columns: 1fr;
-    background-color: var(--avocado);
+    background-color: white;
     padding: 0.75rem 0.7rem 0rem 0.7rem;
     min-height: calc(100dvh - 93px);
   }
@@ -1178,7 +1200,7 @@ body {
     left: 0;
     height: 100vh;
     width: 100vw;
-    background-color: var(--avocado);
+    background-color: var(--blue);
     display: flex;
     align-items: center;
     justify-content: center;
