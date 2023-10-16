@@ -65,14 +65,16 @@ const Projects = forwardRef((props, ref) => {
               </Slider>
               <a href="/projects/programming-and-events"><span className="project-button">More Information</span></a>
             </div>
-
+          </div>
+          <div className="section-heading">
             <div className="event">
               <h1><a href="projects/groups-and-workshops">Community Groups & Workshops</a></h1>
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam tempora, libero excepturi eaque cumque corrupti laudantium architecto explicabo dolorum blanditiis quaerat voluptatibus incidunt commodi quisquam nesciunt praesentium! Alias, voluptates eum.</p>
               <img src="assets/images/clubs.jpg" alt="Clubs" className="carousel-image" />
               <a href="/projects/groups-and-workshops"><span className="project-button">More Information</span></a>
             </div>
-
+          </div>
+          <div className="section-heading">
             <div className="event">
               <h1><a href="projects/botanical-spaces">New Botanical Spaces</a></h1>
               <p>Our immersive botanical spaces are experiments in what the evolution of a botanical garden can look like; unlikely urban oases of rare and unusual plants, community hubs for science, education, and experimentation.</p>
@@ -85,14 +87,14 @@ const Projects = forwardRef((props, ref) => {
               </Slider>
               <a href="/projects/botanical-spaces"><span className="project-button">More Information</span></a>
             </div>
-
+          </div>
+          <div className="section-heading">
             <div className="event">
               <h1><a href="projects/media">New Nature Media</a></h1>
               <p>We believe that an innovative and updated approach to how science and the natural world are represented in media is long overdue. Taking advantage of the full scope of today's media tools, we want to broadcast our signal far and wide and bring a new generation of viewers into the conversation.</p>
               <img src="assets/images/travel.jpg" alt="Travel" className="carousel-image" />
               <a href="/projects/media"><span className="project-button">More Information</span></a>
             </div>
-
             <p className="lb">--</p>
           </div>
         </div>
@@ -101,7 +103,7 @@ const Projects = forwardRef((props, ref) => {
           <div className="footnote">
             <span className="footnote-text-link">1.&emsp;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui a blanditiis reiciendis beatae illo provident mollitia sapiente, voluptatem iure expedita officiis minima repellat dolores laborum maiores molestiae veniam eaque cum.</span>
           </div>
-          <FootnotesLogo></FootnotesLogo>
+          {/* <FootnotesLogo></FootnotesLogo> */}
         </div>
       </div >
       <Footer />

@@ -18,7 +18,7 @@ const Contact = () => {
             <p>Be the first to hear about new events, workshops, and updates from Nonhuman Teachers.</p>
             <Newsletter />
             <p>For inquiries regarding collaborations, partnerships, and donations please email us at: <a href="mailto:info@nonhumanteachers.org">info@nonhumanteachers.org</a></p>
-            <p>Follow us: <a href="https://instagram.com/nonhuman.teachers">@nonhumanteachers</a></p>
+            {/* <p>Follow us: <a href="https://instagram.com/nonhuman.teachers">@nonhumanteachers</a></p> */}
           </div>
           <p className="lb">--</p>
         </div>
@@ -107,7 +107,6 @@ const Contact = () => {
           <div className="footnote">
             <span className="footnote-text">Miguel Gaydosh<br /><span class="title">Designer</span></span>
           </div>
-          <FootnotesLogo></FootnotesLogo>
         </div>
 
       </div>

@@ -51,6 +51,9 @@ const About = () => {
         </div>
         <div className="footnotes">
           <div className="footnote">
+            <span className='footnote-text' id='1'>REFERENCES</span>
+          </div>
+          <div className="footnote">
             <span className='footnote-text' id='1'>1. Our name comes from a passage found scrawled in the lecture notes of the late ecologist, Peter Warshall. We hope he doesn't mind us borrowing it.</span>
           </div>
           <div className="footnote">
@@ -65,7 +68,7 @@ const About = () => {
           <div className="footnote">
             <span className='footnote-text' id='5'>5. Our immersive botanical spaces are experiments in what the evolution of a botanical garden can look like; unlikely urban oases of rare and unusual plants, community hubs for science, education, and experimentation.</span>
           </div>
-          <FootnotesLogo />
+          {/* <FootnotesLogo /> */}
         </div>
       </div >
       <Footer />
