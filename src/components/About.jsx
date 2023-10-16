@@ -4,10 +4,15 @@ import Modal from './Modal';
 
 import Footer from "./Footer"
 import FootnotesLogo from './FootnotesLogo';
+import Newsletter from './Newsletter';
 
 
 const About = () => {
   const [modalImageUrl, setModalImageUrl] = useState(null);
+
+  function handleClick() {
+    window.location.href = "/donate"
+  }
 
   function handleOpenModal(imageUrl) {
     setModalImageUrl(imageUrl);
@@ -24,10 +29,24 @@ const About = () => {
     <>
       <div className="section" id="about">
         <div className="copy">
-          {/* <p>"The engineers of the future will be poets" <br />-Terrence McKenna</p> */}
-          <img src="/assets/images/protest.png" alt="NHT Protest" />
-          <p>Nonhuman Teachers<span className="footnote-number">[1]</span> is a 501(c)(3) nonprofit organization that takes a new approach<span className="footnote-number">[2]</span> to ecological storytelling, blending science, art, and the imagination to help deepen the relationship between humans and the natural world.</p>
-          <p>Through multidisciplinary experiential programming<span className="footnote-number">[3]</span>, new nature media<span className="footnote-number">[4]</span>, and immersive botanical spaces<span className="footnote-number">[5]</span>, we aim to ignite a sense of wonder about our rapidly changing Earth, not only to make us better citizens of this place but to help folks imagine it differently.</p>
+          <div className="section-heading">
+            <h1>About</h1>
+            <img src="/assets/images/protest.png" alt="NHT Protest" />
+            <p>Nonhuman Teachers<span className="footnote-number">[1]</span> takes a new approach to ecological storytelling, blending science, art, and the imagination to help deepen the relationship between humans and the natural world.<span className="footnote-number">[2]</span></p>
+            <p>Through multidisciplinary experiential programming<span className="footnote-number">[3]</span>, new nature media<span className="footnote-number">[4]</span>, and immersive botanical spaces<span className="footnote-number">[5]</span>, we aim to ignite a sense of wonder about our rapidly changing Earth, not only to make us better citizens of this place but to help folks imagine it differently.</p>
+          </div>
+          <div className='section-heading'>
+            <h1>Support</h1>
+            <p>Nonhuman Teachers is a registered 501(c)(3) nonprofit organization that accepts tax-deductible donations.</p>
+            <input type="submit" value="Donate Now" className="donate" onClick={handleClick} />
+          </div>
+          <div className='section-heading'>
+            <h1>Contact</h1>
+            <p>Be the first to hear about new events, workshops, and updates from Nonhuman Teachers.</p>
+            <Newsletter />
+            <p>For inquiries regarding collaborations, partnerships, and donations please email us at: <a href="mailto:info@nonhumanteachers.org">info@nonhumanteachers.org</a></p>
+            <p>Follow us: <a href="https://instagram.com/nonhuman.teachers">@nonhumanteachers</a></p>
+          </div>
           <p className="lb">--</p>
         </div>
         <div className="footnotes">

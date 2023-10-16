@@ -6,14 +6,20 @@ import React from "react";
 const Contact = () => {
   return (
     <>
-      <div className="section" id="contact">
+      <div className="section">
         <div className="copy">
-          <p>For any inquiries regarding collaborations, partnerships, and donations please email us at: <a href="mailto:info@nonhumanteachers.org">info@nonhumanteachers.org</a></p>
-          <p>Nonhuman Teachers<span className="footnote-number">1-8</span><br />3209 Fletcher Drive<br />Los Angeles, CA 90065</p>
-          <p>Our facilities are open during events, and at all other times by appointment only.</p>
-          <p>Follow us: <a href="https://instagram.com/nonhuman.teachers">@nonhumanteachers</a></p>
-          <Newsletter />
-          <img src="assets/images/protest.png" alt="Protest" />
+          <div className='section-heading'>
+            <h1>Contact</h1>
+            <img src="/assets/images/protest.png" alt="Protest" />
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam sint voluptatibus quas nihil<span className="footnote-number">[1]</span> sit ea, quod earum veritatis, nemo soluta fugit explicabo recusandae ratione molestiae vitae sequi nam? Excepturi, sequi.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor cupiditate aspernatur omnis ea dolorem iusto rem, cumque impedit totam pariatur debitis sed numquam recusandae delectus molestiae expedita harum animi laudantium!</p>
+          </div>
+          <div className="section-heading">
+            <p>Be the first to hear about new events, workshops, and updates from Nonhuman Teachers.</p>
+            <Newsletter />
+            <p>For inquiries regarding collaborations, partnerships, and donations please email us at: <a href="mailto:info@nonhumanteachers.org">info@nonhumanteachers.org</a></p>
+            <p>Follow us: <a href="https://instagram.com/nonhuman.teachers">@nonhumanteachers</a></p>
+          </div>
           <p className="lb">--</p>
         </div>
         <div className="footnotes">

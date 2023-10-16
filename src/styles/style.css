@@ -41,22 +41,6 @@ body {
   justify-content: center;
 }
 
-.home p {
-  font-family: "Helveesti";
-  font-size: 1.5rem;
-  text-align: left;
-  margin-bottom: 1rem;
-}
-
-.home a {
-  display: block;
-  height: 33%;
-}
-
-.home img {
-  height: 100%;
-}
-
 .homeish {
   background: white;
   padding: 1rem 1rem 0 1rem;
@@ -120,7 +104,7 @@ body {
 .copy {
   padding: 1rem 1rem 0.2rem 0.5rem;
   overflow: scroll;
-  height: calc(100dvh - 57px);
+  height: calc(100dvh - 55px);
   max-width: 800px;
   /* background: red; */
 }
@@ -141,7 +125,9 @@ body {
 }
 
 .copy .section-heading {
-  margin-bottom: 2rem;
+  padding: 1rem 1rem 0rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid black;
 }
 
 .donation-form-container {
@@ -158,7 +144,7 @@ body {
 }
 
 .event {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 
@@ -248,20 +234,20 @@ body {
   background: white;
   border-top: 1px solid black;
   z-index: 100;
-  padding: 0.25rem 0rem;
+  padding: 0.3rem 0rem;
   overflow: hidden;
   white-space: nowrap;
 }
 
 .footer p {
   font-family: "Helveesti";
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   font-style: italic;
   color: black;
   margin-top: 2px;
   display: inline-block;
   white-space: nowrap;
-  animation: scrollText 15s linear infinite;
+  animation: scrollText 30s linear infinite;
 }
 
 @keyframes scrollText {
@@ -277,7 +263,7 @@ body {
 .footnotes {
   position: relative;
   top: -1px;
-  height: calc(100dvh - 50px);
+  height: calc(100dvh - 51px);
   overflow: scroll;
   padding: 1rem 1rem 0rem 0rem;
   scrollbar-color: transparent transparent;
@@ -492,7 +478,7 @@ body {
   font-family: "Helveesti";
   font-style: normal;
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: var(--main-font);
   line-height: 1rem;
   color: black;
   background: none;
@@ -525,7 +511,7 @@ body {
   font-family: "Helveesti";
   font-style: normal;
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: var(--main-font);
   /* line-height: 1.3rem; */
   padding: 0.25rem;
   color: black;
@@ -543,6 +529,36 @@ body {
 }
 
 .subscribe:hover {
+  background: black;
+  color: white;
+  cursor: pointer;
+  /* mix-blend-mode: normal; */
+}
+
+.donate {
+  font-family: "Helveesti";
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--main-font);
+  /* line-height: 1.3rem; */
+  padding: 0.25rem;
+  color: black;
+  background: none;
+  border: 1px solid black;
+  display: inline-block;
+  transition: background 200ms ease-in-out;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.donate:focus {
+  background: black;
+  color: white;
+  cursor: pointer;
+  /* mix-blend-mode: normal; */
+}
+
+.donate:hover {
   background: black;
   color: white;
   cursor: pointer;
@@ -611,7 +627,7 @@ body {
   font-size: var(--header-font);
   line-height: 1.3rem;
   color: black;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
   text-align: justify;
 }
 
@@ -628,7 +644,7 @@ body {
   line-height: 1.3rem;
   color: black;
   margin-bottom: 0.5rem;
-  text-align: justify;
+  text-align: left;
 
 }
 
@@ -638,13 +654,13 @@ body {
 
 .section p a {
   color: black;
-  text-decoration: underline;
+  text-decoration: none;
   transition: color ease-in-out 100ms;
 }
 
 .section p a:hover {
   color: var(--blue);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 
@@ -664,13 +680,13 @@ body {
 
 .section li a {
   color: black;
-  text-decoration: underline;
+  text-decoration: none;
   transition: color ease-in-out 100ms;
 }
 
 .section li a:hover {
   color: var(--blue);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .section-left-contact {
@@ -710,35 +726,6 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-
-  .home {
-    width: 100dvw;
-    height: 100dvh;
-    padding: 0rem 5rem;
-    display: grid;
-    align-content: center;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2000;
-  }
-
-  .home p {
-    font-size: var(--header-font);
-    text-align: left;
-    color: black;
-  }
-
-  .home a {
-    text-decoration: underline;
-    color: black;
-    transition: color ease 250ms;
-  }
-
-  .home a:hover {
-    color: white;
   }
 
   .lb {
