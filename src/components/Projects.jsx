@@ -1,13 +1,18 @@
-import { forwardRef, useRef } from "react";
+import { useRef, useState } from "react";
 import Slider from 'react-slick';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import Footer from "../components/Footer"
 import FootnotesLogo from "../components/FootnotesLogo"
 
-const Projects = forwardRef((props, ref) => {
+export default function Project() {
+
+
+  const footnotes = useRef(null);
+  const prevFootnoteRef = useRef(0);
+  const [footnotesLogo, setFootnotesLogo] = useState(false);
+  const [activeFootnote, setActiveFootnote] = useState(null);
 
   const projectSlider = useRef(null);
   const botanicalSlider = useRef(null);
@@ -42,14 +47,28 @@ const Projects = forwardRef((props, ref) => {
     ref.current.slickNext(); // go to the next slide
   }
 
+  function footnoteClick(id) {
+    if (prevFootnoteRef.current === id) {
+      setActiveFootnote(0);
+    }
+    else {
+      setActiveFootnote(id);
+      prevFootnoteRef.current = id;
+    }
+
+    const footnoteDetail = document.getElementById(`${id}`);
+    if (footnoteDetail) {
+      footnoteDetail.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+
   return (
     <>
-      <div className="section" id="projects" ref={ref}>
+      <div className="section">
         <div className="copy">
           <div className='section-heading'>
-            {/* <img src="/assets/images/protest.png" alt="Protest" /> */}
             <h1>Projects</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam sint voluptatibus quas nihil<span className="footnote-number">[1]</span> sit ea, quod earum veritatis, nemo soluta fugit explicabo recusandae ratione molestiae vitae sequi nam? Excepturi, sequi.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam sint voluptatibus quas nihil<span className="footnote-number" onClick={() => footnoteClick(1)}>[1]</span> sit ea, quod earum veritatis, nemo soluta fugit explicabo recusandae ratione molestiae vitae sequi nam? Excepturi, sequi.</p>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor cupiditate aspernatur omnis ea dolorem iusto rem, cumque impedit totam pariatur debitis sed numquam recusandae delectus molestiae expedita harum animi laudantium!</p>
           </div>
           <div className="section-heading">
@@ -99,16 +118,14 @@ const Projects = forwardRef((props, ref) => {
           </div>
         </div>
 
-        <div className="footnotes">
-          <div className="footnote">
-            <span className="footnote-text-link">1.&emsp;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui a blanditiis reiciendis beatae illo provident mollitia sapiente, voluptatem iure expedita officiis minima repellat dolores laborum maiores molestiae veniam eaque cum.</span>
+        {/* FOOTNOTES */}
+        <div className="footnotes" ref={footnotes}>
+          <div className="footnote" id="1">
+            <span className={`footnote-text ${activeFootnote === 1 ? 'active' : ''}`} id="1">1. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero tempore laborum quibusdam. Aperiam sed, eos quibusdam nam pariatur ad, fugit ea, odit voluptas voluptates ut. Excepturi fugit ea quam officiis.</span>
           </div>
-          {/* <FootnotesLogo></FootnotesLogo> */}
+          {footnotesLogo ? <FootnotesLogo /> : null}
         </div>
       </div >
-      <Footer />
     </>
   );
-});
-
-export default Projects;
+};

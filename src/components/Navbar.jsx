@@ -1,58 +1,39 @@
-import { forwardRef, useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import "../styles/style.css";
 
-const Navbar = forwardRef((props, ref) => {
-  const [selectedLink, setSelectedLink] = useState();
-
-
-
-  useEffect(() => {
-    setSelectedLink(props.currentPage)
-  }, [props])
-
-
-
-  function handleClick(link) {
-    setSelectedLink(link);
-  }
+export default function Navbar() {
+  const location = useLocation();
 
   return (
     <>
       <div className="navbar">
         <div className="left">
           <div className="navbar-item">
-            <a href="/">Nonhuman Teachers</a>
+            <Link to="/">Nonhuman Teachers</Link>
           </div>
         </div>
         <div className="right">
           <div className="navbar-item">
-            <a href="/about" className={`navbar-item ${selectedLink === "about" ? "selected" : ""}`}
-              onClick={() => handleClick("about")}>About</a>
+            <Link to="/about" className={location.pathname === "/about" ? "selected" : ""}>About</Link>
           </div>
 
           <div className="navbar-item">
-            <a href="/projects" className={`navbar-item ${selectedLink === "projects" ? "selected" : ""}`}
-              onClick={() => handleClick("about")}>Projects</a>
+            <Link to="/projects" className={location.pathname === "/projects" ? "selected" : ""}>Projects</Link>
           </div>
           <div className="navbar-item">
-            <a href="/calendar" className={`navbar-item ${selectedLink === "calendar" ? "selected" : ""}`}
-              onClick={() => handleClick("calendar")}>Calendar</a>
+            <Link to="/calendar" className={location.pathname === "/calendar" ? "selected" : ""}>Calendar</Link>
           </div>
 
           <div className="navbar-item">
-            <a href="/support" className={`navbar-item ${selectedLink === "support" ? "selected" : ""}`}
-              onClick={() => handleClick("support")}>Support</a>
+            <Link to="/support" className={location.pathname === "/support" ? "selected" : ""}>Support</Link>
+
           </div>
 
           <div className="navbar-item">
-            <a href="/contact" className={`navbar-item ${selectedLink === "contact" ? "selected" : ""}`}
-              onClick={() => handleClick("contact")}>Contact</a>
+            <Link to="/contact" className={location.pathname === "/contact" ? "selected" : ""}>Contact</Link>
           </div>
         </div>
       </div>
-
     </>
   );
-});
-
-export default Navbar;
+};
