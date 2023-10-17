@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import authenticate from "./getEvents.js"
-import Footer from "./Footer";
 import FootnotesLogo from "./FootnotesLogo";
 
 const Events = () => {
@@ -16,7 +15,27 @@ const Events = () => {
     workAround();
   }, [])
 
+  const footnotes = useRef(null);
+  const prevFootnoteRef = useRef(0);
+  const [footnotesLogo, setFootnotesLogo] = useState(false);
+  const [activeFootnote, setActiveFootnote] = useState(null);
 
+  function footnoteClick(id) {
+    console.log(prevFootnoteRef);
+    if (prevFootnoteRef.current === id) {
+      setActiveFootnote(0);
+      prevFootnoteRef.current = 0;
+    }
+    else {
+      setActiveFootnote(id);
+      prevFootnoteRef.current = id;
+    }
+
+    const footnoteDetail = document.getElementById(`${id}`);
+    if (footnoteDetail) {
+      footnoteDetail.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
 
   return (
     <>
@@ -24,14 +43,14 @@ const Events = () => {
         <div className="copy">
           <div className='section-heading'>
             <h1>Calendar</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam sint voluptatibus quas nihil<span className="footnote-number">[1]</span> sit ea, quod earum veritatis, nemo soluta fugit explicabo recusandae ratione molestiae<span className="footnote-number">2</span> vitae sequi nam? Excepturi, sequi.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam sint voluptatibus quas nihil<span className="footnote-number" onClick={() => footnoteClick(1)}>[1]</span> sit ea, quod earum veritatis, nemo soluta fugit explicabo recusandae ratione molestiae vitae sequi nam? Excepturi, sequi.</p>
           </div>
           <div className="section-heading">
             <h1>Upcoming Events</h1>
           </div>
           {upcomingEvents ? upcomingEvents.map((event, index) => (
-            <div className="section-heading">
-              <div className="event" key={index}>
+            <div className="section-heading" key={index}>
+              <div className="event">
                 <a href={event.url}><img src={event.image} alt="Event" /></a>
                 <span>{event.title}</span>
                 <span className="event-date">{event.date}, {event.time}</span>
@@ -43,8 +62,8 @@ const Events = () => {
             <h1>Past Events</h1>
           </div>
           {pastEvents ? pastEvents.map((event, index) => (
-            <div className="section-heading">
-              <div className="event" key={index}>
+            <div className="section-heading" key={index}>
+              <div className="event" >
                 <a href={event.url}><img src={event.image} alt="Event" /></a>
                 <span>{event.title}</span>
                 <span className="event-date">{event.date}, {event.time}</span>
@@ -54,16 +73,13 @@ const Events = () => {
           )) : null}
           <p className="lb">--</p>
         </div>
-        <div className="footnotes">
-          <div className="footnote">
-            <span className="footnote-text">1.&emsp;We are headquartered in Los Angeles and New York, so most of our events take place in one these two cities. If you'd like to work on putting something together with us in your town, please <a href="mailto:info@nonhumanteachers.org">email us</a>.</span>
+        <div className="footnotes" ref={footnotes}>
+          <div className="footnote" id="1">
+            <span className={`footnote-text ${activeFootnote === 1 ? 'active' : ''}`} id="1">1. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis eius unde veniam incidunt distinctio a facere quidem porro, quod consectetur dicta debitis impedit fugiat nostrum? Enim natus ducimus provident fugit.</span>
           </div>
-          <div className="footnote">
-            <span className="footnote-text">2.&emsp;We host a lot of events, so this is just a recent selection. See the full list <a href="https://www.eventbrite.com/o/nonhuman-teachers-62088205263">here</a>.</span>
-          </div>
+          {footnotesLogo ? <FootnotesLogo /> : null}
         </div>
       </div >
-      <Footer />
     </>
   )
 };

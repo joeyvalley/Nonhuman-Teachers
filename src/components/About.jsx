@@ -1,21 +1,18 @@
 import { useEffect, useRef, useState } from 'react';
-import Modal from './Modal';
-import { gsap } from 'gsap';
+import { useNavigate } from 'react-router-dom';
 
-import Footer from "./Footer"
+
 import FootnotesLogo from './FootnotesLogo';
 import Newsletter from './Newsletter';
 
 
-const About = () => {
+export default function About() {
   const footnotes = useRef(null);
   const prevFootnoteRef = useRef(0);
   const [footnotesLogo, setFootnotesLogo] = useState(false);
-  const [modalImageUrl, setModalImageUrl] = useState(null);
   const [activeFootnote, setActiveFootnote] = useState(null);
 
-  const container = document.querySelector('.footnotes');
-  const marginTop = "1rem";
+  const navigation = useNavigate();
 
   useEffect(() => {
     setTimeout(() => {
@@ -31,18 +28,7 @@ const About = () => {
   }, []);
 
   function handleClick() {
-    window.location.href = "/donate"
-  }
-
-  function handleOpenModal(imageUrl) {
-    setModalImageUrl(imageUrl);
-  };
-  function handleCloseModal() {
-    gsap.to('.modal', {
-      opacity: 0, duration: 0.5, onComplete: () => {
-        setModalImageUrl(null);
-      }
-    });
+    navigation('/donate');;
   }
 
   function footnoteClick(id) {
@@ -54,15 +40,11 @@ const About = () => {
       prevFootnoteRef.current = id;
     }
 
-    // Find the div with the corresponding ID
     const footnoteDetail = document.getElementById(`${id}`);
-
-    // Scroll the div to the top of its container
     if (footnoteDetail) {
       footnoteDetail.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
   }
-
 
   return (
     <>
@@ -108,14 +90,6 @@ const About = () => {
           {footnotesLogo ? <FootnotesLogo /> : null}
         </div>
       </div >
-      <Footer />
-      {
-        modalImageUrl && (
-          <Modal imageUrl={modalImageUrl} onClose={handleCloseModal} />
-        )
-      }
     </>
   )
 };
-
-export default About;
