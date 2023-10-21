@@ -7,13 +7,31 @@ import "slick-carousel/slick/slick-theme.css";
 import FootnotesLogo from "../components/FootnotesLogo"
 
 export default function Project() {
+  // Set up states for content visibilty.
+  const [loadedImagesCount, setLoadedImagesCount] = useState(0);
 
-
+  // Set up footnote interaction capabilities.
   const footnotes = useRef(null);
   const prevFootnoteRef = useRef(0);
   const [footnotesLogo, setFootnotesLogo] = useState(false);
   const [activeFootnote, setActiveFootnote] = useState(null);
 
+  function footnoteClick(id) {
+    if (prevFootnoteRef.current === id) {
+      setActiveFootnote(0);
+    }
+    else {
+      setActiveFootnote(id);
+      prevFootnoteRef.current = id;
+    }
+
+    const footnoteDetail = document.getElementById(`${id}`);
+    if (footnoteDetail) {
+      footnoteDetail.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+
+  // Set up image carousels.
   const projectSlider = useRef(null);
   const botanicalSlider = useRef(null);
 
@@ -47,25 +65,17 @@ export default function Project() {
     ref.current.slickNext(); // go to the next slide
   }
 
-  function footnoteClick(id) {
-    if (prevFootnoteRef.current === id) {
-      setActiveFootnote(0);
-    }
-    else {
-      setActiveFootnote(id);
-      prevFootnoteRef.current = id;
-    }
-
-    const footnoteDetail = document.getElementById(`${id}`);
-    if (footnoteDetail) {
-      footnoteDetail.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-  }
-
   return (
     <>
+      {/* {!(loadedImagesCount > 0 && loadedImagesCount === (eventsImages.length + botanicalImages.length)) ?
+        <div className='loading'>
+          <img src="/assets/beetle-worship.png" alt="Loading" />
+        </div>
+        : ''} */}
       <div className="section">
-        <div className="copy">
+
+        {/* Main content */}
+        <div className={`copy ${loadedImagesCount === (eventsImages.length + botanicalImages.length) ? 'loaded' : ''}`}>
           <div className='section-heading'>
             <h1>Projects</h1>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam sint voluptatibus quas nihil<span className="footnote-number" onClick={() => footnoteClick(1)}>[1]</span> sit ea, quod earum veritatis, nemo soluta fugit explicabo recusandae ratione molestiae vitae sequi nam? Excepturi, sequi.</p>
@@ -78,7 +88,9 @@ export default function Project() {
               <Slider {...settings} ref={projectSlider}>
                 {eventsImages.map((img, index) => (
                   <div key={index}>
-                    <img src={img} alt={`Events ${index}`} onClick={() => handleImageClick(projectSlider)} className="carousel-image" />
+                    <img src={img} alt={`Events ${index}`} onClick={() => handleImageClick(projectSlider)} className="carousel-image" onLoad={() => {
+                      setLoadedImagesCount(prevCount => prevCount + 1);
+                    }} />
                   </div>
                 ))}
               </Slider>
@@ -100,7 +112,9 @@ export default function Project() {
               <Slider {...settings} ref={botanicalSlider}>
                 {botanicalImages.map((img, index) => (
                   <div key={index}>
-                    <img src={img} alt={`Botanical Spaces ${index}`} onClick={() => handleImageClick(botanicalSlider)} className="carousel-image" />
+                    <img src={img} alt={`Botanical Spaces ${index}`} onClick={() => handleImageClick(botanicalSlider)} className="carousel-image" onLoad={() => {
+                      setLoadedImagesCount(prevCount => prevCount + 1);
+                    }} />
                   </div>
                 ))}
               </Slider>
@@ -118,8 +132,8 @@ export default function Project() {
           </div>
         </div>
 
-        {/* FOOTNOTES */}
-        <div className="footnotes" ref={footnotes}>
+        {/* Footnotes */}
+        <div className={`footnotes ${loadedImagesCount === (eventsImages.length + botanicalImages.length) ? 'loaded' : ''}`} ref={footnotes}>
           <div className="footnote" id="1">
             <span className={`footnote-text ${activeFootnote === 1 ? 'active' : ''}`} id="1">1. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero tempore laborum quibusdam. Aperiam sed, eos quibusdam nam pariatur ad, fugit ea, odit voluptas voluptates ut. Excepturi fugit ea quam officiis.</span>
           </div>

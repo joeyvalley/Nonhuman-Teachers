@@ -24,7 +24,7 @@ export default function App() {
   return (
 
     <div className="main">
-      <Navbar></Navbar>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />}></Route>
         {/* Main Pages */}
