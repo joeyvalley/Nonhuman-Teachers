@@ -9,7 +9,6 @@ module.exports = async (req, res) => {
     const listId = process.env.LIST_ID; // Replace with your mailing list ID
     const server = process.env.SERVER_ID; // Extract the server number from your API key (e.g., "us1" or "us20")
 
-    console.log(apiKey);
 
     try {
       const response = await axios({
