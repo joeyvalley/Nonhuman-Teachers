@@ -5,9 +5,9 @@ module.exports = async (req, res) => {
   if (req.method === 'POST') {
 
     const { email } = req.body;
-    const apiKey = process.env.API_KEY
-    const listId = process.env.LIST_ID; // Replace with your mailing list ID
-    const server = process.env.SERVER_ID; // Extract the server number from your API key (e.g., "us1" or "us20")
+    const apiKey = process.env.REACT_APP_API_KEY;
+    const listId = process.env.REACT_APP_LIST_ID; // Replace with your mailing list ID
+    const server = process.env.REACT_APP_SERVER_ID; // Extract the server number from your API key (e.g., "us1" or "us20")
 
 
     try {
