@@ -27,7 +27,11 @@ module.exports = async (req, res) => {
       res.status(response.status).send(response.data);
     } catch (error) {
       if (error.response) {
-        res.status(error.response.status).send(error.response.data);
+        if (error.response.data && error.response.data.title === "Member Exists") {
+          res.status(400).send({ message: 'This email is already subscribed.' });
+        } else {
+          res.status(error.response.status).send(error.response.data);
+        }
       } else {
         console.error('Axios error:', error);
         res.status(500).send({ message: 'Internal Server Error' });
