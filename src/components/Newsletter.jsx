@@ -8,20 +8,19 @@ export default function Newsletter() {
   async function handleSubmit(e) {
     e.preventDefault();
     const email = e.target.EMAIL.value; // Get email value from the form
-    try {
-      const response = await axios.post('/api/subscribe', { email });
-      console.log(response.status);
 
-      if (response.status === 200) {
-        setEmail("Thank you for subscribing!")
-      } else {
-        setEmail("An error occurred, please try again.")
-        console.log('An error occurred:', response);
-      }
-    } catch (error) {
-      setEmail("Whoops.")
-      console.log('An error occurred:', error);
-    }
+    const response = await axios.post('/api/subscribe', { email });
+    console.log(response.status);
+
+    //   if (response.status === 200) {
+    //     setEmail("Thank you for subscribing!")
+    //   } else {
+    //     setEmail("An error occurred, please try again.")
+    //     console.log('An error occurred:', response);
+    //   }
+    // } catch (error) {
+    //   setEmail("Whoops.")
+    //   console.log('An error occurred:', error);
   }
 
   return (
