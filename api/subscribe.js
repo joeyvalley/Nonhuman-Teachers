@@ -24,11 +24,11 @@ module.exports = async (req, res) => {
         },
       });
 
-      res.status(response.status).send(response.data);
+      res.status(response.status).send({ message: 'subscribed' });
     } catch (error) {
       if (error.response) {
         if (error.response.data && error.response.data.title === "Member Exists") {
-          res.status(200).send({ message: 'This email is already subscribed.' });
+          res.status(200).send({ message: 'exists' });
         } else {
           res.status(error.response.status).send(error.response.data);
         }
