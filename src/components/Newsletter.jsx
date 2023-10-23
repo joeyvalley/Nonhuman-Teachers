@@ -23,6 +23,9 @@ export default function Newsletter() {
     } catch (error) {
       setEmail("Whoops, an error occurred. Try again later.");
     }
+    setTimeout(() => {
+      setEmail("E-mail")
+    }, 5000);
   }
 
   return (
