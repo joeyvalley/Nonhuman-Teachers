@@ -12,15 +12,16 @@ export default function Newsletter() {
       const { status, data } = await axios.post('/api/subscribe', { email: enteredEmail });
       console.log(status);
       if (status === 200) {
-        setEmail("Thanks for subscribing! Talk soon.");
-      } else if (status === 400) {
-        setEmail("You are already subscribed to this newsletter. Thanks!");
+        if (data.message === "subscribed") {
+          setEmail("Thanks for subscribing! Talk soon.");
+        } else {
+          setEmail("You are already subscribed to this newsletter. Thanks!");
+        }
       } else {
-        setEmail("Whoops, an unexpected error occurred. Try again later.");
+        setEmail("Whoops, an error occurred. Try again later.");
       }
     } catch (error) {
       setEmail("Whoops, an error occurred. Try again later.");
-      console.log('An error occurred:', error);
     }
   }
 
