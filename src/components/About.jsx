@@ -64,7 +64,7 @@ export default function About() {
       {/* Main Content */}
       <div className={`copy ${copyLoaded ? 'loaded' : ''}`}>
         <div className="section-heading">
-          <h1>About</h1>
+          {/* <h1>About</h1> */}
           <img src="/assets/images/protest.png" alt="NHT Protest"
             onLoad={() => {
               setCopyLoaded(true);
@@ -73,7 +73,7 @@ export default function About() {
               }, 500);
             }}
           />
-          <p className='img-credit'>Image description / credit</p>
+          <p className='img-credit'>Earth Day protests in Union Square, New York City - April 22, 1970</p>
           <p>Nonhuman Teachers<span className="footnote-number" onClick={() => footnoteClick(1)}>[1]</span> takes a new approach to ecological storytelling, blending science, art, and the imagination to help deepen the relationship between humans and the natural world.<span className="footnote-number" onClick={() => footnoteClick(2)}>[2]</span></p>
           <p>Through multidisciplinary experiential programming<span className="footnote-number" onClick={() => footnoteClick(3)}>[3]</span>, new nature media<span className="footnote-number" onClick={() => footnoteClick(4)}>[4]</span>, and immersive botanical spaces<span className="footnote-number" onClick={() => footnoteClick(5)}>[5]</span>, we aim to ignite a sense of wonder about our rapidly changing Earth, not only to make us better citizens of this place but to help folks imagine it differently.</p>
         </div>

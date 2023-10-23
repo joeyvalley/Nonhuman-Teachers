@@ -16,9 +16,11 @@ body {
   font-size: 16px;
 }
 
-form {
+form.report {
   border: 1px solid black;
   padding: 1rem;
+  margin-top: 0.5rem;
+  background: #e6e6e6;
 }
 
 .report-overlay {
@@ -34,6 +36,7 @@ form {
   z-index: 1000;
 }
 
+
 .report-content {
   background: white;
   border: 1px solid black;
@@ -45,7 +48,11 @@ form {
   overflow: scroll;
 }
 
-.report-content h1 {
+.report-content p {
+  margin-bottom: 0.125rem;
+}
+
+.report-header {
   font-family: "Helveesti";
   font-style: normal;
   font-weight: 400;
@@ -55,10 +62,11 @@ form {
   margin-bottom: 0.5rem;
   text-align: justify;
   padding: .7rem 0rem;
+  display: block;
   border-bottom: 1px solid black;
 }
 
-button {
+button.report {
   border: 1px solid black;
   background: white;
   padding: 0rem 0.5rem;
@@ -67,6 +75,7 @@ button {
   font-weight: 400;
   font-size: var(--header-font);
   color: black;
+  background: var(--gray);
   text-align: center;
   transition: all ease-in-out 250ms;
   position: absolute;
@@ -74,20 +83,20 @@ button {
   right: 1rem;
 }
 
-button:hover {
+button.report:hover {
   cursor: pointer;
   background: black;
   color: white;
 }
 
-input[type="text"] {
+input[type="text"].report {
   background: lightgray;
   border: 1px solid lightgray;
   padding: 0.5rem 0.25rem;
   display: inline-block;
   margin-right: 1rem;
   margin-bottom: 1rem;
-  min-width: 300px;
+  width: 350px;
   font-family: "Helveesti";
   font-style: normal;
   font-weight: 400;
@@ -96,14 +105,14 @@ input[type="text"] {
   transition: opacity ease-in-out 250ms;
 }
 
-input[type="email"] {
+input[type="email"].report {
   background: lightgray;
   border: 1px solid lightgray;
   padding: 0.5rem 0.25rem;
   display: block;
   margin-right: 1rem;
   margin-bottom: 1rem;
-  width: 300px;
+  width: 350px;
   font-family: "Helveesti";
   font-style: normal;
   font-weight: 400;
@@ -111,14 +120,14 @@ input[type="email"] {
   color: gray;
 }
 
-input[type="date"] {
+input[type="date"].report {
   background: lightgray;
   border: 1px solid lightgray;
   padding: 0.5rem 0.25rem;
   display: inline-block;
   margin-right: 1rem;
   margin-bottom: 1rem;
-  width: 300px;
+  width: 350px;
   font-family: "Helveesti";
   font-style: normal;
   font-weight: 400;
@@ -126,7 +135,7 @@ input[type="date"] {
   color: gray;
 }
 
-input[type="submit"] {
+input[type="submit"].report {
   border: 1px solid black;
   background: white;
   padding: 0rem 0.5rem;
@@ -139,13 +148,13 @@ input[type="submit"] {
   transition: all ease-in-out 250ms;
 }
 
-input[type="submit"]:hover {
+input[type="submit"].report:hover {
   cursor: pointer;
   background: black;
   color: white;
 }
 
-input:focus {
+input.report:focus {
   border: 1px solid black;
   outline: none;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -153,7 +162,7 @@ input:focus {
   /* Adds a subtle blue glow around the input */
 }
 
-textarea {
+textarea.report {
   background: lightgray;
   border: 1px solid lightgray;
   padding: 0.5rem 0.25rem;
@@ -168,20 +177,20 @@ textarea {
   margin-bottom: 0.5rem;
 }
 
-textarea:focus {
+textarea.report:focus {
   border: 1px solid black;
   outline: none;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-select {
+select.report {
   background: lightgray;
   border: 1px solid lightgray;
   padding: 0.5rem 0.25rem;
   display: inline-block;
   margin-right: 1rem;
   margin-bottom: 1rem;
-  width: 300px;
+  width: 350px;
   font-family: "Helveesti";
   font-style: normal;
   font-weight: 400;
@@ -189,7 +198,7 @@ select {
   color: gray;
 }
 
-select:focus {
+select.report:focus {
   border: 1px solid black;
   outline: none;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -208,5 +217,48 @@ select:focus {
 
 .category {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+}
+
+.past-report {
+  border: 1px solid black;
+}
+
+.author p {
+  font-family: 'Helveesti';
+  font-size: 0.7rem;
+  color: white;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+  background-color: red;
+  display: block;
+}
+
+.logo img {
+  border: none;
+}
+
+.author {
+  display: block;
+  background-color: black;
+  padding: 0;
+  margin: 0;
+}
+
+.past-reports-container {
+  display: grid;
+  column-gap: 1rem;
+  row-gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 1rem;
+}
+
+.past-reports-container>*:last-child {
+  margin-bottom: 0;
 }

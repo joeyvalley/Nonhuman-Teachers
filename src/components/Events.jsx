@@ -1,14 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import authenticate from "./getEvents.js"
+import authenticate from "../api/getEvents.js"
 import FootnotesLogo from "./FootnotesLogo";
 
 export default function Events() {
-
-  // Set up states for content visibilty.
-  const [loadedImagesCount, setLoadedImagesCount] = useState(0);
-  const [copyLoaded, setCopyLoaded] = useState(false);
-
-
 
   // Handle dynamically loading images with the Eventbrite API
   const [upcomingEvents, setUpcomingEvents] = useState([]);
@@ -46,81 +40,105 @@ export default function Events() {
     }
   }
 
+  const [upcomingImagesCount, setUpcomingImagesCount] = useState(0);
+  const [upcomingImagesLoaded, setUpcomingImagesLoaded] = useState(false);
 
-  useEffect(() => {
-    if (loadedImagesCount > 0 && loadedImagesCount === (upcomingEvents.length + pastEvents.length)) {
-      setCopyLoaded(true);
-      console.log("images are loaded");
-    }
-  }, [loadedImagesCount, upcomingEvents.length, pastEvents.length]);
+  const handleUpcomingLoad = () => {
+    setUpcomingImagesCount(prevCount => {
+      const newCount = prevCount + 1;
+      if (newCount === upcomingEvents.length) {
+        setUpcomingImagesLoaded(true);
+      }
+      return newCount;
+    });
+  };
+
+  const [pastImagesCount, setPastImagesCount] = useState(0);
+  const [pastImagesLoaded, setPastImagesLoaded] = useState(false);
+
+  const handlePastLoad = () => {
+    setPastImagesCount(prevCount => {
+      const newCount = prevCount + 1;
+      if (newCount === pastEvents.length) {
+        setPastImagesLoaded(true);
+      }
+      return newCount;
+    });
+  };
 
   return (
-    <>
-      {/* {!copyLoaded ?
-        <div className='loading'>
-          <img src="/assets/beetle-worship.png" alt="Loading" />
+    <div className="section">
+      {/* Main content. */}
+      <div className="copy loaded">
+        <div className='section-heading'>
+          <h1>Calendar</h1>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam sint voluptatibus quas nihil<span className="footnote-number" onClick={() => footnoteClick(1)}>[1]</span> sit ea, quod earum veritatis, nemo soluta fugit explicabo recusandae ratione molestiae vitae sequi nam? Excepturi, sequi.</p>
         </div>
-        : ''} */}
-      <div className="section">
 
-        {/* Main content. */}
-
-        <div className={`copy ${copyLoaded ? 'loaded' : ''}`}>
-          <div className='section-heading'>
-            <h1>Calendar</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam sint voluptatibus quas nihil<span className="footnote-number" onClick={() => footnoteClick(1)}>[1]</span> sit ea, quod earum veritatis, nemo soluta fugit explicabo recusandae ratione molestiae vitae sequi nam? Excepturi, sequi.</p>
-          </div>
-
-          {/* Upcoming Events */}
-          <div className="section-heading">
-            <h1>Upcoming Events</h1>
-          </div>
+        {/* Upcoming Events */}
+        <div className={`calendar-section ${upcomingImagesLoaded ? 'show-content' : ''}`}>
+          <h1>Upcoming Events</h1>
+          {upcomingImagesLoaded ?
+            null :
+            <div className="loading">
+              <img src="assets/spinner.gif" alt="Loading" />
+            </div>
+          }
           {upcomingEvents ? upcomingEvents.map((event, index) => (
-            <div className="section-heading" key={index}>
+            <div className="calendar-event" key={index}>
               <div className="event">
                 <a href={event.url}>
-                  <img src={event.image} alt="Event" onLoad={() => {
-                    setLoadedImagesCount(prevCount => prevCount + 1);
-                    console.log("image loaded");
-                  }} />
+                  <img src={event.image} alt="Event" onLoad={handleUpcomingLoad} />
                 </a>
                 <span>{event.title}</span>
                 <span className="event-date">{event.date}, {event.time}</span>
                 <a href={event.url}><span className="event-link">Tickets and more info</span></a>
               </div>
             </div>
-          )) : null}
+          )) : (
+            <div>
+              <p>No upcoming events. Please check back soon!</p>
+            </div>
+          )}
+        </div>
 
-          {/* Past Events */}
-          <div className="section-heading">
-            <h1>Past Events</h1>
-          </div>
+        {/* Past Events */}
+        <div className={`calendar-section ${pastImagesLoaded ? 'show-content' : ''}`}>
+          <h1>Past Events</h1>
+          {pastImagesLoaded ?
+            null :
+            <div className="loading">
+              <img src="assets/spinner.gif" alt="Loading" />
+            </div>
+          }
           {pastEvents ? pastEvents.map((event, index) => (
-            <div className="section-heading" key={index}>
-              <div className="event" >
+            <div className="calendar-event" key={index}>
+              <div className="event">
                 <a href={event.url}>
-                  <img src={event.image} alt="Event" onLoad={() => {
-                    setLoadedImagesCount(prevCount => prevCount + 1);
-                    console.log("image loaded");
-                  }} />
+                  <img src={event.image} alt="Event" onLoad={handlePastLoad} />
                 </a>
                 <span>{event.title}</span>
                 <span className="event-date">{event.date}, {event.time}</span>
-                <a href={event.url}><span className="event-link">More info</span></a>
+                <a href={event.url}><span className="event-link">Tickets and more info</span></a>
               </div>
             </div>
-          )) : null}
-          <p className="lb">--</p>
+          )) : (
+            <div>
+              <p>Whoops, I'm not sure what's going on. Please check back soon!</p>
+            </div>
+          )}
         </div>
 
-        {/* Footnotes */}
-        <div className={`footnotes ${copyLoaded ? 'loaded' : ''}`} ref={footnotes}>
-          <div className="footnote" id="1">
-            <span className={`footnote-text ${activeFootnote === 1 ? 'active' : ''}`} id="1">1. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis eius unde veniam incidunt distinctio a facere quidem porro, quod consectetur dicta debitis impedit fugiat nostrum? Enim natus ducimus provident fugit.</span>
-          </div>
-          {footnotesLogo ? <FootnotesLogo /> : null}
+
+      </div>
+
+      {/* Footnotes */}
+      <div className={`footnotes ${upcomingImagesLoaded ? 'loaded' : ''}`} ref={footnotes}>
+        <div className="footnote" id="1">
+          <span className={`footnote-text ${activeFootnote === 1 ? 'active' : ''}`} id="1">1. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis eius unde veniam incidunt distinctio a facere quidem porro, quod consectetur dicta debitis impedit fugiat nostrum? Enim natus ducimus provident fugit.</span>
         </div>
-      </div >
-    </>
+        {footnotesLogo ? <FootnotesLogo /> : null}
+      </div>
+    </div >
   )
 };

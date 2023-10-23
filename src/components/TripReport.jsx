@@ -3,6 +3,8 @@ import { useEffect, useRef, useState } from 'react';
 import FootnotesLogo from './FootnotesLogo';
 import NewReport from './NewReport';
 
+import { getReports } from '../api/getReports';
+
 export default function TripReport() {
   // Set content visibility.
   const [copyLoaded, setCopyLoaded] = useState(false);
@@ -47,15 +49,39 @@ export default function TripReport() {
       footnoteDetail.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
   }
-  const [newReport, setNewReport] = useState(false);
 
+  // Handle creatign a new trip report.
+  const [newReport, setNewReport] = useState(false);
   function createNewReport() {
     setNewReport(true);
   }
 
+  // Handle setting old trip reports
+  const [pastReports, setPastReports] = useState([]);
+  useEffect(() => {
+    const workAround = async () => {
+      const reportsData = await getReports();
+      setPastReports(reportsData)
+    };
+    workAround();
+  }, [])
+
+  function formatDate(dateString) {
+    const date = new Date(dateString);
+
+    const day = date.getUTCDate();
+    const month = date.getUTCMonth() + 1; // Months are zero-based, so +1 to get the correct month
+    const year = date.getUTCFullYear().toString().slice(-2); // Get the last two digits of the year
+
+    return `${month}/${day}/${year}`;
+  }
+
+  function selectImage(category) {
+    console.log(category);
+  }
+
   return (
     <div className="section">
-
       {/* Main Content */}
       <div className={`copy ${copyLoaded ? 'loaded' : ''}`}>
         <div className="section-heading">
@@ -77,9 +103,23 @@ export default function TripReport() {
         </div>
         <div className='section-heading'>
           <h1>Past Reports</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis inventore odio et ad! Animi ipsa excepturi maxime dolorem deserunt neque, nisi labore amet aspernatur ab ad quia nihil molestias consequatur.</p>
+          <div className="past-reports-container">
+            {pastReports.length ? pastReports.map((event, index) => (
+              <div className="past-report" key={index}>
+                <div className="logo">
+                  {selectImage(event.category)}
+                  <img src="/assets/nht-logo.png" alt="Logo" />
+                </div>
+                <div className='author'>
+                  <p>{formatDate(event.dateOfTrip)}</p>
+                </div>
+              </div>
+            )) : null}
+          </div>
         </div>
-        <p className="lb">--</p>
       </div>
+
       {/* Footnotes */}
       <div className={`footnotes ${footnoteLoaded ? 'loaded' : ''}`} ref={footnotes}>
         <div className="footnote" id="1">

@@ -1,7 +1,8 @@
 :root {
-  --fontColor: black;
+  --black: #262626;
   --blend: difference;
   --blue: #25418F;
+  --gray: #e6e6e6;
   --main-font: 0.9rem;
   --header-font: 1.1rem;
   --footnote: 0.7rem;
@@ -44,7 +45,7 @@ body {
 .homeish {
   background: white;
   padding: 1rem 1rem 0 1rem;
-  border: 1px solid black;
+  border: 1px solid var(--black);
 }
 
 
@@ -117,15 +118,17 @@ body {
 
 .loading {
   width: 100%;
-  height: 100dvh;
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 1;
+  border: none;
+
 }
 
 .loading img {
-  width: 33%;
+  width: 100px !important;
+  border: none !important;
   /* animation: loading 250ms alternate-reverse infinite; */
 }
 
@@ -153,7 +156,7 @@ body {
 .copy img {
   width: 100%;
   margin-bottom: 0.125rem;
-  border: 1px solid black;
+  border: 1px solid var(--black);
 }
 
 .copy .img-credit {
@@ -169,8 +172,25 @@ body {
 .copy .section-heading {
   padding: 1rem 1rem 0rem 1rem;
   margin-bottom: 1rem;
-  border: 1px solid black;
+  border: 1px solid var(--black);
   background: white;
+}
+
+.calendar-section {
+  padding: 1rem 1rem 0rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--black);
+  background: white;
+  max-height: 1000px;
+  /* Initial small height */
+  overflow: hidden;
+  /* Hide overflowing content */
+  transition: max-height 2500ms ease-in;
+}
+
+.calendar-section.show-content {
+  max-height: 10000px;
+  /* This should be larger than you expect the content to be */
 }
 
 .donation-form-container {
@@ -190,6 +210,38 @@ body {
   margin-bottom: 1rem;
 }
 
+.calendar-event {
+  padding: 1rem 1rem 0rem 1rem;
+  border: 1px solid var(--black);
+  margin-bottom: 1rem;
+  background: #fdfdfd;
+  opacity: 1;
+  transition: opacity ease-in-out 500ms;
+}
+
+.calendar-event.loaded {
+  opacity: 1;
+}
+
+.event h2 {
+  font-family: "Helveesti";
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--header-font);
+  line-height: 1.3rem;
+  color: black;
+  margin-bottom: 0.25rem;
+  text-align: justify;
+  display: inline-block;
+  text-align: left;
+}
+
+.event h2 a {
+  color: black;
+  display: inline;
+  background: none;
+}
+
 
 .event-info {
   margin: 0.5rem 0rem;
@@ -197,22 +249,24 @@ body {
 
 .event-link {
   padding: 0.25rem;
-  border: 1px solid black;
-  color: black !important;
+  border: 1px solid var(--black);
+  background: var(--gray);
+  color: var(--black) !important;
   text-align: center;
   transition: all ease-in-out 200ms;
   margin-top: 0.5rem;
 }
 
 .event-link:hover {
-  background: black;
+  background: var(--black);
   color: white !important;
   cursor: pointer;
 }
 
 .project-button {
   padding: 0.25rem;
-  border: 1px solid black;
+  border: 1px solid var(--black);
+  background: var(--gray);
   text-align: center;
   transition: all ease-in-out 200ms;
   width: auto;
@@ -220,21 +274,21 @@ body {
 }
 
 .project-button:hover {
-  background: black;
+  background: var(--black);
   color: white;
   cursor: pointer;
 }
 
 .event a {
   text-decoration: none;
-  color: black;
+  color: var(--black);
 }
 
 .event img {
   width: 100%;
   background: white;
   margin-bottom: 0.25rem;
-  border: 1px solid black;
+  border: 1px solid var(--black);
   opacity: 0.8;
   transition: opacity ease 250ms;
 }
@@ -248,7 +302,7 @@ body {
   font-size: var(--main-font);
   display: block;
   margin-bottom: 0rem;
-  color: black;
+  color: var(--black);
 }
 
 .event h1 {
@@ -256,7 +310,7 @@ body {
 }
 
 .event h1 a {
-  color: black;
+  color: var(--black);
   text-decoration: underline;
   transition: color ease 250ms;
 }
@@ -275,7 +329,7 @@ body {
   align-items: center;
   bottom: 0;
   background: white;
-  border-top: 1px solid black;
+  border-top: 1px solid var(--black);
   z-index: 100;
   padding: 0.3rem 0rem;
   overflow: hidden;
@@ -286,7 +340,7 @@ body {
   font-family: "Helveesti";
   font-size: 0.75rem;
   font-style: italic;
-  color: black;
+  color: var(--black);
   margin-top: 2px;
   display: inline-block;
   white-space: nowrap;
@@ -307,13 +361,13 @@ body {
   position: relative;
   top: 16px;
   right: -11px;
-  border-left: 1px solid black;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-left: 1px solid var(--black);
+  border-top: 1px solid var(--black);
+  border-bottom: 1px solid var(--black);
   background: white;
   height: calc(100dvh - 103.5px);
   overflow-y: scroll;
-  padding: 0rem 1rem 0.5rem 1rem;
+  padding: 0rem 1rem 0.5rem 0.25rem;
   transform: translateX(100%);
   opacity: 0;
   transition: all 500ms ease-out;
@@ -343,7 +397,7 @@ body {
 }
 
 .heading {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--black);
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
 }
@@ -362,14 +416,14 @@ body {
 
 .footnote-number:hover {
   cursor: pointer;
-  background: black;
+  background: var(--black);
   color: white;
 }
 
 .footnote-text {
   font-family: "Helveesti";
   font-size: var(--footnote);
-  color: black;
+  color: var(--black);
   display: block;
   text-align: left;
   transition: all ease-in-out 200ms;
@@ -378,29 +432,29 @@ body {
 
 .footnote-text.active {
   /* animation: highlightFootnote 10s ease-in-out forwards; */
-  background: black;
+  background: var(--black);
   color: white;
 }
 
 @keyframes highlightFootnote {
   0% {
-    background-color: black;
+    background-color: var(--black);
     color: white;
   }
 
   99% {
-    background-color: black;
+    background-color: var(--black);
     color: white;
   }
 
   100% {
     background-color: white;
-    color: black;
+    color: var(--black);
   }
 }
 
 .footnote-text a {
-  color: black;
+  color: var(--black);
   text-decoration: underline;
   transition: color ease-in-out 100ms;
 }
@@ -413,7 +467,7 @@ body {
 .footnote-text-link {
   font-family: "Helveesti";
   font-size: var(--footnote);
-  color: black;
+  color: var(--black);
   transition: color ease-in-out 100ms;
   padding-bottom: 4px;
   display: block;
@@ -485,13 +539,13 @@ body {
   right: 1.75rem;
   font-family: "Helveesti";
   font-size: var(--main-font);
-  color: black;
+  color: var(--black);
   transition: color ease 250ms;
 }
 
 .modal-close:hover {
   cursor: pointer;
-  color: black;
+  color: var(--black);
 }
 
 .modal-content {
@@ -518,46 +572,80 @@ body {
   display: flex;
   justify-content: space-between;
   width: 100vw;
-  gap: 2rem;
-  border-bottom: 1px solid black;
+  gap: 1rem;
+  border-bottom: 1px solid var(--black);
 }
 
 .left {
   display: inline-block;
-  width: 100%;
+  background: red;
+  white-space: nowrap;
 }
 
 .right {
   display: flex;
-  justify-content: space-between;
+  justify-content: right;
+  gap: 0.5rem;
   width: 100%;
+  background: right;
 }
 
 
 .navbar-item {
   font-family: "Helveesti";
   font-size: var(--header-font);
-  color: black;
-  display: inline;
+  color: var(--black);
+  display: inline-block;
   width: fit-content;
-  padding: 0rem 0.5rem;
 }
 
 .navbar-item a {
-  color: black;
+  color: var(--black);
+  border: 1px solid var(--black);
   text-decoration: none;
-  transition: color ease-in-out 100ms;
+  transition: all ease-in-out 100ms;
+  padding: 0 1rem;
 }
 
 .navbar-item a:hover {
-  color: var(--blue);
+  color: white;
   text-decoration: none;
+  border: 1px solid var(--black);
+  background: var(--black);
 
 }
 
 .navbar-item a.selected {
   transition: none;
-  color: var(--blue);
+  color: white;
+  background: var(--black);
+}
+
+.navbar-home {
+  font-family: "Helveesti";
+  font-size: var(--header-font);
+  color: white;
+  background: var(--black);
+  display: inline-block;
+  width: fit-content;
+
+}
+
+.navbar-home a {
+  color: white;
+  border: 1px solid var(--black);
+  background: var(--black);
+  text-decoration: none;
+  padding: 0 1rem;
+  transition: all ease-in-out 100ms;
+}
+
+.navbar-home a:hover {
+  color: var(--black);
+  text-decoration: none;
+  border: 1px solid var(--black);
+  background: white;
+
 }
 
 .email {
@@ -566,11 +654,11 @@ body {
   font-weight: 400;
   font-size: var(--main-font);
   line-height: 1rem;
-  color: black;
+  color: var(--black);
   background: none;
   border: none;
   border-radius: 0;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--black);
   width: 100%;
   padding: 0px;
   display: inline-block;
@@ -579,11 +667,11 @@ body {
 
 .email:focus {
   outline: none;
-  color: black;
+  color: var(--black);
 }
 
 .email::placeholder {
-  color: black;
+  color: var(--black);
 }
 
 .newsletter form {
@@ -600,22 +688,22 @@ body {
   font-size: var(--main-font);
   /* line-height: 1.3rem; */
   padding: 0.25rem;
-  color: black;
-  background: none;
-  border: 1px solid black;
+  color: var(--black);
+  background: var(--gray);
+  border: 1px solid var(--black);
   display: inline-block;
   transition: background 200ms ease-in-out;
 }
 
 .subscribe:focus {
-  background: black;
+  background: var(--black);
   color: white;
   cursor: pointer;
   /* mix-blend-mode: normal; */
 }
 
 .subscribe:hover {
-  background: black;
+  background: var(--black);
   color: white;
   cursor: pointer;
   /* mix-blend-mode: normal; */
@@ -628,9 +716,9 @@ body {
   font-size: var(--main-font);
   /* line-height: 1.3rem; */
   padding: 0.25rem;
-  color: black;
-  background: none;
-  border: 1px solid black;
+  color: var(--black);
+  background: var(--gray);
+  border: 1px solid var(--black);
   display: inline-block;
   transition: background 200ms ease-in-out;
   margin-bottom: 1rem;
@@ -638,14 +726,14 @@ body {
 }
 
 .donate:focus {
-  background: black;
+  background: var(--black);
   color: white;
   cursor: pointer;
   /* mix-blend-mode: normal; */
 }
 
 .donate:hover {
-  background: black;
+  background: var(--black);
   color: white;
   cursor: pointer;
   /* mix-blend-mode: normal; */
@@ -681,13 +769,13 @@ body {
   font-family: "Helveesti";
   font-size: 1rem;
   line-height: 0.5rem !important;
-  color: black;
+  color: var(--black);
   transition: color ease-in-out 100ms;
 }
 
 .project-title a {
   text-decoration: none !important;
-  color: black !important;
+  color: var(--black) !important;
 }
 
 .project-title a:hover {
@@ -700,10 +788,12 @@ body {
   width: 100vw;
   grid-template-columns: 4fr 1fr;
   gap: 1rem;
-  margin-top: 46px;
+  margin-top: 47px;
   padding: 0;
-  height: calc(100dvh - 75px);
+  height: calc(100dvh - 76px);
   position: fixed;
+  z-index: 1000;
+  overflow: hidden;
 }
 
 .section h1 {
@@ -712,9 +802,14 @@ body {
   font-weight: 400;
   font-size: var(--header-font);
   line-height: 1.3rem;
-  color: black;
+  color: white;
   margin-bottom: 0.75rem;
   text-align: justify;
+  border: 1px solid var(--black);
+  background: var(--black);
+  padding: 0rem 1rem;
+  display: block;
+  text-align: center;
 }
 
 .section h1 a {
@@ -728,7 +823,7 @@ body {
   font-weight: 400;
   font-size: var(--main-font);
   line-height: 1.3rem;
-  color: black;
+  color: var(--black);
   margin-bottom: 0.5rem;
   text-align: left;
 
@@ -739,7 +834,7 @@ body {
 }
 
 .section p a {
-  color: black;
+  color: var(--black);
   text-decoration: none;
   transition: color ease-in-out 100ms;
 }
@@ -761,11 +856,11 @@ body {
   font-weight: 400;
   font-size: var(--main-font);
   line-height: 1.3rem;
-  color: black;
+  color: var(--black);
 }
 
 .section li a {
-  color: black;
+  color: var(--black);
   text-decoration: none;
   transition: color ease-in-out 100ms;
 }
@@ -800,501 +895,4 @@ body {
   justify-content: center;
   z-index: -1;
   overflow: hidden;
-}
-
-
-/* MOBILE RULES */
-@media screen and (max-width: 800px) {
-  .background-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .lb {
-    display: block;
-  }
-
-  .bug {
-    position: fixed;
-    bottom: 0;
-    /* right: 6.5%; */
-    width: 70px;
-    display: none;
-    z-index: 100;
-    margin: 0;
-    padding: 0;
-  }
-
-  .contact-left {
-    padding-right: 24px;
-  }
-
-  .contact-left p {
-    text-align: left !important;
-  }
-
-  .contact-right {
-    text-align: left !important;
-  }
-
-  .project img {
-    width: 100%;
-    margin-bottom: 1rem;
-  }
-
-  .project img:hover {
-    cursor: pointer;
-    mix-blend-mode: overlay;
-  }
-
-  .projects {
-    position: relative;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .projects-left {
-    padding-right: 0.5rem;
-  }
-
-  .projects-right {
-    padding-left: 0.5rem;
-  }
-
-  .project-title {
-    text-align: center !important;
-    font-family: "Helveesti";
-    font-size: 1rem;
-    line-height: 0.5rem !important;
-    /* margin-bottom: 1rem; */
-    color: black;
-    transition: color ease-in-out 100ms;
-  }
-
-  .project-title a {
-    text-decoration: none !important;
-    color: black !important;
-  }
-
-  .project-title a:hover {
-    text-decoration: none !important;
-    color: var(--blue) !important;
-  }
-
-  .email {
-    font-family: "Helveesti";
-    font-style: normal;
-    font-weight: 400;
-    font-size: var(--header-font);
-    line-height: 1rem;
-    color: white;
-    background: none;
-    border: none;
-    border-radius: 0;
-    border-bottom: 1px solid black;
-    width: 100%;
-    padding: 0px;
-    display: inline-block;
-    transition: color 200ms ease-in-out;
-  }
-
-  .email:focus {
-    outline: none;
-    /* mix-blend-mode: normal; */
-    color: black;
-  }
-
-  .email::placeholder {
-    color: black;
-  }
-
-  .newsletter {}
-
-  .newsletter form {
-    display: flex;
-    margin-bottom: 1rem;
-  }
-
-  .subscribe {
-    font-family: "Helveesti";
-    font-style: normal;
-    font-weight: 400;
-    font-size: var(--header-font);
-    /* line-height: 1.3rem; */
-    padding: 0.25rem;
-    color: black;
-    border: 1px solid black;
-    display: inline-block;
-    transition: background 200ms ease-in-out;
-  }
-
-  .subscribe:focus {
-    background: black;
-    color: white;
-    cursor: pointer;
-    /* mix-blend-mode: normal; */
-  }
-
-  .subscribe:hover {
-    background: black;
-    color: white;
-    cursor: pointer;
-    /* mix-blend-mode: normal; */
-  }
-
-  .event {
-    /* margin-bottom: 1rem; */
-  }
-
-  .event-link {
-    padding: 0.25rem;
-    border: 1px solid black;
-    color: black !important;
-    text-align: center;
-    transition: all ease-in-out 200ms;
-    margin-top: 0.25rem;
-  }
-
-  .event-link:hover {
-    background: black;
-    color: white !important;
-    cursor: pointer;
-  }
-
-  .event a {
-    text-decoration: none;
-    color: black;
-  }
-
-  .event img {
-    width: 100%;
-  }
-
-  .event span {
-    font-family: "Helveesti";
-    font-size: 0.7rem;
-    display: block;
-    margin-bottom: 0rem;
-  }
-
-
-  .footer {
-    position: relative;
-    padding: 1.5rem 0rem 0.5rem 0rem;
-    width: 100vw;
-    max-height: 55px;
-    display: flex;
-    justify-content: center;
-  }
-
-  .footer p {
-    font-family: "Helveesti";
-    font-size: var(--footnote) !important;
-  }
-
-  .footer p a {
-    text-decoration: none;
-    color: black;
-  }
-
-  .footer p a:hover {
-    text-decoration: none;
-    color: var(--blue);
-    transition: color ease-in-out 200ms;
-  }
-
-  .footnotes {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 1rem;
-    grid-row-gap: 1rem;
-    top: 0;
-    background: none;
-    height: auto;
-    padding-right: 1.5rem;
-  }
-
-  .footnote {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    height: auto;
-  }
-
-  .footnote img {
-    width: 100%;
-    display: none;
-  }
-
-  .footnote-number {
-    vertical-align: super;
-    font-size: var(--footnote);
-    line-height: 0;
-    transition: all ease-in-out 250ms;
-  }
-
-  .footnote-text {
-    font-family: "Helveesti";
-    font-size: var(--footnote);
-    color: black;
-    transition: color ease-in-out 100ms;
-    display: block;
-    text-align: justify;
-  }
-
-  .footnote-text a {
-    color: black;
-    text-decoration: underline;
-    transition: color ease-in-out 100ms;
-  }
-
-  .footnote-text a:hover {
-    color: var(--blue);
-    text-decoration: underline;
-  }
-
-  .footnote-text-link {
-    font-family: "Helveesti";
-    font-size: var(--footnote);
-    color: black;
-    transition: color ease-in-out 100ms;
-    padding-bottom: 4px;
-    display: block;
-    text-align: left;
-  }
-
-  .footnote-text-link:hover {
-    cursor: pointer;
-    color: var(--blue)
-  }
-
-
-  .logo {
-    width: 120px;
-  }
-
-  .logo-sticky {
-    position: absolute;
-    width: 100%;
-    top: calc(50dvh - 60px);
-    text-align: center;
-    z-index: 100;
-    mix-blend-mode: normal;
-  }
-
-  .logo-fixed {
-    position: fixed;
-    width: 100%;
-    text-align: center;
-    left: 0;
-    margin-top: 0;
-    transform: none;
-    z-index: 50;
-    mix-blend-mode: overlay;
-  }
-
-  .main {
-    position: relative;
-    width: 100vw;
-    height: fit-content;
-  }
-
-  .masthead {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;
-  }
-
-  .masthead p {
-    font-size: 0.7rem !important;
-    text-align: left !important;
-  }
-
-  .modal {
-    height: 100vh;
-    width: 100vw;
-    /* background: red; */
-    z-index: 100;
-    position: fixed;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    opacity: 0;
-  }
-
-  .modal-close {
-    position: absolute;
-    z-index: 110;
-    top: 1.75rem;
-    right: 1.75rem;
-    font-family: "Helveesti";
-    font-size: 1.79rem;
-    color: var(--black);
-    transition: color ease-in-out 100ms;
-  }
-
-  .modal-close:hover {
-    cursor: pointer;
-    color: var(--blue);
-  }
-
-  .modal-content {
-    width: 100%;
-    height: 100%;
-    /* background: green; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .modal-content img {
-    min-height: 100%;
-    min-width: 100%;
-  }
-
-  .navbar {
-    position: sticky;
-    z-index: 100;
-    padding: 0.75rem;
-    top: 0;
-    z-index: 50;
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    width: 100vw;
-    gap: 0.5rem;
-    border-bottom: 1px solid black;
-  }
-
-
-  .navbar-item {
-    font-family: "Helveesti";
-    font-size: var(--main-font);
-    color: var(--black);
-    display: inline;
-    width: fit-content;
-  }
-
-  .navbar-item a {
-    color: black;
-    text-decoration: none;
-  }
-
-  .navbar-item a:hover {
-    color: var(--blue);
-    text-decoration: none;
-  }
-
-  .section {
-    display: grid;
-    width: 100vw;
-    grid-template-columns: 1fr;
-    background-color: white;
-    padding: 0.75rem 0.7rem 0rem 0.7rem;
-    min-height: calc(100dvh - 93px);
-  }
-
-  .section h1 {
-    font-family: "Helveesti";
-    font-style: normal;
-    font-weight: 400;
-    font-size: var(--header-font);
-    line-height: 1.3rem;
-    color: black;
-    margin-bottom: 0.5rem;
-    text-align: justify;
-  }
-
-
-  .section p {
-    font-family: "Helveesti";
-    font-style: normal;
-    font-weight: 400;
-    font-size: var(--main-font);
-    line-height: 1.3rem;
-    color: black;
-    margin-bottom: 1rem;
-    text-align: justify;
-    padding-right: 1.5rem;
-
-  }
-
-
-  .section p.italic {
-    font-style: italic;
-  }
-
-  .section p a {
-    color: black;
-    text-decoration: underline;
-    transition: color ease-in-out 100ms;
-  }
-
-  .section p a:hover {
-    color: white;
-    text-decoration: underline;
-  }
-
-
-  .section ul {
-    list-style-type: none;
-    margin-bottom: 1rem;
-  }
-
-  .section li {
-    font-family: "Helveesti";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.3rem;
-    color: black;
-  }
-
-  .section li a {
-    color: black;
-    text-decoration: underline;
-    transition: color ease-in-out 100ms;
-  }
-
-  .section li a:hover {
-    color: white;
-    text-decoration: underline;
-  }
-
-  .section-left-contact {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-
-  .section-right {
-    padding-left: 1.5rem;
-  }
-
-  .selected {
-    color: white !important;
-  }
-
-  .video-container {
-    position: relative;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color: var(--blue);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 0;
-    overflow: hidden;
-  }
-
 }
