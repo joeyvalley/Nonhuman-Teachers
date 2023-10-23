@@ -83,7 +83,7 @@ export default function Project() {
           </div>
           <div className="section-heading">
             <div className="event">
-              <h1><a href="projects/programming-and-events">Public Programming</a></h1>
+              <h2><a href="projects/programming-and-events">Public Programming</a></h2>
               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam id labore exercitationem explicabo a quae eveniet, nostrum mollitia repellendus ad ut quasi beatae! Delectus reprehenderit nisi cupiditate cum perferendis ipsum?</p>
               <Slider {...settings} ref={projectSlider}>
                 {eventsImages.map((img, index) => (
@@ -99,7 +99,7 @@ export default function Project() {
           </div>
           <div className="section-heading">
             <div className="event">
-              <h1><a href="projects/groups-and-workshops">Community Groups & Workshops</a></h1>
+              <h2><a href="projects/groups-and-workshops">Community Groups & Workshops</a></h2>
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam tempora, libero excepturi eaque cumque corrupti laudantium architecto explicabo dolorum blanditiis quaerat voluptatibus incidunt commodi quisquam nesciunt praesentium! Alias, voluptates eum.</p>
               <img src="assets/images/clubs.jpg" alt="Clubs" className="carousel-image" />
               <a href="/projects/groups-and-workshops"><span className="project-button">More Information</span></a>
@@ -107,7 +107,7 @@ export default function Project() {
           </div>
           <div className="section-heading">
             <div className="event">
-              <h1><a href="projects/botanical-spaces">New Botanical Spaces</a></h1>
+              <h2><a href="projects/botanical-spaces">New Botanical Spaces</a></h2>
               <p>Our immersive botanical spaces are experiments in what the evolution of a botanical garden can look like; unlikely urban oases of rare and unusual plants, community hubs for science, education, and experimentation.</p>
               <Slider {...settings} ref={botanicalSlider}>
                 {botanicalImages.map((img, index) => (
@@ -123,7 +123,7 @@ export default function Project() {
           </div>
           <div className="section-heading">
             <div className="event">
-              <h1><a href="projects/media">New Nature Media</a></h1>
+              <h2><a href="projects/media">New Nature Media</a></h2>
               <p>We believe that an innovative and updated approach to how science and the natural world are represented in media is long overdue. Taking advantage of the full scope of today's media tools, we want to broadcast our signal far and wide and bring a new generation of viewers into the conversation.</p>
               <img src="assets/images/travel.jpg" alt="Travel" className="carousel-image" />
               <a href="/projects/media"><span className="project-button">More Information</span></a>

@@ -8,7 +8,7 @@ export default function Navbar() {
     <>
       <div className="navbar">
         <div className="left">
-          <div className="navbar-item">
+          <div className="navbar-home">
             <Link to="/">Nonhuman Teachers</Link>
           </div>
         </div>

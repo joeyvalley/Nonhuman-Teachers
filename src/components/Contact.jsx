@@ -10,7 +10,7 @@ export default function Contact() {
       <div className={`copy ${copyLoaded ? 'loaded' : ''}`}>
         <div className='section-heading'>
           <h1>Contact</h1>
-          <img src="/assets/images/protest.png" alt="Protest"
+          <img src="/assets/images/contact.jpg" alt="Cycads"
             onLoad={() => {
               setCopyLoaded(true);
               setTimeout(() => {
@@ -18,6 +18,7 @@ export default function Contact() {
               }, 500);
             }}
           />
+          <p className='img-credit'>Male cones of E. kosiensis</p>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam sint voluptatibus quas nihil<span className="footnote-number">[1]</span> sit ea, quod earum veritatis, nemo soluta fugit explicabo recusandae ratione molestiae vitae sequi nam? Excepturi, sequi.</p>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor cupiditate aspernatur omnis ea dolorem iusto rem, cumque impedit totam pariatur debitis sed numquam recusandae delectus molestiae expedita harum animi laudantium!</p>
         </div>
