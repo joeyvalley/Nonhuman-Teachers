@@ -18,6 +18,9 @@ export default async function signUp(email) {
         status: 'subscribed',
       },
     });
+
+    console.log(res);
+
     if (res.status === "subscribed") {
       return "subscribed"
     }
