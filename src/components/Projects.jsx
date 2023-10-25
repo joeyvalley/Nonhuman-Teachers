@@ -94,7 +94,7 @@ export default function Project() {
                   </div>
                 ))}
               </Slider>
-              <a href="/projects/programming-and-events"><span className="project-button">More Information</span></a>
+              {/* <a href="/projects/programming-and-events"><span className="project-button">More Information</span></a> */}
             </div>
           </div>
           <div className="section-heading">
@@ -111,7 +111,7 @@ export default function Project() {
                   </div>
                 ))}
               </Slider>
-              <a href="/projects/botanical-spaces"><span className="project-button">More Information</span></a>
+              {/* <a href="/projects/botanical-spaces"><span className="project-button">More Information</span></a> */}
             </div>
           </div>
           <div className="section-heading">
@@ -119,7 +119,7 @@ export default function Project() {
               <h2><a href="projects/media">New Nature Media</a></h2>
               <p>We believe that an innovative and updated approach to how science and the natural world are represented in media is long overdue. One that resonates with a broader audience while bringing a new generation of viewers into the conversation. Taking advantage of the full scope of today's media tools, we want to broadcast our signal far and wide.</p>
               <img src="assets/images/travel.jpg" alt="Travel" className="carousel-image" />
-              <a href="/projects/media"><span className="project-button">More Information</span></a>
+              {/* <a href="/projects/media"><span className="project-button">More Information</span></a> */}
             </div>
             <p className="lb">--</p>
           </div>
