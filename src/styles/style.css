@@ -35,19 +35,50 @@ body {
 }
 
 .home {
-  width: 100dvw;
-  height: 100dvh;
   display: flex;
+  width: 100vw;
+  margin-top: 47px;
+  padding: 5rem;
+  height: calc(100dvh - 76px);
+  position: fixed;
+  z-index: 1000;
   align-items: center;
   justify-content: center;
+
 }
 
 .homeish {
-  background: white;
+  /* background: white; */
   padding: 1rem 1rem 0 1rem;
-  border: 1px solid var(--black);
+  /* border: 1px solid var(--black); */
+  width: 33%;
 }
 
+.homeish img {
+  width: 100%;
+}
+
+.homeish p {
+  font-family: "Helveesti";
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--main-font);
+  line-height: 1.3rem;
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+
+.homeish p a {
+  color: var(--black);
+  text-decoration: underline;
+  transition: all ease-in-out 250ms;
+}
+
+.homeish p a:hover {
+  background: var(--black);
+  color: white;
+  text-decoration: none;
+}
 
 
 .lb {
@@ -105,11 +136,12 @@ body {
 
 .copy {
   padding: 1rem 0rem 0rem 1.5rem;
-  overflow: scroll;
-  height: calc(100dvh - 55px);
+  overflow-y: scroll;
+  height: calc(100dvh - 77px);
   max-width: 800px;
   opacity: 0;
   transition: opacity ease-in-out 250ms;
+  margin: 0;
 }
 
 .copy.loaded {
@@ -161,7 +193,6 @@ body {
 
 .copy .img-credit {
   font-size: var(--footnote);
-  /* background-color: red; */
   line-height: 0.75rem;
   text-align: right;
   font-style: italic;
@@ -359,13 +390,13 @@ body {
 
 .footnotes {
   position: relative;
-  top: 16px;
+  top: 1rem;
   right: -11px;
   border-left: 1px solid var(--black);
   border-top: 1px solid var(--black);
   border-bottom: 1px solid var(--black);
   background: white;
-  height: calc(100dvh - 103.5px);
+  height: calc(100dvh - 109px);
   overflow-y: scroll;
   padding: 0rem 1rem 0.5rem 0.25rem;
   transform: translateX(100%);
@@ -578,7 +609,6 @@ body {
 
 .left {
   display: inline-block;
-  background: red;
   white-space: nowrap;
 }
 
@@ -673,6 +703,7 @@ body {
 .email::placeholder {
   color: var(--black);
 }
+
 
 .newsletter form {
   display: grid;
@@ -784,16 +815,15 @@ body {
 }
 
 .section {
+  position: fixed;
   display: grid;
   width: 100vw;
   grid-template-columns: 4fr 1fr;
   gap: 1rem;
-  margin-top: 47px;
+  margin-top: 48px;
   padding: 0;
-  height: calc(100dvh - 76px);
-  position: fixed;
+  height: calc(100dvh - 77px);
   z-index: 1000;
-  overflow: hidden;
 }
 
 .section h1 {

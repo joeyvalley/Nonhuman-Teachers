@@ -55,7 +55,7 @@ export default function About() {
   const navigation = useNavigate();
 
   function handleDonate() {
-    navigation('/donate');;
+    navigation('/donate');
   }
 
   return (

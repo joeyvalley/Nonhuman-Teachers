@@ -78,13 +78,13 @@ export default function Project() {
         <div className={`copy ${loadedImagesCount === (eventsImages.length + botanicalImages.length) ? 'loaded' : ''}`}>
           <div className='section-heading'>
             <h1>Projects</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam sint voluptatibus quas nihil<span className="footnote-number" onClick={() => footnoteClick(1)}>[1]</span> sit ea, quod earum veritatis, nemo soluta fugit explicabo recusandae ratione molestiae vitae sequi nam? Excepturi, sequi.</p>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor cupiditate aspernatur omnis ea dolorem iusto rem, cumque impedit totam pariatur debitis sed numquam recusandae delectus molestiae expedita harum animi laudantium!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ipsa cumque inventore quos quia est iure explicabo sed sunt labore. Ipsum error veritatis laudantium architecto, quos sint accusamus quo quas.</p>
           </div>
           <div className="section-heading">
             <div className="event">
               <h2><a href="projects/programming-and-events">Public Programming</a></h2>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam id labore exercitationem explicabo a quae eveniet, nostrum mollitia repellendus ad ut quasi beatae! Delectus reprehenderit nisi cupiditate cum perferendis ipsum?</p>
+              <p>Connecting with the natural world should be a collective and social endeavor.</p>
+              <p>Our multidisciplinary events offer artful ways of engaging with and learning about the natural world while also fostering a deep sense of community. These include lectures, workshops, book and plant clubs, movie screenings, and all manner of performances.</p>
               <Slider {...settings} ref={projectSlider}>
                 {eventsImages.map((img, index) => (
                   <div key={index}>
@@ -99,16 +99,9 @@ export default function Project() {
           </div>
           <div className="section-heading">
             <div className="event">
-              <h2><a href="projects/groups-and-workshops">Community Groups & Workshops</a></h2>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam tempora, libero excepturi eaque cumque corrupti laudantium architecto explicabo dolorum blanditiis quaerat voluptatibus incidunt commodi quisquam nesciunt praesentium! Alias, voluptates eum.</p>
-              <img src="assets/images/clubs.jpg" alt="Clubs" className="carousel-image" />
-              <a href="/projects/groups-and-workshops"><span className="project-button">More Information</span></a>
-            </div>
-          </div>
-          <div className="section-heading">
-            <div className="event">
               <h2><a href="projects/botanical-spaces">New Botanical Spaces</a></h2>
-              <p>Our immersive botanical spaces are experiments in what the evolution of a botanical garden can look like; unlikely urban oases of rare and unusual plants, community hubs for science, education, and experimentation.</p>
+              <p>Botanical gardens have existed since at least the 16th century and they've never been radically rethought.</p>
+              <p>Our immersive botanical spaces are experiments in what the evolution of a botanical garden can look like; unlikely urban oases of rare and unusual plants, hubs for citizen science, education, experimentation and community.</p>
               <Slider {...settings} ref={botanicalSlider}>
                 {botanicalImages.map((img, index) => (
                   <div key={index}>
@@ -124,7 +117,7 @@ export default function Project() {
           <div className="section-heading">
             <div className="event">
               <h2><a href="projects/media">New Nature Media</a></h2>
-              <p>We believe that an innovative and updated approach to how science and the natural world are represented in media is long overdue. Taking advantage of the full scope of today's media tools, we want to broadcast our signal far and wide and bring a new generation of viewers into the conversation.</p>
+              <p>We believe that an innovative and updated approach to how science and the natural world are represented in media is long overdue. One that resonates with a broader audience while bringing a new generation of viewers into the conversation. Taking advantage of the full scope of today's media tools, we want to broadcast our signal far and wide.</p>
               <img src="assets/images/travel.jpg" alt="Travel" className="carousel-image" />
               <a href="/projects/media"><span className="project-button">More Information</span></a>
             </div>
