@@ -119,7 +119,7 @@ export default function Events() {
                 </a>
                 <span>{event.title}</span>
                 <span className="event-date">{event.date}, {event.time}</span>
-                <a href={event.url}><span className="event-link">Tickets and more info</span></a>
+                <a href={event.url}><span className="event-link">More information</span></a>
               </div>
             </div>
           )) : (
