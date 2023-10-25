@@ -17,7 +17,14 @@ export default function Video() {
     { title: "Jumping fish", link: "https://i.imgur.com/w89cJtl.mp4" },
     { title: "mini horse", link: "https://i.imgur.com/oXV1dQ1.mp4" },
     { title: "opossums", link: "https://i.imgur.com/QtoenRl.mp4" },
-    { title: "cracking geode", link: "https://i.imgur.com/LO3T7QN.mp4" }
+    { title: "cracking geode", link: "https://i.imgur.com/LO3T7QN.mp4" },
+    { title: "swimming crab", link: "https://res.cloudinary.com/dnld1cqvy/video/upload/v1698254341/NHT%20Videos/swimming-crab_ancpbc.mp4" },
+    { title: "snail", link: "https://res.cloudinary.com/dnld1cqvy/video/upload/v1698254336/NHT%20Videos/snail_qonnht.mp4" },
+    { title: "manowar", link: "https://res.cloudinary.com/dnld1cqvy/video/upload/v1698254335/NHT%20Videos/manowar_hswpl1.mp4" },
+    { title: "sunset", link: "https://res.cloudinary.com/dnld1cqvy/video/upload/v1698254332/NHT%20Videos/sunset_wxpkgf.mp4" },
+    { title: "husky", link: "https://res.cloudinary.com/dnld1cqvy/video/upload/v1698254326/NHT%20Videos/husky_eerne8.mp4" },
+    { title: "high voltage", link: "https://res.cloudinary.com/dnld1cqvy/video/upload/v1698254324/NHT%20Videos/high-voltage_sj4day.mp4" },
+    { title: "chips crab", link: "https://res.cloudinary.com/dnld1cqvy/video/upload/v1698254319/NHT%20Videos/chips-crab_rcpnzz.mp4" }
   ]
   const startingVideo = randomVideo();
 
