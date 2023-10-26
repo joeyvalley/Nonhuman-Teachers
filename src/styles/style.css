@@ -1096,11 +1096,28 @@ body {
   }
 
   .footer {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    bottom: 0;
+    background: white;
+    border-top: 1px solid var(--black);
+    z-index: 100;
     padding: 0.25rem 0rem;
-    background: red;
+    overflow: hidden;
+    white-space: nowrap;
   }
 
   .footer p {
-    font-size: .66rem;
+    font-family: "Helveesti";
+    font-size: 0.66rem;
+    font-style: italic;
+    color: var(--black);
+    margin-top: 2px;
+    display: inline-block;
+    white-space: nowrap;
+    animation: scrollText 30s linear infinite;
   }
 }
