@@ -309,6 +309,7 @@ body {
 .project-button {
   padding: 0.1rem 1rem;
   border: 1px solid var(--black);
+  border-radius: 0;
   background: white;
   text-align: center;
   transition: all ease-in-out 200ms;
@@ -734,6 +735,7 @@ body {
   color: var(--black);
   background: var(--gray);
   border: 1px solid var(--black);
+  border-radius: 0;
   display: inline-block;
   transition: background 200ms ease-in-out;
 }
@@ -762,6 +764,7 @@ body {
   color: var(--black);
   background: var(--gray);
   border: 1px solid var(--black);
+  border-radius: 0;
   display: inline-block;
   transition: background 200ms ease-in-out;
   margin-bottom: 1rem;
@@ -1096,28 +1099,180 @@ body {
   }
 
   .footer {
-    position: fixed;
-    width: 100%;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    bottom: 0;
-    background: white;
-    border-top: 1px solid var(--black);
-    z-index: 100;
     padding: 0.25rem 0rem;
-    overflow: hidden;
-    white-space: nowrap;
   }
 
   .footer p {
-    font-family: "Helveesti";
     font-size: 0.66rem;
-    font-style: italic;
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3),
+only screen and (min--moz-device-pixel-ratio: 3),
+only screen and (-o-min-device-pixel-ratio: 3/1),
+only screen and (min-device-pixel-ratio: 3),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 3dppx) {
+
+  .home {
+    display: flex;
+    width: 100vw;
+    margin-top: 36px;
+    padding: 5rem;
+    height: calc(100dvh - 65px);
+    position: fixed;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .homeish {
+    padding: 0;
+    height: calc(100dvh - 65px);
+    width: 150px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar {
+    position: fixed;
+    z-index: 100;
+    padding: 0.5rem;
+    top: 0;
+    z-index: 50;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    gap: 0.5rem;
+    border-bottom: 1px solid var(--black);
+  }
+
+  .navbar-item {
+    font-family: "Helveesti";
+    font-size: var(--main-font);
     color: var(--black);
-    margin-top: 2px;
     display: inline-block;
+  }
+
+  .navbar-item a {
+    color: var(--black);
+    border: 1px solid var(--black);
+    text-decoration: none;
+    transition: all ease-in-out 100ms;
+    padding: 0 0.33rem;
+  }
+
+  .left {
+    display: none;
     white-space: nowrap;
-    animation: scrollText 30s linear infinite;
+  }
+
+  .right {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.33rem;
+    width: 100%;
+    background: right;
+  }
+
+  .section {
+    position: fixed;
+    display: flex;
+    align-items: left;
+    width: 100vw;
+    margin-top: 37px;
+    padding: 0;
+    height: calc(100dvh - 61px);
+    z-index: 1000;
+  }
+
+  .section h1 {
+    font-family: "Helveesti";
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--main-font);
+    line-height: 1.3rem;
+    color: white;
+    margin-bottom: 0.75rem;
+    text-align: justify;
+    border: 1px solid var(--black);
+    background: var(--black);
+    padding: 0rem 1rem;
+    display: block;
+    text-align: center;
+  }
+
+  .section p {
+    font-family: "Helveesti";
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--main-font);
+    line-height: 1.3rem;
+    color: var(--black);
+    margin-bottom: 0.5rem;
+    text-align: justify;
+
+  }
+
+  .copy {
+    width: 100dvw;
+    height: calc(100dvh - 68px);
+    padding: 1rem 1rem 0rem 1rem;
+    overflow-y: scroll;
+    opacity: 0;
+    transition: opacity ease-in-out 250ms;
+    margin: 0;
+    background: red;
+  }
+
+  .copy .section-heading {
+    padding: 0.5rem 0.5rem 0rem 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--black);
+    background: white;
+  }
+
+  .footnotes {
+    display: none;
+  }
+
+  .footnote-number {
+    display: none;
+  }
+
+  .event {
+    margin-bottom: 0.33rem;
+  }
+
+  .event h1 {
+    font-size: var(--main-font);
+  }
+
+  .event h2 {
+
+    font-size: var(--main-font);
+    color: black;
+    background: yellow;
+    margin-bottom: 0.5rem;
+  }
+
+  .event-title {
+    background: yellow;
+  }
+
+  .img-credit {
+    display: none;
+  }
+
+  .footer {
+    padding: 0.25rem 0rem;
+  }
+
+  .footer p {
+    font-size: 0.5rem;
+    text-transform: uppercase !important;
   }
 }
