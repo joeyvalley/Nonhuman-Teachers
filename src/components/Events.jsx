@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import authenticate from "../api/getEvents.js"
+import authenticate from "../api/getEvents"
 import FootnotesLogo from "./FootnotesLogo";
 
 export default function Events() {

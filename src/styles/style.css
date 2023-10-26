@@ -1097,10 +1097,10 @@ body {
 
   .footer {
     padding: 0.25rem 0rem;
+    background: red;
   }
 
   .footer p {
     font-size: .66rem;
-
   }
 }
