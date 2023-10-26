@@ -1225,7 +1225,6 @@ only screen and (min-resolution: 3dppx) {
     opacity: 0;
     transition: opacity ease-in-out 250ms;
     margin: 0;
-    background: red;
   }
 
   .copy .section-heading {
