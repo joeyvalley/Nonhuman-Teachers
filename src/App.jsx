@@ -6,6 +6,7 @@ import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './components/About'
 import Events from './components/Events'
+import Gallery from './components/Gallery'
 import Contact from './components/Contact'
 import Support from './components/Support'
 import DonationPage from './components/DonationForm'
@@ -53,7 +54,7 @@ export default function App() {
         {/* Main Pages */}
         <Route path="/about" element={<About />}></Route>
         <Route path="/projects" element={<Projects />}></Route>
-        <Route path="/calendar" element={<Events />}></Route>
+        <Route path="/gallery" element={<Gallery />}></Route>
         <Route path="/support" element={<Support />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
         <Route path="/donate" element={<DonationPage />}></Route>

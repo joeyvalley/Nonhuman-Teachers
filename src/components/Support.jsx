@@ -56,12 +56,20 @@ export default function Support() {
       <div className={`copy ${copyLoaded ? 'loaded' : ''}`}>
         <div className="section-heading">
           <h2>Support Nonhuman Teachers</h2>
+          <img src="/assets/images/pages/protest.png" alt="NHT Protest"
+            onLoad={() => {
+              setCopyLoaded(true);
+              setTimeout(() => {
+                setFootnoteLoaded(true);
+              }, 500);
+            }}
+          />
+          <p className='img-credit'>Some of the humans of Nonhuman Teachers (Image credit: Nonhuman Teachers)</p>
           <p>At a time when the relationship between humans and the natural world is under enormous pressure, a new approach is urgently needed! A more inclusive approach that involves new stories and new voices. Nonhuman Teachers is dedicated to facilitating this shift, but we need your help to do it! We feel strongly that mending this strained relationship is the first step toward righting the course of Spaceship Earth.</p>
           <p>Your contributions allow us to produce interdisciplinary public programming, build immersive botanical spaces, create the next generation of nature media, and much more.</p>
           <p>Help us do something truly bigger than ourselves!</p>
           <input type="submit" value="Donate" className="donate" onClick={handleDonate} />
         </div>
-
       </div>
 
       {/* Footnotes */}

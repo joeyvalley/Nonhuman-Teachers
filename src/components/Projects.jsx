@@ -58,8 +58,8 @@ export default function Project() {
   const botanicalImages = [
     // 'assets/images/projects/botanical.jpg',
     // 'assets/images/projects/nyc-greenhouse.jpg',
-    'assets/images/projects/santa-monica.jpg',
     'assets/images/projects/greenhouse.jpg',
+    'assets/images/projects/santa-monica.jpg',
   ];
 
   const mediaImages = [

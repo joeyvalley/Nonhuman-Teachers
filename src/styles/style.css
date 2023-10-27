@@ -201,6 +201,21 @@ body {
   display: inline-block;
 }
 
+.section h4 {
+  display: flex;
+  font-family: "Helveesti";
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--main-font);
+  color: var(--black);
+  text-align: left;
+  /* display: block; */
+  background-color: var(--black);
+  color: white;
+  align-items: center;
+  justify-content: center;
+}
+
 .loading {
   width: 100%;
   display: flex;
@@ -438,6 +453,17 @@ body {
   animation: scrollText 30s linear infinite;
 }
 
+.footer p a {
+  text-decoration: none;
+  transition: all ease-in-out 100ms;
+}
+
+
+.footer p a:active {
+  background: black;
+  color: white;
+}
+
 @keyframes scrollText {
   0% {
     transform: translateX(0%);
@@ -462,6 +488,7 @@ body {
   transform: translateX(100%);
   opacity: 0;
   transition: all 500ms ease-out;
+  display: none;
 }
 
 .footnotes.loaded {

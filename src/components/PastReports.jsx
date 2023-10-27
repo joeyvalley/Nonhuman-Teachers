@@ -29,13 +29,13 @@ export default function PastReports() {
 
   return (
     <div className='section-heading'>
-      <h1>Past Reports</h1>
+      <h2>Past Reports</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis inventore odio et ad! Animi ipsa excepturi maxime dolorem deserunt neque, nisi labore amet aspernatur ab ad quia nihil molestias consequatur.</p>
       <div className="past-reports-container">
         {pastReports.length ? pastReports.map((event, index) => (
           <div className="past-report" key={index}>
             <img src={`/assets/images/reports/${event.category.toLowerCase()}.jpg`} alt="Logo" />
-            {/* <p>{formatDate(event.dateOfTrip)}</p> */}
+            <p>{formatDate(event.dateOfTrip)}</p>
           </div>
         )) : null}
       </div>

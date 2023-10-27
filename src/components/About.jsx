@@ -73,7 +73,7 @@ export default function About() {
               }, 500);
             }}
           />
-          <p className='img-credit'>Earth Day protests in New York City, April 22, 1970</p>
+          <p className='img-credit'>Earth Day protests in New York City, April 22, 1970 (Image credit: Jason Laure)</p>
           <p>Nonhuman Teachers<span className="footnote-number" onClick={() => footnoteClick(1)}>[1]</span> is a 501(c)(3) nonprofit organization that takes a new approach to ecological storytelling, blending science, art, and the imagination to help deepen the relationship between humans and the natural world.<span className="footnote-number" onClick={() => footnoteClick(2)}>[2]</span></p>
           <p>We based our mission on the observation that so many of us have fallen into a dysfunctional relationship with the living environment, and that healing this relationship requires compelling new ways of envisioning our world that don’t simply cause dread and avoidance, or beauty and delusion, but that address the complexities of our time in ways that inspire and empower us to keep going.</p>
           <p>Moreover, we need new voices. Not just science voices, but artists, poets, dog walkers, air traffic controllers, rivers, lichens, rats and trees. The scope and urgency of our planetary moment suggests that we need everyone and not just the specialized few.</p>

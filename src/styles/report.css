@@ -262,7 +262,7 @@ select.report:focus {
 }
 
 .past-report {
-  background: red;
+  background: black;
   display: flex;
   overflow: hidden;
   border: 1px solid var(--black);
@@ -272,5 +272,14 @@ select.report:focus {
   border: none !important;
   width: 100%;
   transform: scale(1.05);
-  opacity: 0.9;
+  opacity: 0.75;
+  mix-blend-mode: luminosity;
+  transition: all ease-in-out 250ms;
+}
+
+.past-report img:hover {
+  opacity: 1;
+  cursor: pointer;
+  /* mix-blend-mode: normal; */
+
 }
