@@ -48,16 +48,16 @@ export default function Project() {
 
   const eventsImages = [
     'assets/images/projects/sonny-workshop.jpg',
-    'assets/images/projects/laraaji-nyc.jpg',
+    // 'assets/images/projects/laraaji-nyc.jpg',
     'assets/images/projects/hortculture-nyc2.jpg',
-    'assets/images/projects/gabriel.jpg',
-    'assets/images/projects/clubs.jpg',
-    'assets/images/projects/events.jpg',
+    // 'assets/images/projects/gabriel.jpg',
+    // 'assets/images/projects/clubs.jpg',
+    // 'assets/images/projects/events.jpg',
   ];
 
   const botanicalImages = [
-    'assets/images/projects/botanical.jpg',
-    'assets/images/projects/nyc-greenhouse.jpg',
+    // 'assets/images/projects/botanical.jpg',
+    // 'assets/images/projects/nyc-greenhouse.jpg',
     'assets/images/projects/santa-monica.jpg',
     'assets/images/projects/greenhouse.jpg',
   ];

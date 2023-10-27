@@ -62,7 +62,7 @@ export default function TripReport() {
       <div className={`copy ${copyLoaded ? 'loaded' : ''}`}>
         <div className="section-heading">
           <h1>Trip Report</h1>
-          <img src="/assets/images/trip-report.jpg" alt="Trip Report"
+          <img src="/assets/images/pages/trip-report.jpg" alt="Trip Report"
             onLoad={() => {
               setCopyLoaded(true);
             }}
