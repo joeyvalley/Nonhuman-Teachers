@@ -1,12 +1,13 @@
 import "./styles/style.css";
 
+import { useEffect, useState } from "react";
 import { Routes, Route } from 'react-router-dom'
 // Import Pages
 import Home from './pages/Home'
 import About from './components/About'
 import Events from './components/Events'
 import Contact from './components/Contact'
-import Donate from './components/Donate'
+import Support from './components/Support'
 import DonationPage from './components/DonationForm'
 import Projects from './components/Projects'
 // Import sub-pages
@@ -20,19 +21,40 @@ import TripReport from './components/TripReport'
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Video from "./components/Video";
+//Import video array
+import videoList from "./api/videoList";
 
 export default function App() {
+
+  const [selectedVideo, setSelectedVideo] = useState(null);
+
+
+
+  const randomVideo = () => {
+    return videoList[Math.floor(Math.random() * videoList.length)];
+  };
+
+
+  const handleVideoChange = () => {
+    setSelectedVideo(randomVideo());
+  };
+
+  useEffect(() => {
+    setSelectedVideo(randomVideo());
+  }, [])
+
+
   return (
 
     <div className="main">
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />}></Route>
+        <Route path="/" element={<Home onLogoClick={handleVideoChange} />}></Route>
         {/* Main Pages */}
         <Route path="/about" element={<About />}></Route>
         <Route path="/projects" element={<Projects />}></Route>
         <Route path="/calendar" element={<Events />}></Route>
-        <Route path="/support" element={<Donate />}></Route>
+        <Route path="/support" element={<Support />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
         <Route path="/donate" element={<DonationPage />}></Route>
 
@@ -44,7 +66,7 @@ export default function App() {
         <Route path="/projects/media" element={<MediaPage />}></Route>
         <Route path="/projects/trip-report" element={<TripReport />}></Route>
       </Routes>
-      <Video></Video>
+      <Video videoInfo={selectedVideo}></Video>
       <Footer></Footer>
     </div>
 

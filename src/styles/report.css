@@ -1,11 +1,11 @@
 @font-face {
   font-family: "Helveesti";
-  src: url(../../public/assets/helveesti-regular.woff);
+  src: url(../../public/assets/fonts/helveesti-regular.woff);
 }
 
 @font-face {
   font-family: "Helveesti";
-  src: url(../../public/assets/helveesti-regular-italic.woff);
+  src: url(../../public/assets/fonts/helveesti-regular-italic.woff);
   font-style: italic;
 }
 
@@ -220,9 +220,7 @@ select.report:focus {
   justify-content: flex-start;
 }
 
-.past-report {
-  border: 1px solid black;
-}
+
 
 .author p {
   font-family: 'Helveesti';
@@ -255,10 +253,24 @@ select.report:focus {
   display: grid;
   column-gap: 1rem;
   row-gap: 1rem;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   margin-bottom: 1rem;
 }
 
 .past-reports-container>*:last-child {
   margin-bottom: 0;
+}
+
+.past-report {
+  background: red;
+  display: flex;
+  overflow: hidden;
+  border: 1px solid var(--black);
+}
+
+.past-report img {
+  border: none !important;
+  width: 100%;
+  transform: scale(1.05);
+  opacity: 0.9;
 }

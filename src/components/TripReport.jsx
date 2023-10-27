@@ -2,13 +2,13 @@ import { useEffect, useRef, useState } from 'react';
 
 import FootnotesLogo from './FootnotesLogo';
 import NewReport from './NewReport';
-
-import { getReports } from '../api/getReports';
+import PastReports from './PastReports';
 
 export default function TripReport() {
+
   // Set content visibility.
   const [copyLoaded, setCopyLoaded] = useState(false);
-  const [footnoteLoaded, setFootnoteLoaded] = useState(false);
+  // const [footnoteLoaded, setFootnoteLoaded] = useState(false);
 
   // Footnotes functions and variables.
   const footnotes = useRef(null);
@@ -56,30 +56,6 @@ export default function TripReport() {
     setNewReport(true);
   }
 
-  // Handle setting old trip reports
-  const [pastReports, setPastReports] = useState([]);
-  useEffect(() => {
-    const workAround = async () => {
-      const reportsData = await getReports();
-      setPastReports(reportsData)
-    };
-    workAround();
-  }, [])
-
-  function formatDate(dateString) {
-    const date = new Date(dateString);
-
-    const day = date.getUTCDate();
-    const month = date.getUTCMonth() + 1; // Months are zero-based, so +1 to get the correct month
-    const year = date.getUTCFullYear().toString().slice(-2); // Get the last two digits of the year
-
-    return `${month}/${day}/${year}`;
-  }
-
-  function selectImage(category) {
-    console.log(category);
-  }
-
   return (
     <div className="section">
       {/* Main Content */}
@@ -89,9 +65,6 @@ export default function TripReport() {
           <img src="/assets/images/trip-report.jpg" alt="Trip Report"
             onLoad={() => {
               setCopyLoaded(true);
-              setTimeout(() => {
-                setFootnoteLoaded(true);
-              }, 500);
             }}
           />
           <p className='img-credit'>5-HT2A receptors throughout the cortex and claustrum / David A. Martin & Charles D. Nichols</p>
@@ -101,27 +74,13 @@ export default function TripReport() {
           <input type="button" value="Share" className="donate" onClick={createNewReport} />
           {newReport && <NewReport onClose={() => setNewReport(false)} />}
         </div>
-        <div className='section-heading'>
-          <h1>Past Reports</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis inventore odio et ad! Animi ipsa excepturi maxime dolorem deserunt neque, nisi labore amet aspernatur ab ad quia nihil molestias consequatur.</p>
-          <div className="past-reports-container">
-            {pastReports.length ? pastReports.map((event, index) => (
-              <div className="past-report" key={index}>
-                <div className="logo">
-                  {selectImage(event.category)}
-                  <img src="/assets/nht-logo.png" alt="Logo" />
-                </div>
-                <div className='author'>
-                  <p>{formatDate(event.dateOfTrip)}</p>
-                </div>
-              </div>
-            )) : null}
-          </div>
-        </div>
+        {copyLoaded ?
+          <PastReports></PastReports> : null
+        }
       </div>
 
       {/* Footnotes */}
-      <div className={`footnotes ${footnoteLoaded ? 'loaded' : ''}`} ref={footnotes}>
+      <div className={`footnotes ${copyLoaded ? 'loaded' : ''}`} ref={footnotes}>
         <div className="footnote" id="1">
           <span className={`footnote-text ${activeFootnote === 1 ? 'active' : ''}`} id="1">1. Nonhuman Teachers 501(c)(3) hereby asserts and confirms its explicit intention to exercise the prerogative of publication with regard to all content submitted to this website, along with any associated royalties thereof. It is imperative that should you not desire your submission to be published, you refrain from including it on this page. By submitting to this page, you are agreeing to the above terms.</span>
         </div>

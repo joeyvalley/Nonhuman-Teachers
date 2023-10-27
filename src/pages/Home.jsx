@@ -1,20 +1,9 @@
-import Newsletter from "../components/Newsletter";
-import { useNavigate } from "react-router-dom";
-
-export default function Home() {
-
-  // Handle donate click and navigation.
-  const navigation = useNavigate();
-
-  function handleDonate() {
-    navigation('/donate');;
-  }
-
+export default function Home({ onLogoClick }) {
   return (
     <div>
       <div className="home">
         <div className="homeish">
-          <img src="assets/beetle-worship.png" alt="NHT Logo" />
+          <img src="assets/beetle-worship.png" alt="NHT Logo" onClick={onLogoClick} />
         </div>
       </div >
     </div>

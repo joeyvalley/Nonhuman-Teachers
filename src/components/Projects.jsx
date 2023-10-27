@@ -34,6 +34,7 @@ export default function Project() {
   // Set up image carousels.
   const projectSlider = useRef(null);
   const botanicalSlider = useRef(null);
+  const mediaSlider = useRef(null);
 
   const settings = {
     arrows: false,
@@ -46,19 +47,26 @@ export default function Project() {
   };
 
   const eventsImages = [
-    'assets/images/events.jpg',
-    'assets/images/botanical.jpg',
-    'assets/images/clubs.jpg',
-    'assets/images/travel.jpg',
-    'assets/images/future.jpg'
+    'assets/images/projects/sonny-workshop.jpg',
+    'assets/images/projects/laraaji-nyc.jpg',
+    'assets/images/projects/hortculture-nyc2.jpg',
+    'assets/images/projects/gabriel.jpg',
+    'assets/images/projects/clubs.jpg',
+    'assets/images/projects/events.jpg',
   ];
 
   const botanicalImages = [
-    'assets/images/botanical.jpg',
-    'assets/images/clubs.jpg',
-    'assets/images/travel.jpg',
-    'assets/images/future.jpg',
-    'assets/images/events.jpg'
+    'assets/images/projects/botanical.jpg',
+    'assets/images/projects/nyc-greenhouse.jpg',
+    'assets/images/projects/santa-monica.jpg',
+    'assets/images/projects/greenhouse.jpg',
+  ];
+
+  const mediaImages = [
+    'assets/images/projects/cycad-fog.jpg',
+    'assets/images/projects/podcast.jpg',
+    'assets/images/projects/cycad-mic.jpg',
+    'assets/images/projects/travel.jpg',
   ];
 
   function handleImageClick(ref) {
@@ -72,19 +80,14 @@ export default function Project() {
           <img src="/assets/beetle-worship.png" alt="Loading" />
         </div>
         : ''} */}
-      <div className="section">
+      <div id="projects-container" className="section">
 
         {/* Main content */}
-        <div className={`copy ${loadedImagesCount === (eventsImages.length + botanicalImages.length) ? 'loaded' : ''}`}>
-          <div className='section-heading'>
-            <h1>Projects</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ipsa cumque inventore quos quia est iure explicabo sed sunt labore. Ipsum error veritatis laudantium architecto, quos sint accusamus quo quas.</p>
-          </div>
-          <div className="section-heading">
+        <div id="projects-content" className={`copy ${loadedImagesCount === (eventsImages.length + botanicalImages.length) ? 'loaded' : ''}`}>
+          <div id="public-programming" className="section-heading">
             <div className="event">
-              <h2><a href="projects/programming-and-events">Public Programming</a></h2>
-              <p>Connecting with the natural world should be a collective and social endeavor.</p>
-              <p>Our multidisciplinary events offer artful ways of engaging with and learning about the natural world while also fostering a deep sense of community. These include lectures, workshops, book and plant clubs, movie screenings, and all manner of performances.</p>
+              <h2>Public Programming</h2>
+              <p>Our multidisciplinary events in LA and NYC include lectures, workshops, book and plant clubs, movie screenings, and all kinds of performances. We feel strongly that connecting with the natural world should be a social and inclusive endeavor.</p>
               <Slider {...settings} ref={projectSlider}>
                 {eventsImages.map((img, index) => (
                   <div key={index}>
@@ -97,11 +100,10 @@ export default function Project() {
               {/* <a href="/projects/programming-and-events"><span className="project-button">More Information</span></a> */}
             </div>
           </div>
-          <div className="section-heading">
+          <div id="botanical-spaces" className="section-heading">
             <div className="event">
-              <h2><a href="projects/botanical-spaces">New Botanical Spaces</a></h2>
-              <p>Botanical gardens have existed since at least the 16th century and they've never been radically rethought.</p>
-              <p>Our immersive botanical spaces are experiments in what the evolution of a botanical garden can look like; unlikely urban oases of rare and unusual plants, hubs for citizen science, education, experimentation and community.</p>
+              <h2>Immersive Botanical Spaces</h2>
+              <p>These are experiments in what the evolution of a botanical garden can look like; unlikely urban oases for rare and unusual plants, that are also hubs for citizen science, education, experimentation, and community. Every plant, just like every human, comes with a story. Learning these stories can have a transformative effect on people, changing a green leafy “thing” into a fully realized “being” worthy of human care and compassion.</p>
               <Slider {...settings} ref={botanicalSlider}>
                 {botanicalImages.map((img, index) => (
                   <div key={index}>
@@ -114,19 +116,23 @@ export default function Project() {
               {/* <a href="/projects/botanical-spaces"><span className="project-button">More Information</span></a> */}
             </div>
           </div>
-          <div className="section-heading">
+          <div id="new-media" className="section-heading">
             <div className="event">
               <h2><a href="projects/media">New Nature Media</a></h2>
-              <p>We believe that an innovative and updated approach to how science and the natural world are represented in media is long overdue. One that resonates with a broader audience while bringing a new generation of viewers into the conversation. Taking advantage of the full scope of today's media tools, we want to broadcast our signal far and wide.</p>
-              <img src="assets/images/travel.jpg" alt="Travel" className="carousel-image" />
-              {/* <a href="/projects/media"><span className="project-button">More Information</span></a> */}
+              <p>We believe that an updated approach to how science and the natural world are represented in media is long overdue. One that tracks better with the issues of our time. Our goal with the media side of things is to tell relevant and surprising stories about our wondrous blue marble while taking full advantage of today's media tools, in effort to broadcast our signal far and wide.</p>
+              <Slider {...settings} ref={mediaSlider}>
+                {mediaImages.map((img, index) => (
+                  <div key={index}>
+                    <img src={img} alt={`Events ${index}`} onClick={() => handleImageClick(mediaSlider)} className="carousel-image" />
+                  </div>
+                ))}
+              </Slider>
             </div>
-            <p className="lb">--</p>
           </div>
         </div>
 
         {/* Footnotes */}
-        <div className={`footnotes ${loadedImagesCount === (eventsImages.length + botanicalImages.length) ? 'loaded' : ''}`} ref={footnotes}>
+        <div id="projects-footnotes" className={`footnotes ${loadedImagesCount === (eventsImages.length + botanicalImages.length) ? 'loaded' : ''}`} ref={footnotes}>
           <div className="footnote" id="1">
             <span className={`footnote-text ${activeFootnote === 1 ? 'active' : ''}`} id="1">1. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero tempore laborum quibusdam. Aperiam sed, eos quibusdam nam pariatur ad, fugit ea, odit voluptas voluptates ut. Excepturi fugit ea quam officiis.</span>
           </div>

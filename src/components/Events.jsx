@@ -71,13 +71,13 @@ export default function Events() {
       {/* Main content. */}
       <div className="copy loaded">
         <div className='section-heading'>
-          <h1>Calendar</h1>
+          <h2>Calendar</h2>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam sint voluptatibus quas nihil<span className="footnote-number" onClick={() => footnoteClick(1)}>[1]</span> sit ea, quod earum veritatis, nemo soluta fugit explicabo recusandae ratione molestiae vitae sequi nam? Excepturi, sequi.</p>
         </div>
 
         {/* Upcoming Events */}
         <div className={`calendar-section ${upcomingImagesLoaded ? 'show-content' : ''}`}>
-          <h1>Upcoming Events</h1>
+          <h2>Upcoming Events</h2>
           {upcomingImagesLoaded ?
             null :
             <div className="loading">
@@ -104,7 +104,7 @@ export default function Events() {
 
         {/* Past Events */}
         <div className={`calendar-section ${pastImagesLoaded ? 'show-content' : ''}`}>
-          <h1>Past Events</h1>
+          <h2>Past Events</h2>
           {pastImagesLoaded ?
             null :
             <div className="loading">
@@ -114,12 +114,12 @@ export default function Events() {
           {pastEvents ? pastEvents.map((event, index) => (
             <div className="calendar-event" key={index}>
               <div className="event">
-                <a href={event.url}>
-                  <img src={event.image} alt="Event" onLoad={handlePastLoad} />
-                </a>
+                {/* <a href={event.url}> */}
+                <img src={event.image} alt="Event" onLoad={handlePastLoad} />
+                {/* </a> */}
                 <span className="event-title">{event.title}</span>
                 <span className="event-date">{event.date}, {event.time}</span>
-                <a href={event.url}><span className="event-link">More information</span></a>
+                {/* <a href={event.url}><span className="event-link">More information</span></a> */}
               </div>
             </div>
           )) : (

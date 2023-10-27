@@ -25,7 +25,7 @@ export default function Navbar() {
           </div>
 
           <div className="navbar-item">
-            <Link to="/support" className={location.pathname === "/support" ? "selected" : ""}>Support</Link>
+            <Link to="/support" className={location.pathname === "/support" || location.pathname === "/donate" ? "selected" : ""}>Support</Link>
 
           </div>
 
