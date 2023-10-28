@@ -44,12 +44,31 @@ form.report {
   max-width: 800px;
   font-family: 'Helveesti';
   position: relative;
-  padding: 1rem;
+  padding: 0.5rem 1rem 1rem;
   overflow: scroll;
 }
 
 .report-content p {
   margin-bottom: 0.125rem;
+}
+
+.archived-report {
+  background: white;
+  border: 1px solid black;
+  width: 100%;
+  max-width: 800px;
+  font-family: 'Helveesti';
+  position: relative;
+  padding: 1rem;
+  overflow: scroll;
+}
+
+.archived-report p {
+  margin-bottom: 0.25rem;
+}
+
+.highlighted {
+  background: yellow;
 }
 
 .report-header {
@@ -79,7 +98,7 @@ button.report {
   text-align: center;
   transition: all ease-in-out 250ms;
   position: absolute;
-  top: 1.5rem;
+  top: 1rem;
   right: 1rem;
 }
 
@@ -263,7 +282,7 @@ select.report:focus {
 
 .past-report {
   background: black;
-  display: flex;
+  display: block;
   overflow: hidden;
   border: 1px solid var(--black);
 }
@@ -271,15 +290,25 @@ select.report:focus {
 .past-report img {
   border: none !important;
   width: 100%;
-  transform: scale(1.05);
+  transform: scale(1.1);
   opacity: 0.7;
-  mix-blend-mode: luminosity;
   transition: all ease-in-out 250ms;
 }
 
 .past-report img:hover {
   opacity: 1;
   cursor: pointer;
-  /* mix-blend-mode: normal; */
+}
 
+.past-report-text {
+  position: absolute;
+  z-index: 100;
+  bottom: -0.5rem;
+  font-size: 0.7rem !important;
+  line-height: 1rem !important;
+  text-align: right !important;
+  color: white !important;
+  background: black;
+  display: block;
+  width: 100%;
 }

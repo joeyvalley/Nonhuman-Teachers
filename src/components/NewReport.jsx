@@ -9,7 +9,7 @@ export default function NewReport({ onClose }) {
   const [email, setEmail] = useState("");
   const [dateOfTrip, setDateOfTrip] = useState("");
   const [description, setDescription] = useState("");
-  const [type, setType] = useState("");
+  const [type, setType] = useState("Fungus");
   const [type2, setType2] = useState("");
   const [placeHolder, setPlaceHolder] = useState("Chytrids, bread molds, sac fungi, etc.")
 
@@ -81,8 +81,8 @@ export default function NewReport({ onClose }) {
                 (
                   <>
                     <span className="report-header">New Report</span>
-                    <button className="report" onClick={onClose}>Cancel</button>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit beatae ipsam neque voluptates. Dolore accusantium amet vitae hic dolorem perspiciatis velit tempore! Fugiat magnam at facilis fuga? Natus, neque possimus?</p>
+                    <button className="report" onClick={onClose}>Close</button>
+                    {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit beatae ipsam neque voluptates. Dolore accusantium amet vitae hic dolorem perspiciatis velit tempore! Fugiat magnam at facilis fuga? Natus, neque possimus?</p> */}
                     <form className="report" onSubmit={handleSubmit}>
 
                       {/* First and last name */}

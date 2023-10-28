@@ -61,17 +61,16 @@ export default function TripReport() {
       {/* Main Content */}
       <div className={`copy ${copyLoaded ? 'loaded' : ''}`}>
         <div className="section-heading">
-          <h2>Trip Report</h2>
+          <h2>Experience Report</h2>
           <img src="/assets/images/pages/trip-report.jpg" alt="Trip Report"
             onLoad={() => {
               setCopyLoaded(true);
             }}
           />
-          <p className='img-credit'>5-HT2A receptors throughout the cortex and claustrum / David A. Martin & Charles D. Nichols</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus maxime explicabo expedita eligendi quas hic vel impedit dicta, fugit suscipit doloribus earum sequi delectus dolor dolorum deleniti beatae. Tempore, aut.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim eum quibusdam nemo possimus commodi aliquam voluptatibus omnis, vel ipsa sunt molestiae delectus mollitia ab repellat, vero quam iure maxime repellendus!</p>
-          <p>Contribute a report now.<span className="footnote-number" onClick={() => footnoteClick(1)}>[1]</span></p>
-          <input type="button" value="Share" className="donate" onClick={createNewReport} />
+          <p className='img-credit'>5-HT2A receptors throughout the cortex and claustrum (Image credit: David A. Martin & Charles D. Nichols)</p>
+          <p>Have you had a transcendent experience with a mushroom, a plant, an animal, a crystal, a microbe, an alien, or some other nonhuman entity? We wanna know about it! </p>
+          <p>Contribute an  Experience Report now.<span className="footnote-number" onClick={() => footnoteClick(1)}>[1]</span></p>
+          <input type="button" value="New Report" className="donate" onClick={createNewReport} />
           {newReport && <NewReport onClose={() => setNewReport(false)} />}
         </div>
         {copyLoaded ?
