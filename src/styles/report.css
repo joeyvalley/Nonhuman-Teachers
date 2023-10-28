@@ -53,10 +53,11 @@ form.report {
 }
 
 .archived-report {
-  background: white;
+  background: lightgray;
   border: 1px solid black;
   width: 100%;
-  max-width: 800px;
+  max-width: 600px;
+  max-height: calc(100dvh - 2rem);
   font-family: 'Helveesti';
   position: relative;
   padding: 1rem;
@@ -69,6 +70,12 @@ form.report {
 
 .highlighted {
   background: yellow;
+}
+
+.description {
+  border-top: 1px solid black !important;
+  padding-top: 0.5rem;
+
 }
 
 .report-header {

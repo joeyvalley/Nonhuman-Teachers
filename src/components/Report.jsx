@@ -22,14 +22,14 @@ export default function Report({ report, onClose }) {
     return `${monthName} ${day}, ${year}`;
   }
   return (
-    <div className="report-overlay">
+    <div className="report-overlay" onClick={onClose}>
       <div className="archived-report">
         <button className="report" onClick={onClose}>Close</button>
         <p>Posted By: {name ? report.first + " " + report.last : "Anonymous"}</p>
         <p>Category: <span className="highlighted">{report.category}</span></p>
         <p>{report.subCategory ? "Sub-Category: " : ""}{report.subCategory ? report.subCategory : ""}</p>
         <p>Date of Experience: {formatDate(report.dateOfTrip)}</p>
-        <p>Description: {report.details}</p>
+        <p className="description">{report.details}</p>
       </div >
     </div >
   )
