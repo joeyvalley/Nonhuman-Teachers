@@ -1,7 +1,6 @@
 {
   "name": "nht",
   "version": "0.1.0",
-  "type": "module",
   "private": true,
   "dependencies": {
     "@mailchimp/mailchimp_marketing": "^3.0.80",
