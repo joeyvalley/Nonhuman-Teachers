@@ -103,7 +103,7 @@ export default function Project() {
           <div id="botanical-spaces" className="section-heading">
             <div className="event">
               <h2>Immersive Botanical Spaces</h2>
-              <p>These are experiments in what the evolution of a botanical garden can look like; unlikely urban oases for rare and unusual plants, that are also hubs for citizen science, education, experimentation, and community. Every plant, just like every human, comes with a story. Learning these stories can have a transformative effect on people, changing a green leafy “thing” into a fully realized “being” worthy of human care and compassion.</p>
+              <p>These are experiments in what the evolution of a botanical garden can look like; unlikely urban oases for rare and unusual plants that are also hubs for citizen science, education, experimentation, and community. Every plant, just like every human, comes with a story. Learning these stories can have a transformative effect on people, changing a green leafy thing into a fully realized being worthy of human care and compassion.</p>
               <Slider {...settings} ref={botanicalSlider}>
                 {botanicalImages.map((img, index) => (
                   <div key={index}>
@@ -119,7 +119,7 @@ export default function Project() {
           <div id="new-media" className="section-heading">
             <div className="event">
               <h2><a href="projects/media">New Nature Media</a></h2>
-              <p>We believe that an updated approach to how science and the natural world are represented in media is long overdue. One that tracks better with the issues of our time. Our goal with the media side of things is to tell relevant and surprising stories about our wondrous blue marble while taking full advantage of today's media tools, in effort to broadcast our signal far and wide.</p>
+              <p>We believe that an updated approach to how science and the natural world are represented in media is long overdue. One that tracks better with the issues of our time. Our goal with the media side of things is to tell relevant and surprising new stories about our wondrous blue marble while taking full advantage of today's media tools with the aim of broadcasting our signal far and wide.</p>
               <Slider {...settings} ref={mediaSlider}>
                 {mediaImages.map((img, index) => (
                   <div key={index}>

@@ -82,16 +82,15 @@ export default function NewReport({ onClose }) {
                   <>
                     <span className="report-header">New Report</span>
                     <button className="report" onClick={onClose}>Close</button>
-                    {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit beatae ipsam neque voluptates. Dolore accusantium amet vitae hic dolorem perspiciatis velit tempore! Fugiat magnam at facilis fuga? Natus, neque possimus?</p> */}
                     <form className="report" onSubmit={handleSubmit}>
 
                       {/* First and last name */}
                       <p>Name:</p>
                       <div className="category">
-                        <div>
+                        <div className="category-field">
                           <input className="report" type="text" placeholder="First Name" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
                         </div>
-                        <div>
+                        <div className="category-field">
                           <input className="report" type="text" placeholder="Last Name" value={lastName} onChange={(e) => setLastName(e.target.value)} />
                         </div>
                       </div>
@@ -102,7 +101,7 @@ export default function NewReport({ onClose }) {
 
                       {/* Category */}
                       <div className="category">
-                        <div>
+                        <div className="category-field">
                           <p>Category:</p>
                           <select className="report" required id="tripType" value={type} onChange={handleSelection} >
                             <option value="Fungus">Fungus</option>

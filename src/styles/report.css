@@ -1,3 +1,10 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
 @font-face {
   font-family: "Helveesti";
   src: url(../../public/assets/fonts/helveesti-regular.woff);
@@ -318,4 +325,60 @@ select.report:focus {
   background: black;
   display: block;
   width: 100%;
+}
+
+.category-field {
+  display: block !important;
+}
+
+@media screen and (max-width: 767px) {
+
+  input.report {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .category div input[type="text"].report {
+    display: block;
+    border-radius: 0;
+    width: 100%;
+  }
+
+  input[type="email"].report {
+    display: block;
+    border-radius: 0;
+    width: 100%;
+  }
+
+  input[type="date"].report {
+    display: block;
+    border-radius: 0;
+    text-align: left;
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  textarea.report {
+    border-radius: 0;
+    height: 100px;
+  }
+
+  select.report {
+    border-radius: 0;
+    width: 100%;
+    display: block !important;
+  }
+
+  .report-content {
+    width: 100%;
+    margin: 1rem;
+  }
+
+  .category {
+    display: block;
+  }
+
+  .archived-report {
+    margin: 1rem;
+  }
 }
