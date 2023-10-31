@@ -1099,7 +1099,7 @@ body {
     display: flex;
     align-items: left;
     width: 100vw;
-    margin-top: 35px;
+    margin-top: 36px;
     padding: 0;
     height: calc(100dvh - 60px);
     z-index: 1000;
@@ -1139,7 +1139,7 @@ body {
 
   .copy {
     width: 100dvw;
-    height: calc(100dvh - 60px);
+    height: calc(100dvh - 62px);
     padding: 0.5rem 0.5rem 0rem 0.5rem;
     overflow-y: scroll;
     opacity: 0;
