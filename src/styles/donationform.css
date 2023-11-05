@@ -1,12 +1,13 @@
-.donation-container {
+.donation-form-container {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
+  display: grid;
+  width: 100dvw;
+  grid-template-columns: 1fr;
+  height: 100dvh;
   align-items: center;
   justify-content: center;
+  z-index: 1;
+  overflow: auto;
 }
 
 .donation-form {
@@ -14,8 +15,8 @@
   font-size: 1.75rem !important;
   position: absolute;
   min-height: 900px;
+  max-height: 1000px;
   width: 300px;
   top: calc(50% - 245px);
   left: calc(50% - 150px);
-  z-index: 50;
 }

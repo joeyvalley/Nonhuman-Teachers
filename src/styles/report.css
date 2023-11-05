@@ -382,3 +382,27 @@ select.report:focus {
     margin: 1rem;
   }
 }
+
+
+.ql-container {
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  height: 100%;
+  margin-bottom: 1rem !important;
+  position: relative;
+}
+
+.ql-editor {
+  box-sizing: border-box;
+  line-height: 1.42;
+  height: 150px !important;
+  outline: none;
+  overflow-y: scroll;
+  padding: 0.5rem;
+  tab-size: 4;
+  -moz-tab-size: 4;
+  text-align: left;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}

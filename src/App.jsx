@@ -26,24 +26,15 @@ import Video from "./components/Video";
 import videoList from "./api/videoList";
 
 export default function App() {
-
   const [selectedVideo, setSelectedVideo] = useState(null);
 
-
-
-  const randomVideo = () => {
+  function randomVideo() {
     return videoList[Math.floor(Math.random() * videoList.length)];
-  };
-
+  }
 
   const handleVideoChange = () => {
     setSelectedVideo(randomVideo());
   };
-
-  useEffect(() => {
-    setSelectedVideo(randomVideo());
-  }, [])
-
 
   return (
 

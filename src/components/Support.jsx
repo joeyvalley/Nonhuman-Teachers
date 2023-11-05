@@ -1,48 +1,9 @@
-import { useEffect, useRef, useState } from "react"
+import { useState } from "react"
 import { useNavigate } from 'react-router-dom';
 
-import FootnotesLogo from './FootnotesLogo';
 
 export default function Support() {
   const [copyLoaded, setCopyLoaded] = useState(false);
-  const [footnoteLoaded, setFootnoteLoaded] = useState(false);
-
-  const footnotes = useRef(null);
-  const prevFootnoteRef = useRef(0);
-  const [footnotesLogo, setFootnotesLogo] = useState(false);
-  const [activeFootnote, setActiveFootnote] = useState(null);
-
-  // Show or hide logo in footnotes container depending on if there is overflow.
-  useEffect(() => {
-    setCopyLoaded(true);
-    setFootnoteLoaded(true);
-    const handleResize = () => {
-      setTimeout(() => {
-        if (footnotes.current.scrollHeight > footnotes.current.clientHeight) {
-          setFootnotesLogo(true);
-        } else {
-          setFootnotesLogo(false);
-        }
-      }, 100);
-    };
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
-  // Select and deselect footnotes on click.
-  function footnoteClick(id) {
-    if (prevFootnoteRef.current === id) {
-      setActiveFootnote(0);
-    }
-    else {
-      setActiveFootnote(id);
-      prevFootnoteRef.current = id;
-    }
-  }
-
 
   const navigation = useNavigate();
   function handleDonate() {
@@ -56,12 +17,9 @@ export default function Support() {
       <div className={`copy ${copyLoaded ? 'loaded' : ''}`}>
         <div className="section-heading">
           <h2>Support Nonhuman Teachers</h2>
-          <img src="/assets/images/pages/protest.png" alt="NHT Protest"
+          <img src="https://res.cloudinary.com/dnld1cqvy/image/upload/v1699207156/NHT%20Images/human-teachers_subolf.jpg" alt="Human Teachers"
             onLoad={() => {
               setCopyLoaded(true);
-              setTimeout(() => {
-                setFootnoteLoaded(true);
-              }, 500);
             }}
           />
           <p className='img-credit'>Some of the humans of Nonhuman Teachers (Image credit: Nonhuman Teachers)</p>
@@ -70,14 +28,11 @@ export default function Support() {
           <p>Help us do something truly bigger than ourselves!</p>
           <input type="submit" value="Donate" className="donate" onClick={handleDonate} />
         </div>
-      </div>
-
-      {/* Footnotes */}
-      <div className={`footnotes ${footnoteLoaded ? 'loaded' : ''}`} ref={footnotes}>
-        <div className="footnote">
-          <span className="footnote-text">1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa fuga saepe minima ducimus nulla minus sequi, consectetur illo odio distinctio quis culpa nemo ab? Suscipit voluptatibus quia ipsa est officiis.</span>
+        <div className="section-heading">
+          <h2>Volunteer</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quidem nemo voluptates ullam accusamus deserunt eaque, dolores, ad quae aut provident earum officia excepturi numquam blanditiis vel veritatis, atque corporis.</p>
+          <p>Please <a href="mailto:info@nonhumanteachers.org">email us</a> for more information, we'd love to meet you!</p>
         </div>
-        {footnotesLogo ? <FootnotesLogo /> : null}
       </div>
     </div>
   )

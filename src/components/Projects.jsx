@@ -4,31 +4,25 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import FootnotesLogo from "../components/FootnotesLogo"
+import Footnote from "./Footnote"
+import footNotes from "../api/footnotes";
+
 
 export default function Project() {
   // Set up states for content visibilty.
   const [loadedImagesCount, setLoadedImagesCount] = useState(0);
 
-  // Set up footnote interaction capabilities.
-  const footnotes = useRef(null);
-  const prevFootnoteRef = useRef(0);
-  const [footnotesLogo, setFootnotesLogo] = useState(false);
-  const [activeFootnote, setActiveFootnote] = useState(null);
+  const [footnoteContent, setFootnoteContent] = useState([]);
+  const [showFootnote, setShowFootnote] = useState(false);
 
-  function footnoteClick(id) {
-    if (prevFootnoteRef.current === id) {
-      setActiveFootnote(0);
-    }
-    else {
-      setActiveFootnote(id);
-      prevFootnoteRef.current = id;
-    }
+  function openFootnote(footnoteNumber) {
+    const footnote = footNotes.find(item => item.page === "projects" && item.number === footnoteNumber);
+    setFootnoteContent(footnote);
+    setShowFootnote(true);
+  }
 
-    const footnoteDetail = document.getElementById(`${id}`);
-    if (footnoteDetail) {
-      footnoteDetail.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
+  function closeFootnote() {
+    setShowFootnote(false);
   }
 
   // Set up image carousels.
@@ -48,11 +42,11 @@ export default function Project() {
 
   const eventsImages = [
     'assets/images/projects/sonny-workshop.jpg',
-    // 'assets/images/projects/laraaji-nyc.jpg',
+    'assets/images/projects/laraaji-nyc.jpg',
     'assets/images/projects/hortculture-nyc2.jpg',
-    // 'assets/images/projects/gabriel.jpg',
-    // 'assets/images/projects/clubs.jpg',
-    // 'assets/images/projects/events.jpg',
+    'assets/images/projects/gabriel.jpg',
+    'assets/images/projects/clubs.jpg',
+    'assets/images/projects/events.jpg',
   ];
 
   const botanicalImages = [
@@ -75,19 +69,12 @@ export default function Project() {
 
   return (
     <>
-      {/* {!(loadedImagesCount > 0 && loadedImagesCount === (eventsImages.length + botanicalImages.length)) ?
-        <div className='loading'>
-          <img src="/assets/beetle-worship.png" alt="Loading" />
-        </div>
-        : ''} */}
       <div id="projects-container" className="section">
-
-        {/* Main content */}
         <div id="projects-content" className={`copy ${loadedImagesCount === (eventsImages.length + botanicalImages.length) ? 'loaded' : ''}`}>
           <div id="public-programming" className="section-heading">
             <div className="event">
               <h2>Public Programming</h2>
-              <p>Our multidisciplinary events in LA and NYC include lectures, workshops, book and plant clubs, movie screenings, and all kinds of performances. We feel strongly that connecting with the natural world should be a social and inclusive endeavor.</p>
+              <p>Our multidisciplinary events in LA and NYC include lectures, workshops, book and plant clubs, movie screenings, and all kinds of performances.<span className="footnote-number" onMouseOver={() => openFootnote(1)} onMouseOut={closeFootnote}>[1]</span> We feel strongly that connecting with the natural world should be a social and inclusive endeavor.</p>
               <Slider {...settings} ref={projectSlider}>
                 {eventsImages.map((img, index) => (
                   <div key={index}>
@@ -132,11 +119,8 @@ export default function Project() {
         </div>
 
         {/* Footnotes */}
-        <div id="projects-footnotes" className={`footnotes ${loadedImagesCount === (eventsImages.length + botanicalImages.length) ? 'loaded' : ''}`} ref={footnotes}>
-          <div className="footnote" id="1">
-            <span className={`footnote-text ${activeFootnote === 1 ? 'active' : ''}`} id="1">1. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero tempore laborum quibusdam. Aperiam sed, eos quibusdam nam pariatur ad, fugit ea, odit voluptas voluptates ut. Excepturi fugit ea quam officiis.</span>
-          </div>
-          {footnotesLogo ? <FootnotesLogo /> : null}
+        <div className="footnotes">
+          <Footnote footnote={footnoteContent} isOpen={showFootnote}></Footnote>
         </div>
       </div >
     </>

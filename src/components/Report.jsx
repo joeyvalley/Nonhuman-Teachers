@@ -21,6 +21,10 @@ export default function Report({ report, onClose }) {
 
     return `${monthName} ${day}, ${year}`;
   }
+
+  const createMarkup = (html) => {
+    return { __html: html };
+  };
   return (
     <div className="report-overlay" onClick={onClose}>
       <div className="archived-report">
@@ -29,7 +33,7 @@ export default function Report({ report, onClose }) {
         <p>Category: <span className="highlighted">{report.category}</span></p>
         <p>{report.subCategory ? "Sub-Category: " : ""}{report.subCategory ? report.subCategory : ""}</p>
         <p>Date of Experience: {formatDate(report.dateOfTrip)}</p>
-        <p className="description">{report.details}</p>
+        <p className="description" dangerouslySetInnerHTML={createMarkup(report.details)}></p>
       </div >
     </div >
   )

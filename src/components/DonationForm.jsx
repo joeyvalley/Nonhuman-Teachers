@@ -1,6 +1,7 @@
 import "../styles/donationform.css"
 
 export default function DonationForm() {
+  console.log("hello");
   return (
     <>
       <script src="https://donorbox.org/widget.js" paypalExpress="false"></script>

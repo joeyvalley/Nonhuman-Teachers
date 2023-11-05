@@ -3,6 +3,9 @@ import React, { useState } from "react";
 
 import { submitReport } from "../api/submitReport";
 
+import 'react-quill/dist/quill.snow.css';
+import ReactQuill from "react-quill";
+
 export default function NewReport({ onClose }) {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -18,7 +21,7 @@ export default function NewReport({ onClose }) {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    const details = { "fname": firstName, "lname": lastName, "email": email, "date": dateOfTrip, "category": type, "subcategory": type2, "details": description }
+    const details = { "fname": firstName, "lname": lastName, "email": email, "date": dateOfTrip, "category": type, "subcategory": type2, "details": editorHtml }
     const res = await submitReport(details);
     if (res) {
       setSuccessfulAdd(true);
@@ -57,6 +60,12 @@ export default function NewReport({ onClose }) {
         break;
     }
   }
+
+  const [editorHtml, setEditorHtml] = useState('');
+
+  const handleEditorChange = (html) => {
+    setEditorHtml(html);
+  };
 
   return (
     <div className="report-overlay">
@@ -125,9 +134,9 @@ export default function NewReport({ onClose }) {
 
                       {/* Details */}
                       <p>Please tell us about your experience:</p>
-                      <textarea className="report" required value={description} onChange={(e) => setDescription(e.target.value)} />
+                      {/* <textarea className="report" required value={description} onChange={(e) => setDescription(e.target.value)} /> */}
+                      <ReactQuill value={editorHtml} onChange={handleEditorChange} />
                       <input className="report" type="submit" />
-
                     </form>
                   </>
                 )
