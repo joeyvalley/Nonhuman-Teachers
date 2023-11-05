@@ -3,7 +3,7 @@ export default function Home({ onLogoClick }) {
     <div>
       <div className="home">
         <div className="homeish">
-          <img src="assets/white.png" alt="NHT Logo" onClick={onLogoClick} />
+          {/* <img src="assets/white.png" alt="NHT Logo" onClick={onLogoClick} /> */}
         </div>
       </div >
     </div>
