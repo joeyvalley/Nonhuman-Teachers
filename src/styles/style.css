@@ -52,6 +52,10 @@ body {
   font-size: var(--footnote);
 }
 
+.home-logo {
+  display: none;
+}
+
 .nht a {
   background: yellow;
   font-size: var(--footnote);
@@ -1117,6 +1121,27 @@ body {
     padding: 0 0.1667rem;
   }
 
+  .section {
+    position: fixed;
+    display: flex;
+    align-items: left;
+    width: 100vw;
+    margin-top: 38.5px;
+    height: calc(100dvh - 63px);
+    z-index: 1000;
+    padding-right: 0rem;
+  }
+
+  .copy {
+    width: 100dvw;
+    height: calc(100dvh - 66px);
+    padding: 0.5rem 0.5rem 0rem 0.5rem;
+    overflow-y: scroll;
+    opacity: 0;
+    transition: opacity ease-in-out 250ms;
+    margin: 0;
+    /* background: red; */
+  }
 
 
   .section h1 {
@@ -1151,27 +1176,7 @@ body {
 
   }
 
-  .section {
-    position: fixed;
-    display: flex;
-    align-items: left;
-    width: 100vw;
-    margin-top: 37px;
-    height: calc(100dvh - 37px);
-    z-index: 1000;
-    padding-right: 0rem;
-  }
 
-  .copy {
-    width: 100dvw;
-    height: calc(100dvh - 37px);
-    padding: 0.5rem 0.5rem 0rem 0.5rem;
-    overflow-y: scroll;
-    opacity: 0;
-    transition: opacity ease-in-out 250ms;
-    margin: 0;
-    /* background: red; */
-  }
 
   .copy .section-heading {
     padding: 0.5rem 0.5rem 0rem 0.5rem;
@@ -1221,30 +1226,46 @@ body {
   }
 
   .footer {
-    display: none;
     padding: 0.25rem 0rem;
-  }
-
-  .footer p {
-    font-size: var(--main-font);
-    /* text-transform: uppercase; */
-  }
-
-  .nht {
-    font-size: var(--main-font);
-  }
-
-  .nht a {
-    font-size: var(--main-font);
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   .left {
     display: none;
   }
 
   .right {
     justify-content: space-between;
+  }
+
+  .home-logo {
+    display: block;
+  }
+
+  .footer {
+    display: none;
+  }
+
+  .section {
+    position: fixed;
+    display: flex;
+    align-items: left;
+    width: 100vw;
+    margin-top: 37px;
+    height: calc(100dvh - 37px);
+    z-index: 1000;
+    padding-right: 0rem;
+  }
+
+  .copy {
+    width: 100dvw;
+    height: calc(100dvh - 37px);
+    padding: 0.5rem 0.5rem 0rem 0.5rem;
+    overflow-y: scroll;
+    opacity: 0;
+    transition: opacity ease-in-out 250ms;
+    margin: 0;
+    /* background: red; */
   }
 }
