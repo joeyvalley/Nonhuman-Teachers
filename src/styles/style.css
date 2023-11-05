@@ -47,9 +47,14 @@ body {
 
 }
 
+
 .nht {
-  font-size: var(--main-font);
+  font-size: var(--footnote);
+}
+
+.nht a {
   background: yellow;
+  font-size: var(--footnote);
 }
 
 .homeish {
@@ -1152,14 +1157,14 @@ body {
     align-items: left;
     width: 100vw;
     margin-top: 37px;
-    height: calc(100dvh - 68px);
+    height: calc(100dvh - 37px);
     z-index: 1000;
     padding-right: 0rem;
   }
 
   .copy {
     width: 100dvw;
-    height: calc(100dvh - 68px);
+    height: calc(100dvh - 37px);
     padding: 0.5rem 0.5rem 0rem 0.5rem;
     overflow-y: scroll;
     opacity: 0;
@@ -1216,6 +1221,7 @@ body {
   }
 
   .footer {
+    display: none;
     padding: 0.25rem 0rem;
   }
 
