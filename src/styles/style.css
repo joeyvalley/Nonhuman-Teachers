@@ -1150,22 +1150,22 @@ body {
     display: flex;
     align-items: left;
     width: 100vw;
-    margin-top: 35px;
-    height: calc(100dvh - 60px);
+    margin-top: 36.5px;
+    height: calc(100dvh - 62.5px);
     z-index: 1000;
     padding-right: 0rem;
-    background: green;
+    /* background: green; */
   }
 
   .copy {
     width: 100dvw;
-    height: calc(100dvh - 60px);
+    height: calc(100dvh - 62.5px);
     padding: 0.5rem 0.5rem 0rem 0.5rem;
     overflow-y: scroll;
     opacity: 0;
     transition: opacity ease-in-out 250ms;
     margin: 0;
-    background: red;
+    /* background: red; */
   }
 
   .copy .section-heading {
