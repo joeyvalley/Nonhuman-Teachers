@@ -25,17 +25,24 @@ export default function PastReports() {
 
   return (
     <>
-      <div className='section-heading'>
-        <h2>Archive</h2>
-        <div className="past-reports-container">
-          {pastReports.length ? pastReports.map((event, index) => (
-            <div className="past-report" key={index}>
-              <img src={`/assets/images/reports/${event.category.toLowerCase()}.jpg`} alt="Logo" onClick={() => showArchive(event)} />
+      {
+        pastReports.length ? (
+          <div className='section-heading'>
+            <h2>Archive</h2>
+            <div className="past-reports-container">
+              {pastReports.map((event, index) => (
+                <div className="past-report" key={index}>
+                  <img src={`/assets/images/reports/${event.category.toLowerCase()}.jpg`} alt={event.category} onClick={() => showArchive(event)} />
+                </div>
+              ))}
             </div>
-          )) : null}
-        </div>
-      </div>
-      {report ? <Report report={report} onClose={() => setReport(false)}></Report> : null}
+          </div>
+        ) : null
+      }
+      {
+        report ? <Report report={report} onClose={() => setReport(null)} /> : null
+      }
+
     </>
   )
 }

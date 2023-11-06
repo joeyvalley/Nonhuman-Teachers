@@ -7,7 +7,7 @@ export default function Support() {
 
   const navigation = useNavigate();
   function handleDonate() {
-    navigation('/donate');;
+    navigation('/donate');
   }
 
   return (
