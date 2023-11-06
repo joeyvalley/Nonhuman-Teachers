@@ -575,7 +575,7 @@ body {
   color: var(--black);
   /* background-color: yellow; */
   display: block;
-  text-align: left;
+  text-align: justify;
   transition: all ease-in-out 200ms;
   padding: 0.25rem;
 }
@@ -989,6 +989,7 @@ body {
   background: yellow;
   text-decoration: none;
   transition: all ease-in-out 250ms;
+  font-size: var(--main-font);
 }
 
 .section p a:hover {

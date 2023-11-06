@@ -52,6 +52,12 @@ const footNotes = [
     "number": 1,
     "content": "Our organization is based between Los Angeles and New York, so most of our events take place in these cities. If you'd like to see a Nonhuman Teachers event in your city, please email us! We are passionate about telling these stories in communities throughout the country and around the globe.",
     "type": "text"
+  },
+  {
+    "page": "trip-report",
+    "number": 1,
+    "content": "Nonhuman Teachers 501(c)(3) hereby asserts its explicit intention to exercise the prerogative of publication with regard to all content submitted to this website, along with associated royalties thereof. Should you not desire your submission to be published, it’s imperative that you refrain from including it on this page. By submitting to this page, you are agreeing to the above terms.",
+    "type": "text"
   }
 ]
 
