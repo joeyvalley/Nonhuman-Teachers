@@ -34,6 +34,13 @@ body {
   font-style: italic;
 }
 
+.footnote-italic {
+  font-family: "Helveesti";
+  font-size: var(--footnote);
+  color: var(--black);
+  font-style: italic;
+}
+
 .home {
   display: flex;
   width: 100vw;
@@ -575,7 +582,7 @@ body {
   color: var(--black);
   /* background-color: yellow; */
   display: block;
-  text-align: justify;
+  text-align: left;
   transition: all ease-in-out 200ms;
   padding: 0.25rem;
 }
@@ -1240,10 +1247,6 @@ body {
     justify-content: space-between;
   }
 
-  .home-logo {
-    display: block;
-  }
-
   .footer {
     display: none;
   }
@@ -1268,5 +1271,9 @@ body {
     transition: opacity ease-in-out 250ms;
     margin: 0;
     /* background: red; */
+  }
+
+  .board-group {
+    grid-template-columns: 1fr 1fr;
   }
 }

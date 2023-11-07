@@ -7,6 +7,8 @@ import "slick-carousel/slick/slick-theme.css";
 import Footnote from "./Footnote"
 import footNotes from "../api/footnotes";
 
+import { useNavigate } from "react-router-dom";
+
 
 export default function Project() {
   // Set up states for content visibilty.
@@ -67,6 +69,11 @@ export default function Project() {
     ref.current.slickNext(); // go to the next slide
   }
 
+  const navigate = useNavigate();
+  function handleEasterEgg() {
+    navigate('/projects/trip-report')
+  }
+
   return (
     <>
       <div id="projects-container" className="section">
@@ -74,7 +81,7 @@ export default function Project() {
           <div id="public-programming" className="section-heading">
             <div className="event">
               <h2>Public Programming</h2>
-              <p>Our multidisciplinary events in LA and NYC include lectures, workshops, book and plant clubs, movie screenings, and all kinds of performances.<span className="footnote-number" onMouseOver={() => openFootnote(1)} onMouseOut={closeFootnote}>[1]</span> We feel strongly that connecting with the natural world should be a social and inclusive endeavor.</p>
+              <p>Our multidisciplinary events in LA and NYC<span className="footnote-number" onMouseOver={() => openFootnote(1)} onMouseOut={closeFootnote}>[1]</span> include lectures, workshops, book and plant clubs, movie screenings, and all kinds of performances.<span className="footnote-number" onMouseOver={() => openFootnote(2)} onMouseOut={closeFootnote}>[2]</span> We feel strongly that connecting with the natural world should be a social and inclusive endeavor.</p>
               <Slider {...settings} ref={projectSlider}>
                 {eventsImages.map((img, index) => (
                   <div key={index}>
@@ -90,7 +97,7 @@ export default function Project() {
           <div id="botanical-spaces" className="section-heading">
             <div className="event">
               <h2>Immersive Botanical Spaces</h2>
-              <p>These are experiments in what the evolution of a botanical garden can look like; unlikely urban oases for rare and unusual plants that are also hubs for citizen science, education, experimentation, and community. Every plant, just like every human, comes with a story. Learning these stories can have a transformative effect on people, changing a green leafy thing into a fully realized being worthy of human care and compassion.</p>
+              <p>These are experiments in what the evolution of a botanical garden can look like;<span className="footnote-number" onMouseOver={() => openFootnote(3)} onMouseOut={closeFootnote}>[3]</span> unlikely urban oases for rare and unusual plants that are also hubs for citizen science, education, experimentation, and community. Every plant, just like every human, comes with a story. Learning these stories can have a transformative effect on people, changing a green leafy thing into a fully realized being worthy of human care and compassion.<span className="footnote-number" onMouseOver={() => openFootnote(4)} onMouseOut={closeFootnote}>[4]</span></p>
               <Slider {...settings} ref={botanicalSlider}>
                 {botanicalImages.map((img, index) => (
                   <div key={index}>
@@ -106,7 +113,7 @@ export default function Project() {
           <div id="new-media" className="section-heading">
             <div className="event">
               <h2><a href="projects/media">New Nature Media</a></h2>
-              <p>We believe that an updated approach to how science and the natural world are represented in media is long overdue. One that tracks better with the issues of our time. Our goal with the media side of things is to tell relevant and surprising new stories about our wondrous blue marble while taking full advantage of today's media tools with the aim of broadcasting our signal far and wide.</p>
+              <p>We believe that an updated approach to how science and the natural world are represented in media is long overdue. One that tracks better with the issues of our time.<span className="footnote-number" onMouseOver={() => openFootnote(5)} onMouseOut={closeFootnote}>[5]</span> Our goal with the media side of things is to tell relevant and surprising <span onClick={() => handleEasterEgg()}>new stories</span> about our wondrous blue marble while taking full advantage of today's media tools with the aim of broadcasting our signal far and wide.</p>
               <Slider {...settings} ref={mediaSlider}>
                 {mediaImages.map((img, index) => (
                   <div key={index}>

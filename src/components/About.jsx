@@ -26,7 +26,7 @@ export default function About() {
       {/* Main Content */}
       <div className={`copy ${copyLoaded ? 'loaded' : ''}`}>
         <div className="section-heading">
-          <h2>About Us</h2>
+          <h2>Who are we?</h2>
           <img src="/assets/images/pages/protest.png" alt="NHT Protest"
             onLoad={() => {
               setCopyLoaded(true);
