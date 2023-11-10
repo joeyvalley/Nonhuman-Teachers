@@ -34,9 +34,33 @@ body {
   font-style: italic;
 }
 
+p {
+  font-family: "Helveesti";
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--main-font);
+  line-height: 1.3rem;
+  color: var(--black);
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+h2 {
+  font-family: "Helveesti";
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--header-font);
+  line-height: 1.3rem;
+  color: var(--black);
+  background: yellow;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  text-align: left;
+}
+
 .footnote-italic {
   font-family: "Helveesti";
-  font-size: var(--footnote);
+  font-size: inherit;
   color: var(--black);
   font-style: italic;
 }
@@ -166,7 +190,7 @@ body {
 .copy {
   padding: 1rem 0rem 0rem 1.5rem;
   overflow-y: scroll;
-  height: calc(100dvh - 77px);
+  height: calc(100dvh - 75px);
   /* max-width: 800px; */
   opacity: 0;
   transition: opacity ease-in-out 250ms;
@@ -468,26 +492,28 @@ body {
   justify-content: left;
   align-items: center;
   bottom: 0;
-  background: white;
-  border-top: 1px solid var(--black);
-  z-index: 100;
-  padding: 0.3rem 0rem;
+  padding: 0.7rem 0rem 0rem;
   overflow: hidden;
   white-space: nowrap;
+  background: white;
+  border-top: 1px solid var(--black);
+  z-index: 50;
 }
 
 .footer p {
   font-family: "Helveesti";
-  font-size: 0.75rem;
-  font-style: italic;
+  font-size: 0.75rem !important;
+  font-style: italic !important;
+  line-height: 0.5rem !important;
   color: var(--black);
-  margin-top: 2px;
   display: inline-block;
   white-space: nowrap;
   animation: scrollText 30s linear infinite;
 }
 
 .footer p a {
+  font-size: 0.75rem !important;
+  font-style: italic !important;
   text-decoration: none;
   transition: all ease-in-out 100ms;
 }
@@ -515,16 +541,15 @@ body {
 .footnotes {
   position: relative;
   top: 1rem;
-  max-height: calc(100dvh - 109px);
+  height: fit-content;
   overflow-y: scroll;
   padding: 0;
-
+  background: white;
+  border-top: 1px solid var(--black);
+  border-left: 1px solid var(--black);
+  border-right: 1px solid var(--black);
 }
 
-.footnotes.loaded {
-  transform: translateX(0);
-  opacity: 1;
-}
 
 .footnotes::-webkit-scrollbar {
   width: 0;
@@ -535,21 +560,43 @@ body {
   background-color: transparent;
 }
 
+.footnotes h1 {
+  font-family: "Helveesti";
+  font-style: italic !important;
+  font-weight: 400;
+  font-size: 0.75rem !important;
+  line-height: 0.5rem !important;
+  color: var(--black) !important;
+  margin: 0 !important;
+  text-align: justify;
+  border: none !important;
+  border: none !important;
+  background: white !important;
+  padding: 0.5rem 0.25rem !important;
+  display: block;
+  text-align: left !important;
+  text-transform: uppercase;
+}
+
 .footnote {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   flex-wrap: nowrap;
-  height: auto;
+  max-height: 0;
+  overflow: hidden;
   padding: 0rem;
   background: white;
-  border: 1px solid var(--black);
-  opacity: 0;
   transition: all ease-in-out 300ms;
+  /* transition: border-bottom ease-out 0ms; */
+  border-top: 1px solid black;
+  border-bottom: 0px solid var(--black);
+
 }
 
 .footnote.loaded {
-  opacity: 1;
+  border-bottom: 1px solid var(--black);
+  max-height: 1000px;
 }
 
 .heading {
@@ -578,13 +625,12 @@ body {
 
 .footnote-text {
   font-family: "Helveesti";
-  font-size: var(--footnote);
-  color: var(--black);
-  /* background-color: yellow; */
-  display: block;
-  text-align: left;
-  transition: all ease-in-out 200ms;
-  padding: 0.25rem;
+  font-size: 0.75rem !important;
+  color: var(--black) !important;
+  display: inline !important;
+  text-align: left !important;
+  transition: all ease-in-out 200ms !important;
+  padding: 0.25rem !important;
 }
 
 .footnote-text.active {
@@ -947,8 +993,20 @@ body {
   display: grid;
   width: 100vw;
   grid-template-columns: 4fr 2fr;
+  gap: 1rem;
+  margin-top: 46px;
+  padding-right: 2rem;
+  height: calc(100dvh - 75px);
+  z-index: 1;
+}
+
+.trip-report-section {
+  position: fixed;
+  display: grid;
+  width: 100vw;
+  grid-template-columns: 4fr 2fr;
   gap: 2rem;
-  margin-top: 48px;
+  margin-top: 46px;
   padding-right: 2rem;
   height: calc(100dvh - 75px);
   z-index: 1000;

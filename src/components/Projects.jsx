@@ -127,6 +127,8 @@ export default function Project() {
 
         {/* Footnotes */}
         <div className="footnotes">
+          <h1>References</h1>
+          {/* {showFootnote ? "" : <span className="footnote-text">fuck</span>} */}
           <Footnote footnote={footnoteContent} isOpen={showFootnote}></Footnote>
         </div>
       </div >

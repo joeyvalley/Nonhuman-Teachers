@@ -27,7 +27,7 @@ export default function TripReport() {
   }
 
   return (
-    <div className="section">
+    <div className="trip-report-section">
       {/* Main Content */}
       <div className={`copy ${copyLoaded ? 'loaded' : ''}`}>
         <div className="section-heading">
