@@ -1,19 +1,13 @@
 import Footer from "./Footer";
 
 export default function Footnote({ footnote, isOpen }) {
-  // Check if footnote is null
-  if (!footnote) {
-    // Optionally, return null or a placeholder
-    return (
-      <div className="footnote">
-      </div>
-    )
-  }
   const { number, content, type, caption } = footnote;
 
   const createMarkup = (html) => {
     return { __html: html };
   };
+
+  console.log(isOpen);
 
   return (
     <>

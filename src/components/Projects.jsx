@@ -14,17 +14,26 @@ export default function Project() {
   // Set up states for content visibilty.
   const [loadedImagesCount, setLoadedImagesCount] = useState(0);
 
-  const [footnoteContent, setFootnoteContent] = useState([]);
-  const [showFootnote, setShowFootnote] = useState(false);
+  const defaultFootnote = { page: 'project', number: 0, content: `"The world is now dominated by an animal that doesn't think it's an animal"<br /><br />- Melanie Challenger, author`, type: 'text', caption: '' };
+
+  const [footnoteContent, setFootnoteContent] = useState(defaultFootnote);
+  const [showFootnote, setShowFootnote] = useState(true);
 
   function openFootnote(footnoteNumber) {
     const footnote = footNotes.find(item => item.page === "projects" && item.number === footnoteNumber);
-    setFootnoteContent(footnote);
-    setShowFootnote(true);
+    setShowFootnote(false);
+    setTimeout(() => {
+      setFootnoteContent(footnote);
+      setShowFootnote(true);
+    }, 300);
   }
 
   function closeFootnote() {
     setShowFootnote(false);
+    setTimeout(() => {
+      setFootnoteContent(defaultFootnote);
+      setShowFootnote(true);
+    }, 300);
   }
 
   // Set up image carousels.

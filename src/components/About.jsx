@@ -5,18 +5,20 @@ import Footnote from "./Footnote"
 
 export default function About() {
 
+  const defaultFootnote = { page: 'about', number: 0, content: '"The engineers of the future will be poets."<br /><br />- Terence McKenna, author', type: 'text', caption: '' };
   const [copyLoaded, setCopyLoaded] = useState(false);
-  const [footnoteContent, setFootnoteContent] = useState([]);
-  const [showFootnote, setShowFootnote] = useState(false);
+  const [footnoteContent, setFootnoteContent] = useState(defaultFootnote);
+  const [showFootnote, setShowFootnote] = useState(true);
 
   function openFootnote(footnoteNumber) {
-    const footnote = footNotes.find(item => item.page === "about" && item.number === footnoteNumber);
-
-    // Check if the clicked footnote is already open
+    setShowFootnote(false);
+    let footnote = footNotes.find(item => item.page === "about" && item.number === footnoteNumber);
     if (showFootnote && footnoteContent.number === footnoteNumber) {
-      setShowFootnote(false);
+      setTimeout(() => {
+        setFootnoteContent(defaultFootnote);
+        setShowFootnote(true);
+      }, 300);
     } else {
-      setShowFootnote(false);
       setTimeout(() => {
         setFootnoteContent(footnote);
         setShowFootnote(true);
@@ -56,7 +58,6 @@ export default function About() {
 
       <div className="footnotes">
         <h1>References</h1>
-        {/* {showFootnote ? "" : <span className="footnote-text">fuck</span>} */}
         <Footnote footnote={footnoteContent} isOpen={showFootnote}></Footnote>
       </div>
     </div >
