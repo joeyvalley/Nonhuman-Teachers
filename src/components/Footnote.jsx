@@ -7,8 +7,6 @@ export default function Footnote({ footnote, isOpen }) {
     return { __html: html };
   };
 
-  console.log(isOpen);
-
   return (
     <>
       <div className={`footnote ${isOpen ? 'loaded' : ''}`}>

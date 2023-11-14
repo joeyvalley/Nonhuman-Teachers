@@ -46,7 +46,7 @@ export default function App() {
         <Route path="/admin" element={<Admin />}></Route>
       </Routes>
       <Video videoInfo={selectedVideo}></Video>
-      <Footer></Footer>
+      {/* <Footer></Footer> */}
     </div>
   )
 }

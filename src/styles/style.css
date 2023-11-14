@@ -3,9 +3,10 @@
   --blend: difference;
   --blue: #25418F;
   --gray: #e6e6e6;
-  --main-font: 0.9rem;
-  --header-font: 1.1rem;
-  --footnote: 0.7rem;
+  --main-font: 1rem;
+  --header-font: 1.2rem;
+  --footnote: 0.85rem;
+  --footnote2: 0.75rem;
 }
 
 * {
@@ -39,9 +40,8 @@ p {
   font-style: normal;
   font-weight: 400;
   font-size: var(--main-font);
-  line-height: 1.3rem;
+  line-height: 1.4rem;
   color: var(--black);
-  margin-bottom: 0.5rem;
   text-align: left;
 }
 
@@ -56,6 +56,15 @@ h2 {
   margin-bottom: 0.5rem;
   display: inline-block;
   text-align: left;
+}
+
+.copy-footer {
+  display: flex;
+  background: white;
+  justify-content: center;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 1px solid var(--black);
 }
 
 .footnote-italic {
@@ -188,13 +197,13 @@ h2 {
 }
 
 .copy {
-  padding: 1rem 0rem 0rem 1.5rem;
+  padding: 1rem 0rem 0.5rem 1.5rem;
   overflow-y: scroll;
-  height: calc(100dvh - 75px);
-  /* max-width: 800px; */
+  height: calc(100dvh - 46px);
   opacity: 0;
   transition: opacity ease-in-out 250ms;
   margin: 0;
+
 }
 
 .copy.loaded {
@@ -242,6 +251,18 @@ h2 {
   font-style: italic !important;
   font-weight: 200 !important;
 
+}
+
+.section {
+  position: fixed;
+  display: grid;
+  width: 100vw;
+  grid-template-columns: 4fr 2fr;
+  gap: 1rem;
+  margin-top: 46px;
+  padding-right: 2rem;
+  height: calc(100dvh - 46px);
+  z-index: 1;
 }
 
 .section h2 {
@@ -321,24 +342,40 @@ h2 {
 
 .copy img {
   width: 100%;
-  margin-bottom: 0.125rem;
   border: 1px solid var(--black);
 }
 
 .copy .img-credit {
   font-size: var(--footnote);
   line-height: 0.75rem;
-  text-align: right;
+  text-align: left;
   font-style: italic;
   margin-bottom: 0.5rem;
 }
 
 
 .copy .section-heading {
-  padding: 1rem 1rem 0rem 1rem;
-  margin-bottom: 1rem;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
   border: 1px solid var(--black);
   background: white;
+}
+
+.copy .img-heading {
+  padding: 0.5rem 0.5rem 0.24rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid var(--black);
+  background: white;
+}
+
+.copy .img-heading img {
+  opacity: 0.9;
+  transition: opacity ease-in-out 250ms;
+}
+
+.copy .img-heading img:hover {
+  opacity: 1;
+  cursor: pointer;
 }
 
 .calendar-section {
@@ -486,17 +523,17 @@ h2 {
 }
 
 .footer {
-  position: fixed;
+  position: relative;
   width: 100%;
   display: flex;
   justify-content: left;
   align-items: center;
   bottom: 0;
-  padding: 0.7rem 0rem 0rem;
+  padding: 0.5rem 0rem 0rem;
   overflow: hidden;
   white-space: nowrap;
   background: white;
-  border-top: 1px solid var(--black);
+  border-bottom: 1px solid var(--black);
   z-index: 50;
 }
 
@@ -508,6 +545,7 @@ h2 {
   color: var(--black);
   display: inline-block;
   white-space: nowrap;
+  padding-bottom: 0.5rem;
   animation: scrollText 30s linear infinite;
 }
 
@@ -538,11 +576,31 @@ h2 {
   }
 }
 
+.footnotes-container {
+  position: relative;
+  margin: 0;
+  height: calc(100dvh - 46px);
+  overflow-y: scroll;
+  padding: 1rem 0rem 1rem;
+  opacity: 0;
+}
+
+.footnotes-container.loaded {
+  opacity: 1;
+}
+
+.footnotes-container::-webkit-scrollbar {
+  width: 0;
+  background-color: transparent;
+}
+
+.footnotes-container::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
 .footnotes {
   position: relative;
-  top: 1rem;
   height: fit-content;
-  overflow-y: scroll;
   padding: 0;
   background: white;
   border-top: 1px solid var(--black);
@@ -551,20 +609,15 @@ h2 {
 }
 
 
-.footnotes::-webkit-scrollbar {
-  width: 0;
-  background-color: transparent;
-}
 
-.footnotes::-webkit-scrollbar-thumb {
-  background-color: transparent;
-}
+
+
 
 .footnotes h1 {
   font-family: "Helveesti";
   font-style: italic !important;
   font-weight: 400;
-  font-size: 0.75rem !important;
+  font-size: var(--footnote) !important;
   line-height: 0.5rem !important;
   color: var(--black) !important;
   margin: 0 !important;
@@ -572,7 +625,7 @@ h2 {
   border: none !important;
   border: none !important;
   background: white !important;
-  padding: 0.5rem 0.25rem !important;
+  padding: 0.6rem 0.5rem !important;
   display: block;
   text-align: left !important;
   text-transform: uppercase;
@@ -612,7 +665,7 @@ h2 {
 
 .footnote-number {
   vertical-align: super;
-  font-size: var(--footnote);
+  font-size: var(--footnote2);
   line-height: 0;
   transition: all ease-in-out 250ms;
 }
@@ -625,13 +678,22 @@ h2 {
 
 .footnote-text {
   font-family: "Helveesti";
-  font-size: 0.75rem !important;
+  font-size: var(--footnote2) !important;
   color: var(--black) !important;
   display: inline !important;
   text-align: left !important;
   transition: all ease-in-out 200ms !important;
-  padding: 0.25rem !important;
+  padding: 0.5rem !important;
 }
+
+.footnote-text a {
+  font-family: "Helveesti";
+  font-size: var(--footnote2) !important;
+  color: var(--black) !important;
+  text-decoration: underline;
+}
+
+
 
 .footnote-text.active {
   /* animation: highlightFootnote 10s ease-in-out forwards; */
@@ -802,6 +864,7 @@ h2 {
 }
 
 .navbar-item a {
+  font-size: var(--header-font);
   color: var(--black);
   border: 1px solid var(--black);
   text-decoration: none;
@@ -835,6 +898,7 @@ h2 {
 }
 
 .navbar-home a {
+  font-size: var(--header-font);
   color: white;
   border: 1px solid var(--black);
   background: var(--black);
@@ -988,17 +1052,7 @@ h2 {
   color: var(--blue) !important;
 }
 
-.section {
-  position: fixed;
-  display: grid;
-  width: 100vw;
-  grid-template-columns: 4fr 2fr;
-  gap: 1rem;
-  margin-top: 46px;
-  padding-right: 2rem;
-  height: calc(100dvh - 75px);
-  z-index: 1;
-}
+
 
 .trip-report-section {
   position: fixed;
@@ -1038,11 +1092,9 @@ h2 {
   font-style: normal;
   font-weight: 400;
   font-size: var(--main-font);
-  line-height: 1.3rem;
+  line-height: 1.4rem;
   color: var(--black);
-  margin-bottom: 0.5rem;
   text-align: left;
-
 }
 
 .section p.italic {
