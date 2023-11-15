@@ -79,9 +79,9 @@ const footNotes = [
   {
     "page": "projects",
     "number": 1,
-    "content": "[1] Our organization is based between Los Angeles and New York, so most of our events take place in these cities.<br /><br />If you'd like to see a Nonhuman Teachers event in your city, please <a href='mailto:info@nonhumanteachers.org'>email us!</a><br /><br />We are passionate about telling these stories in communities throughout the country and around the globe.",
-    "type": "text",
-    "caption": ""
+    "caption": "[1] Our organization is based between Los Angeles and New York, so most of our events take place in these cities.<br /><br />If you'd like to see a Nonhuman Teachers event in your city, please <a href='mailto:info@nonhumanteachers.org'>email us!</a><br /><br />We are passionate about telling these stories in communities throughout the country and around the globe.<br /><br />Image credit: Tom Bellino",
+    "type": "image",
+    "content": "https://res.cloudinary.com/dnld1cqvy/image/upload/v1700082455/NHT%20Images/MAP_Los_Angeles_New_York_copy_mwzcvq.jpg"
   },
   {
     "page": "projects",
@@ -185,9 +185,9 @@ const footNotes = [
   {
     "page": "experience-report",
     "number": 6,
-    "content": "https://res.cloudinary.com/dnld1cqvy/image/upload/v1700077264/NHT%20Images/joeyvalley_None_c0c687e9-e85f-45cb-85eb-8129a139009c_ned9k7.png",
+    "content": "https://res.cloudinary.com/dnld1cqvy/image/upload/v1700073107/NHT%20Images/lazar_zelbzk.jpg",
     "type": "image",
-    "caption": `[6] Zeta Reticuli is a binary star system located about 39 light years away from Earth that has been a focal point in various claims of extraterrestrial encounters and abductions, intriguing both the scientific community and UFO enthusiasts.<br /><br />The system gained prominence in the annals of UFOlogy following the famous Betty and Barney Hill abduction case in 1961, where the couple claimed they were abducted by aliens from a spacecraft originating from this star system and again more controversially through the claims of Bob Lazar, who said he participated in the reverse-engineering of alien spacecraft that purportedly came from Zeta Reticuli.<br /><br />These stories have contributed to the mystique of Zeta Reticuli in the search for life beyond Earth.<br /><br />Image credit: Bob Lazar`
+    "caption": `[6] Zeta Reticuli is a binary star system located about 39 light years away from Earth that has been a focal point in various claims of extraterrestrial encounters and abductions, intriguing both the scientific community and UFO enthusiasts.<br /><br />The system gained prominence in the annals of UFOlogy following the famous <a href='https://en.wikipedia.org/wiki/Barney_and_Betty_Hill_incident' target='_blank'>Betty and Barney Hill incident</a> in 1961, where the couple claimed they were abducted by aliens from a spacecraft originating from this star system and again more controversially through the claims of Bob Lazar, who said he participated in the reverse-engineering of alien spacecraft that purportedly came from Zeta Reticuli.<br /><br />These stories have contributed to the mystique of Zeta Reticuli in the search for life beyond Earth.<br /><br />Image credit: Bob Lazar`
   },
   {
     "page": "experience-report",

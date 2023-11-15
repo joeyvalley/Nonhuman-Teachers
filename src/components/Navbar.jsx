@@ -13,6 +13,9 @@ export default function Navbar() {
           </div>
         </div>
         <div className="right">
+          <div className="navbar-item navbar-mobile">
+            <Link to="/" className={location.pathname === "/" ? "selected" : ""}>Home</Link>
+          </div>
           <div className="navbar-item">
             <Link to="/about" className={location.pathname === "/about" ? "selected" : ""}>About</Link>
           </div>

@@ -35,6 +35,21 @@ body {
   font-style: italic;
 }
 
+.slick-next {
+  right: 0.25rem !important;
+  mix-blend-mode: difference;
+}
+
+.slick-prev {
+  left: 0.25rem !important;
+  z-index: 9999;
+  mix-blend-mode: difference;
+}
+
+.navbar-mobile a {
+  display: none;
+}
+
 p {
   font-family: "Helveesti";
   font-style: normal;
@@ -172,9 +187,9 @@ h2 {
   background: yellow;
 }
 
-.carousel-image:hover {
+/* .carousel-image:hover {
   cursor: pointer;
-}
+} */
 
 .carousel-image:focus {
   outline: none;
@@ -568,6 +583,10 @@ h2 {
   color: var(--black);
 }
 
+.mobile-footer {
+  display: none;
+}
+
 @keyframes scrollText {
   0% {
     transform: translateX(0%);
@@ -611,14 +630,21 @@ h2 {
   border-right: 1px solid var(--black);
 }
 
+.footnotes-header {
+  display: flex;
+  justify-content: space-between;
+}
 
+.footnotes-close {
+  display: none;
+}
 
 
 
 
 .footnotes h1 {
   font-family: "Helveesti";
-  font-style: italic !important;
+  /* font-style: italic !important; */
   font-weight: 400;
   font-size: var(--footnote) !important;
   line-height: 0.5rem !important;
@@ -629,9 +655,9 @@ h2 {
   border: none !important;
   background: white !important;
   padding: 0.6rem 0.5rem !important;
-  display: block;
+  display: inline-block;
   text-align: left !important;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .footnote {
@@ -1174,30 +1200,8 @@ h2 {
   overflow: hidden;
 }
 
-@media screen and (max-width: 767px) {
 
-
-  .home {
-    display: flex;
-    width: 100vw;
-    margin-top: 36px;
-    padding: 5rem;
-    height: calc(100dvh - 65px);
-    position: fixed;
-    z-index: 1000;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .homeish {
-    padding: 0;
-    height: calc(100dvh - 65px);
-    width: 250px;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+@media screen and (max-width: 700px) {
 
   .navbar {
     position: fixed;
@@ -1207,7 +1211,7 @@ h2 {
     z-index: 50;
     background-color: white;
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
     width: 100vw;
     gap: 0.33rem;
     border-bottom: 1px solid var(--black);
@@ -1223,173 +1227,185 @@ h2 {
 
   .navbar-item a {
     color: var(--black);
-    border: 1px solid var(--black);
+    /* border: 1px solid var(--black); */
+    border: none;
     text-decoration: none;
     transition: all ease-in-out 100ms;
     padding: 0 0.1667rem;
   }
 
+  .navbar-item a:hover {
+    border: none;
+  }
+
+  .navbar-mobile a {
+    display: inline-block;
+  }
+
   .right {
     display: flex;
-    justify-content: right;
+    justify-content: space-between;
     gap: 0.33rem;
     width: 100%;
     background: right;
   }
 
-  .navbar-home {
-    font-size: var(--main-font);
-  }
-
-  .navbar-home a {
-    padding: 0 0.1667rem;
-  }
-
-  .section {
-    position: fixed;
-    display: flex;
-    align-items: left;
-    width: 100vw;
-    margin-top: 38.5px;
-    height: calc(100dvh - 63px);
-    z-index: 1000;
-    padding-right: 0rem;
-  }
-
-  .copy {
-    width: 100dvw;
-    height: calc(100dvh - 66px);
-    padding: 0.5rem 0.5rem 0rem 0.5rem;
-    overflow-y: scroll;
-    opacity: 0;
-    transition: opacity ease-in-out 250ms;
-    margin: 0;
-    /* background: red; */
-  }
-
-
-  .section h1 {
-    font-family: "Helveesti";
-    font-style: normal;
-    font-weight: 400;
-    font-size: var(--main-font);
-    line-height: 1.3rem;
-    color: white;
-    margin-bottom: 0.75rem;
-    text-align: justify;
-    border: 1px solid var(--black);
-    background: var(--black);
-    padding: 0rem 1rem;
-    display: block;
-    text-align: center;
-  }
-
-  .section h2 {
-    font-size: var(--main-font);
-  }
-
-  .section p {
-    font-family: "Helveesti";
-    font-style: normal;
-    font-weight: 400;
-    font-size: var(--main-font);
-    line-height: 1.3rem;
-    color: var(--black);
-    margin-bottom: 0.5rem;
-    text-align: justify;
-
-  }
-
-
-
-  .copy .section-heading {
-    padding: 0.5rem 0.5rem 0rem 0.5rem;
-    margin-bottom: 1rem;
-    border: 1px solid var(--black);
-    background: white;
-  }
-
-  .footnotes {
-    display: none;
-  }
-
-  .footnote-number {
-    display: none;
-  }
-
-  .calendar-section {
-    padding: 0.5rem 0.5rem 0rem 0.5rem;
-  }
-
-  .calendar-event {
-    padding: 1rem 1rem 0.75rem 1rem;
-  }
-
-  .event {
-    margin-bottom: 0.33rem;
-  }
-
-  .event h1 {
-    font-size: var(--main-font);
-  }
-
-  .event h2 {
-
-    font-size: var(--main-font);
-    color: black;
-    background: yellow;
-    margin-bottom: 0.5rem;
-  }
-
-  .event-title {
-    background: yellow;
-  }
-
-  .img-credit {
-    display: none;
-  }
-
-  .footer {
-    padding: 0.25rem 0rem;
-  }
-}
-
-@media screen and (max-width: 600px) {
   .left {
     display: none;
   }
 
-  .right {
+  .footnotes-container {
+    position: absolute;
+    width: 100dvw;
+    height: 100dvh;
+    left: calc(100dvw);
+    padding: 0 0 4.5rem 0;
+    background: white;
+    overflow: scroll;
+    z-index: 100000;
+  }
+
+  .footnotes {
+    border: none;
+
+  }
+
+  .footnotes-header {
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid var(--black);
+    width: 100%;
+    background: white;
+    display: flex;
     justify-content: space-between;
+  }
+
+  .footnote {
+    border: none !important;
+  }
+
+  .footnote.loaded {
+    min-height: 100px;
+  }
+
+  .footnote-img {
+    border-top: none !important;
+  }
+
+  /* .footnotes h1 {
+    font-size: var(--main-font) !important;
+  }
+
+  .footnotes-close {
+    font-size: var(--main-font) !important;
+  }
+
+  .footnote-text {
+    font-size: var(--footnote) !important;
+  } */
+
+  .footnotes-close {
+    display: inline-block;
+    font-family: "Helveesti";
+    font-weight: 400;
+    font-size: var(--footnote) !important;
+    line-height: 0.5rem !important;
+    color: var(--black) !important;
+    margin: 0 !important;
+    border: none !important;
+    padding: 0.6rem 0.5rem !important;
+    display: inline-block;
+    text-align: left !important;
+    transition: all ease-in-out 250ms;
+  }
+
+  .footnotes-close:hover {
+    cursor: pointer;
+    color: white !important;
+    background: var(--black);
+
+  }
+
+  .visible {
+    left: 0;
+  }
+
+  .footnote {
+    min-height: 100dvh;
+  }
+
+  .section {
+    position: fixed;
+    /* display: flex; */
+    width: 100dvw;
+    height: fit-content;
+    margin-top: 41px;
+    height: calc(100dvh - 41px);
+    z-index: 1;
+    padding: 0;
+  }
+
+  .copy {
+    height: 100%;
+    width: 100dvw;
+    overflow-y: scroll;
+    opacity: 0;
+    transition: opacity ease-in-out 250ms;
+    padding-bottom: 50px;
+    padding: 1rem 0.5rem 2.5rem 0.5rem;
+
+  }
+
+  .board-group {
+    grid-template-columns: 1fr 1fr;
   }
 
   .footer {
     display: none;
   }
 
-  .section {
+  .mobile-footer {
     position: fixed;
+    width: 100%;
     display: flex;
-    align-items: left;
-    width: 100vw;
-    margin-top: 37px;
-    height: calc(100dvh - 37px);
-    z-index: 1000;
-    padding-right: 0rem;
+    justify-content: left;
+    align-items: center;
+    bottom: 0;
+    padding: 0.5rem 0rem 0rem;
+    overflow: hidden;
+    white-space: nowrap;
+    background: white;
+    border-top: 1px solid var(--black);
+    z-index: 50;
   }
 
-  .copy {
-    width: 100dvw;
-    height: calc(100dvh - 37px);
-    padding: 0.5rem 0.5rem 0rem 0.5rem;
-    overflow-y: scroll;
-    opacity: 0;
-    transition: opacity ease-in-out 250ms;
-    margin: 0;
-    /* background: red; */
+  .mobile-footer p {
+    font-family: "Helveesti";
+    font-size: 0.75rem !important;
+    font-style: italic !important;
+    line-height: 0.5rem !important;
+    color: var(--black);
+    display: inline-block;
+    white-space: nowrap;
+    padding-bottom: 0.5rem;
+    animation: scrollText 30s linear infinite;
+    margin-bottom: 0rem !important;
   }
 
-  .board-group {
-    grid-template-columns: 1fr 1fr;
+  .mobile-footer p a {
+    font-size: 0.75rem !important;
+    font-style: italic !important;
+    text-decoration: none;
+    transition: all ease-in-out 100ms;
+  }
+
+
+  .mobile-footer p a:active {
+    background: yellow;
+    color: var(--black);
+  }
+
+  .mobile-footer p a:visited {
+    color: var(--black);
   }
 }

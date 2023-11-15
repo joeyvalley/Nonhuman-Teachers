@@ -18,6 +18,7 @@ export default function Project() {
 
   const [footnoteContent, setFootnoteContent] = useState(defaultFootnote);
   const [showFootnote, setShowFootnote] = useState(true);
+  const [footnoteShowing, setFootnoteShowing] = useState(false);
 
   function openFootnote(footnoteNumber) {
     setShowFootnote(false);
@@ -33,7 +34,19 @@ export default function Project() {
         setShowFootnote(true);
       }, 300);
     }
+    checkForMobile();
   }
+
+  function checkForMobile() {
+
+    if (!footnoteShowing) {
+      setFootnoteShowing(true);
+    }
+    else {
+      setFootnoteShowing(false)
+    }
+  }
+
   const [copyLoaded, setCopyLoaded] = useState(false);
   useEffect(() => {
     setTimeout(() => {
@@ -48,11 +61,11 @@ export default function Project() {
   const mediaSlider = useRef(null);
 
   const settings = {
-    arrows: false,
+    arrows: true,
     dots: false,
     infinite: true,
     fade: true,
-    speed: 500,
+    speed: 250,
     slidesToShow: 1,
     slidesToScroll: 1
   };
@@ -112,7 +125,7 @@ export default function Project() {
               <Slider {...settings} ref={projectSlider}>
                 {eventsImages.map((img, index) => (
                   <div key={index}>
-                    <img src={img} alt={`Events ${index}`} onClick={() => handleImageClick(projectSlider)} className="carousel-image" />
+                    <img src={img} alt={`Events ${index}`} className="carousel-image" />
                   </div>
                 ))}
               </Slider>
@@ -125,7 +138,7 @@ export default function Project() {
               <Slider {...settings} ref={botanicalSlider}>
                 {botanicalImages.map((img, index) => (
                   <div key={index}>
-                    <img src={img} alt={`Botanical Spaces ${index}`} onClick={() => handleImageClick(botanicalSlider)} className="carousel-image" />
+                    <img src={img} alt={`Botanical Spaces ${index}`} className="carousel-image" />
                   </div>
                 ))}
               </Slider>
@@ -138,7 +151,7 @@ export default function Project() {
               <Slider {...settings} ref={mediaSlider}>
                 {mediaImages.map((img, index) => (
                   <div key={index}>
-                    <img src={img} alt={`Events ${index}`} onClick={() => handleImageClick(mediaSlider)} className="carousel-image" />
+                    <img src={img} alt={`Events ${index}`} className="carousel-image" />
                   </div>
                 ))}
               </Slider>
@@ -148,9 +161,17 @@ export default function Project() {
         </div>
 
         {/* Footnotes */}
-        <div className={`footnotes-container ${copyLoaded ? 'loaded' : ''}`}>
+        <div className={`footnotes-container ${copyLoaded ? 'loaded' : ''} ${footnoteShowing ? 'visible' : ''}`}>
           <div className="footnotes">
-            <h1>References</h1>
+            <div className="footnotes-header">
+              <h1>References</h1>
+              <span className='footnotes-close' onClick={() => {
+                setFootnoteShowing(false);
+                setTimeout(() => {
+                  setFootnoteContent(defaultFootnote);
+                }, 500)
+              }}>Close</span>
+            </div>
             <Footnote footnote={footnoteContent} isOpen={showFootnote}></Footnote>
             <Footer></Footer>
           </div>

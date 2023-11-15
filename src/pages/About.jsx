@@ -11,13 +11,13 @@ export default function About() {
   const [copyLoaded, setCopyLoaded] = useState(false);
   const [footnoteContent, setFootnoteContent] = useState(defaultFootnote);
   const [showFootnote, setShowFootnote] = useState(true);
+  const [footnoteShowing, setFootnoteShowing] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
       setCopyLoaded(true)
     }, 500);
   }, [])
-
 
   function openFootnote(footnoteNumber) {
     setShowFootnote(false);
@@ -32,6 +32,17 @@ export default function About() {
         setFootnoteContent(footnote);
         setShowFootnote(true);
       }, 300);
+    }
+    checkForMobile();
+  }
+
+  function checkForMobile() {
+
+    if (!footnoteShowing) {
+      setFootnoteShowing(true);
+    }
+    else {
+      setFootnoteShowing(false)
     }
   }
 
@@ -65,9 +76,17 @@ export default function About() {
         </div>
         <CopyFooter></CopyFooter>
       </div>
-      <div className={`footnotes-container ${copyLoaded ? 'loaded' : ''}`}>
+      <div className={`footnotes-container ${copyLoaded ? 'loaded' : ''} ${footnoteShowing ? 'visible' : ''}`}>
         <div className="footnotes">
-          <h1>References</h1>
+          <div className="footnotes-header">
+            <h1>References</h1>
+            <span className='footnotes-close' onClick={() => {
+              setFootnoteShowing(false);
+              setTimeout(() => {
+                setFootnoteContent(defaultFootnote);
+              }, 500)
+            }}>Close</span>
+          </div>
           <Footnote footnote={footnoteContent} isOpen={showFootnote}></Footnote>
           <Footer></Footer>
         </div>

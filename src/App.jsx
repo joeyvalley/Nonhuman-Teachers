@@ -12,6 +12,7 @@ import TripReport from './pages/TripReport'
 //Import top-level components
 import Navbar from "./components/Navbar";
 import Video from "./components/Video";
+import MobileFooter from "./components/MobileFooter";
 //Import video array
 import videoList from "./api/videoList";
 //Import CSS
@@ -42,6 +43,7 @@ export default function App() {
         <Route path="/admin" element={<Admin />}></Route>
       </Routes>
       <Video videoInfo={selectedVideo}></Video>
+      <MobileFooter></MobileFooter>
     </div>
   )
 }
