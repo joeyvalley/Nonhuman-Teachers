@@ -55,6 +55,10 @@ export default function Board() {
           <h3>Sasha Markova</h3>
           <span className="board-title">Writer & Creative Director</span>
         </div>
+        <div className="board-seat">
+          <h3>Andy Rifkin</h3>
+          <span className="board-title">Real Estate Capital Partner</span>
+        </div>
       </div>
       <h2>Staff</h2>
       <div className="board-group">

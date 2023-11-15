@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 import footNotes from '../api/footnotes';
-import Footnote from "./Footnote"
-import Footer from './Footer'
-import CopyFooter from './CopyFooter';
+import Footnote from "../components/Footnote"
+import Footer from '../components/Footer'
+import CopyFooter from '../components/CopyFooter';
 
 
 export default function About() {
 
-  const defaultFootnote = { page: 'about', number: 0, content: '"The engineers of the future will be poets."<br /><br />- Terence McKenna, author', type: 'text', caption: '' };
+  const defaultFootnote = { page: 'about', number: 0, content: '"The engineers of the future will be poets."<br /><br /><span class="footnote-italic">Terence McKenna, author</span>', type: 'text', caption: '' };
   const [copyLoaded, setCopyLoaded] = useState(false);
   const [footnoteContent, setFootnoteContent] = useState(defaultFootnote);
   const [showFootnote, setShowFootnote] = useState(true);
@@ -71,11 +71,6 @@ export default function About() {
           <Footnote footnote={footnoteContent} isOpen={showFootnote}></Footnote>
           <Footer></Footer>
         </div>
-        {/* <div className={`footnotes ${copyLoaded ? 'loaded' : ''}`}>
-          
-          
-          
-        </div> */}
       </div>
     </div >
   )

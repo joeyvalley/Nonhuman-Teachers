@@ -43,6 +43,7 @@ p {
   line-height: 1.4rem;
   color: var(--black);
   text-align: left;
+  margin-bottom: 1rem;
 }
 
 h2 {
@@ -197,7 +198,7 @@ h2 {
 }
 
 .copy {
-  padding: 1rem 0rem 0.5rem 1.5rem;
+  padding: 1.5rem 0rem 1.5rem 1.5rem;
   overflow-y: scroll;
   height: calc(100dvh - 46px);
   opacity: 0;
@@ -258,9 +259,9 @@ h2 {
   display: grid;
   width: 100vw;
   grid-template-columns: 4fr 2fr;
-  gap: 1rem;
-  margin-top: 46px;
-  padding-right: 2rem;
+  gap: 1.5rem;
+  margin-top: 50px;
+  padding-right: 1.5rem;
   height: calc(100dvh - 46px);
   z-index: 1;
 }
@@ -396,7 +397,7 @@ h2 {
 }
 
 .event {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0rem;
 }
 
 .calendar-event {
@@ -547,6 +548,7 @@ h2 {
   white-space: nowrap;
   padding-bottom: 0.5rem;
   animation: scrollText 30s linear infinite;
+  margin-bottom: 0rem !important;
 }
 
 .footer p a {
@@ -579,10 +581,11 @@ h2 {
 .footnotes-container {
   position: relative;
   margin: 0;
-  height: calc(100dvh - 46px);
   overflow-y: scroll;
-  padding: 1rem 0rem 1rem;
+  padding: 1.5rem 0rem;
   opacity: 0;
+  transition: all ease-in-out 500ms;
+  display: block;
 }
 
 .footnotes-container.loaded {
@@ -661,6 +664,7 @@ h2 {
 .footnote img {
   width: 100%;
   cursor: pointer;
+  border-bottom: 1px solid black;
 }
 
 .footnote-number {
@@ -693,7 +697,9 @@ h2 {
   text-decoration: underline;
 }
 
-
+.higlighted {
+  background: yellow !important;
+}
 
 .footnote-text.active {
   /* animation: highlightFootnote 10s ease-in-out forwards; */
@@ -945,7 +951,7 @@ h2 {
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-column-gap: 0.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .subscribe {
@@ -990,7 +996,6 @@ h2 {
   border-radius: 0;
   display: inline-block;
   transition: background 200ms ease-in-out;
-  margin-bottom: 1rem;
   width: 100%;
 }
 
@@ -1059,10 +1064,10 @@ h2 {
   display: grid;
   width: 100vw;
   grid-template-columns: 4fr 2fr;
-  gap: 2rem;
-  margin-top: 46px;
-  padding-right: 2rem;
-  height: calc(100dvh - 75px);
+  gap: 1.5rem;
+  margin-top: 50px;
+  padding-right: 1.5rem;
+  height: calc(100dvh - 50px);
   z-index: 1000;
 }
 
@@ -1095,6 +1100,7 @@ h2 {
   line-height: 1.4rem;
   color: var(--black);
   text-align: left;
+  margin-bottom: 1rem;
 }
 
 .section p.italic {
