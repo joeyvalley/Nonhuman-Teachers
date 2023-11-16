@@ -1,40 +1,49 @@
+import { useState } from "react";
 import { Routes, Route } from 'react-router-dom'
+// Import Pages
 import Home from './pages/Home'
-import AboutPage from './pages/About'
-import CalendarPage from './pages/Calendar'
-import ContactPage from './pages/Contact'
-import DonatePage from './pages/Donate'
-import DonationPage from './components/DonationForm'
-import ProjectsPage from './pages/Projects'
-
-import EventsPage from './pages/projects/Events'
-import PlantOrphansPage from './pages/projects/PlantOrphans'
-import TravelPage from './pages/projects/Travel'
-import FuturePage from './pages/projects/Future'
-import ClubsPage from './pages/projects/Clubs'
-
-// import DonationForm from "./components/DonationForm"
+import Admin from "./pages/Admin";
+import About from './pages/About'
+import Contact from './pages/Contact'
+import Support from './pages/Support'
+import DonationPage from './pages/DonationForm'
+import Projects from './pages/Projects'
+import TripReport from './pages/TripReport'
+//Import top-level components
+import Navbar from "./components/Navbar";
+import Video from "./components/Video";
+import MobileFooter from "./components/MobileFooter";
+//Import video array
+import videoList from "./api/videoList";
+//Import CSS
+import "./styles/style.css";
 
 export default function App() {
-  return (
+  const [selectedVideo, setSelectedVideo] = useState(null);
 
-    <Routes>
-      <Route path="/" element={<Home />}></Route>
-      {/* Main Pages */}
-      <Route path="/projects" element={<ProjectsPage />}></Route>
-      <Route path="/calendar" element={<CalendarPage />}></Route>
-      <Route path="/support/" element={<DonatePage />}></Route>
-      <Route path="/donate/" element={<DonationPage />}></Route>
-      <Route path="/about" element={<AboutPage />}></Route>
-      <Route path="/contact/" element={<ContactPage />}></Route>
-      {/* Sub-Pages */}
-      <Route path="/projects/clubs-and-societies" element={<ClubsPage />}></Route>
-      <Route path="/projects/programming-and-events" element={<EventsPage />}></Route>
-      <Route path="/projects/the-future" element={<FuturePage />}></Route>
-      <Route path="/projects/botanical-spaces" element={<PlantOrphansPage />}></Route>
-      <Route path="/projects/research-and-travel" element={<TravelPage />}></Route>
-      {/* Alternate Pages */}
-      {/* <Route path="/donations" element={<DonationForm />}></Route> */}
-    </Routes>
+  function randomVideo() {
+    return videoList[Math.floor(Math.random() * videoList.length)];
+  }
+
+  const handleVideoChange = () => {
+    setSelectedVideo(randomVideo());
+  };
+
+  return (
+    <div className="main">
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home onLogoClick={handleVideoChange} />}></Route>
+        <Route path="/about" element={<About />}></Route>
+        <Route path="/projects" element={<Projects />}></Route>
+        <Route path="/support" element={<Support />}></Route>
+        <Route path="/contact" element={<Contact />}></Route>
+        <Route path="/donate" element={<DonationPage />}></Route>
+        <Route path="/experience-reports" element={<TripReport />}></Route>
+        <Route path="/admin" element={<Admin />}></Route>
+      </Routes>
+      <Video videoInfo={selectedVideo}></Video>
+      <MobileFooter></MobileFooter>
+    </div>
   )
 }

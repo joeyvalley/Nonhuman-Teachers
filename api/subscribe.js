@@ -1,11 +1,14 @@
 const axios = require('axios');
 
 module.exports = async (req, res) => {
+
   if (req.method === 'POST') {
+
     const { email } = req.body;
-    const apiKey = process.env.API_KEY
-    const listId = process.env.LIST_ID; // Replace with your mailing list ID
-    const server = process.env.SERVER_ID; // Extract the server number from your API key (e.g., "us1" or "us20")
+    const apiKey = process.env.REACT_APP_API_KEY;
+    const listId = process.env.REACT_APP_LIST_ID; // Replace with your mailing list ID
+    const server = process.env.REACT_APP_SERVER_ID; // Extract the server number from your API key (e.g., "us1" or "us20")
+
 
     try {
       const response = await axios({
@@ -21,10 +24,14 @@ module.exports = async (req, res) => {
         },
       });
 
-      res.status(response.status).send(response.data);
+      res.status(response.status).send({ message: 'subscribed' });
     } catch (error) {
       if (error.response) {
-        res.status(error.response.status).send(error.response.data);
+        if (error.response.data && error.response.data.title === "Member Exists") {
+          res.status(200).send({ message: 'exists' });
+        } else {
+          res.status(error.response.status).send(error.response.data);
+        }
       } else {
         console.error('Axios error:', error);
         res.status(500).send({ message: 'Internal Server Error' });

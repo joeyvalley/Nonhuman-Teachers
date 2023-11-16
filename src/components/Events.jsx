@@ -1,11 +1,12 @@
-import { useEffect, useState } from "react";
-import authenticate from "./getEvents.js"
-import Footer from "./Footer";
+import { useEffect, useRef, useState } from "react";
+import authenticate from "../api/getEvents"
 import FootnotesLogo from "./FootnotesLogo";
 
-const Events = () => {
-  const [upcomingEvents, setUpcomingEvents] = useState();
-  const [pastEvents, setPastEvents] = useState();
+export default function Events() {
+
+  // Handle dynamically loading images with the Eventbrite API
+  const [upcomingEvents, setUpcomingEvents] = useState([]);
+  const [pastEvents, setPastEvents] = useState([]);
 
   useEffect(() => {
     const workAround = async () => {
@@ -16,46 +17,128 @@ const Events = () => {
     workAround();
   }, [])
 
+  // Setup and handle footnote functionality.
+  const footnotes = useRef(null);
+  const prevFootnoteRef = useRef(0);
+  const [footnotesLogo, setFootnotesLogo] = useState(false);
+  const [activeFootnote, setActiveFootnote] = useState(null);
 
+  function footnoteClick(id) {
+    console.log(prevFootnoteRef);
+    if (prevFootnoteRef.current === id) {
+      setActiveFootnote(0);
+      prevFootnoteRef.current = 0;
+    }
+    else {
+      setActiveFootnote(id);
+      prevFootnoteRef.current = id;
+    }
+
+    const footnoteDetail = document.getElementById(`${id}`);
+    if (footnoteDetail) {
+      footnoteDetail.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+
+  const [upcomingImagesCount, setUpcomingImagesCount] = useState(0);
+  const [upcomingImagesLoaded, setUpcomingImagesLoaded] = useState(false);
+
+  const handleUpcomingLoad = () => {
+    setUpcomingImagesCount(prevCount => {
+      const newCount = prevCount + 1;
+      if (newCount === upcomingEvents.length) {
+        setUpcomingImagesLoaded(true);
+      }
+      return newCount;
+    });
+  };
+
+  const [pastImagesCount, setPastImagesCount] = useState(0);
+  const [pastImagesLoaded, setPastImagesLoaded] = useState(false);
+
+  const handlePastLoad = () => {
+    setPastImagesCount(prevCount => {
+      const newCount = prevCount + 1;
+      if (newCount === pastEvents.length) {
+        setPastImagesLoaded(true);
+      }
+      return newCount;
+    });
+  };
 
   return (
-    <>
-      <div className="section" id="calendar">
-        <div className="copy">
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe corporis corrupti doloremque! Suscipit optio architecto libero repellat. Corrupti impedit, cum rem hic maxime commodi est necessitatibus, reprehenderit iste aperiam cumque.</p>
-          <h1>Upcoming<span className="footnote-number">1</span></h1>
+    <div className="section">
+      {/* Main content. */}
+      <div className="copy loaded">
+        <div className='section-heading'>
+          <h2>Calendar</h2>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam sint voluptatibus quas nihil<span className="footnote-number" onClick={() => footnoteClick(1)}>[1]</span> sit ea, quod earum veritatis, nemo soluta fugit explicabo recusandae ratione molestiae vitae sequi nam? Excepturi, sequi.</p>
+        </div>
+
+        {/* Upcoming Events */}
+        <div className={`calendar-section ${upcomingImagesLoaded ? 'show-content' : ''}`}>
+          <h2>Upcoming Events</h2>
+          {upcomingImagesLoaded ?
+            null :
+            <div className="loading">
+              <img src="assets/spinner.gif" alt="Loading" />
+            </div>
+          }
           {upcomingEvents ? upcomingEvents.map((event, index) => (
-            <div className="event" key={index}>
-              <a href={event.url}><img src={event.image} alt="Event" /></a>
-              <span>{event.title}</span>
-              <span className="event-date">{event.date}, {event.time}</span>
-              <a href={event.url}><span className="event-link">Tickets and more info</span></a>
+            <div className="calendar-event" key={index}>
+              <div className="event">
+                <a href={event.url}>
+                  <img src={event.image} alt="Event" onLoad={handleUpcomingLoad} />
+                </a>
+                <span className="event-title">{event.title}</span>
+                <span className="event-date">{event.date}, {event.time}</span>
+                <a href={event.url}><span className="event-link">Tickets and more info</span></a>
+              </div>
             </div>
-          )) : null}
-          <h1>Past Events<span className="footnote-number">2</span></h1>
+          )) : (
+            <div>
+              <p>No upcoming events. Please check back soon!</p>
+            </div>
+          )}
+        </div>
+
+        {/* Past Events */}
+        <div className={`calendar-section ${pastImagesLoaded ? 'show-content' : ''}`}>
+          <h2>Past Events</h2>
+          {pastImagesLoaded ?
+            null :
+            <div className="loading">
+              <img src="assets/spinner.gif" alt="Loading" />
+            </div>
+          }
           {pastEvents ? pastEvents.map((event, index) => (
-            <div className="event" key={index}>
-              <a href={event.url}><img src={event.image} alt="Event" /></a>
-              <span>{event.title}</span>
-              <span className="event-date">{event.date}, {event.time}</span>
-              <a href={event.url}><span className="event-link">More info</span></a>
+            <div className="calendar-event" key={index}>
+              <div className="event">
+                {/* <a href={event.url}> */}
+                <img src={event.image} alt="Event" onLoad={handlePastLoad} />
+                {/* </a> */}
+                <span className="event-title">{event.title}</span>
+                <span className="event-date">{event.date}, {event.time}</span>
+                {/* <a href={event.url}><span className="event-link">More information</span></a> */}
+              </div>
             </div>
-          )) : null}
-          <p className="lb">--</p>
+          )) : (
+            <div>
+              <p>Whoops, I'm not sure what's going on. Please check back soon!</p>
+            </div>
+          )}
         </div>
-        <div className="footnotes">
-          <div className="footnote">
-            <span className="footnote-text">1.&emsp;We are headquartered in Los Angeles and New York, so most of our events take place in one these two cities. If you'd like to work on putting something together with us in your town, please <a href="mailto:info@nonhumanteachers.org">email us</a>.</span>
-          </div>
-          <div className="footnote">
-            <span className="footnote-text">2.&emsp;We host a lot of events, so this is just a recent selection. See the full list <a href="https://www.eventbrite.com/o/nonhuman-teachers-62088205263">here</a>.</span>
-          </div>
-          <FootnotesLogo></FootnotesLogo>
+
+
+      </div>
+
+      {/* Footnotes */}
+      <div className={`footnotes ${upcomingImagesLoaded ? 'loaded' : ''}`} ref={footnotes}>
+        <div className="footnote" id="1">
+          <span className={`footnote-text ${activeFootnote === 1 ? 'active' : ''}`} id="1">1. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis eius unde veniam incidunt distinctio a facere quidem porro, quod consectetur dicta debitis impedit fugiat nostrum? Enim natus ducimus provident fugit.</span>
         </div>
-      </div >
-      <Footer />
-    </>
+        {footnotesLogo ? <FootnotesLogo /> : null}
+      </div>
+    </div >
   )
 };
-
-export default Events;
