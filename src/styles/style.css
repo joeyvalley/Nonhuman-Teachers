@@ -21,7 +21,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   background-color: white;
-  overflow-x: hidden;
+  font-size: 16px;
 }
 
 @font-face {
@@ -1278,6 +1278,7 @@ h2 {
     background: white;
     display: flex;
     justify-content: space-between;
+    padding: 0.5rem 0rem;
   }
 
   .footnote {
@@ -1292,7 +1293,7 @@ h2 {
     border-top: none !important;
   }
 
-  /* .footnotes h1 {
+  .footnotes h1 {
     font-size: var(--main-font) !important;
   }
 
@@ -1300,9 +1301,10 @@ h2 {
     font-size: var(--main-font) !important;
   }
 
+
   .footnote-text {
     font-size: var(--footnote) !important;
-  } */
+  }
 
   .footnotes-close {
     display: inline-block;
@@ -1380,8 +1382,12 @@ h2 {
   }
 
   .mobile-footer p {
+    display: none !important;
+  }
+
+  .mobile-footer-text {
     font-family: "Helveesti";
-    font-size: 0.75rem !important;
+    font-size: 0.5rem !important;
     font-style: italic !important;
     line-height: 0.5rem !important;
     color: var(--black);
@@ -1392,20 +1398,21 @@ h2 {
     margin-bottom: 0rem !important;
   }
 
-  .mobile-footer p a {
-    font-size: 0.75rem !important;
+  .mobile-footer-text a {
+    color: var(--black);
+    font-size: 0.5rem !important;
     font-style: italic !important;
     text-decoration: none;
     transition: all ease-in-out 100ms;
   }
 
 
-  .mobile-footer p a:active {
+  .mobile-footer-text a:active {
     background: yellow;
     color: var(--black);
   }
 
-  .mobile-footer p a:visited {
+  .mobile-footer-text a:visited {
     color: var(--black);
   }
 }
