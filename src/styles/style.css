@@ -1453,6 +1453,10 @@ h2 {
     justify-content: flex-start;
   }
 
+  .report-response {
+    padding: 0.5rem;
+  }
+
   .copy {
     height: 100%;
     width: 100dvw;

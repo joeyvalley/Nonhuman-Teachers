@@ -74,7 +74,9 @@ export default function NewReport({ onClose }) {
           (
             <>
               <span className="report-header">Thank You!</span>
-              <p>Your trip report has been successfully submitted and is pending approval.</p>
+              <div className="report-response">
+                <p>Your trip report has been successfully submitted and is pending approval.</p>
+              </div>
               <button className="report" onClick={onClose}>Close</button>
             </>
           ) :
@@ -83,7 +85,9 @@ export default function NewReport({ onClose }) {
               {unsuccesfulAdd ? (
                 <>
                   <span className="report-header">Error</span>
-                  <p>There was an error. Please try again.</p>
+                  <div className="report-response">
+                    <p>There was an error. Please try again.</p>
+                  </div>
                   <button className="report" onClick={onClose}>Close</button>
                 </>
               ) :
