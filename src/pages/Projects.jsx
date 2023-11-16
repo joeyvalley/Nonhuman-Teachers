@@ -14,7 +14,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function Project() {
   // Set up states for content visibilty.
-  const defaultFootnote = { page: 'project', number: 0, content: `"The world is now dominated by an animal that doesn't think it's an animal"<br /><br /><span class="footnote-italic">Melanie Challenger, author</span>`, type: 'text', caption: '' };
+  const defaultFootnote = { page: 'projects', number: 0, content: `"The world is now dominated by an animal that doesn't think it's an animal"<br /><br /><span class="footnote-italic">Melanie Challenger, author</span>`, type: 'text', caption: '' };
 
   const [footnoteContent, setFootnoteContent] = useState(defaultFootnote);
   const [showFootnote, setShowFootnote] = useState(true);

@@ -1284,7 +1284,6 @@ h2 {
   .footnote {
     border: none !important;
     overflow: visible;
-
   }
 
   .footnote.loaded {
@@ -1687,7 +1686,6 @@ h2 {
   .visible {
     left: 0;
   }
-
 
 
   .section {

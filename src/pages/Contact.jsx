@@ -15,6 +15,8 @@ export default function Contact() {
   const [copyLoaded, setCopyLoaded] = useState(false);
   const [footnoteContent, setFootnoteContent] = useState(defaultFootnote);
   const [showFootnote, setShowFootnote] = useState(true);
+  const [footnoteShowing, setFootnoteShowing] = useState(false);
+
 
   useEffect(() => {
     setTimeout(() => {
@@ -24,21 +26,34 @@ export default function Contact() {
 
 
   function openFootnote(footnoteNumber) {
-    setShowFootnote(false);
     let footnote = footNotes.find(item => item.page === "contact" && item.number === footnoteNumber);
+    setShowFootnote(false);
+    // If you're clicking on the same footnote while it's already open, only applicable to the desktop view
     if (showFootnote && footnoteContent.number === footnoteNumber) {
       setTimeout(() => {
         setFootnoteContent(defaultFootnote);
         setShowFootnote(true);
       }, 300);
-    } else {
+    }
+
+    else {
       setTimeout(() => {
         setFootnoteContent(footnote);
         setShowFootnote(true);
       }, 300);
     }
+    checkForMobile();
   }
 
+  function checkForMobile() {
+
+    if (!footnoteShowing) {
+      setFootnoteShowing(true);
+    }
+    else {
+      setFootnoteShowing(false)
+    }
+  }
   return (
     <div className="section">
       <div className={`copy ${copyLoaded ? 'loaded' : ''}`}>
@@ -57,9 +72,17 @@ export default function Contact() {
         <Board></Board>
         <CopyFooter></CopyFooter>
       </div >
-      <div className={`footnotes-container ${copyLoaded ? 'loaded' : ''}`}>
+      <div className={`footnotes-container ${copyLoaded ? 'loaded' : ''} ${footnoteShowing ? 'visible' : ''}`}>
         <div className="footnotes">
-          <h1>References</h1>
+          <div className="footnotes-header">
+            <h1>References</h1>
+            <span className='footnotes-close' onClick={() => {
+              setFootnoteShowing(false);
+              setTimeout(() => {
+                setFootnoteContent(defaultFootnote);
+              }, 500)
+            }}>Close</span>
+          </div>
           <Footnote footnote={footnoteContent} isOpen={showFootnote}></Footnote>
           <Footer></Footer>
         </div>

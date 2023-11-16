@@ -20,14 +20,17 @@ export default function About() {
   }, [])
 
   function openFootnote(footnoteNumber) {
-    setShowFootnote(false);
     let footnote = footNotes.find(item => item.page === "about" && item.number === footnoteNumber);
+    setShowFootnote(false);
+    // If you're clicking on the same footnote while it's already open, only applicable to the desktop view
     if (showFootnote && footnoteContent.number === footnoteNumber) {
       setTimeout(() => {
         setFootnoteContent(defaultFootnote);
         setShowFootnote(true);
       }, 300);
-    } else {
+    }
+
+    else {
       setTimeout(() => {
         setFootnoteContent(footnote);
         setShowFootnote(true);
