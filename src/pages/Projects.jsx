@@ -147,7 +147,7 @@ export default function Project() {
           <div id="new-media" className="section-heading">
             <div className="event">
               <h2><a href="projects/media">New Nature Media</a></h2>
-              <p>We believe that an updated approach to how science and the natural world are represented in media is long overdue. One that tracks better with the issues of our time.<span className="footnote-number" onClick={() => openFootnote(5)}>[5]</span> Our goal with the media side of things is to tell relevant and surprising <span onClick={() => handleEasterEgg()}>new stories</span> about our wondrous blue marble while taking full advantage of today's media tools with the aim of broadcasting our signal far and wide.<span className="footnote-number" onClick={() => openFootnote(6)}>[6]</span></p>
+              <p>We believe that an updated approach to how science and the natural world are represented in media is long overdue. One that tracks better with the issues of our time.<span className="footnote-number" onClick={() => openFootnote(5)}>[5]</span> Our goal with the media side of things is to tell relevant and surprising new stories<span className="footnote-number" onClick={() => openFootnote(6)}>[6]</span> about our wondrous blue marble while taking full advantage of today's media tools with the aim of broadcasting our signal far and wide.<span className="footnote-number" onClick={() => openFootnote(7)}>[7]</span></p>
               <Slider {...settings} ref={mediaSlider}>
                 {mediaImages.map((img, index) => (
                   <div key={index}>
