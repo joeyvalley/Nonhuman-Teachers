@@ -105,8 +105,14 @@ export default function NewReport({ onClose }) {
                       </div>
 
                       {/* Contact Information */}
-                      <p>Contact Information:</p>
-                      <input className="report" required type="email" placeholder="E-mail Address" value={email} onChange={(e) => setEmail(e.target.value)} />
+                      <div className="category-field">
+                        <div>
+                          <p>Contact Information:</p>
+
+                          <input className="report" required type="email" placeholder="E-mail Address" value={email} onChange={(e) => setEmail(e.target.value)} />
+                        </div>
+
+                      </div>
 
                       {/* Category */}
                       <div className="category">
