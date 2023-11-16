@@ -74,7 +74,9 @@ export default function NewReport({ onClose }) {
           (
             <>
               <span className="report-header">Thank You!</span>
-              <p>Your trip report has been successfully submitted and is pending approval.</p>
+              <div className="report-response">
+                <p>Your trip report has been successfully submitted and is pending approval.</p>
+              </div>
               <button className="report" onClick={onClose}>Close</button>
             </>
           ) :
@@ -83,7 +85,9 @@ export default function NewReport({ onClose }) {
               {unsuccesfulAdd ? (
                 <>
                   <span className="report-header">Error</span>
-                  <p>There was an error. Please try again.</p>
+                  <div className="report-response">
+                    <p>There was an error. Please try again.</p>
+                  </div>
                   <button className="report" onClick={onClose}>Close</button>
                 </>
               ) :
@@ -105,8 +109,14 @@ export default function NewReport({ onClose }) {
                       </div>
 
                       {/* Contact Information */}
-                      <p>Contact Information:</p>
-                      <input className="report" required type="email" placeholder="E-mail Address" value={email} onChange={(e) => setEmail(e.target.value)} />
+                      <div className="category-field">
+                        <div>
+                          <p>Contact Information:</p>
+
+                          <input className="report" required type="email" placeholder="E-mail Address" value={email} onChange={(e) => setEmail(e.target.value)} />
+                        </div>
+
+                      </div>
 
                       {/* Category */}
                       <div className="category">
