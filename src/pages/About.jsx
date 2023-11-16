@@ -61,18 +61,18 @@ export default function About() {
           <p>Through our multidisciplinary public programming<span className="footnote-number" onClick={() => openFootnote(2)} >[2]</span>,  immersive botanical spaces<span className="footnote-number" onClick={() => openFootnote(3)} >[3]</span>, and new nature media<span className="footnote-number" onClick={() => openFootnote(4)} >[4]</span>, we aim to ignite a sense of wonder about our rapidly changing Earth, not only to make us better citizens of this place but to help us imagine it differently.</p>
         </div>
         <div className="img-heading">
-          <img src="https://res.cloudinary.com/dnld1cqvy/image/upload/v1699985541/NHT%20Images/our_mission_c03pyy.jpg" alt="NHT Protest" onClick={() => openFootnote(5)} />
+          <img src="https://res.cloudinary.com/dnld1cqvy/image/upload/v1699985541/NHT%20Images/our_mission_c03pyy.jpg" alt="NHT Protest" onClick={() => openFootnote(7)} />
         </div>
         <div className="section-heading">
           <h2>New Stories</h2>
-          <p>We based our mission on the observation that so many of us have fallen into a dysfunctional relationship<span className="footnote-number" onClick={() => openFootnote(6)} >[6]</span> with the living environment, and that healing this relationship requires compelling new ways of envisioning our world that don't simply cause dread and avoidance, or beauty and delusion, but that address the complexities of our time in ways that inspire and empower us to keep going.</p>
+          <p>We based our mission on the observation that so many of us have fallen into a dysfunctional relationship<span className="footnote-number" onClick={() => openFootnote(5)} >[5]</span> with the living environment, and that healing this relationship requires compelling new ways of envisioning our world that don't simply cause dread and avoidance, or beauty and delusion, but that address the complexities of our time in ways that inspire and empower us to keep going.</p>
         </div>
         <div className="img-heading">
-          <img src="https://res.cloudinary.com/dnld1cqvy/image/upload/v1699991924/NHT%20Images/new_stories_y8qorc.jpg" alt="Susan Orlean" onClick={() => openFootnote(7)} />
+          <img src="https://res.cloudinary.com/dnld1cqvy/image/upload/v1699991924/NHT%20Images/new_stories_y8qorc.jpg" alt="Susan Orlean" onClick={() => openFootnote(8)} />
         </div>
         <div className="section-heading">
           <h2>New Voices</h2>
-          <p>Moreover, we need new voices.<span className="footnote-number" onClick={() => openFootnote(8)} >[8]</span> Not just science voices, but artists, poets, dog walkers, air traffic controllers, rivers, lichens, rats and trees. The scope and urgency of our planetary moment suggests that we need everyone and not just the specialized few.</p>
+          <p>Moreover, we need new voices.<span className="footnote-number" onClick={() => openFootnote(6)} >[6]</span> Not just science voices, but artists, poets, dog walkers, air traffic controllers, rivers, lichens, rats and trees. The scope and urgency of our planetary moment suggests that we need everyone and not just the specialized few.</p>
         </div>
         <div className="img-heading">
           <img src="https://res.cloudinary.com/dnld1cqvy/image/upload/v1699388908/NHT%20Images/New_Voices_nbi1tm.jpg" alt="William Padilla Brown" onClick={() => openFootnote(9)} />

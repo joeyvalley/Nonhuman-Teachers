@@ -16,49 +16,49 @@ const footNotes = [
   {
     "page": "about",
     "number": 3,
-    "caption": "[3] Our immersive botanical spaces are experiments in what the evolution of a botanical garden can look like; unlikely urban oases of rare and unusual plants that are community hubs for science, education, and experimentation.<br/><br />Image credit: Nonhuman Teachers",
+    "caption": "[3] Our immersive botanical spaces are experiments in what the evolution of a botanical garden can look like; unlikely urban oases of rare and unusual plants that are also community hubs for science, education, and experimentation.<br/><br />Image credit: Nonhuman Teachers",
     "type": "image",
     "content": "https://res.cloudinary.com/dnld1cqvy/image/upload/v1700060305/NHT%20Images/immersive_copy_2_kb5zu6.jpg"
   },
   {
     "page": "about",
     "number": 4,
-    "caption": "[4] We believe that an innovative and updated approach to how science and the natural world are represented in media is long overdue. One that resonates with a broader audience while bringing a new generation of viewers into the conversation.<br /><br />Taking advantage of the full scope of today's media tools, we want to broadcast our signal far and wide.<br /><br />Image credit: Nonhuman Teachers",
+    "caption": "[4] We believe that an innovative and updated approach to how science and the natural world are represented in media is long overdue. One that resonates with a broader audience while bringing a new generation of viewers into the conversation. Taking advantage of the full scope of today's media tools, we want to broadcast our signal far and wide.<br /><br />Image credit: Nonhuman Teachers",
     "type": "image",
     "content": "https://res.cloudinary.com/dnld1cqvy/image/upload/v1700060649/NHT%20Images/new_media_again_copy_xm5bk4.jpg"
   },
   {
     "page": "about",
+    "number": 7,
+    "content": "This photo shows the first-ever Earth Day, held on April 22, 1970, when close to a million New Yorkers took to the streets in response to growing concerns around environmental conservation. On this same day, millions of badass eco warriors throughout the US gathered in streets, parks, and college campuses for marches, rallies, teach-ins, and organized community clean-ups, all to raise awareness about our role in the health of our planet and in the lives of nonhuman beings. This inaugural Earth Day marks the birth of the modern environmental movement.<br/><br />Image credit: Jason Laure",
+    "type": "text",
+    "caption": ""
+  },
+  {
+    "page": "about",
     "number": 5,
-    "content": "[5] On April 22, 1970, nearly one million New Yorkers paraded, marched, and strolled up and down a car-free Fifth Avenue in Manhattan, from 59th Street to 14th Street, and along 14th Street between Second and Seventh Avenues.<br /><br />The one-day event recognized the first Earth Day when New Yorkers joined with Americans across the country to bring awareness to the emerging consciousness about air and water pollution.<br/><br />Image credit: Jason Laure",
+    "content": "https://res.cloudinary.com/dnld1cqvy/image/upload/v1699379638/NHT%20Images/surfer_sxbyn2.jpg",
+    "type": "image",
+    "caption": "[5] Surfer Dede Surinaya catches a wave in a heavily polluted bay on Java, Indonesia, the world's most populated island.<br /><br />Image credit: Zak Noyle"
+  },
+  {
+    "page": "about",
+    "number": 8,
+    "content": "Susan Orlean is an acclaimed author and journalist known for writing narratives that examine surprising entanglements between humans and nonhuman beings: orchids, dogs, donkeys, tigers, lions, chickens, rabbits, etc. <br /><br />Image credit: Corey Hendrickson",
     "type": "text",
     "caption": ""
   },
   {
     "page": "about",
     "number": 6,
-    "content": "https://res.cloudinary.com/dnld1cqvy/image/upload/v1699379638/NHT%20Images/surfer_sxbyn2.jpg",
-    "type": "image",
-    "caption": "[6] There is an estimated 75 to 199 million tons of plastic waste currently in our oceans, with a further 33 billion pounds of plastic entering the marine environment every single year.<br /><br />Here surfer Dede Surinaya catches a wave in a remote but garbage-covered bay on Java, Indonesia, the world's most populated island.<br /><br />Image credit: Zak Noyle"
-  },
-  {
-    "page": "about",
-    "number": 7,
-    "content": "[7] Susan Orlean is a renowned author and journalist known for her captivating and deeply researched narratives. Her work often illuminates the intricate and sometimes unexpected connections between humans and the natural world.<br /><br />Through her writings, she invites readers to view nature not as a backdrop to human activity but as an integral and influential part of our lives, fostering a deeper appreciation and understanding of our role within our environment.<br /><br />Image credit: Corey Hendrickson",
-    "type": "text",
-    "caption": ""
-  },
-  {
-    "page": "about",
-    "number": 8,
     "content": "https://res.cloudinary.com/dnld1cqvy/image/upload/v1698770715/NHT%20Images/new-voices_bsaolb.jpg",
     "type": "image",
-    "caption": `[8] Haida was an approximately 18 year old male Southern Resident killer whale <span class='footnote-italic'>(Orcinus orca)</span> who lived at Sealand of the Pacific, a public aquarium in British Columbia, Canada. He was captured in Yukon Harbor, Washington, in October of 1968 and was the first whale kept at Sealand of the Pacific, where he lived until his death in 1982.<br /><br />Sealand's research division began sound and communication experiments with it's whales in 1972. It was during this time that flautist Paul Horn was asked to participate by playing his flute to Haida. The two quickly developed a close relationship and understanding, communicating through music.<br /><br />A recording of their collaboration was made and released in 1972 by Sealand of the Pacific entitled <a href="https://www.discogs.com/release/3020564-Haida-2-Paul-Horn-Haida-Paul-Horn-EP" target="_blank">Haida & Paul Horn</a>, which featured <a href='https://www.youtube.com/watch?v=jYda_ENS7DA' target='_blank'>two tracks of original music</a> and a spoken-word piece entitled "They Call Them Killers."<br /><br />Image credit: Sealand of the Pacific`
+    "caption": `[6] Haida was an approximately 18-year-old male Southern Resident killer whale <span class='footnote-italic'>(Orcinus orca)</span> who lived at Sealand of the Pacific, a public aquarium in British Columbia, Canada. He was captured in Yukon Harbor, Washington, in October of 1968 and was the first whale kept at Sealand of the Pacific, where he lived until his death in 1982.<br /><br />Sealand's research division began sound and communication experiments with it's whales in 1972. It was during this time that flautist Paul Horn was asked to participate by playing his flute to Haida. The two quickly developed a close relationship and understanding, communicating through music.<br /><br />A recording of their collaboration was made and released in 1972 by Sealand of the Pacific entitled <a href="https://www.discogs.com/release/3020564-Haida-2-Paul-Horn-Haida-Paul-Horn-EP" target="_blank">Haida & Paul Horn</a>, which featured <a href='https://www.youtube.com/watch?v=jYda_ENS7DA' target='_blank'>two tracks of original music</a> and a spoken-word piece entitled "They Call Them Killers."<br /><br />Image credit: Sealand of the Pacific`
   },
   {
     "page": "about",
     "number": 9,
-    "content": "[9] William Padilla-Brown is a multidisciplinary citizen scientist practicing social science, mycology, phycology, molecular biology, and additive manufacturing.<br /><br />He is the founder and CEO of <a href='https://mycosymbiotics.com/' target='_blank'>MycoSymbiotics</a>, a design, education, and research facility powered by a mushroom farm based in Central Pennsylvania.<br /><br />Image credit: HAOMA",
+    "content": `William Padilla-Brown is a "citizen scientist" mycologist who, after dropping out of high school at 16, taught himself molecular biology which led to him sequencing the genome of <span class="footnote-italic">Cordyceps militaris</span>, a medicinal mushroom known for it's parasitic relationship with insects, and to publishing of the first-ever English language book on cultivating this fascinating life form.<br /><br />Today, William works as the founder and CEO of <a href='https://mycosymbiotics.com/' target='_blank'>MycoSymbiotics</a>, a research and education facility powered by a mushroom farm based in Central Pennsylvania.<br /><br />Image credit: HAOMA`,
     "type": "text",
     "caption": ""
   },
@@ -70,16 +70,9 @@ const footNotes = [
     "caption": `[1] For any and all inquiries regarding collaborations, partnerships, or donations, please <a href="mailto:info@nonhumanteachers.org">email us</a>.<br /><br />If you're on social media, you can follow us <a href="https://instagram.com/nonhuman.teachers" target="_blank">@nonhumanteachers</a><br /><br />Image credit: Kristina Podobed`
   },
   {
-    "page": "contact",
-    "number": 2,
-    "content": "Lorem ipsum",
-    "type": "text",
-    "caption": ""
-  },
-  {
     "page": "projects",
     "number": 1,
-    "caption": "[1] Our organization is based between Los Angeles and New York, so most of our events take place in these cities.<br /><br />If you'd like to see a Nonhuman Teachers event in your city, please <a href='mailto:info@nonhumanteachers.org'>email us!</a><br /><br />We are passionate about telling these stories in communities throughout the country and around the globe.<br /><br />Image credit: Tom Bellino",
+    "caption": "[1] Nonhuman Teachers is headquartered in Los Angeles and New York City, but we can travel!<br /><br />If you'd like a Nonhuman Teachers event in your city <a href='mailto:info@nonhumanteachers.org'>email us</a>.<br /><br />Image credit: Tom Bellino",
     "type": "image",
     "content": "https://res.cloudinary.com/dnld1cqvy/image/upload/v1700082455/NHT%20Images/MAP_Los_Angeles_New_York_copy_mwzcvq.jpg"
   },
@@ -88,14 +81,14 @@ const footNotes = [
     "number": 2,
     "content": "https://res.cloudinary.com/dnld1cqvy/image/upload/v1700001269/NHT%20Images/IMG_9174_copy_ec3966.jpg",
     "type": "image",
-    "caption": "[2] We are incredibly honored to have hosted a wide array of incredibly talented artists, educators, scientists, and all manner of nonhuman lifeforms at our various public programming offerings.<br /><br />The list includes but is not limited to: artist Cecilia Vicuña, ambient musician Laraaji, harpist Mary Lattimore, composer and ornithologist Alexander Liebermann, mycologist William Padilla-Brown, naturalist Joey Santore, filmmaker Mark Lewis, community group Ryders Alley Trencherfed Society, musician Chuquimamani Condori, and anarchist collective FREE THE LAND!, among many others.<br /><br />Pictured here is plant grafting workshop in New York City, led by the <a href='https://lescss.org' target='_blank'>Lower East Side Cactus and Succulent Society</a>.<br/><br />Image credit: LESCSS"
+    "caption": "[2] Our most recent season of events included a broad spectrum of artists, thinkers, and nonhuman beings working at the intersection of art and ecology: Chilean artist Cecilia Vicuña, ambient musician Laraaji, harpist and composer Mary Lattimore, musicologist and ornithologist Alexander Liebermann, mycologist William Padilla-Brown, botanist and science communicator Joey Santore, curator Laura Copelin, artist and musician Chuquimamani Condori, filmmaker David Fenster, Australian nature documentarian Mark Lewis, community rat vigilante group Ryders Alley Trencherfed Society, eco-anarchist collective FREE THE LAND!, ecology-based new music duo Green-House, filmmaker Ahsen Nadeem, artist and birder “Pigeon Pat” McCarthy, and others.<br /><br />Pictured is a plant grafting workshop in NYC, led by the <a href='https://lescss.org' target='_blank'>Lower East Side Cactus and Succulent Society</a>.<br/><br />Image credit: LESCSS"
   },
   {
     "page": "projects",
     "number": 3,
     "content": "https://res.cloudinary.com/dnld1cqvy/image/upload/v1699378419/NHT%20Images/IMG_5681_qaxmsb.jpg",
     "type": "image",
-    "caption": "[3] Orchidariums, specialized environments for growing orchids, have a rich history dating back to the Victorian era, when the fascination with exotic plants swept across Europe. This period, known as the Orchidelirium, saw wealthy enthusiasts constructing elaborate glasshouses to cultivate these coveted flowers.<br /><br /> These early orchidariums were a symbol of status and botanical curiosity, representing the intersection of science, art, and luxury. Over time, advancements in glassmaking and greenhouse technology made orchid cultivation more accessible, allowing these delicate and diverse plants to be enjoyed by a wider audience.<br /><br />Today, orchidariums range from sophisticated, climate-controlled environments to simple setups in homes.<br /><br />Image credit: Jevin Rainn"
+    "caption": `[3] Orchidariums are specialized greenhouses for housing orchids that originated in Victorian England where orchid obsession among the wealthy gave rise to <a href="https://en.wikipedia.org/wiki/Orchidelirium" target="_blank">“orchidelerium”</a>, the obsessive collection of wild orchids.<br /><br />While early orchidariums were used as status symbols for the elite, many of the plants they housed died due to improper care and poor growing conditions.<br /><br />In stark contrast, today's orchidariums are generally conservation-forward facilities that replicate the exacting conditions orchids require to thrive.<br /><br />Image credit: Jevin Rainn`
   },
   {
     "page": "projects",
@@ -109,27 +102,33 @@ const footNotes = [
     "number": 5,
     "content": "https://res.cloudinary.com/dnld1cqvy/image/upload/v1699379097/NHT%20Images/West_Coast_Wildfires_Pillars_moievk.jpg",
     "type": "image",
-    "caption": "[5] Wildfires on the west coast of the United States producing thick plumes of smoke, visible from over 1,200 miles away.<br /><br/>This image, captured by the Copernicus Sentinel-3 satellite on September 10th, 2022, shows the extent of the smoke which, in some areas, caused the sky to turn orange.<br /><br />Image credit: The European Space Agency"
+    "caption": "[5] This image, captured by the Copernicus Sentinel-3 satellite on September 10th, 2022, shows wildfires on the west coast of the United States with plumes of smoke visible from space. <br /><br />Image credit: The European Space Agency"
   },
   {
     "page": "projects",
     "number": 6,
-    "content": "https://res.cloudinary.com/dnld1cqvy/image/upload/v1700002197/NHT%20Images/universeexpanding011118-8_copy_h5yqyb.jpg",
+    "content": "https://res.cloudinary.com/dnld1cqvy/image/upload/v1700176693/NHT%20Images/godard_ejcazp.jpg",
     "type": "image",
-    "caption": "[6] The universe is expanding uniformly in all directions at a rate of 67 - 74km/s/Mpc, which, in layman's terms, is roughly 3.3 million light years per second.<br /><br />While we may not be able to broadcast the NHT signal to the far edges of the universe, we hope at least to communicate with as many creatures as possible here on Spaceship Earth.<br /><br />Image credit: NASA"
+    "caption": `[6]  "Sometimes reality is too complex. Stories give it form."<br /><br /><span class="footnote-italic">Jean Luc Goddard</span><br /><br />Image credit: Darryl A. Turner`
+  },
+  {
+    "page": "projects",
+    "number": 7,
+    "content": "https://res.cloudinary.com/dnld1cqvy/image/upload/v1700176518/NHT%20Images/vla_qze9jb.jpg",
+    "type": "image",
+    "caption": `[7] The <a href="https://en.wikipedia.org/wiki/Very_Large_Array" target="_blank">VLA</a> (Very Large Array) in New Mexico, is the world's largest radio telescope used for atmospheric/weather studies, satellite tracking, and for the detection of signals from nonhuman life beyond Earth.<br /><br />Image credit: NASA`
   },
   {
     "page": "support",
     "number": 1,
-    "caption": "[1] While the exact details may be debated, the overarching reality is undeniable: climate change poses a grave existential threat to a vast array of life on Earth.<br /><br />In summer 2021, the IPCC published a report on the physical science basis of climate change, which included updated carbon budget estimates for limiting global warming to 1.5ºC.<br /><br />According to the <a href='https://climateclock.world' target='_blank'>Climate Clock</a>, this gives us roughly 5 years and change to right the ship.<br /><br />The time to act is yesterday.<br /><br />Image credit: 123RF",
+    "caption": "[1] n 2021 the IPCC published a report on the physical science basis of climate change, which included updated carbon budget estimates for limiting global warming to 1.5ºC. According to the <a href='https://climateclock.world' target='_blank'>Climate Clock</a>, this gives us roughly 5 years to right the ship. In other words, the time to act is yesterday.<br /><br />Image credit: 123RF",
     "type": "image",
     "content": "https://previews.123rf.com/images/eteimaging/eteimaging1207/eteimaging120700026/14602772-earth-globe-and-thermometer-losing-their-shapes-and-melting.jpg"
   },
   {
     "page": "support",
     "number": 2,
-    "caption": `[2] Buckminster Fuller's concept of "Spaceship Earth" encapsulates his visionary perspective on our planet's finite resources and the interconnectedness of all life.<br /><br />The concept requires we view Earth as a 
-    vessel and all humans as crew members - rather than passengers - urging humanity to bear the responsibility of cooperatively managing and caring for our planet thus ensuring its health and viability for future generations.<br /><br />First introduced in 1968 in his book <a href='https://en.wikipedia.org/wiki/Operating_Manual_for_Spaceship_Earth' target='_blank'>"Operating Manual for Spaceship Earth"</a>, the concept was revolutionary in promoting environmental awareness and stewardship, influencing ecological and sustainability movements worldwide.<br /><br />We miss you, Bucky.<br /><br />Image credit: PBS`,
+    "caption": `[2] Buckminster Fuller's concept of "Spaceship Earth" views our planet as a self-contained spaceship, emphasizing its limited resources and interconnectedness.<br /><br />He believed that, like astronauts on a spaceship, we must work together to sustain and preserve all life on Earth. Fuller advocated for a holistic approach to global problem-solving, promoting efficiency, innovation, and unity to ensure the long-term survival and well-being of humanity.<br /><br />We miss you Bucky!<br /><br />Image credit: PBS`,
     "type": "image",
     "content": "https://res.cloudinary.com/dnld1cqvy/image/upload/v1700006375/NHT%20Images/Buckminster_Fuller_szpq45.jpg"
   },
@@ -143,7 +142,7 @@ const footNotes = [
   {
     "page": "support",
     "number": 4,
-    "content": "[4] If you're passionate about finding new and creative solutions to the many problems we're facing, we encourage you to join us!<br /><br />Please <a href='mailto:info@nonhumanteachers.org'>reach out</a> if you'd like to learn more about opportunities to contribute to our mission and help shape our species us into better stewards of this ever-changing planet, we'd love to meet you!<br /><br />Pictured: Some of the distinguished humans of Nonhuman Teachers.<br /><br />Image credit: Nonhuman Teachers",
+    "content": "[4] If you're interested in learning more about how you can contribute to our mission, please don't hesitate to <a href='mailto:info@nonhumanteachers.org'>reach out</a>.<br /><br />Pictured: Some of the distinguished humans of Nonhuman Teachers.<br /><br />Image credit: Nonhuman Teachers",
     "type": "text",
     "caption": ""
   },
@@ -194,7 +193,7 @@ const footNotes = [
     "number": 7,
     "content": "https://res.cloudinary.com/dnld1cqvy/image/upload/v1700077264/NHT%20Images/joeyvalley_None_c0c687e9-e85f-45cb-85eb-8129a139009c_ned9k7.png",
     "type": "image",
-    "caption": `[7] A January 2023 study by the University of Exeter revealed that fleeting natural events - sunrises, sunsets, rainbows, thunderstorms, moonlit skies, etc. - can trigger significant boosts in peoples feelings of awe.<br /><br />They suggested that encouraging people to experience such events could help improve mood, increase positive emotions, sharpen the mind and enhance prosocial behavior.<br/><br />The researchers have further suggested that this behavior might be used as part of <a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7277179/' target='_blank'>green prescribing</a>, where nature plays a therapeutic role in mental health treatment.<br /><br />Image credit: Midjourney`
+    "caption": `[7] A January 2023 study by the University of Exeter revealed that fleeting natural events - sunrises, sunsets, rainbows, thunderstorms, moonlit skies - can trigger significant boosts in peoples feelings of awe.<br /><br />They suggested that encouraging people to experience such events could help improve mood, increase positive emotions, sharpen the mind and enhance prosocial behavior.<br/><br />The researchers have further suggested that this behavior might be used as part of <a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7277179/' target='_blank'>green prescribing</a>, where nature plays a therapeutic role in mental health treatment.<br /><br />Image credit: Midjourney`
   },
   {
     "page": "experience-report",
