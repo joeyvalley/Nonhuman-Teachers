@@ -1257,9 +1257,9 @@ h2 {
   .footnotes-container {
     position: absolute;
     width: 100dvw;
-    height: 100dvh;
-    left: calc(100dvw);
-    padding: 0 0 4.5rem 0;
+    height: calc(100dvh + 50px);
+    left: 100dvh;
+    padding: 0;
     background: white;
     overflow: scroll;
     z-index: 100000;
@@ -1278,11 +1278,13 @@ h2 {
     background: white;
     display: flex;
     justify-content: space-between;
-    padding: 0.5rem 0rem;
+    padding: 0.5rem 0.5rem 0.35rem 0;
   }
 
   .footnote {
     border: none !important;
+    overflow: visible;
+    background: red;
   }
 
   .footnote.loaded {
@@ -1297,20 +1299,20 @@ h2 {
     font-size: var(--main-font) !important;
   }
 
-  .footnotes-close {
+
+  .footnote-text {
     font-size: var(--main-font) !important;
   }
 
-
-  .footnote-text {
-    font-size: var(--footnote) !important;
+  .footnote-text a {
+    font-size: var(--main-font) !important;
   }
 
   .footnotes-close {
     display: inline-block;
     font-family: "Helveesti";
     font-weight: 400;
-    font-size: var(--footnote) !important;
+    font-size: var(--main-font) !important;
     line-height: 0.5rem !important;
     color: var(--black) !important;
     margin: 0 !important;
@@ -1332,9 +1334,7 @@ h2 {
     left: 0;
   }
 
-  .footnote {
-    min-height: 100dvh;
-  }
+
 
   .section {
     position: fixed;
