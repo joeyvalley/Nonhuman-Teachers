@@ -78,7 +78,7 @@ export default function TripReport() {
             <br />
             Had virus-induced fever dreams?<span className="footnote-number" onClick={() => openFootnote(6)}>[6]</span>
             <br />
-            Wept a sunset?<span className="footnote-number" onClick={() => openFootnote(7)}>[7]</span>
+            Wept at a sunset?<span className="footnote-number" onClick={() => openFootnote(7)}>[7]</span>
           </p>
           <p>We want to hear about it!</p>
           <p>Tell us about your experience<span className="footnote-number" onClick={() => openFootnote(8)}>[8]</span> and contribute to our growing collection of stories of nonhuman teachers.</p>
