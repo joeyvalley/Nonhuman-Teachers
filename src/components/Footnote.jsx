@@ -1,11 +1,17 @@
-import Footer from "./Footer";
+import { useEffect, useState } from "react";
+
 
 export default function Footnote({ footnote, isOpen }) {
-  const { number, content, type, caption } = footnote;
+  const { content, type, caption } = footnote;
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const createMarkup = (html) => { return { __html: html }; };
 
-  const createMarkup = (html) => {
-    return { __html: html };
-  };
+  useEffect(() => {
+    if (!isOpen) {
+      setImageLoaded(false);
+    }
+  }, [isOpen])
+
 
   return (
     <>
@@ -16,12 +22,11 @@ export default function Footnote({ footnote, isOpen }) {
           </>
         ) : (
           <>
-            <img className="footnote-image" src={content} alt="Footnote" />
+            <img className={`footnote-image ${imageLoaded ? 'show' : ''}`} src={content} alt="Footnote" onLoad={() => { setImageLoaded(true) }} />
             {caption === "" ? "" : <span className="footnote-text" dangerouslySetInnerHTML={createMarkup(caption)}></span>}
           </>
         )}
       </div>
-      {/* <Footer></Footer> */}
     </>
   );
 }
