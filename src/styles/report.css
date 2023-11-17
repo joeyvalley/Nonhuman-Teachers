@@ -380,9 +380,17 @@ select.report:focus {
 
   .archived-report {
     max-width: 100% !important;
+    height: 100%;
     background: white !important;
     border: none !important;
     padding: 0 !important;
+    position: relative;
+  }
+
+  .archived-report-header {
+    background: green;
+    position: sticky;
+    top: 0;
   }
 
   .archived-report-content {
