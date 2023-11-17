@@ -75,7 +75,7 @@ export default function NewReport({ onClose }) {
             <>
               <span className="report-header">Thank You!</span>
               <div className="report-response">
-                <p>Your trip report has been successfully submitted and is pending approval.</p>
+                <p>Your story has been successfully submitted and is pending approval.</p>
               </div>
               <button className="report" onClick={onClose}>Close</button>
             </>
@@ -93,7 +93,7 @@ export default function NewReport({ onClose }) {
               ) :
                 (
                   <>
-                    <span className="report-header">New Report</span>
+                    <span className="report-header">New Story</span>
                     <button className="report" onClick={onClose}>Close</button>
                     <form className="report" onSubmit={handleSubmit}>
 
