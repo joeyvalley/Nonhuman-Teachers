@@ -39,7 +39,7 @@ export default function App() {
         <Route path="/support" element={<Support />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
         <Route path="/donate" element={<DonationPage />}></Route>
-        <Route path="/experience-reports" element={<TripReport />}></Route>
+        <Route path="/human-encounters" element={<TripReport />}></Route>
         <Route path="/admin" element={<Admin />}></Route>
       </Routes>
       <Video videoInfo={selectedVideo}></Video>

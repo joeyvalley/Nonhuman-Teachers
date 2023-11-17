@@ -63,7 +63,7 @@ export default function TripReport() {
       {/* Main Content */}
       <div className={`copy ${copyLoaded ? 'loaded' : ''}`}>
         <div className="section-heading">
-          <h2>Experience Report</h2>
+          <h2>Human Encounters with Nonhuman Teachers</h2>
           <p>Have you ever...</p>
           <p>
             Achieved gnosis with a mushroom?<span className="footnote-number" onClick={() => openFootnote(1)}>[1]</span>
@@ -82,7 +82,7 @@ export default function TripReport() {
           </p>
           <p>We want to hear about it!</p>
           <p>Tell us about your experience<span className="footnote-number" onClick={() => openFootnote(8)}>[8]</span> and contribute to our growing collection of stories of nonhuman teachers.</p>
-          <input type="button" value="Submit Report" className="donate" onClick={createNewReport} />
+          <input type="button" value="Contribute" className="donate" onClick={createNewReport} />
           {newReport && <NewReport onClose={() => setNewReport(false)} />}
         </div>
         <div className="img-heading">
