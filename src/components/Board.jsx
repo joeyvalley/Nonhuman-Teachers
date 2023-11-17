@@ -68,7 +68,7 @@ export default function Board() {
         </div>
         <div className="board-seat">
           <h3>Sandeep Rangi</h3>
-          <span className="board-title">Accounting</span>
+          <span className="board-title">CPA</span>
         </div>
         <div className="board-seat">
           <h3>Sarah Agudo</h3>
