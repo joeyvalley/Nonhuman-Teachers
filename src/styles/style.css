@@ -639,9 +639,6 @@ h2 {
   display: none;
 }
 
-
-
-
 .footnotes h1 {
   font-family: "Helveesti";
   /* font-style: italic !important; */
@@ -673,7 +670,6 @@ h2 {
   /* transition: border-bottom ease-out 0ms; */
   border-top: 1px solid black;
   border-bottom: 0px solid var(--black);
-
 }
 
 .footnote.loaded {
@@ -690,6 +686,15 @@ h2 {
 .footnote img {
   width: 100%;
   border-bottom: 1px solid black;
+}
+
+.footnote-image {
+  opacity: 0;
+  transition: opacity ease-in-out 300ms;
+}
+
+.footnote-image.show {
+  opacity: 1;
 }
 
 .footnote-number {
@@ -1362,7 +1367,7 @@ h2 {
     background: white;
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: flex-start;
     z-index: 1000;
     padding: 0 !important;
   }
@@ -1538,7 +1543,7 @@ h2 {
     background: white;
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: flex-start;
     z-index: 1000;
     padding: 0 !important;
   }

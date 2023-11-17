@@ -9,8 +9,6 @@ import "slick-carousel/slick/slick-theme.css";
 import Footnote from "../components/Footnote"
 import footNotes from "../api/footnotes";
 
-import { useNavigate } from "react-router-dom";
-
 
 export default function Project() {
   // Set up states for content visibilty.
@@ -105,14 +103,9 @@ export default function Project() {
 
   ];
 
-  function handleImageClick(ref) {
-    ref.current.slickNext(); // go to the next slide
-  }
-
-  const navigate = useNavigate();
-  function handleEasterEgg() {
-    navigate('/projects/trip-report')
-  }
+  // function handleImageClick(ref) {
+  //   ref.current.slickNext(); // go to the next slide
+  // }
 
   return (
     <>
