@@ -81,7 +81,7 @@ const footNotes = [
     "number": 2,
     "content": "https://res.cloudinary.com/dnld1cqvy/image/upload/v1700001269/NHT%20Images/IMG_9174_copy_ec3966.jpg",
     "type": "image",
-    "caption": "[2] Our most recent season of events included a broad spectrum of artists, thinkers, and nonhuman beings working at the intersection of art and ecology: Chilean artist Cecilia Vicuña, ambient musician Laraaji, harpist and composer Mary Lattimore, musicologist and ornithologist Alexander Liebermann, mycologist William Padilla-Brown, botanist and science communicator Joey Santore, curator Laura Copelin, artist and musician Chuquimamani Condori, filmmaker David Fenster, Australian nature documentarian Mark Lewis, community rat vigilante group Ryders Alley Trencherfed Society, eco-anarchist collective FREE THE LAND!, ecology-based new music duo Green-House, filmmaker Ahsen Nadeem, artist and birder “Pigeon Pat” McCarthy, and others.<br /><br />Pictured is a plant grafting workshop in NYC, led by the <a href='https://lescss.org' target='_blank'>Lower East Side Cactus and Succulent Society</a>.<br/><br />Image credit: LESCSS"
+    "caption": "[2] Our most recent season of events included a broad spectrum of artists, thinkers, and nonhuman beings working at the intersection of art and ecology:<br /><br />Chilean artist Cecilia Vicuña, ambient musician Laraaji, harpist and composer Mary Lattimore, musicologist and ornithologist Alexander Liebermann, mycologist William Padilla-Brown, botanist and science communicator Joey Santore, curator Laura Copelin, artist and musician Chuquimamani Condori, filmmaker David Fenster, Australian nature documentarian Mark Lewis, community rat vigilante group Ryders Alley Trencherfed Society, eco-anarchist collective FREE THE LAND!, ecology-based new music duo Green-House, filmmaker Ahsen Nadeem, artist and birder “Pigeon Pat” McCarthy, and others.<br /><br />Pictured is a plant grafting workshop in NYC, led by the <a href='https://lescss.org' target='_blank'>Lower East Side Cactus and Succulent Society</a>.<br/><br />Image credit: LESCSS"
   },
   {
     "page": "projects",
@@ -121,7 +121,7 @@ const footNotes = [
   {
     "page": "support",
     "number": 1,
-    "caption": "[1] n 2021 the IPCC published a report on the physical science basis of climate change, which included updated carbon budget estimates for limiting global warming to 1.5ºC. According to the <a href='https://climateclock.world' target='_blank'>Climate Clock</a>, this gives us roughly 5 years to right the ship. In other words, the time to act is yesterday.<br /><br />Image credit: 123RF",
+    "caption": "[1] In 2021 the <a href='https://www.ipcc.ch/' target='_blank'>IPCC</a> published a report on the physical science basis of climate change, which included updated carbon budget estimates for limiting global warming to 1.5ºC. According to the <a href='https://climateclock.world' target='_blank'>Climate Clock</a>, this gives us roughly 5 years to right the ship. In other words, the time to act is yesterday.<br /><br />Image credit: 123RF",
     "type": "image",
     "content": "https://previews.123rf.com/images/eteimaging/eteimaging1207/eteimaging120700026/14602772-earth-globe-and-thermometer-losing-their-shapes-and-melting.jpg"
   },
@@ -186,7 +186,7 @@ const footNotes = [
     "number": 6,
     "content": "https://res.cloudinary.com/dnld1cqvy/image/upload/v1700073107/NHT%20Images/lazar_zelbzk.jpg",
     "type": "image",
-    "caption": `[6] Zeta Reticuli is a binary star system located about 39 light years away from Earth that has been a focal point in various claims of extraterrestrial encounters and abductions, intriguing both the scientific community and UFO enthusiasts.<br /><br />The system gained prominence in the annals of UFOlogy following the famous <a href='https://en.wikipedia.org/wiki/Barney_and_Betty_Hill_incident' target='_blank'>Betty and Barney Hill incident</a> in 1961, where the couple claimed they were abducted by aliens from a spacecraft originating from this star system and again more controversially through the claims of Bob Lazar, who said he participated in the reverse-engineering of alien spacecraft that purportedly came from Zeta Reticuli.<br /><br />These stories have contributed to the mystique of Zeta Reticuli in the search for life beyond Earth.<br /><br />Image credit: Bob Lazar`
+    "caption": `[6] Zeta Reticuli is  a binary star system located about 39 light years away from Earth that has been a focal point in various claims of extraterrestrial encounters and abductions, intriguing both the scientific community and UFO enthusiasts.<br /><br />The system gained prominence in the annals of UFOlogy following the famous <a href='https://en.wikipedia.org/wiki/Barney_and_Betty_Hill_incident' target='_blank'>Betty and Barney Hill incident</a> in 1961, where the couple claimed they were abducted by aliens from a spacecraft originating from this star system and again more controversially through the claims of Bob Lazar, who said he participated in the reverse-engineering of alien spacecraft that purportedly came from Zeta Reticuli.<br /><br />These stories have contributed to the mystique of Zeta Reticuli in the search for life beyond Earth.<br /><br />Image credit: Bob Lazar`
   },
   {
     "page": "experience-report",
