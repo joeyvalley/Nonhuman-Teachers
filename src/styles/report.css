@@ -379,7 +379,14 @@ select.report:focus {
   }
 
   .archived-report {
-    margin: 1rem;
+    max-width: 100% !important;
+    background: white !important;
+    border: none !important;
+    padding: 0 !important;
+  }
+
+  .archived-report-content {
+    padding: 0.5rem;
   }
 }
 
@@ -405,4 +412,6 @@ select.report:focus {
   text-align: left;
   white-space: pre-wrap;
   word-wrap: break-word;
+
+
 }
