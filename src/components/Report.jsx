@@ -23,9 +23,9 @@ export default function Report({ report, onClose }) {
   const createMarkup = (html) => { return { __html: html }; };
 
   return (
-    <div className="report-overlay" onClick={onClose}>
+    <div className="report-overlay">
       <div className="archived-report">
-        <div>
+        <div className="archived-report-header">
           <span className="report-header">Posted: {formatDate(report.dateCreated)}</span>
           <button className="report" onClick={onClose}>Close</button>
         </div>
