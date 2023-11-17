@@ -93,9 +93,9 @@ const footNotes = [
   {
     "page": "projects",
     "number": 4,
-    "content": "https://res.cloudinary.com/dnld1cqvy/image/upload/v1699378810/NHT%20Images/Pinterest_image_m3qtg4.jpg",
+    "content": "https://res.cloudinary.com/dnld1cqvy/image/upload/v1700261531/NHT%20Images/Tree_Hugger_copy_rwwig9.jpg",
     "type": "image",
-    "caption": `[4] Pareidolia is the tendency for perception to impose a meaningful interpretation on a nebulous stimulus, usually visual, so that one sees an object, pattern, or meaning where there is none.<br /><br />A notable example of pareidolia occurred in 1877, when observers using telescopes to view the surface of Mars thought that they saw faint straight lines, which were then interpreted by some as canals. It was theorized that the canals were possibly created by sentient beings.<br /><br />Pareidolia is linked to heightened creativity levels in humans.<br /><br /><span class="footnote-italic">Image credit: Jom Stivln</span>`
+    "caption": `[4] <span class="footnote-italic">Image credit: Emma McCabe</span>`
   },
   {
     "page": "projects",
