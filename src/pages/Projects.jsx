@@ -69,43 +69,37 @@ export default function Project() {
   };
 
   const eventsImages = [
-    "https://res.cloudinary.com/dnld1cqvy/image/upload/v1699997071/NHT%20Images/Public%20Programming/sonny-workshop_bsxnoc.jpg",
-    "https://res.cloudinary.com/dnld1cqvy/image/upload/v1699997038/NHT%20Images/Public%20Programming/garden_g7pkay.jpg",
-    "https://res.cloudinary.com/dnld1cqvy/image/upload/v1699997057/NHT%20Images/Public%20Programming/hortculture-nyc_pp55df.jpg",
-    "https://res.cloudinary.com/dnld1cqvy/image/upload/v1699997061/NHT%20Images/Public%20Programming/laraaji-nyc_dpum2x.jpg",
-    "https://res.cloudinary.com/dnld1cqvy/image/upload/v1699998970/NHT%20Images/Public%20Programming/liquid-light_zfpolu.jpg",
-    "https://res.cloudinary.com/dnld1cqvy/image/upload/v1699997090/NHT%20Images/Public%20Programming/events_s1xjjp.jpg",
-    "https://res.cloudinary.com/dnld1cqvy/image/upload/v1699999072/NHT%20Images/Public%20Programming/wires_xxx8mo.jpg"
+    "https://res.cloudinary.com/dd5bgygfp/image/upload/v1702593297/images/sonny-workshop_gffmeb.jpg",
+    "https://res.cloudinary.com/dd5bgygfp/image/upload/v1702593294/images/garden_pxzgxb.jpg",
+    "https://res.cloudinary.com/dd5bgygfp/image/upload/v1702593295/images/hortculture-nyc_lyvfph.jpg",
+    "https://res.cloudinary.com/dd5bgygfp/image/upload/v1702593295/images/laraaji-nyc_ohr3lf.jpg",
+    "https://res.cloudinary.com/dd5bgygfp/image/upload/v1702593296/images/liquid-light_ikx9l2.jpg",
+    "https://res.cloudinary.com/dd5bgygfp/image/upload/v1702593295/images/events_i9wvsx.jpg",
+    "https://res.cloudinary.com/dd5bgygfp/image/upload/v1702593298/images/wires_r2jkbp.jpg"
   ];
 
   const botanicalImages = [
-    "https://res.cloudinary.com/dnld1cqvy/image/upload/v1699998065/NHT%20Images/Botanical%20Spaces/santa-monica_p4lr0v.jpg",
-    "https://res.cloudinary.com/dnld1cqvy/image/upload/v1699998262/NHT%20Images/Botanical%20Spaces/greenhouse_unkdc5.jpg",
-    "https://res.cloudinary.com/dnld1cqvy/image/upload/v1699998244/NHT%20Images/Botanical%20Spaces/erlandson_hay4cg.jpg",
-    "https://res.cloudinary.com/dnld1cqvy/image/upload/v1699998063/NHT%20Images/Botanical%20Spaces/rowley_gdrcd8.jpg",
-    "https://res.cloudinary.com/dnld1cqvy/image/upload/v1699998054/NHT%20Images/Botanical%20Spaces/nyc-greenhouse_egovzx.jpg",
-    "https://res.cloudinary.com/dnld1cqvy/image/upload/v1699998042/NHT%20Images/Botanical%20Spaces/future_dcbjei.jpg",
-    "https://res.cloudinary.com/dnld1cqvy/image/upload/v1699998004/NHT%20Images/Botanical%20Spaces/botanical_pkz5bk.jpg",
-    "https://res.cloudinary.com/dnld1cqvy/image/upload/v1699997999/NHT%20Images/Botanical%20Spaces/lilly-pad_fkbnxz.jpg",
-    // "https://res.cloudinary.com/dnld1cqvy/image/upload/v1699997998/NHT%20Images/Botanical%20Spaces/billy_qbtaiv.jpg"
+    "https://res.cloudinary.com/dd5bgygfp/image/upload/v1702593903/images/santa-monica_o5hjts.jpg",
+    "https://res.cloudinary.com/dd5bgygfp/image/upload/v1702593900/images/greenhouse_xfiiy7.jpg",
+    "https://res.cloudinary.com/dd5bgygfp/image/upload/v1702593897/images/erlandson_pejogf.jpg",
+    "https://res.cloudinary.com/dd5bgygfp/image/upload/v1702593902/images/rowley_xlmqgx.jpg",
+    "https://res.cloudinary.com/dd5bgygfp/image/upload/v1702593904/images/nyc-greenhouse_e93jzy.jpg",
+    "https://res.cloudinary.com/dd5bgygfp/image/upload/v1702593898/images/future_r3mmjq.jpg",
+    "https://res.cloudinary.com/dd5bgygfp/image/upload/v1702593899/images/botanical_mrnfeq.jpg",
+    "https://res.cloudinary.com/dd5bgygfp/image/upload/v1702593901/images/lilly-pad_bqpjzp.jpg",
   ];
 
   const mediaImages = [
-    "https://res.cloudinary.com/dnld1cqvy/image/upload/v1699997211/NHT%20Images/New%20Nature%20Media/cycad-fog_unoknp.jpg",
-    "https://res.cloudinary.com/dnld1cqvy/image/upload/v1699997954/NHT%20Images/New%20Nature%20Media/cactus_bxvadu.jpg",
-    "https://res.cloudinary.com/dnld1cqvy/image/upload/v1699997948/NHT%20Images/New%20Nature%20Media/mead_x1wrkw.jpg",
-    "https://res.cloudinary.com/dnld1cqvy/image/upload/v1699997234/NHT%20Images/New%20Nature%20Media/travel_qwxwzh.jpg",
-    "https://res.cloudinary.com/dnld1cqvy/image/upload/v1699997226/NHT%20Images/New%20Nature%20Media/podcast_qhhwtd.jpg",
-    "https://res.cloudinary.com/dnld1cqvy/image/upload/v1699997213/NHT%20Images/New%20Nature%20Media/cycad-mic_rvum8h.jpg",
-
-    "https://res.cloudinary.com/dnld1cqvy/image/upload/v1699997209/NHT%20Images/New%20Nature%20Media/cycad-cones_bxrrq2.jpg",
-    "https://res.cloudinary.com/dnld1cqvy/image/upload/v1699997201/NHT%20Images/New%20Nature%20Media/watermelons_lbyjbf.jpg"
+    "https://res.cloudinary.com/dd5bgygfp/image/upload/v1702593706/images/cycad-fog_kzk1oe.jpg",
+    "https://res.cloudinary.com/dd5bgygfp/image/upload/v1702593705/images/cactus_vhoj5d.jpg",
+    "https://res.cloudinary.com/dd5bgygfp/image/upload/v1702593706/images/mead_xc7acu.jpg",
+    "https://res.cloudinary.com/dd5bgygfp/image/upload/v1702593709/images/travel_wri2fm.jpg",
+    "https://res.cloudinary.com/dd5bgygfp/image/upload/v1702593709/images/podcast_asxwwx.jpg",
+    "https://res.cloudinary.com/dd5bgygfp/image/upload/v1702593706/images/cycad-mic_hkjkqw.jpg",
+    "hhttps://res.cloudinary.com/dd5bgygfp/image/upload/v1702593812/images/cycad-cones_qxkkwh.jpg",
+    "https://res.cloudinary.com/dd5bgygfp/image/upload/v1702593709/images/watermelons_mvv36d.jpg"
 
   ];
-
-  // function handleImageClick(ref) {
-  //   ref.current.slickNext(); // go to the next slide
-  // }
 
   return (
     <>
