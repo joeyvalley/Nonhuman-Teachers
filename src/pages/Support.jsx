@@ -74,7 +74,7 @@ export default function Support() {
           <p>Please <a href="mailto:info@nonhumanteachers.org">email us</a> if you'd like to learn more about opportunities to contribute to our mission and help shape our species us into better stewards of this ever-changing planet, we'd love to meet you!</p>
         </div> */}
         <div className="img-heading">
-          <img src="https://res.cloudinary.com/dnld1cqvy/image/upload/v1700003034/NHT%20Images/nht-group-photo_wlgdpj.jpg" alt="Human Teachers" onClick={() => openFootnote(4)} />
+          <img src="https://res.cloudinary.com/dd5bgygfp/image/upload/v1702590709/images/nht-group-photo_whrdtx.jpg" alt="Human Teachers" onClick={() => openFootnote(4)} />
         </div>
         <CopyFooter></CopyFooter>
       </div>
