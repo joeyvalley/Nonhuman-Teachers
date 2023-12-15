@@ -65,7 +65,7 @@ const footNotes = [
   {
     "page": "contact",
     "number": 1,
-    "content": "https://res.cloudinary.com/dnld1cqvy/image/upload/v1698770735/NHT%20Images/girl-monkey_rjs39r.jpg",
+    "content": "https://res.cloudinary.com/dd5bgygfp/image/upload/v1702651724/images/footnotes/girl-monkey_cmgrpq.jpg",
     "type": "img",
     "caption": `[1] For any and all inquiries regarding collaborations, partnerships, or donations, please <a href="mailto:info@nonhumanteachers.org">email us</a>.<br /><br />If you're on social media, you can follow us <a href="https://instagram.com/nonhuman.teachers" target="_blank">@nonhumanteachers</a><br /><br /><span class="footnote-italic">Image credit: Kristina Podobed</span>`
   },
@@ -149,14 +149,14 @@ const footNotes = [
   {
     "page": "experience-report",
     "number": 1,
-    "content": "https://res.cloudinary.com/dnld1cqvy/image/upload/v1700065947/NHT%20Images/Amanita_muscaria_BugwoodForestryImages_lg_mlftjn.jpg",
+    "content": "https://res.cloudinary.com/dd5bgygfp/image/upload/v1702594232/images/footnotes/amanita_oloekq.jpg",
     "type": "image",
     "caption": `[1] Psychoactive mushrooms have been utilized in rituals for thousands of years. <br /><br />In Mesoamerica, they were known as "teonanácatl" (tr. "flesh of the gods"), and evidence from cave paintings and historical texts across different cultures indicates a longstanding relationship between humans and fungi through altered states of consciousness. This connection endures to the present day.<br /><br /><span class="footnote-italic">Image credit: Bugwood Forestry Images</span>`
   },
   {
     "page": "experience-report",
     "number": 3,
-    "content": "https://res.cloudinary.com/dd5bgygfp/image/upload/v1702594232/images/footnotes/amanita_oloekq.jpg",
+    "content": "https://res.cloudinary.com/dd5bgygfp/image/upload/v1702594235/images/footnotes/julia-butterfly-save-redwood-trees-8_wo01ht.jpg",
     "type": "image",
     "caption": `[3] Julia Butterfly Hill is an environmental activist who became a symbol of environmental conservation through the extraordinary act of living in a California Redwood <span class="footnote-italic">(Sequoia sempervirens)</span> from December 1997 to December 1999 to prevent it from being cut down by the Pacific Lumber Company.<br /><br />In a 2021 interview, Ms. Hill said of her time spent in the tree, affectionately named "Luna":<br /><br />"While I was in Luna, I learned that every issue we're facing is the symptom, and the disease is the disease of disconnect."<br /><br />"When we're disconnected from the Earth and we're disconnecting from each other, we make choices and don't realize how it's truly impacting all of us, and that means all the beings, everything, and the future generations."<br /><br /><span class="footnote-italic">Image credit: Shaun Walker</span>`
   },
