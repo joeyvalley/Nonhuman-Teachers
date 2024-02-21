@@ -61,21 +61,21 @@ export default function About() {
           <p>Through our multidisciplinary public programming<span className="footnote-number" onClick={() => openFootnote(2)} >[2]</span>,  immersive botanical spaces<span className="footnote-number" onClick={() => openFootnote(3)} >[3]</span>, and new nature media<span className="footnote-number" onClick={() => openFootnote(4)} >[4]</span>, we aim to ignite a sense of wonder about our rapidly changing Earth, not only to make us better citizens of this place but to help us imagine it differently.</p>
         </div>
         <div className="img-heading">
-          <img src="https://res.cloudinary.com/dd5bgygfp/image/upload/v1702590563/images/our_mission_cjkoj8.jpg" alt="NHT Protest" onClick={() => openFootnote(7)} />
+          <img src="https://previews.dropbox.com/p/thumb/ACKwMc29t75P7XaSjr3PucaD5Xc7AsSczOZYhCHIGRUFYrPoDTPI9Rl7MZDQ_4accclopexeFrI0qCTvMQ5EfIGiDXMrvjBooc47M6_yQGCUZDxX7aosXFt8jzqsI3s2EuiGuDXMs-Oe8N8ix5OE33Qf7OCaS8xr45E6LYcjnJ1ZAg17k8RMCFmXm7XB9cZcbeG-72jDcbgf_YQne2w_4r5iIut4QxLVr_LnYwHkD9BsuhMLThhYz33FqR9o2DAm7Qi5BYfyZJ3G2n7RtPWlZiRJwwISDGLiEoNmx8fBoh-dTp6In0rG7aeN4RtCuqOyodfxv1J7y-bDfMOk6DxaTGBu/p.jpeg" alt="NHT Protest" onClick={() => openFootnote(7)} />
         </div>
         <div className="section-heading">
           <h2>New Stories</h2>
           <p>We based our mission on the observation that so many of us have fallen into a dysfunctional relationship<span className="footnote-number" onClick={() => openFootnote(5)} >[5]</span> with the living environment, and that healing this relationship requires compelling new ways of envisioning our world that don't simply cause dread and avoidance, or beauty and delusion, but that address the complexities of our time in ways that inspire and empower us to keep going.</p>
         </div>
         <div className="img-heading">
-          <img src="https://res.cloudinary.com/dd5bgygfp/image/upload/v1702590563/images/new_stories_cohddh.jpg" alt="Susan Orlean" onClick={() => openFootnote(8)} />
+          <img src="https://previews.dropbox.com/p/thumb/ACJ5lwqJK_cvSgf1_fomA4-yeU0TuO632S1zngG1VqS0JK0_NguCim6xkpWLnry_JlfvbD66fmTvqfPB7X9DENOkx0xwCARCA2YVtxRCXNzMhkVxYpk264brX5MgDMaz6lJS_PPqEUhxkJ8Ba-NMPhG8u4OQbllX65wcrLyowsmKsSwpcgzgQQWv7zqKR8Q7Se4XClI_vRBFcZMXN9aI_MelfOnELB_H7jJBMay_ZlpZX1mv4sXKbga0XdqPYpIiQVZd-zHIAvTZRT55YAruh0haLLUTIb8LY5z_N31TJlLBYCiUpd2HTxIHEPJM1dAfezkmZw-NvAlz-E8AN7wzTx2A/p.jpeg" alt="Susan Orlean" onClick={() => openFootnote(8)} />
         </div>
         <div className="section-heading">
           <h2>New Voices</h2>
           <p>Moreover, we need new voices.<span className="footnote-number" onClick={() => openFootnote(6)} >[6]</span> Not just science voices, but artists, poets, dog walkers, air traffic controllers, rivers, lichens, rats and trees. The scope and urgency of our planetary moment suggests that we need everyone and not just the specialized few.</p>
         </div>
         <div className="img-heading">
-          <img src="https://res.cloudinary.com/dd5bgygfp/image/upload/v1702590563/images/new_voices_pwnbsb.jpg" alt="William Padilla Brown" onClick={() => openFootnote(9)} />
+          <img src="https://previews.dropbox.com/p/thumb/ACIvcB7DgU6yhr8X33nP2_9jTu-GjfvprngYLmCUaghEmTLJ1DuNXj5WsZGqlRks26lFSUVKHJQo--crvd5pRd8WdDqJyWwaf5THlLz7bXnJAQRwOKHrwYgLoK6wXxjzkSUsiOCTlrUqh7tIjkePaxgnGgWUMyBhojMZpkZ5kq5pH-bbMayu4Whb-QUq6SRwQflCEhjDNllV24nHA6V28uY3B8BNWlJbVSkp2hdEUky1CiHSSOvvrpLiPNhdCnu7tI_KN7cHG-Le-Lr3LPbzOCSIVWe5FqaXZz89VC5fwR6WbgKB-FP9pfaPtMjpt_egukm_D-hrifjONs7ljepCPvH7/p.jpeg" alt="William Padilla Brown" onClick={() => openFootnote(9)} />
         </div>
         <CopyFooter></CopyFooter>
       </div>
