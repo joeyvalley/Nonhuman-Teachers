@@ -15,18 +15,24 @@ export default function Board() {
           <span className="board-member">Carlos Morera</span>
           <span className="board-title">Secretary</span>
         </div>
-        <div className="board-seat">
-          <span className="board-member">Sandeep Rangi</span>
-          <span className="board-title">Financial Director</span>
+                <div className="board-seat">
+          <span className="board-member">Marshall Birnbaum</span>
+          <span className="board-title">Director of Operations</span>
         </div>
+
         <div className="board-seat">
           <span className="board-member">Joseph Valle</span>
           <span className="board-title">Technical Director</span>
         </div>
-        <div className="board-seat">
+                <div className="board-seat">
+          <span className="board-member">Sandeep Rangi</span>
+          <span className="board-title">Financial Director</span>
+        </div>
+
+        {/* <div className="board-seat">
           <span className="board-member">Sarah Agudo</span>
           <span className="board-title">Director</span>
-        </div>
+        </div> */}
       </div>
 
       <h2>Advisory Board</h2>
@@ -66,25 +72,22 @@ export default function Board() {
       </div>
       <h2>Staff</h2>
       <div className="board-group">
-        <div className="board-seat">
+        {/* <div className="board-seat">
           <h3>Christian Cummings</h3>
           <span className="board-title">Executive Director</span>
         </div>
         <div className="board-seat">
           <h3>Sandeep Rangi</h3>
           <span className="board-title">Accounting and Finance</span>
-        </div>
-        <div className="board-seat">
-          <h3>Sarah Agudo</h3>
-          <span className="board-title">Legal</span>
-        </div>
+        </div> */}
+
         <div className="board-seat">
           <h3>William Ramirez</h3>
           <span className="board-title">Greenhouse Manager</span>
         </div>
-        <div className="board-seat">
-          <h3>Zachary Repko</h3>
-          <span className="board-title">Programming</span>
+                <div className="board-seat">
+          <h3>Sarah Agudo</h3>
+          <span className="board-title">Legal</span>
         </div>
       </div>
     </div>
