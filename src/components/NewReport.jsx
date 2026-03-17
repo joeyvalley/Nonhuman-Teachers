@@ -10,7 +10,7 @@ export default function NewReport({ onClose }) {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
-  const [dateOfTrip, setDateOfTrip] = useState("");
+  const [dateOfTrip, setDateOfTrip] = useState(""); 
   const [type, setType] = useState("Fungus");
   const [type2, setType2] = useState("");
   const [placeHolder, setPlaceHolder] = useState("Chytrids, bread molds, sac fungi, etc.")
