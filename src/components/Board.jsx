@@ -22,7 +22,7 @@ export default function Board() {
 
         <div className="board-seat">
           <span className="board-member">Joseph Valle</span>
-          <span className="board-title">Technical Director</span>
+          <span className="board-title">Programming Director</span>
         </div>
                 <div className="board-seat">
           <span className="board-member">Sandeep Rangi</span>
