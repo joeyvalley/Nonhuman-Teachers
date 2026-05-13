@@ -15,7 +15,7 @@ export default function Board() {
           <span className="board-member">Carlos Morera</span>
           <span className="board-title">Secretary</span>
         </div>
-                <div className="board-seat">
+        <div className="board-seat">
           <span className="board-member">Marshall Birnbaum</span>
           <span className="board-title">Director of Operations</span>
         </div>
@@ -24,7 +24,7 @@ export default function Board() {
           <span className="board-member">Joseph Valle</span>
           <span className="board-title">Programming Director</span>
         </div>
-                <div className="board-seat">
+        <div className="board-seat">
           <span className="board-member">Sandeep Rangi</span>
           <span className="board-title">Financial Director</span>
         </div>
@@ -85,9 +85,13 @@ export default function Board() {
           <h3>William Ramirez</h3>
           <span className="board-title">Greenhouse Manager</span>
         </div>
-                <div className="board-seat">
+        <div className="board-seat">
           <h3>Sarah Agudo</h3>
           <span className="board-title">Legal</span>
+        </div>
+        <div className="board-seat">
+          <h3>Isabel Mesko</h3>
+          <span className="board-title">Creative Strategist</span>
         </div>
       </div>
     </div>

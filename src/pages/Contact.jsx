@@ -59,12 +59,6 @@ export default function Contact() {
       <div className={`copy ${copyLoaded ? 'loaded' : ''}`}>
         <div className='section-heading'>
           <h2>Mailing List</h2>
-          {/* <img src="/assets/images/pages/contact.jpg" alt="Cycads"
-            onLoad={() => {
-              setCopyLoaded(true);
-            }}
-          />
-          <p className='img-credit'>Robonaut 2 reaches out to touch a gloved astronaut hand (Image credit: NASA)</p> */}
           <p>Stay connected!<span className="footnote-number" onClick={() => openFootnote(1)}>[1]</span></p>
           <p>Enter your email below and be the first to hear about our latest initiatives, upcoming events, and other ways to get involved.</p>
           <Newsletter />
