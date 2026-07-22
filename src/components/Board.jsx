@@ -55,7 +55,7 @@ export default function Board() {
         </div>
         <div className="board-seat">
           <h3>Susan Morris</h3>
-          <span className="board-title">Arts & Culture Writer</span>
+          <span className="board-title">Producer</span>
         </div>
         <div className="board-seat">
           <h3>Angus Wall</h3>
@@ -69,6 +69,11 @@ export default function Board() {
           <h3>Andy Rifkin</h3>
           <span className="board-title">Real Estate Capital Partner</span>
         </div>
+        <div className="board-seat">
+          <h3>Gracia Echeverria</h3>
+          <span className="board-title">Professor</span>
+        </div>
+        
       </div>
       <h2>Staff</h2>
       <div className="board-group">
