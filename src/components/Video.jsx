@@ -1,13 +1,23 @@
-import videoList from "../api/videoList";
+export default function Video({ videoInfo, highlighterVisible }) {
+  console.log(videoInfo);
 
-export default function Video({ highlighterVisible }) {
+  if (!videoInfo) return null;
+
   return (
     <div className="video-container">
       <div className={`notebook ${highlighterVisible ? "notebook-visible" : ""}`}>
         <img alt="notebook" src="/assets/images/pages/find3.png" />
       </div>
-      <video className="background-video" autoPlay muted playsInline loop preload="auto" src={videoList[Math.floor(Math.random() * videoList.length)].link} type="video/mp4">
-      </video>
+      <video
+        className="background-video"
+        autoPlay
+        muted
+        playsInline
+        loop
+        preload="auto"
+        src={videoInfo.link}
+        type="video/mp4"
+      ></video>
     </div>
-  )
+  );
 }
