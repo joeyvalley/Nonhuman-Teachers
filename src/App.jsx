@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Routes, Route } from 'react-router-dom'
 // Import Pages
 import Home from './pages/Home'
@@ -14,14 +14,21 @@ import Navbar from "./components/Navbar";
 import Video from "./components/Video";
 import MobileFooter from "./components/MobileFooter";
 //Import video array
+import videoList from "./api/videoList";
 //Import CSS
 import "./styles/style.css";
 
 export default function App() {
+  const [selectedVideo, setSelectedVideo] = useState(null);
   const [highlighterVisible, setHighlighterVisible] = useState(null);
 
   const showHighlighter = () => setHighlighterVisible(true);
   const fadeHighlighter = () => setHighlighterVisible(false);
+
+  useEffect(() => {
+    const rand = videoList[Math.floor(Math.random() * videoList.length)];
+    setSelectedVideo(rand);
+  }, []);
 
   return (
     <div className="main">
@@ -36,7 +43,7 @@ export default function App() {
         <Route path="/human-encounters" element={<TripReport />}></Route>
         <Route path="/admin" element={<Admin />}></Route>
       </Routes>
-      <Video highlighterVisible={highlighterVisible}></Video>
+      <Video videoInfo={selectedVideo} highlighterVisible={highlighterVisible}></Video>
       <MobileFooter></MobileFooter>
     </div>
   )
