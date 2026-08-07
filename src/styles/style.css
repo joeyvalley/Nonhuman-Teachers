@@ -110,6 +110,7 @@ h2 {
 
 .home-logo {
   display: none;
+  z-index: 10001;
 }
 
 .nht a {
@@ -1202,6 +1203,32 @@ h2 {
   justify-content: center;
   z-index: -1;
   overflow: hidden;
+  pointer-events: none;
+}
+
+.notebook{
+  position: fixed;
+  height: calc(100vh - 51px);
+  width: 100vw;
+  top: 51px;
+  z-index: 1000;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease-in-out;
+}
+.notebook-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.notebook img{
+  width: 100%;
+}
+
+.clicked {
+  opacity: 0;
 }
 
 /* For smaller desktop windows */

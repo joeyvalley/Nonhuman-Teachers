@@ -20,20 +20,20 @@ import "./styles/style.css";
 
 export default function App() {
   const [selectedVideo, setSelectedVideo] = useState(null);
+  const [highlighterVisible, setHighlighterVisible] = useState(null);
 
   function randomVideo() {
     return videoList[Math.floor(Math.random() * videoList.length)];
   }
 
-  const handleVideoChange = () => {
-    setSelectedVideo(randomVideo());
-  };
+  const showHighlighter = () => setHighlighterVisible(true);
+  const fadeHighlighter = () => setHighlighterVisible(false);
 
   return (
     <div className="main">
-      <Navbar />
+      <Navbar onLogoClick={showHighlighter} onPageClick={fadeHighlighter} />
       <Routes>
-        <Route path="/" element={<Home onLogoClick={handleVideoChange} />}></Route>
+        <Route path="/" element={<Home />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/projects" element={<Projects />}></Route>
         <Route path="/support" element={<Support />}></Route>
@@ -42,7 +42,7 @@ export default function App() {
         <Route path="/human-encounters" element={<TripReport />}></Route>
         <Route path="/admin" element={<Admin />}></Route>
       </Routes>
-      <Video videoInfo={selectedVideo}></Video>
+      <Video videoInfo={selectedVideo} highlighterVisible={highlighterVisible}></Video>
       <MobileFooter></MobileFooter>
     </div>
   )
