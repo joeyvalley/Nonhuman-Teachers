@@ -1,6 +1,5 @@
 export default function Video({ videoInfo, highlighterVisible }) {
-  console.log(videoInfo);
-
+  
   if (!videoInfo) return null;
 
   return (

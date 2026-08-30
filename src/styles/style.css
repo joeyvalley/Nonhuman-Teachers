@@ -396,15 +396,15 @@ h2 {
 }
 
 .calendar-section {
-  padding: 1rem 1rem 0rem 1rem;
-  margin-bottom: 1rem;
-  border: 1px solid var(--black);
+  /* padding: 1rem 1rem 0rem 1rem; */
+  /* margin-bottom: 1rem; */
+  /* border: 1px solid var(--black); */
   background: white;
-  max-height: 1000px;
+  /* max-height: 1000px; */
   /* Initial small height */
-  overflow: hidden;
+  /* overflow: hidden; */
   /* Hide overflowing content */
-  transition: max-height 2500ms ease-in;
+  /* transition: max-height 2500ms ease-in; */
 }
 
 .calendar-section.show-content {
@@ -413,13 +413,17 @@ h2 {
 }
 
 .event {
-  margin-bottom: 0rem;
+  margin-bottom: 0;
+}
+
+.event img{
+  cursor: pointer;
 }
 
 .calendar-event {
-  padding: 1rem 1rem 0rem 1rem;
-  border: 1px solid var(--black);
-  margin-bottom: 1rem;
+  /* padding: 1rem 1rem 0rem 1rem; */
+  /* border: 1px solid var(--black); */
+  /* margin-bottom: 1rem; */
   background: #fdfdfd;
   opacity: 1;
   transition: opacity ease-in-out 500ms;
@@ -450,13 +454,48 @@ h2 {
 }
 
 .event-title {
-  background: yellow;
-  display: inline !important;
+  /* background: #4bc525; */
+  display: inline block;
+  font-family: "Helveesti";
+  font-style: normal;
+  font-weight: 400;
+  padding: 0 0 0.25rem 0;
 }
 
+.event-title-ended{
+  /* background: #c54425; */
+  font-family: "Helveesti";
+  font-style: normal;
+  font-weight: 400;
+  color: var(--black);
+  /* padding: 0.25rem; */
+  /* color: #c54425; */
+  display: inline-block;
+}
+
+.event-date{
+  font-family: "Helveesti";
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--footnote2) !important;
+  display: inline-block;
+}
+
+.event-date-ended{
+  font-family: "Helveesti";
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--footnote2) !important;
+  color: var(--black);
+  margin-bottom: 1rem;
+  display: inline-block;
+}
 
 .event-info {
-  margin: 0.5rem 0rem;
+  font-family: "Helveesti";
+  font-style: normal;
+  font-weight: 400;
+  margin: 0.5rem 0rem 0rem 0rem;
 }
 
 .event-link {
@@ -466,13 +505,57 @@ h2 {
   color: var(--black) !important;
   text-align: center;
   transition: all ease-in-out 200ms;
-  margin-top: 0.5rem;
+  font-family: "Helveesti";
+  font-style: normal;
+  font-weight: 400;
+  display: inline-block;
 }
 
 .event-link:hover {
   background: var(--black);
   color: white !important;
   cursor: pointer;
+}
+
+.tickets{
+  display: block;
+  font-family: "Helveesti";
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--main-font);
+  width: 100%;
+  padding: 0.25rem;
+  margin: 0.25rem 0 0 0;
+  background: lightgray;
+  border: 1px solid black;
+  color: black;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+.tickets:hover {
+  background: black;
+  color: white;
+}
+
+.show-more {
+  display: block;
+  font-family: "Helveesti";
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--main-font);
+  width: 100%;
+  padding: 0.25rem;
+  margin: 0.25rem 0 0 0;
+  background: lightgray;
+  border: 1px solid black;
+  color: black;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+.show-more:hover {
+  background: var(--black);
+  color: white;
 }
 
 .project-button {
