@@ -8,6 +8,7 @@ import Contact from './pages/Contact'
 import Support from './pages/Support'
 import DonationPage from './pages/DonationForm'
 import Projects from './pages/Projects'
+import Events from './pages/Events'
 import TripReport from './pages/TripReport'
 //Import top-level components
 import Navbar from "./components/Navbar";
@@ -37,6 +38,7 @@ export default function App() {
         <Route path="/" element={<Home />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/projects" element={<Projects />}></Route>
+        <Route path="/events" element={<Events />}></Route>
         <Route path="/support" element={<Support />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
         <Route path="/donate" element={<DonationPage />}></Route>

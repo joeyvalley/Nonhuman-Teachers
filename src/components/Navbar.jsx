@@ -23,9 +23,9 @@ export default function Navbar({ onLogoClick, onPageClick }) {
           <div className="navbar-item" onClick={onPageClick}>
             <Link to="/projects" className={location.pathname === "/projects" ? "selected" : ""}>Projects</Link>
           </div>
-          {/* <div className="navbar-item">
-            <Link to="/gallery" className={location.pathname === "/gallery" ? "selected" : ""}>Gallery</Link>
-          </div> */}
+          <div className="navbar-item" onClick={onPageClick}>
+            <Link to="/events" className={location.pathname === "/events" ? "selected" : ""}>Events</Link>
+          </div>
 
           <div className="navbar-item" onClick={onPageClick}>
             <Link to="/support" className={location.pathname === "/support" || location.pathname === "/donate" ? "selected" : ""}>Support</Link>
